@@ -1,0 +1,26 @@
+{
+  "name": "antigravity-l10n",
+  "version": "1.0.0",
+  "description": "Antigravity IDE 设置页面一键中文化与生命周期管理工具",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "translate": "node src/index.js translate",
+    "rollback": "node src/index.js rollback",
+    "check": "node src/index.js check",
+    "scan": "node src/index.js scan",
+    "find-context": "node scratch/find_exact_context.js"
+  },
+  "keywords": [
+    "antigravity",
+    "l10n",
+    "i18n",
+    "translation"
+  ],
+  "author": "Antigravity Pair",
+  "license": "MIT",
+  "dependencies": {
+    "@xiaode-ai/i18nt": "^1.2.0",
+    "typescript": "^6.0.3"
+  }
+}
