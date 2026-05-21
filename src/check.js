@@ -19,11 +19,18 @@ export function check(config) {
     return false;
   }
 
+  const workbenchPath = path.join(path.dirname(targetFilePath), '..', 'vs', 'workbench', 'workbench.desktop.main.js');
+
   try {
     // 2. 调用当前 Node 进程原生 --check 工具对文件进行极速抽象语法分析
-    // 这能百分之百保证文件没有由于损坏而导致 React 渲染崩溃的基础语法问题
     execSync(`node --check "${targetFilePath}"`, { stdio: 'pipe' });
-    console.log(`[OK] 语法校验通过！目标文件编译良好，未发现任何拼写断裂或语法破损。`);
+    console.log(`[OK] jetskiAgent/main.js 语法校验通过！`);
+
+    if (fs.existsSync(workbenchPath)) {
+      execSync(`node --check "${workbenchPath}"`, { stdio: 'pipe' });
+      console.log(`[OK] workbench.desktop.main.js 语法校验通过！`);
+    }
+
     const checksumOk = checkProductChecksums(targetFilePath);
     if (!checksumOk) {
       return false;

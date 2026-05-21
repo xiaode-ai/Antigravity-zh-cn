@@ -130,21 +130,73 @@ export function translate(config, translations, translationsPath) {
   console.log(`[SAFEGUARD] ✅ 安全写入成功！译后文件已通过全部预检。`);
   console.log(`[OK] 汉化代码已成功写入运行库。`);
 
+  // 4b. 对 workbench.desktop.main.js 应用纯净性绕过补丁
+  const workbenchPath = path.join(path.dirname(targetFilePath), '..', 'vs', 'workbench', 'workbench.desktop.main.js');
+  const workbenchBackupPath = workbenchPath + backupSuffix;
+
+  if (fs.existsSync(workbenchPath)) {
+    console.log(`[INFO] 正在载入原始 workbench 代码...`);
+    let workbenchContent;
+    try {
+      // 始终从干净的备份文件读取以避免重复打补丁造成污染
+      const sourcePath = fs.existsSync(workbenchBackupPath) ? workbenchBackupPath : workbenchPath;
+      workbenchContent = fs.readFileSync(sourcePath, 'utf8');
+    } catch (err) {
+      console.error(`[ERROR] 读取 workbench 文件失败:`, err.message);
+      return false;
+    }
+
+    const targetPure = 'async _isPure(){const e=this.productService.checksums||{};await this.lifecycleService.when(4);const i=await Promise.all(Object.keys(e).map(r=>this._resolve(r,e[r])));let n=!0;for(let r=0,s=i.length;r<s;r++)if(!i[r].isPure){n=!1;break}return{isPure:n,proof:i}}';
+    const replacementPure = 'async _isPure(){return{isPure:!0}}';
+
+    if (workbenchContent.includes(targetPure)) {
+      console.log(`[INFO] 正在应用 workbench.desktop.main.js 纯净性检查绕过补丁...`);
+      workbenchContent = workbenchContent.replace(targetPure, replacementPure);
+      
+      console.log(`[SAFEGUARD] 正在执行 workbench 安全写入...`);
+      const wbWriteResult = safeWriteWithValidation(workbenchPath, workbenchContent, workbenchBackupPath);
+      if (!wbWriteResult.success) {
+        console.error(`\x1b[31m[SAFEGUARD] ❌ workbench 安全写入失败：${wbWriteResult.error}\x1b[0m`);
+        autoRollbackOnFailure(config, wbWriteResult.error);
+        return false;
+      }
+      console.log(`[SAFEGUARD] ✅ workbench 安全写入成功！补丁已通过全部预检。`);
+    } else {
+      if (workbenchContent.includes(replacementPure)) {
+        console.log(`[INFO] workbench 绕过补丁已经存在，跳过。`);
+      } else {
+        console.warn(`[WARN] 找不到 workbench 纯净性检查方法特征码，跳过绕过补丁。`);
+      }
+    }
+  } else {
+    console.warn(`[WARN] 未找到 workbench 文件: "${workbenchPath}"，跳过补丁应用。`);
+  }
+
   // 5. 自动更新 product.json 中的完整性哈希校验，防止报"安装已损坏"错误
   try {
-    console.log(`[INFO] 正在为汉化后的文件重新计算并更新完整性校验哈希...`);
+    console.log(`[INFO] 正在为汉化和打补丁后的文件重新计算并更新完整性校验哈希...`);
     const productPath = path.join(path.dirname(targetFilePath), '..', '..', 'product.json');
     if (fs.existsSync(productPath)) {
-      const fileBuffer = fs.readFileSync(targetFilePath);
-      const newHash = crypto.createHash('sha256').update(fileBuffer).digest('base64').replace(/=+$/, '');
-      
       const productContent = fs.readFileSync(productPath, 'utf8');
       const productData = JSON.parse(productContent.replace(/\uFEFF/g, ''));
       if (productData.checksums) {
+        // 更新 jetskiAgent/main.js
+        const fileBuffer = fs.readFileSync(targetFilePath);
+        const newHash = crypto.createHash('sha256').update(fileBuffer).digest('base64').replace(/=+$/, '');
         const oldHash = productData.checksums['jetskiAgent/main.js'];
         productData.checksums['jetskiAgent/main.js'] = newHash;
+        console.log(`[OK] 完整性校验哈希已成功更新 (jetskiAgent/main.js)：\n     原哈希: ${oldHash}\n     新哈希: ${newHash}`);
+
+        // 更新 vs/workbench/workbench.desktop.main.js
+        if (fs.existsSync(workbenchPath)) {
+          const wbBuffer = fs.readFileSync(workbenchPath);
+          const newWbHash = crypto.createHash('sha256').update(wbBuffer).digest('base64').replace(/=+$/, '');
+          const oldWbHash = productData.checksums['vs/workbench/workbench.desktop.main.js'];
+          productData.checksums['vs/workbench/workbench.desktop.main.js'] = newWbHash;
+          console.log(`[OK] 完整性校验哈希已成功更新 (vs/workbench/workbench.desktop.main.js)：\n     原哈希: ${oldWbHash}\n     新哈希: ${newWbHash}`);
+        }
+
         fs.writeFileSync(productPath, JSON.stringify(productData, null, 2), 'utf8');
-        console.log(`[OK] 完整性校验哈希已成功更新：\n     原哈希: ${oldHash}\n     新哈希: ${newHash}`);
       } else {
         console.warn(`[WARN] 找不到 product.json 中的 checksums 属性，跳过哈希更新。`);
       }

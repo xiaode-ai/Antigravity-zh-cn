@@ -1,0 +1,288 @@
+Found 116 js files under app directory.
+
+Match found for "isPure" in file: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\extensions\antigravity\dist\extension.js
+  Occurrence 1 at index 1369416:
+    ce.fs.readFile(n.uri))}const a=this.getAnchorIndex(e,n),E=this.getRange(e,n,a);let d=[],u=0;if(this.isPureUpdate(e,n,E))d=await this.applyTextUpdate(e,n,E),u=n.cellCount;else{const t=await this.applyStructuralUpdate(e,n,E);d=t.modifiedCells,u=t.totalCellCo
+  Occurrence 2 at index 1369980:
+    IFF_ZONES,l,[t],a)}catch(e){console.error(e)}return(0,i.v)(l.CS,{modifiedCells:d,totalCellCount:u})}isPureUpdate(e,t,n){if(e.operation!==l.HD.REPLACE_CELLS&&e.operation!==l.HD.OVERWRITE_NOTEBOOK)return!1;const o=e.cells,i=n.end-n.start;return i===o.length&
+
+Match found for "corrupt" in file: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\extensions\antigravity-dev-containers\dist\extension.js
+  Occurrence 1 at index 8768:
+    results_and_exit 1\n\tfi\n\n\tif [ ! -f $SERVER_SCRIPT ]; then\n\t\techo "Error server contents are corrupted"\n\t\tprint_install_results_and_exit 1\n\tfi\n\n\trm -f vscode-server.tar.gz\n\n\tpopd > /dev/null\nelse\n\techo "Server script already installed i
+
+Match found for "corrupt" in file: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\extensions\antigravity-remote-openssh\dist\extension.js
+  Occurrence 1 at index 15498:
+    sults_and_exit 1\n\tfi\n\n\tif [[ ! -f $SERVER_SCRIPT ]]; then\n\t\techo "Error server contents are corrupted"\n\t\tprint_install_results_and_exit 1\n\tfi\n\n\trm -f vscode-server.tar.gz\n\n\tpopd > /dev/null\nelse\n\techo "Server script already installed i
+
+Match found for "corrupt" in file: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\extensions\antigravity-remote-wsl\dist\extension.js
+  Occurrence 1 at index 22623:
+    sults_and_exit 1\n\tfi\n\n\tif [[ ! -f $SERVER_SCRIPT ]]; then\n\t\techo "Error server contents are corrupted"\n\t\tprint_install_results_and_exit 1\n\tfi\n\n\trm -f vscode-server.tar.gz\n\n\tpopd > /dev/null\nelse\n\techo "Server script already installed i
+
+Match found for "corrupt" in file: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\extensions\emmet\dist\node\emmetNodeMain.js
+  Occurrence 1 at index 32950:
+    "Corrupt JPG, exceeded buffer limits");if(255!==e[t])throw new TypeError("Invalid JPG, marker table corrupted")}t.JPG={validate:e=>"ffd8"===e.toString("hex",0,2),calculate(e){let t,n;for(e=e.slice(4);e.length;){const r=e.readUInt16BE(0);if(o(e)&&(t=s(e,r)),
+  Occurrence 2 at index 111666:
+    ,"mula","a","propósito","fantasía","alias","rayo","tenedor","deleznable","ventana","cara","anemia","corrupto"]},latin:{common:["lorem","ipsum","dolor","sit","amet","consectetur","adipisicing","elit"],words:["exercitationem","perferendis","perspiciatis","lab
+  Occurrence 3 at index 113478:
+    tia","nulla","a","similique","eos","alias","dolore","tenetur","deleniti","porro","facere","maxime","corrupti"]}},mr=/^lorem([a-z]*)(\d*)(-\d*)?$/i;function gr(e,t){return Math.floor(Math.random()*(t-e)+e)}function br(e,t){const n=e.length,r=Math.min(n,t),o=
+
+Match found for "corrupt" in file: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\extensions\markdown-language-features\dist\serverWorkerMain.js
+  Occurrence 1 at index 20594:
+     parsing message bundle: ".concat(e.message,".")),o.unlink(a,function(e){e&&console.error("Deleting corrupted bundle ".concat(a," failed."))}),c=!0}}if(!(r=function(e,t){var r=u.translationsConfig[e.id];if(r){var o=f(r).contents,i=f(n.join(t,"nls.metadata.j
+  Occurrence 2 at index 23944:
+    gFile=e._translationsConfigFile;try{u.translationsConfig=f(u.translationsConfigFile)}catch(t){if(e._corruptedFile){var i=n.dirname(e._corruptedFile);o.exists(i,function(t){t&&o.writeFile(e._corruptedFile,"corrupted","utf8",function(e){console.error(e)})})}}
+  Occurrence 3 at index 23978:
+    y{u.translationsConfig=f(u.translationsConfigFile)}catch(t){if(e._corruptedFile){var i=n.dirname(e._corruptedFile);o.exists(i,function(t){t&&o.writeFile(e._corruptedFile,"corrupted","utf8",function(e){console.error(e)})})}}}}catch(a){}var a;(0,s.setPseudo)(
+  Occurrence 4 at index 24034:
+    (t){if(e._corruptedFile){var i=n.dirname(e._corruptedFile);o.exists(i,function(t){t&&o.writeFile(e._corruptedFile,"corrupted","utf8",function(e){console.error(e)})})}}}}catch(a){}var a;(0,s.setPseudo)("pseudo"===u.locale),c=Object.create(null)}(),t.loadMess
+  Occurrence 5 at index 24049:
+    ptedFile){var i=n.dirname(e._corruptedFile);o.exists(i,function(t){t&&o.writeFile(e._corruptedFile,"corrupted","utf8",function(e){console.error(e)})})}}}}catch(a){}var a;(0,s.setPseudo)("pseudo"===u.locale),c=Object.create(null)}(),t.loadMessageBundle=m,t.c
+
+Match found for "corrupt" in file: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\extensions\npm\dist\npmMain.js
+  Occurrence 1 at index 326114:
+     parsing message bundle: ".concat(e.message,".")),i.unlink(a,function(e){e&&console.error("Deleting corrupted bundle ".concat(a," failed."))}),u=!0}}if(n=function(e,t){var n=c.translationsConfig[e.id];if(n){var i=p(n).contents,s=p(r.join(t,"nls.metadata.jso
+  Occurrence 2 at index 329925:
+    gFile=e._translationsConfigFile;try{c.translationsConfig=p(c.translationsConfigFile)}catch(t){if(e._corruptedFile){var s=r.dirname(e._corruptedFile);i.exists(s,function(t){t&&i.writeFile(e._corruptedFile,"corrupted","utf8",function(e){console.error(e)})})}}
+  Occurrence 3 at index 329959:
+    y{c.translationsConfig=p(c.translationsConfigFile)}catch(t){if(e._corruptedFile){var s=r.dirname(e._corruptedFile);i.exists(s,function(t){t&&i.writeFile(e._corruptedFile,"corrupted","utf8",function(e){console.error(e)})})}}}}catch(e){}(0,o.setPseudo)("pseud
+  Occurrence 4 at index 330015:
+    (t){if(e._corruptedFile){var s=r.dirname(e._corruptedFile);i.exists(s,function(t){t&&i.writeFile(e._corruptedFile,"corrupted","utf8",function(e){console.error(e)})})}}}}catch(e){}(0,o.setPseudo)("pseudo"===c.locale),u=Object.create(null)}(),t.loadMessageBun
+  Occurrence 5 at index 330030:
+    ptedFile){var s=r.dirname(e._corruptedFile);i.exists(s,function(t){t&&i.writeFile(e._corruptedFile,"corrupted","utf8",function(e){console.error(e)})})}}}}catch(e){}(0,o.setPseudo)("pseudo"===c.locale),u=Object.create(null)}(),t.loadMessageBundle=x,t.config=
+
+Match found for "checksums" in file: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\extensions\terminal-suggest\dist\terminalSuggestMain.js
+  Occurrence 1 at index 9055:
+    (in seconds) to wait for a response to a probe (default 5 sec.)"},{name:"-x",description:"Toggle IP checksums. Normally, this prevents traceroute from calculating IP checksums. In some cases, the operating system can overwrite parts of the outgoing packet but
+  Occurrence 2 at index 9121:
+    {name:"-x",description:"Toggle IP checksums. Normally, this prevents traceroute from calculating IP checksums. In some cases, the operating system can overwrite parts of the outgoing packet but not recalculate the checksum (so in some cases the default is to 
+  Occurrence 3 at index 9294:
+     outgoing packet but not recalculate the checksum (so in some cases the default is to not calculate checksums and using -x causes them to be calculated). Note that checksums are usually required for the last hop when using ICMP ECHO probes ( -I ). So they are
+  Occurrence 4 at index 9358:
+    ses the default is to not calculate checksums and using -x causes them to be calculated). Note that checksums are usually required for the last hop when using ICMP ECHO probes ( -I ). So they are always calculated when using ICMP"},{name:"-z",args:{name:"paus
+  Occurrence 5 at index 1399947:
+    -lockfile",description:"Don't generate a lockfile and fail if an update is needed"},{name:"--update-checksums",description:"Update package checksums from current repository"},{name:"--link-duplicates",description:"Create hardlinks to the repeated modules in n
+  Occurrence 6 at index 1399986:
+    a lockfile and fail if an update is needed"},{name:"--update-checksums",description:"Update package checksums from current repository"},{name:"--link-duplicates",description:"Create hardlinks to the repeated modules in node_modules"},{name:"--link-folder",des
+
+Match found for "corrupt" in file: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\extensions\terminal-suggest\dist\terminalSuggestMain.js
+  Occurrence 1 at index 534222:
+    hable objects immediately, or \"never\" may be used to suppress pruning. This feature helps prevent corruption when 'git gc' runs concurrently with another process writing to the repository; see the \"NOTES\" section of git-gc[1]"},{name:"gc.rerereResolved"
+  Occurrence 2 at index 597137:
+     with capabilities for packs larger than 4 GB as well as proper protection against the repacking of corrupted packs. Version 2 is the default. Note that version 2 is enforced and this config option ignored whenever the corresponding pack is larger than 2 GB
+  Occurrence 3 at index 792838:
+    me:"repair",description:"Repair working tree administrative files, if possible, if they have become corrupted or outdated due to external factors",args:{name:"path",template:"filepaths"}},{name:"unlock",description:"Unlock a working tree, allowing it to be 
+
+Match found for "isPure" in file: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\bootstrap-fork.js
+  Occurrence 1 at index 52002:
+    .context=w,this.refs=K,this.updater=$||W}var p=P.prototype=new h;p.constructor=P,J(p,y.prototype),p.isPureReactComponent=!0;var g=Array.isArray,S=Object.prototype.hasOwnProperty,M={current:null},F={key:!0,ref:!0,__self:!0,__source:!0};function k(o,w,$){var
+
+Match found for "corrupt" in file: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\bootstrap-fork.js
+  Occurrence 1 at index 326859:
+    oString())}catch(r){if(console.error(`Error reading NLS messages file ${t}: ${r}`),E?.languagePack?.corruptMarkerFile)try{await $n.promises.writeFile(E.languagePack.corruptMarkerFile,"corrupted")}catch(n){console.error(`Error writing corrupted NLS marker fi
+  Occurrence 2 at index 326924:
+    file ${t}: ${r}`),E?.languagePack?.corruptMarkerFile)try{await $n.promises.writeFile(E.languagePack.corruptMarkerFile,"corrupted")}catch(n){console.error(`Error writing corrupted NLS marker file: ${n}`)}if(E?.defaultMessagesFile&&E.defaultMessagesFile!==t)t
+  Occurrence 3 at index 326943:
+    ?.languagePack?.corruptMarkerFile)try{await $n.promises.writeFile(E.languagePack.corruptMarkerFile,"corrupted")}catch(n){console.error(`Error writing corrupted NLS marker file: ${n}`)}if(E?.defaultMessagesFile&&E.defaultMessagesFile!==t)try{globalThis._VSCO
+  Occurrence 4 at index 326993:
+    mises.writeFile(E.languagePack.corruptMarkerFile,"corrupted")}catch(n){console.error(`Error writing corrupted NLS marker file: ${n}`)}if(E?.defaultMessagesFile&&E.defaultMessagesFile!==t)try{globalThis._VSCODE_NLS_MESSAGES=JSON.parse((await $n.promises.read
+
+Match found for "isPure" in file: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\cli.js
+  Occurrence 1 at index 263577:
+    .context=Y,this.refs=W,this.updater=K||v}var k=T.prototype=new m;k.constructor=T,F(k,y.prototype),k.isPureReactComponent=!0;var w=Array.isArray,g=Object.prototype.hasOwnProperty,P={current:null},U={key:!0,ref:!0,__self:!0,__source:!0};function M(d,Y,K){var
+
+Match found for "corrupt" in file: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\cli.js
+  Occurrence 1 at index 523313:
+    oString())}catch(r){if(console.error(`Error reading NLS messages file ${e}: ${r}`),t?.languagePack?.corruptMarkerFile)try{await Fi.promises.writeFile(t.languagePack.corruptMarkerFile,"corrupted")}catch(n){console.error(`Error writing corrupted NLS marker fi
+  Occurrence 2 at index 523378:
+    file ${e}: ${r}`),t?.languagePack?.corruptMarkerFile)try{await Fi.promises.writeFile(t.languagePack.corruptMarkerFile,"corrupted")}catch(n){console.error(`Error writing corrupted NLS marker file: ${n}`)}if(t?.defaultMessagesFile&&t.defaultMessagesFile!==e)t
+  Occurrence 3 at index 523397:
+    ?.languagePack?.corruptMarkerFile)try{await Fi.promises.writeFile(t.languagePack.corruptMarkerFile,"corrupted")}catch(n){console.error(`Error writing corrupted NLS marker file: ${n}`)}if(t?.defaultMessagesFile&&t.defaultMessagesFile!==e)try{globalThis._VSCO
+  Occurrence 4 at index 523447:
+    mises.writeFile(t.languagePack.corruptMarkerFile,"corrupted")}catch(n){console.error(`Error writing corrupted NLS marker file: ${n}`)}if(t?.defaultMessagesFile&&t.defaultMessagesFile!==e)try{globalThis._VSCODE_NLS_MESSAGES=JSON.parse((await Fi.promises.read
+  Occurrence 5 at index 524383:
+    _=`${E.hash}.${a}`,h=vt(r,"clp",_),c=vt(h,n),u=vt(c,"nls.messages.json"),D=vt(h,"tcf.json"),v=vt(h,"corrupted.info");await ue.exists(v)&&await xe.rm(h,{recursive:!0,force:!0,maxRetries:3});const F={userLocale:t,osLocale:e,resolvedLanguage:a,defaultMessagesF
+  Occurrence 6 at index 524624:
+    defaultMessagesFile:vt(s,"nls.messages.json"),languagePack:{translationsConfigFile:D,messagesFile:u,corruptMarkerFile:v},locale:t,availableLanguages:{"*":a},_languagePackId:_,_languagePackSupport:!0,_translationsConfigFile:D,_cacheRoot:h,_resolvedLanguagePa
+  Occurrence 7 at index 524799:
+    _languagePackSupport:!0,_translationsConfigFile:D,_cacheRoot:h,_resolvedLanguagePackCoreLocation:c,_corruptedFile:v};if(await ue.exists(u))return aR(c).catch(()=>{}),an("code/didGenerateNls"),F;const[W,y,m]=await Promise.all([xe.readFile(vt(s,"nls.keys.json
+
+Match found for "isPure" in file: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\jetskiAgent\main.js
+  Occurrence 1 at index 2729991:
+    displayName||e.name)+")",n.prototype.isReactComponent=!0,n.__f=!0,n.type=e,n}(jme.prototype=new Hm).isPureReactComponent=!0,jme.prototype.shouldComponentUpdate=function(e,t){return art(this.props,e)||art(this.state,t)};var _wr=vo.__b;vo.__b=function(e){e.t
+  Occurrence 2 at index 3780526:
+    n:kx,isPlaceholder:TF,isPlaceholderType:kn,isPrivate:ub,isPrivateName:ia,isProgram:Xa,isProperty:pk,isPureish:PE,isQualifiedTypeIdentifier:R1,isRecordExpression:nP,isReferenced:_M,isRegExpLiteral:zs,isRegexLiteral:Yx,isRestElement:Ii,isRestProperty:cb,isRe
+  Occurrence 3 at index 4238517:
+    !((l=this.node)!=null&&l.loc)}function Czn(){return!this.isUser()}function Szn(l){return this.scope.isPure(this.node,l)}function Nzn(){var l=this.node;return qKn(l)?!0:rzn(l)?l.importKind==="type"||l.importKind==="typeof":zKn(l)?l.exportKind==="type":nzn(l
+  Occurrence 4 at index 4239447:
+    dentifier:mzn,isBlockScoped:Azn,isExpression:bzn,isFlow:Nzn,isForAwaitStatement:xzn,isGenerated:Czn,isPure:Szn,isReferenced:yzn,isReferencedIdentifier:gzn,isReferencedMemberExpression:pzn,isRestProperty:Vzn,isScope:Rzn,isSpreadProperty:Izn,isStatement:Ezn,
+  Occurrence 5 at index 4257134:
+    e(E=E.parent);return!1},h.hasReference=function(m){return!!this.getProgramParent().references[m]},h.isPure=function(m,E){if(LT(m)){var R=this.getBinding(m.name);return R?E?R.constant:!0:!1}else{if(WAt(m)||p$n(m)||YAt(m)||m$n(m))return!0;if(Mzn(m)){var v;re
+  Occurrence 6 at index 4257315:
+    t:!0:!1}else{if(WAt(m)||p$n(m)||YAt(m)||m$n(m))return!0;if(Mzn(m)){var v;return m.superClass&&!this.isPure(m.superClass,E)||((v=m.decorators)==null?void 0:v.length)>0?!1:this.isPure(m.body,E)}else if(Jzn(m)){for(var S=y(m.body),T;!(T=S()).done;){var _=T.va
+  Occurrence 7 at index 4257390:
+    turn m.superClass&&!this.isPure(m.superClass,E)||((v=m.decorators)==null?void 0:v.length)>0?!1:this.isPure(m.body,E)}else if(Jzn(m)){for(var S=y(m.body),T;!(T=S()).done;){var _=T.value;if(!this.isPure(_,E))return!1}return!0}else{if(Pzn(m))return this.isPur
+  Occurrence 8 at index 4257484:
+    :this.isPure(m.body,E)}else if(Jzn(m)){for(var S=y(m.body),T;!(T=S()).done;){var _=T.value;if(!this.isPure(_,E))return!1}return!0}else{if(Pzn(m))return this.isPure(m.left,E)&&this.isPure(m.right,E);if(GAt(m)||m?.type==="TupleExpression"){for(var B=y(m.elem
+  Occurrence 9 at index 4257541:
+    ),T;!(T=S()).done;){var _=T.value;if(!this.isPure(_,E))return!1}return!0}else{if(Pzn(m))return this.isPure(m.left,E)&&this.isPure(m.right,E);if(GAt(m)||m?.type==="TupleExpression"){for(var B=y(m.elements),L;!(L=B()).done;){var K=L.value;if(K!==null&&!this.
+  Occurrence 10 at index 4257564:
+     _=T.value;if(!this.isPure(_,E))return!1}return!0}else{if(Pzn(m))return this.isPure(m.left,E)&&this.isPure(m.right,E);if(GAt(m)||m?.type==="TupleExpression"){for(var B=y(m.elements),L;!(L=B()).done;){var K=L.value;if(K!==null&&!this.isPure(K,E))return!1}re
+  Occurrence 11 at index 4257697:
+    ype==="TupleExpression"){for(var B=y(m.elements),L;!(L=B()).done;){var K=L.value;if(K!==null&&!this.isPure(K,E))return!1}return!0}else if(t$n(m)||m?.type==="RecordExpression"){for(var z=y(m.properties),ne;!(ne=z()).done;){var le=ne.value;if(!this.isPure(le
+  Occurrence 12 at index 4257844:
+    ?.type==="RecordExpression"){for(var z=y(m.properties),ne;!(ne=z()).done;){var le=ne.value;if(!this.isPure(le,E))return!1}return!0}else if($zn(m)){var oe;return!(m.computed&&!this.isPure(m.key,E)||((oe=m.decorators)==null?void 0:oe.length)>0)}else if(r$n(m
+  Occurrence 13 at index 4257924:
+    e=ne.value;if(!this.isPure(le,E))return!1}return!0}else if($zn(m)){var oe;return!(m.computed&&!this.isPure(m.key,E)||((oe=m.decorators)==null?void 0:oe.length)>0)}else if(r$n(m)){var ce;return!(m.computed&&!this.isPure(m.key,E)||((ce=m.decorators)==null?vo
+  Occurrence 14 at index 4258036:
+    ,E)||((oe=m.decorators)==null?void 0:oe.length)>0)}else if(r$n(m)){var ce;return!(m.computed&&!this.isPure(m.key,E)||((ce=m.decorators)==null?void 0:ce.length)>0||(g$n(m)||m.static)&&m.value!==null&&!this.isPure(m.value,E))}else{if(o$n(m))return this.isPur
+  Occurrence 15 at index 4258141:
+    e(m.key,E)||((ce=m.decorators)==null?void 0:ce.length)>0||(g$n(m)||m.static)&&m.value!==null&&!this.isPure(m.value,E))}else{if(o$n(m))return this.isPure(m.argument,E);if(XAt(m)){for(var pe=y(m.expressions),Ae;!(Ae=pe()).done;){var Re=Ae.value;if(!this.isPu
+  Occurrence 16 at index 4258187:
+    .length)>0||(g$n(m)||m.static)&&m.value!==null&&!this.isPure(m.value,E))}else{if(o$n(m))return this.isPure(m.argument,E);if(XAt(m)){for(var pe=y(m.expressions),Ae;!(Ae=pe()).done;){var Re=Ae.value;if(!this.isPure(Re,E))return!1}return!0}else return s$n(m)?
+  Occurrence 17 at index 4258293:
+    (m.argument,E);if(XAt(m)){for(var pe=y(m.expressions),Ae;!(Ae=pe()).done;){var Re=Ae.value;if(!this.isPure(Re,E))return!1}return!0}else return s$n(m)?OAt(m.tag,"String.raw")&&!this.hasBinding("String",{noGlobals:!0})&&this.isPure(m.quasi,E):zzn(m)?!m.compu
+  Occurrence 18 at index 4258416:
+    eturn!0}else return s$n(m)?OAt(m.tag,"String.raw")&&!this.hasBinding("String",{noGlobals:!0})&&this.isPure(m.quasi,E):zzn(m)?!m.computed&&LT(m.object)&&m.object.name==="Symbol"&&LT(m.property)&&m.property.name!=="for"&&!this.hasBinding("Symbol",{noGlobals:
+  Occurrence 19 at index 4396120:
+    oa(v.callee))h.unshift(v),h.push(boa());else if(Roa(v,S))h.unshift(v),h.push(ENe(v.left));else if(S.isPure(v,!0))h.push(v);else{m.isMethod({computed:!0,key:v})&&(S=S.parent);var T=S.generateDeclaredUidIdentifier();h.unshift(bNe(coa("=",ENe(T),v))),h.push(b
+  Occurrence 20 at index 4786860:
+    .properties.length;S++){var T=m.properties[S];if(Ii(T))break;var _=T.key;if(T.computed&&!this.scope.isPure(_)){var B=this.scope.generateUidIdentifierBasedOnNode(_);this.nodes.push(this.buildVariableDeclaration(B,_)),v||(v=m=Object.assign({},m,{properties:m
+  (and 19 more occurrences...)
+
+Match found for "isPure" in file: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\main.js
+  Occurrence 1 at index 68027:
+    ontext=le,this.refs=V,this.updater=Re||F}var D=w.prototype=new x;D.constructor=w,S(D,N.prototype),D.isPureReactComponent=!0;var B=Array.isArray,G=Object.prototype.hasOwnProperty,Z={current:null},L={key:!0,ref:!0,__self:!0,__source:!0};function W(ie,le,Re){
+  Occurrence 2 at index 2065643:
+    node_modules/preact/compat/dist/compat.mjs"(){Zae(),Zae(),rOr(),rOr(),_Fe=Fh,(TFe.prototype=new YR).isPureReactComponent=!0,TFe.prototype.shouldComponentUpdate=function(e,t){return iut(this.props,e)||iut(this.state,t)},dut=wl.__b,wl.__b=function(e){e.type&
+  Occurrence 3 at index 6278268:
+    n:OD,isPlaceholder:NV,isPlaceholderType:_n,isPrivate:Wy,isPrivateName:ca,isProgram:oi,isProperty:jX,isPureish:vR,isQualifiedTypeIdentifier:yp,isRecordExpression:z$,isReferenced:Vee,isRegExpLiteral:pu,isRegexLiteral:KD,isRestElement:Hi,isRestProperty:Oy,isR
+  Occurrence 4 at index 6736341:
+    !((l=this.node)!=null&&l.loc)}function Kui(){return!this.isUser()}function zui(l){return this.scope.isPure(this.node,l)}function $ui(){var l=this.node;return Cui(l)?!0:Iui(l)?l.importKind==="type"||l.importKind==="typeof":Fui(l)?l.exportKind==="type":xui(l
+  Occurrence 5 at index 6737271:
+    dentifier:Oui,isBlockScoped:jui,isExpression:Yui,isFlow:$ui,isForAwaitStatement:tci,isGenerated:Kui,isPure:zui,isReferenced:Jui,isReferencedIdentifier:Xui,isReferencedMemberExpression:Wui,isRestProperty:qui,isScope:Mui,isSpreadProperty:eci,isStatement:Pui,
+  Occurrence 6 at index 6754979:
+    e(m=m.parent);return!1},h.hasReference=function(g){return!!this.getProgramParent().references[g]},h.isPure=function(g,m){if(JB(g)){var b=this.getBinding(g.name);return b?m?b.constant:!0:!1}else{if(Trr(g)||Wci(g)||Drr(g)||Oci(g))return!0;if(Eci(g)){var A;re
+  Occurrence 7 at index 6755160:
+    t:!0:!1}else{if(Trr(g)||Wci(g)||Drr(g)||Oci(g))return!0;if(Eci(g)){var A;return g.superClass&&!this.isPure(g.superClass,m)||((A=g.decorators)==null?void 0:A.length)>0?!1:this.isPure(g.body,m)}else if(bci(g)){for(var C=R(g.body),I;!(I=C()).done;){var T=I.va
+  Occurrence 8 at index 6755235:
+    turn g.superClass&&!this.isPure(g.superClass,m)||((A=g.decorators)==null?void 0:A.length)>0?!1:this.isPure(g.body,m)}else if(bci(g)){for(var C=R(g.body),I;!(I=C()).done;){var T=I.value;if(!this.isPure(T,m))return!1}return!0}else{if(mci(g))return this.isPur
+  Occurrence 9 at index 6755329:
+    :this.isPure(g.body,m)}else if(bci(g)){for(var C=R(g.body),I;!(I=C()).done;){var T=I.value;if(!this.isPure(T,m))return!1}return!0}else{if(mci(g))return this.isPure(g.left,m)&&this.isPure(g.right,m);if(Nrr(g)||g?.type==="TupleExpression"){for(var _=R(g.elem
+  Occurrence 10 at index 6755386:
+    ),I;!(I=C()).done;){var T=I.value;if(!this.isPure(T,m))return!1}return!0}else{if(mci(g))return this.isPure(g.left,m)&&this.isPure(g.right,m);if(Nrr(g)||g?.type==="TupleExpression"){for(var _=R(g.elements),U;!(U=_()).done;){var H=U.value;if(H!==null&&!this.
+  Occurrence 11 at index 6755409:
+     T=I.value;if(!this.isPure(T,m))return!1}return!0}else{if(mci(g))return this.isPure(g.left,m)&&this.isPure(g.right,m);if(Nrr(g)||g?.type==="TupleExpression"){for(var _=R(g.elements),U;!(U=_()).done;){var H=U.value;if(H!==null&&!this.isPure(H,m))return!1}re
+  Occurrence 12 at index 6755542:
+    ype==="TupleExpression"){for(var _=R(g.elements),U;!(U=_()).done;){var H=U.value;if(H!==null&&!this.isPure(H,m))return!1}return!0}else if(Nci(g)||g?.type==="RecordExpression"){for(var z=R(g.properties),ne;!(ne=z()).done;){var de=ne.value;if(!this.isPure(de
+  Occurrence 13 at index 6755689:
+    ?.type==="RecordExpression"){for(var z=R(g.properties),ne;!(ne=z()).done;){var de=ne.value;if(!this.isPure(de,m))return!1}return!0}else if(Sci(g)){var ce;return!(g.computed&&!this.isPure(g.key,m)||((ce=g.decorators)==null?void 0:ce.length)>0)}else if(Ici(g
+  Occurrence 14 at index 6755769:
+    e=ne.value;if(!this.isPure(de,m))return!1}return!0}else if(Sci(g)){var ce;return!(g.computed&&!this.isPure(g.key,m)||((ce=g.decorators)==null?void 0:ce.length)>0)}else if(Ici(g)){var pe;return!(g.computed&&!this.isPure(g.key,m)||((pe=g.decorators)==null?vo
+  Occurrence 15 at index 6755881:
+    ,m)||((ce=g.decorators)==null?void 0:ce.length)>0)}else if(Ici(g)){var pe;return!(g.computed&&!this.isPure(g.key,m)||((pe=g.decorators)==null?void 0:pe.length)>0||(Xci(g)||g.static)&&g.value!==null&&!this.isPure(g.value,m))}else{if(Dci(g))return this.isPur
+  Occurrence 16 at index 6755986:
+    e(g.key,m)||((pe=g.decorators)==null?void 0:pe.length)>0||(Xci(g)||g.static)&&g.value!==null&&!this.isPure(g.value,m))}else{if(Dci(g))return this.isPure(g.argument,m);if(wrr(g)){for(var Ee=R(g.expressions),Fe;!(Fe=Ee()).done;){var Ae=Fe.value;if(!this.isPu
+  Occurrence 17 at index 6756032:
+    .length)>0||(Xci(g)||g.static)&&g.value!==null&&!this.isPure(g.value,m))}else{if(Dci(g))return this.isPure(g.argument,m);if(wrr(g)){for(var Ee=R(g.expressions),Fe;!(Fe=Ee()).done;){var Ae=Fe.value;if(!this.isPure(Ae,m))return!1}return!0}else return _ci(g)?
+  Occurrence 18 at index 6756138:
+    (g.argument,m);if(wrr(g)){for(var Ee=R(g.expressions),Fe;!(Fe=Ee()).done;){var Ae=Fe.value;if(!this.isPure(Ae,m))return!1}return!0}else return _ci(g)?_rr(g.tag,"String.raw")&&!this.hasBinding("String",{noGlobals:!0})&&this.isPure(g.quasi,m):Fci(g)?!g.compu
+  Occurrence 19 at index 6756261:
+    eturn!0}else return _ci(g)?_rr(g.tag,"String.raw")&&!this.hasBinding("String",{noGlobals:!0})&&this.isPure(g.quasi,m):Fci(g)?!g.computed&&JB(g.object)&&g.object.name==="Symbol"&&JB(g.property)&&g.property.name!=="for"&&!this.hasBinding("Symbol",{noGlobals:
+  Occurrence 20 at index 6894035:
+    Ei(A.callee))h.unshift(A),h.push(YEi());else if(MEi(A,C))h.unshift(A),h.push(HOe(A.left));else if(C.isPure(A,!0))h.push(A);else{g.isMethod({computed:!0,key:A})&&(C=C.parent);var I=C.generateDeclaredUidIdentifier();h.unshift(KOe(UEi("=",HOe(I),A))),h.push(K
+  (and 19 more occurrences...)
+
+Match found for "corrupt" in file: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\main.js
+  Occurrence 1 at index 12898790:
+    oString())}catch(r){if(console.error(`Error reading NLS messages file ${t}: ${r}`),e?.languagePack?.corruptMarkerFile)try{await ier.promises.writeFile(e.languagePack.corruptMarkerFile,"corrupted")}catch(n){console.error(`Error writing corrupted NLS marker f
+  Occurrence 2 at index 12898856:
+    ile ${t}: ${r}`),e?.languagePack?.corruptMarkerFile)try{await ier.promises.writeFile(e.languagePack.corruptMarkerFile,"corrupted")}catch(n){console.error(`Error writing corrupted NLS marker file: ${n}`)}if(e?.defaultMessagesFile&&e.defaultMessagesFile!==t)t
+  Occurrence 3 at index 12898875:
+    .languagePack?.corruptMarkerFile)try{await ier.promises.writeFile(e.languagePack.corruptMarkerFile,"corrupted")}catch(n){console.error(`Error writing corrupted NLS marker file: ${n}`)}if(e?.defaultMessagesFile&&e.defaultMessagesFile!==t)try{globalThis._VSCO
+  Occurrence 4 at index 12898925:
+    mises.writeFile(e.languagePack.corruptMarkerFile,"corrupted")}catch(n){console.error(`Error writing corrupted NLS marker file: ${n}`)}if(e?.defaultMessagesFile&&e.defaultMessagesFile!==t)try{globalThis._VSCODE_NLS_MESSAGES=JSON.parse((await ier.promises.rea
+  Occurrence 5 at index 12900017:
+    d=`${o.hash}.${s}`,f=la(r,"clp",d),p=la(f,n),E=la(p,"nls.messages.json"),R=la(f,"tcf.json"),F=la(f,"corrupted.info");await as.exists(F)&&await W5.rm(f,{recursive:!0,force:!0,maxRetries:3});const S={userLocale:e,osLocale:t,resolvedLanguage:s,defaultMessagesF
+  Occurrence 6 at index 12900258:
+    defaultMessagesFile:la(a,"nls.messages.json"),languagePack:{translationsConfigFile:R,messagesFile:E,corruptMarkerFile:F},locale:e,availableLanguages:{"*":s},_languagePackId:d,_languagePackSupport:!0,_translationsConfigFile:R,_cacheRoot:f,_resolvedLanguagePa
+  Occurrence 7 at index 12900433:
+    _languagePackSupport:!0,_translationsConfigFile:R,_cacheRoot:f,_resolvedLanguagePackCoreLocation:p,_corruptedFile:F};if(await as.exists(E))return Veo(p).catch(()=>{}),nd("code/didGenerateNls"),S;const[V,N,x]=await Promise.all([W5.readFile(la(a,"nls.keys.jso
+
+Match found for "isPure" in file: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\code\electron-utility\sharedProcess\sharedProcessMain.js
+  Occurrence 1 at index 391830:
+    context=J,this.refs=v,this.updater=se||p}var W=C.prototype=new S;W.constructor=C,_(W,I.prototype),W.isPureReactComponent=!0;var H=Array.isArray,F=Object.prototype.hasOwnProperty,M={current:null},D={key:!0,ref:!0,__self:!0,__source:!0};function k(x,J,se){va
+
+Match found for "isPure" in file: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\code\node\cliProcessMain.js
+  Occurrence 1 at index 401656:
+    .context=z,this.refs=P,this.updater=Z||g}var W=C.prototype=new O;W.constructor=C,m(W,y.prototype),W.isPureReactComponent=!0;var x=Array.isArray,k=Object.prototype.hasOwnProperty,T={current:null},G={key:!0,ref:!0,__self:!0,__source:!0};function M(U,z,Z){var
+
+Match found for "isPure" in file: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\platform\terminal\node\ptyHostMain.js
+  Occurrence 1 at index 384661:
+    .context=V,this.refs=y,this.updater=j||m}var Y=p.prototype=new g;Y.constructor=p,M(Y,b.prototype),Y.isPureReactComponent=!0;var F=Array.isArray,T=Object.prototype.hasOwnProperty,S={current:null},U={key:!0,ref:!0,__self:!0,__source:!0};function H(P,V,j){var
+
+Match found for "isPure" in file: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\api\node\extensionHostProcess.js
+  Occurrence 1 at index 214051:
+    ontext=se,this.refs=b,this.updater=Ae||A}var M=N.prototype=new I;M.constructor=N,g(M,S.prototype),M.isPureReactComponent=!0;var L=Array.isArray,W=Object.prototype.hasOwnProperty,X={current:null},J={key:!0,ref:!0,__self:!0,__source:!0};function H(x,se,Ae){v
+
+Match found for "isPure" in file: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\api\worker\extensionHostWorkerMain.js
+  Occurrence 1 at index 102105:
+    context=j,this.refs=b,this.updater=ee||f}var J=N.prototype=new V;J.constructor=N,A(J,p.prototype),J.isPureReactComponent=!0;var B=Array.isArray,D=Object.prototype.hasOwnProperty,X={current:null},y={key:!0,ref:!0,__self:!0,__source:!0};function M(w,j,ee){va
+
+Match found for "_isPure" in file: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Occurrence 1 at index 26737569:
+    tService=s,this.checksumService=o,this.logService=a,this.storage=new Ith(i),this.isPurePromise=this._isPure(),this._compute()}async _compute(){const{isPure:e}=await this.isPure();if(e)return;this.logService.warn(`  ------------------------------------------
+  Occurrence 2 at index 26737945:
+    rage.get();i?.dontShowPrompt&&i.commit===this.productService.commit||this._showNotification()}async _isPure(){const e=this.productService.checksums||{};await this.lifecycleService.when(4);const i=await Promise.all(Object.keys(e).map(r=>this._resolve(r,e[r])
+
+Match found for "isPure" in file: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Occurrence 1 at index 2773215:
+    ontext=pe,this.refs=E,this.updater=Ee||v}var F=x.prototype=new A;F.constructor=x,b(F,S.prototype),F.isPureReactComponent=!0;var T=Array.isArray,k=Object.prototype.hasOwnProperty,V={current:null},L={key:!0,ref:!0,__self:!0,__source:!0};function M(he,pe,Ee){
+  Occurrence 2 at index 7386430:
+    lReservedLineCount:this.model.minReservedLineCount.read(r),targetTextModel:s,range:a,isSingleLine:l,isPureRemove:u,useWhitespaceOnlyDecoration:this.model.useWhitespaceOnlyDecoration.read(r)}}),this.decorations=li(this,r=>{const s=this.uiState.read(r);if(!s
+  Occurrence 3 at index 7386822:
+    escription:"inline-edit-hidden"}}),s.range){const a=[];if(s.isSingleLine)a.push(s.range);else if(!s.isPureRemove){const l=s.range.endLineNumber-s.range.startLineNumber;for(let u=0;u<l;u++){const d=s.range.startLineNumber+u,h=s.targetTextModel.getLineFirstN
+  Occurrence 4 at index 7387182:
+    }for(const l of a)o.push({range:l,options:this._deletionDecoration})}if(s.range&&!s.isSingleLine&&s.isPureRemove){const a=new ye(s.range.startLineNumber,1,s.range.endLineNumber-1,1);o.push({range:a,options:Qzi})}for(const a of s.inlineTexts){let l=a.previe
+  Occurrence 5 at index 7387746:
+    nalLinesWidget=this._register(new H$s(this._editor,li(r=>{const s=this.uiState.read(r);return s&&!s.isPureRemove&&(s.isSingleLine||!s.range)?{lineNumber:s.lineNumber,additionalLines:s.additionalLines.map(o=>({content:Gb.createEmpty(o.content,this.languageS
+  Occurrence 6 at index 7602840:
+    displayName||t.name)+")",n.prototype.isReactComponent=!0,n.__f=!0,n.type=t,n}(H5t.prototype=new bP).isPureReactComponent=!0,H5t.prototype.shouldComponentUpdate=function(t,e){return Zrn(this.props,t)||Zrn(this.state,e)};var Fto=hf.__b;hf.__b=function(t){t.t
+  Occurrence 7 at index 8589926:
+    be,isPlaceholder:cee,isPlaceholderType:Ms,isPrivate:V4,isPrivateName:Uo,isProgram:Ja,isProperty:Yke,isPureish:IO,isQualifiedTypeIdentifier:GI,isRecordExpression:JHe,isReferenced:CJe,isRegExpLiteral:Nh,isRegexLiteral:ybe,isRestElement:Vc,isRestProperty:L4,i
+  Occurrence 8 at index 9048966:
+    !((m=this.node)!=null&&m.loc)}function xtl(){return!this.isUser()}function Dtl(m){return this.scope.isPure(this.node,m)}function Ftl(){var m=this.node;return ntl(m)?!0:otl(m)?m.importKind==="type"||m.importKind==="typeof":ttl(m)?m.exportKind==="type":atl(m
+  Occurrence 9 at index 9049896:
+    dentifier:Etl,isBlockScoped:Rtl,isExpression:_tl,isFlow:Ftl,isForAwaitStatement:Ntl,isGenerated:xtl,isPure:Dtl,isReferenced:wtl,isReferencedIdentifier:btl,isReferencedMemberExpression:ytl,isRestProperty:Ttl,isScope:Ctl,isSpreadProperty:ktl,isStatement:Stl,
+  Occurrence 10 at index 9067670:
+    e(C=C.parent);return!1},y.hasReference=function(_){return!!this.getProgramParent().references[_]},y.isPure=function(_,C){if(pye(_)){var w=this.getBinding(_.name);return w?C?w.constant:!0:!1}else{if(cfr(_)||yil(_)||dfr(_)||Eil(_))return!0;if(Ktl(_)){var D;r
+  Occurrence 11 at index 9067852:
+    t:!0:!1}else{if(cfr(_)||yil(_)||dfr(_)||Eil(_))return!0;if(Ktl(_)){var D;return _.superClass&&!this.isPure(_.superClass,C)||((D=_.decorators)==null?void 0:D.length)>0?!1:this.isPure(_.body,C)}else if(ztl(_)){for(var N=g(_.body),P;!(P=N()).done;){var U=P.va
+  Occurrence 12 at index 9067927:
+    turn _.superClass&&!this.isPure(_.superClass,C)||((D=_.decorators)==null?void 0:D.length)>0?!1:this.isPure(_.body,C)}else if(ztl(_)){for(var N=g(_.body),P;!(P=N()).done;){var U=P.value;if(!this.isPure(U,C))return!1}return!0}else{if(Jtl(_))return this.isPur
+  Occurrence 13 at index 9068021:
+    :this.isPure(_.body,C)}else if(ztl(_)){for(var N=g(_.body),P;!(P=N()).done;){var U=P.value;if(!this.isPure(U,C))return!1}return!0}else{if(Jtl(_))return this.isPure(_.left,C)&&this.isPure(_.right,C);if(sfr(_)||_?.type==="TupleExpression"){for(var G=g(_.elem
+  Occurrence 14 at index 9068078:
+    ),P;!(P=N()).done;){var U=P.value;if(!this.isPure(U,C))return!1}return!0}else{if(Jtl(_))return this.isPure(_.left,C)&&this.isPure(_.right,C);if(sfr(_)||_?.type==="TupleExpression"){for(var G=g(_.elements),j;!(j=G()).done;){var ie=j.value;if(ie!==null&&!thi
+  Occurrence 15 at index 9068101:
+     U=P.value;if(!this.isPure(U,C))return!1}return!0}else{if(Jtl(_))return this.isPure(_.left,C)&&this.isPure(_.right,C);if(sfr(_)||_?.type==="TupleExpression"){for(var G=g(_.elements),j;!(j=G()).done;){var ie=j.value;if(ie!==null&&!this.isPure(ie,C))return!1
+  Occurrence 16 at index 9068236:
+    e==="TupleExpression"){for(var G=g(_.elements),j;!(j=G()).done;){var ie=j.value;if(ie!==null&&!this.isPure(ie,C))return!1}return!0}else if(sil(_)||_?.type==="RecordExpression"){for(var ae=g(_.properties),ve;!(ve=ae()).done;){var Ae=ve.value;if(!this.isPure
+  Occurrence 17 at index 9068386:
+    type==="RecordExpression"){for(var ae=g(_.properties),ve;!(ve=ae()).done;){var Ae=ve.value;if(!this.isPure(Ae,C))return!1}return!0}else if(iil(_)){var Re;return!(_.computed&&!this.isPure(_.key,C)||((Re=_.decorators)==null?void 0:Re.length)>0)}else if(oil(_
+  Occurrence 18 at index 9068466:
+    e=ve.value;if(!this.isPure(Ae,C))return!1}return!0}else if(iil(_)){var Re;return!(_.computed&&!this.isPure(_.key,C)||((Re=_.decorators)==null?void 0:Re.length)>0)}else if(oil(_)){var De;return!(_.computed&&!this.isPure(_.key,C)||((De=_.decorators)==null?vo
+  Occurrence 19 at index 9068578:
+    ,C)||((Re=_.decorators)==null?void 0:Re.length)>0)}else if(oil(_)){var De;return!(_.computed&&!this.isPure(_.key,C)||((De=_.decorators)==null?void 0:De.length)>0||(bil(_)||_.static)&&_.value!==null&&!this.isPure(_.value,C))}else{if(dil(_))return this.isPur
+  Occurrence 20 at index 9068683:
+    e(_.key,C)||((De=_.decorators)==null?void 0:De.length)>0||(bil(_)||_.static)&&_.value!==null&&!this.isPure(_.value,C))}else{if(dil(_))return this.isPure(_.argument,C);if(lfr(_)){for(var Le=g(_.expressions),Ye;!(Ye=Le()).done;){var Ue=Ye.value;if(!this.isPu
+  (and 44 more occurrences...)
+
+Match found for "checksums" in file: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Occurrence 1 at index 26737983:
+    ===this.productService.commit||this._showNotification()}async _isPure(){const e=this.productService.checksums||{};await this.lifecycleService.when(4);const i=await Promise.all(Object.keys(e).map(r=>this._resolve(r,e[r])));let n=!0;for(let r=0,s=i.length;r<s;r
+
+Match found for "corrupt" in file: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Occurrence 1 at index 21686286:
+    ={version:1,entries:{}}),this.indexCache}catch(i){return this.reportError("invalidIndexJSON",`Index corrupt: ${e}`,i),this.indexCache={version:1,entries:{}},this.indexCache}}async getIndex(){return this.storeQueue.queue(async()=>this.internalGetIndex().entr
+  Occurrence 2 at index 26544470:
+    l===-1){this.logService.trace(`Backup: Could not find meta end marker in ${i}. The file is probably corrupt (filesize: ${s.size}).`);return}const u=a.slice(0,l).toString();let d;const h=u.indexOf(Pq.PREAMBLE_META_SEPARATOR);h!==-1&&(d=this.parsePreambleMeta
