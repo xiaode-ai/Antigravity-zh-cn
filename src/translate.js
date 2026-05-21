@@ -75,6 +75,8 @@ export function translate(config, translations, translationsPath) {
     return false;
   }
 
+  const originalContent = content; // 保留最原始备份内容，用于识别映射是否在源码中根本不存在
+
   // 3. 执行翻译对照替换
   // 最佳实践：按照原始代码段 (old) 的长度进行由长到短的降序排序。
   // 这能强力确保包含子短语的长句（如长反馈文本段落）在子短语（如 "Allow", "Deny", "Actual behavior"）被翻译前，
@@ -83,6 +85,7 @@ export function translate(config, translations, translationsPath) {
 
   console.log(`[INFO] 开始应用汉化词典 (共载入 ${sortedTranslations.length} 组匹配，已智能完成长度降序重排)...`);
   let replacedCount = 0;
+  const unappliedAbsolute = []; // 源码中完全不存在的失效映射
   
   for (let i = 0; i < sortedTranslations.length; i++) {
     const pair = sortedTranslations[i];
@@ -90,14 +93,28 @@ export function translate(config, translations, translationsPath) {
       content = content.replaceAll(pair.old, pair.new);
       replacedCount++;
     } else {
-      // 部分由于容错设计而放入的条目（如单引号/双引号冗余），若没找到仅输出 WARN
-      // 在命令行中打印精简的提示
-      const snippet = pair.old.substring(0, 30).replace(/\n/g, ' ');
-      // console.log(`[WARN] 未匹配到源文本: "${snippet}..."`);
+      // 检查该词条是否在原始源码中就完全不存在
+      if (!originalContent.includes(pair.old)) {
+        unappliedAbsolute.push(pair);
+      } else {
+        // 如果原始代码里有，但当前 content 中已经找不到了，
+        // 说明它作为子词条已经被前序更长的词条合并替换（即已汉化）。计入成功数。
+        replacedCount++;
+      }
     }
   }
 
   console.log(`[INFO] 替换完毕，成功应用 ${replacedCount} / ${sortedTranslations.length} 组映射。`);
+
+  if (unappliedAbsolute.length > 0) {
+    console.log(`\n\x1b[33m[WARN] 发现 ${unappliedAbsolute.length} 组失效的映射 (源码中未找到对应的英文词条，可能已过期)：\x1b[0m`);
+    unappliedAbsolute.forEach((pair, index) => {
+      const snippet = pair.old.substring(0, 50).replace(/\n/g, ' ');
+      console.log(`  ▶ [失效 ${index + 1}] "${snippet}${pair.old.length > 50 ? '...' : ''}"`);
+    });
+    console.log(`\x1b[33m[TIP] 建议根据需要，从 translations.json 中清理这些已失效的词条。\x1b[0m\n`);
+  }
+
 
   // ===== 🛡️ 安全写入阶段：先写临时文件，校验通过后再替换 =====
   console.log(`[SAFEGUARD] 正在执行安全写入（暂存 → 校验 → 替换）...`);

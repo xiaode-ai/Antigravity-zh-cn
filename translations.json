@@ -184,10 +184,6 @@
     "new": "label:\"启用沙箱模式（预览版）\",description:\"限制智能体工具在安全、隔离的本地沙箱中运行。\""
   },
   {
-    "old": "label:\"Artifact Review Policy\",description:\"Specifies Agent's behavior when asking for review on artifacts, which are documents it creates to enable a richer conversation experience.\",value:e==='turbo'?\"Always Proceed\":\"Always Ask\"",
-    "new": "label:\"产物审核策略\",description:\"指定智能体在请求审核产物时的行为，产物是它创建的用于提供更丰富对话体验的文档。\",value:e==='turbo'?\"始终执行\":\"每次询问\""
-  },
-  {
     "old": "label:\"Artifact Review Policy\",description:\"Specifies Agent's behavior when asking for review on artifacts, which are documents it creates to enable a richer conversation experience.\",value:e===\"turbo\"?\"Always Proceed\":\"Always Ask\"",
     "new": "label:\"产物审核策略\",description:\"指定智能体在请求审核产物时的行为，产物是它创建的用于提供更丰富对话体验的文档。\",value:e===\"turbo\"?\"始终执行\":\"每次询问\""
   },
@@ -1668,48 +1664,16 @@
     "new": "\"复制\""
   },
   {
-    "old": "\"Copy Link\"",
-    "new": "\"复制链接\""
-  },
-  {
-    "old": "\"Copy command\"",
-    "new": "\"复制命令\""
-  },
-  {
-    "old": "\"Copy URL\"",
-    "new": "\"复制 URL\""
-  },
-  {
     "old": "\"Create Project\"",
     "new": "\"创建项目\""
-  },
-  {
-    "old": "\"Create Task\"",
-    "new": "\"创建任务\""
-  },
-  {
-    "old": "\"Delete task\"",
-    "new": "\"删除任务\""
-  },
-  {
-    "old": "\"Done\"",
-    "new": "\"完成\""
   },
   {
     "old": "\"Download\"",
     "new": "\"下载\""
   },
   {
-    "old": "\"Enable Auto-run\"",
-    "new": "\"启用自动运行\""
-  },
-  {
     "old": "\"Expand\"",
     "new": "\"展开\""
-  },
-  {
-    "old": "\"Collapse\"",
-    "new": "\"折叠\""
   },
   {
     "old": "\"Filter\"",
@@ -1720,16 +1684,8 @@
     "new": "\"打开设置\""
   },
   {
-    "old": "\"Open Terminal\"",
-    "new": "\"打开终端\""
-  },
-  {
     "old": "\"Run\"",
     "new": "\"运行\""
-  },
-  {
-    "old": "\"Run command\"",
-    "new": "\"运行命令\""
   },
   {
     "old": "\"Search\"",
@@ -1746,10 +1702,6 @@
   {
     "old": "\"Update\"",
     "new": "\"更新\""
-  },
-  {
-    "old": "\"Upload\"",
-    "new": "\"上传\""
   },
   {
     "old": "label:\"Error\",textColor:\"text-red-500\"",
@@ -1842,10 +1794,6 @@
   {
     "old": "label:\"Deny List Terminal Commands\",description:\"Agent asks for permission",
     "new": "label:\"终端命令黑名单\",description:\"智能体在执行黑名单条目匹配的命令前会请求许可"
-  },
-  {
-    "old": "\" (except those in the Deny list).\"",
-    "new": "\"（在黑名单中的除外）。\""
   },
   {
     "old": "rightElement:p(lo,{onClick:()=>{re(\"file\")},children:\"Open\"})",
@@ -2018,10 +1966,6 @@
   {
     "old": "children:\"Submitting...\"})]}):\"Submit\"",
     "new": "children:\"提交中...\"})]}):\"提交\""
-  },
-  {
-    "old": "\"Attaching logs requires an email address.\"",
-    "new": "\"附加日志需要提供电子邮件地址。\""
   },
   {
     "old": "p(qne,{value:e.mode,options:[\"allow\",\"ask\",\"deny\"],displayResolver:g=>g,onSelect:g=>{r(t,e.value,g)}})",
