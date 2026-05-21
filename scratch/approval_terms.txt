@@ -1,0 +1,353 @@
+=== 审批与权限相关 UI 字段抓取 ===
+
+--- 词条: "Approve" ---
+[匹配 1] (索引 8522203):
+  Code: 5 opacity-40",children:e.keybindingLabel})]})]})},jEi=({onAddToWhitelist:e,onDenyAddToWhiteList:t,onApproveJustThisStep:r,onShowWhitelist:n,url:a,error:i,clearError:s})=>{let o=Ft(null),u=Ve(()=>{try{return
+[匹配 2] (索引 8920252):
+  Code: n:{case:"approvalInteraction",value:At(cei,{confirm:Z})}}))},[w,k,i.events]),X=U?p(n1t,{promptText:"Approve?",handleUserInteraction:G}):null,Y=e.args?.Action?.toLowerCase(),O=o==="manage_task"&&Y==="send_inp
+[匹配 3] (索引 10211957):
+  Code: nded px-1.5 py-px bg-primary text-primary-foreground hover:opacity-90 transition-opacity",children:"Approve"}),p("button",{onClick:X=>{i(ds.STEP_REJECT,"subagent_deny_button"),G(X)},className:"text-xs cursor
+
+--- 词条: "Reject" ---
+[匹配 1] (索引 2762385):
+  Code: atus:"pending"}})),s=dI(t+"/rejected",(u,d,f,g,b)=>({payload:g,error:(n&&n.serializeError||mxa)(u||"Rejected"),meta:{...b||{},arg:f,requestId:d,rejectedWithValue:!!g,requestStatus:"rejected",aborted:u?.name
+[匹配 2] (索引 8919277):
+  Code: {children:e}),p("div",{className:"flex gap-2 ml-auto",children:[p(lo,{onClick:()=>{t(!1)},children:"Reject"}),p(Eo,{onClick:()=>{t(!0)},children:"Accept"})]})]})},h9i=({step:e,status:t,metadata:r,requestedI
+[匹配 3] (索引 8954052):
+  Code: L content?"}),p("div",{className:"flex gap-2 ml-auto",children:[p(lo,{onClick:()=>{n(!1)},children:"Reject"}),p(Eo,{onClick:()=>{n(!0)},children:"Accept"})]})]})},iFi=({step:e,status:t,sourceTrajectoryStepI
+[匹配 4] (索引 8954344):
+  Code: =r;return n?.interaction?.case==="permission"?null:p(aFi,{trajectoryId:i,stepIndex:a})}return e.userRejected?p("span",{className:"text-secondary-foreground truncate",children:"Read URL rejected"}):null},sFi
+[匹配 5] (索引 8958233):
+  Code: er flex items-center justify-between",children:[(()=>{let F=e.commandLine||"terminal",C=nfn(t,e.userRejected),N=t===On.WAITING?"?":"";return p(Es,{prefix:C,content:p("span",{className:"truncate",children:[p
+[匹配 6] (索引 8963226):
+  Code: ,onToggle:N,supplementaryView:U,permissionView:null,cta:null}):p(So,{title:p(Es,{prefix:nfn(t,r.userRejected),content:p("span",{className:"truncate font-mono text-[13px] mt-px ml-px",children:r.commandLine|
+[匹配 7] (索引 8967972):
+  Code: dInteraction:i})]})};function yFi(e,t){let r=e.terminate?"termination request":"input";return e.userRejected?`Rejected sending ${r} to command`:t===On.DONE?`Sent ${r} to command`:t===On.WAITING?`Suggested s
+[匹配 8] (索引 8968354):
+  Code: i,error:s,clearError:o}=F4();return p(So,{title:p(Es,{content:a}),loading:za(t),errorView:r&&!e.userRejected?p("div",{className:"flex flex-col gap-1",children:[p("span",{className:"text-sm",children:"Error
+[匹配 9] (索引 9540278):
+  Code: n.acknowledgementScope===fW.ALL){let i=p("div",{children:p("span",{children:[n.isAccept?"Accepted":"Rejected"," all changes to the below files"]})});return p(SB,{title:i,children:n.codeAcknowledgementInfos.
+[匹配 10] (索引 9540890):
+  Code: ("div",{className:"flex flex-row items-center",children:[p("span",{children:[n.isAccept?"Accepted":"Rejected"," ",i]})," ",p(uR,{fileUri:s.uriPath,getFileIcon:r?.getFileIcon,openUri:(o,u)=>r?.openFile(o,voi
+[匹配 11] (索引 9634294):
+  Code: d,expandedContent:()=>p("div",{className:"flex flex-col",children:e?.view})}},MDi=({onAcceptAll:e,onRejectAll:t})=>{let{logEvent:r}=jo(),{cascadeContext:{state:{agentStateProvider:n}}}=jn();return p("div",{
+[匹配 12] (索引 9634782):
+  Code: x:s?(s-1).toString():""}},"system-generated trajectory/step identifiers")),await t()})()},children:"Reject all"}),p("span",{className:"hover:bg-secondary cursor-pointer select-none rounded bg-primary px-1 t
+[匹配 13] (索引 9637211):
+  Code: ,{text:f}),actionsContent:()=>s.length===0?p(W9e,{}):p(MDi,{onAcceptAll:async()=>{await d(!0,!0)},onRejectAll:async()=>{await d(!1,!1)}}),expandedContent:s.length===0?void 0:()=>p(JDi,{fileDiffData:s})}},jD
+[匹配 14] (索引 10264068):
+  Code: a-tooltip-id":O,disabled:k!==null,children:[k===Of.KILL&&p(ef,{size:12,className:"flex-shrink-0"}),"Reject All"]}),p(_n,{id:O,delayShow:300,place:"bottom",children:"Reject all generated responses and revert
+[匹配 15] (索引 10264133):
+  Code: ze:12,className:"flex-shrink-0"}),"Reject All"]}),p(_n,{id:O,delayShow:300,place:"bottom",children:"Reject all generated responses and revert to the state before triggering battle mode."}),p("button",{onCli
+[匹配 16] (索引 12048923):
+  Code: d:"antigravity.cancelLogin"}},contextKeys:{CAN_ACCEPT_OR_REJECT_COMMAND:{id:"antigravity.canAcceptOrRejectCommand"},CAN_TRIGGER_TERMINAL_COMMAND_ACTION:{id:"antigravity.canTriggerTerminalCommandAction"},CAN
+[匹配 17] (索引 12049101):
+  Code: rTerminalCommandAction"},CAN_ACCEPT_OR_REJECT_ALL_CASCADE_EDITS_IN_FILE:{id:"antigravity.canAcceptOrRejectAllAgentEditsInFile"},CAN_ACCEPT_OR_REJECT_FOCUSED_DIFFZONE_HUNK:{id:"antigravity.canAcceptOrRejectF
+
+--- 词条: "Allow" ---
+[匹配 1] (索引 3034960):
+  Code: {const ht=sZr(u);if(typeof u=="string"&&!ht&&u.indexOf(":")>-1)try{return new URL(u),Cw(u,r.protocolAllowlist)?{...re,ref:n,href:void 0,...N&&{children:N},...V&&{target:V},...I&&{disabled:I},...x&&{style:x
+[匹配 2] (索引 3809747):
+  Code: ",PipelineTopicUnused:"Pipeline is in topic style but does not use topic reference.",PrimaryTopicNotAllowed:"Topic reference was used in a lexical context without topic binding.",PrimaryTopicRequiresSmartP
+[匹配 3] (索引 3955234):
+  Code: ature.",IndexSignatureHasStatic:"Index signatures cannot have the 'static' modifier.",InitializerNotAllowedInAmbientContext:"Initializers are not allowed in ambient contexts.",InvalidHeritageClauseType:fun
+[匹配 4] (索引 4046799):
+  Code: Unbound,R),this.registerTopicReference(),this.finishNode(E,"TopicReference")):(this.topicReferenceIsAllowedInCurrentContext()||this.raise(Nr.PrimaryTopicNotAllowed,R),this.registerTopicReference(),this.fin
+[匹配 5] (索引 4046855):
+  Code: (E,"TopicReference")):(this.topicReferenceIsAllowedInCurrentContext()||this.raise(Nr.PrimaryTopicNotAllowed,R),this.registerTopicReference(),this.finishNode(E,"PipelinePrimaryTopicReference"));throw this.r
+[匹配 6] (索引 8519113):
+  Code: ainerRef:n,handleChange:a}}function JEi({option:e}){return p(Jf.Option,{value:e.value,disabled:!e.isAllowed,className:({selected:t,active:r})=>Mt("cursor-pointer px-2 py-1 text-sm",t||r?"bg-muted":"",e.isA
+[匹配 7] (索引 8519217):
+  Code: wed,className:({selected:t,active:r})=>Mt("cursor-pointer px-2 py-1 text-sm",t||r?"bg-muted":"",e.isAllowed?t?"":"hover:bg-muted":"opacity-50 cursor-not-allowed"),children:p("div",{className:"flex flex-col
+[匹配 8] (索引 8519458):
+  Code: l}),e.description&&p("div",{className:"text-xs text-muted-foreground",children:e.description}),!e.isAllowed&&e.disabledReason&&p("span",{className:"text-xs text-muted-foreground italic mt-1",children:e.dis
+[匹配 9] (索引 8521306):
+  Code: t;return u&&o.observe(u),()=>o.disconnect()},[n]);let s=Ve(()=>[{value:"irrelevent",label:r.label,isAllowed:!0}],[r.label]);return a?p("div",{className:"flex flex-row items-center gap-x-2 min-w-0 max-w-ful
+[匹配 10] (索引 8522377):
+  Code: o=Ft(null),u=Ve(()=>{try{return new URL(a).hostname}catch{return a}},[a]),d=Ve(()=>({label:"Always Allow",onClick:()=>e()}),[e]),f=Ve(()=>({label:"Deny",onClick:()=>t()}),[t]),g=Ve(()=>({label:"Allow Once
+[匹配 11] (索引 8522472):
+  Code: ways Allow",onClick:()=>e()}),[e]),f=Ve(()=>({label:"Deny",onClick:()=>t()}),[t]),g=Ve(()=>({label:"Allow Once",onClick:()=>r()}),[r]);return p("div",{ref:o,className:"flex w-full flex-col gap-y-2 px-2 py-
+[匹配 12] (索引 8523349):
+  Code: ndInteraction:a})=>{let{cascadeContext:{layout:{isLexicalEditorFocused:i}},stepHandler:{addToBrowserAllowlist:s,openBrowserAllowlist:o}={}}=jn(),u=t!==void 0,d=pdt(Hsn),{trajectoryId:f,stepIndex:g,cascadeI
+[匹配 13] (索引 8523372):
+  Code: {cascadeContext:{layout:{isLexicalEditorFocused:i}},stepHandler:{addToBrowserAllowlist:s,openBrowserAllowlist:o}={}}=jn(),u=t!==void 0,d=pdt(Hsn),{trajectoryId:f,stepIndex:g,cascadeId:b}=e,y=de(I=>{I&&(I.s
+[匹配 14] (索引 8892673):
+  Code: -xs text-secondary-foreground",children:[p(qe,{name:"warning",className:"h-3 w-3 flex-none"}),"Site Allowlist"]}),p("div",{className:"flex items-start justify-between",children:[p("span",{className:"flex-1
+[匹配 15] (索引 8898266):
+  Code: ePathUri)return null;let b=h4(t.absolutePathUri,s.homeDir,s.workspaceUris),y=[{value:s1.ONCE,label:"Allow Once",isAllowed:!0}];return p("div",{className:"my-1 flex w-full flex-col gap-y-2",children:n?p(gre
+[匹配 16] (索引 8898280):
+  Code: n null;let b=h4(t.absolutePathUri,s.homeDir,s.workspaceUris),y=[{value:s1.ONCE,label:"Allow Once",isAllowed:!0}];return p("div",{className:"my-1 flex w-full flex-col gap-y-2",children:n?p(gre,{message:n,on
+[匹配 17] (索引 8899095):
+  Code: xt-secondary-foreground transition-[opacity] hover:text-foreground",children:"Deny"}),p(zon,{label:"Allow in Conversation",onClick:()=>g(!0,s1.CONVERSATION),subOptions:y,onSubOptionChange:F=>g(!0,F),header
+[匹配 18] (索引 8899202):
+  Code: n Conversation",onClick:()=>g(!0,s1.CONVERSATION),subOptions:y,onSubOptionChange:F=>g(!0,F),header:"Allow options"})]})]})})},L1n=({tokenCount:e})=>e?p("span",{className:"ml-1 flex items-center text-xs tex
+[匹配 19] (索引 8910109):
+  Code: 0px",className:"mb-1"})})]})})}function t9i(e){return Ve(()=>[{value:vh.DISABLED,label:"Disabled",isAllowed:!0},{value:vh.ALWAYS_ASK,label:"Ask first",isAllowed:!e,disabledReason:"JavaScript execution disa
+[匹配 20] (索引 8910162):
+  Code: Ve(()=>[{value:vh.DISABLED,label:"Disabled",isAllowed:!0},{value:vh.ALWAYS_ASK,label:"Ask first",isAllowed:!e,disabledReason:"JavaScript execution disabled in strict mode"},{value:vh.TURBO,label:"Always r
+[匹配 21] (索引 8910273):
+  Code: disabledReason:"JavaScript execution disabled in strict mode"},{value:vh.TURBO,label:"Always run",isAllowed:!e,disabledReason:"JavaScript execution disabled in strict mode"}],[e])}var r9i=({cascadeId:e,tra
+[匹配 22] (索引 8911507):
+  Code: ionPolicy?.(w),w===vh.TURBO&&y()},[i,y]),V=Ve(()=>({label:"Deny",onClick:F}),[F]),I=Ve(()=>({label:"Allow once",onClick:y}),[y]),x=Ve(()=>{if(!a)return null;try{return new URL(a).hostname}catch{return a}},
+[匹配 23] (索引 8911635):
+  Code: ,x=Ve(()=>{if(!a)return null;try{return new URL(a).hostname}catch{return a}},[a]),D=Ve(()=>({label:`Allow ${x}`,onClick:C,keybindingLabel:""}),[C,x]),U=Ft(null);return p("div",{className:"flex flex-col w-f
+[匹配 24] (索引 8912392):
+  Code: t,{children:[p(lo,{onClick:F,className:qW,children:"Deny"}),p(Eo,{onClick:y,className:qW,children:["Allow",o&&p("span",{className:"ml-0.5 text-muted-foreground",children:o})]})]})})]})]})},LC=Bs(({tokeniza
+[匹配 25] (索引 8957096):
+  Code: ldren:e.tooltipText})})]})};function lFi(e,t){return Ve(()=>[{value:rl.OFF,label:"Ask every time",isAllowed:t},{value:rl.EAGER,label:"Always run",isAllowed:t&&!e,disabledReason:t?"Disabled in strict mode":
+[匹配 26] (索引 8957144):
+  Code: turn Ve(()=>[{value:rl.OFF,label:"Ask every time",isAllowed:t},{value:rl.EAGER,label:"Always run",isAllowed:t&&!e,disabledReason:t?"Disabled in strict mode":"Requires limited-internet host."}],[e,t])}funct
+[匹配 27] (索引 9030227):
+  Code: edGlobalAttributes.has(e)?{policyAction:nf.KEEP}:this.globalAttributePolicies.get(e)||(this.globallyAllowedAttributePrefixes&&[...this.globallyAllowedAttributePrefixes].some(a=>e.indexOf(a)===0)?{policyAct
+[匹配 28] (索引 9030270):
+  Code: KEEP}:this.globalAttributePolicies.get(e)||(this.globallyAllowedAttributePrefixes&&[...this.globallyAllowedAttributePrefixes].some(a=>e.indexOf(a)===0)?{policyAction:nf.KEEP}:{policyAction:nf.DROP})}},nf;(
+[匹配 29] (索引 9188271):
+  Code: !1,screen:"Models"}],[Mr.CASCADE_ALLOWED_COMMANDS,{isProviderSetting:!0,screen:"Permissions",label:"Allow List Terminal Commands",description:"Agent auto-executes commands matched by an allow list entry."+
+[匹配 30] (索引 9191109):
+  Code: LES,{isProviderSetting:!0,screen:"Permissions",label:"Agent Non-Workspace File Access",description:"Allow Agent to view and edit files outside of the current workspace automatically. Use with caution: this
+[匹配 31] (索引 9191794):
+  Code: Type:"switch"}],[Mr.SANDBOX_ALLOW_NETWORK,{isProviderSetting:!0,screen:"Permissions",label:"Sandbox Allow Network",description:"When enabled, sandboxed commands are allowed to make network requests.",setti
+[匹配 32] (索引 9192413):
+  Code: 0,screen:"Permissions",label:"Terminal Command Auto Execution",description:e==="Cider"?`Google-wide Allowlist: If you are eligible, commands in the this list run without your approval, in addition to the b
+[匹配 33] (索引 9197794):
+  Code: ACCESS_GITIGNORE_FILES,{isProviderSetting:!0,screen:"Tab",label:"Tab Gitignore Access",description:"Allow Tab to view and edit the files in .gitignore. Use with caution if your .gitignore lists files conta
+[匹配 34] (索引 9309198):
+  Code: ryBackground","The background color of the primary editor cursor when multiple cursors are present. Allows customizing the color of a character overlapped by a block cursor.")),Q2s=Ne("editorMultiCursor.se
+[匹配 35] (索引 9309621):
+  Code: aryBackground","The background color of secondary editor cursors when multiple cursors are present. Allows customizing the color of a character overlapped by a block cursor.")),pft=Ne("editorWhitespace.for
+[匹配 36] (索引 9701816):
+  Code: url:"chrome://inspect/#remote-debugging"})]}),p("li",{children:["Enable"," ",p("strong",{children:'"Allow remote debugging for this browser instance"'}),"."]})]})]})),"DevTools port is still closed. Please
+[匹配 37] (索引 9833193):
+  Code: openReadOnlyDiff:O,isViewOnlyMode:P,logEvent:f,openVirtualFile:W,addToBrowserAllowlist:C,openBrowserAllowlist:Je,dispatchNuxTrigger:Z,listBrowserPages:g,openIssueReporter:J,handleClickActiveBrowserPage:Q,h
+[匹配 38] (索引 9868539):
+  Code: e(u??Ju.ASK));let Wt=!f,We=p(jt,{children:[p(s0,{action:"read_file",label:"File Reads",description:"Allow/deny agent read access to specific files or directories.",grants:s,onChangeGrants:o,placeholder:"e.
+[匹配 39] (索引 9868738):
+  Code: er:"e.g., /path/to/file",borderless:!0}),p(s0,{action:"write_file",label:"File Writes",description:"Allow/deny agent write access to specific files or directories.",grants:s,onChangeGrants:o,placeholder:"e
+[匹配 40] (索引 9868940):
+  Code: :"e.g., /path/to/file",borderless:!0})]}),cr=p(s0,{action:"read_url",label:"Read URLs",description:"Allow/deny agent read access to specific URLs or domains.",grants:s,onChangeGrants:o,placeholder:"e.g., h
+[匹配 41] (索引 9869146):
+  Code: tps://example.com",borderless:!0}),ct=p(s0,{action:"command",label:"Terminal Commands",description:"Allow/deny specific terminal commands.",grants:s,onChangeGrants:o,placeholder:"e.g., npm test",borderless
+[匹配 42] (索引 9869333):
+  Code: m test",borderless:!0}),er=p(s0,{action:"unsandboxed",label:"Commands Outside Sandbox",description:"Allow/deny agent command execution outside the sandbox.",grants:s,onChangeGrants:o,placeholder:"e.g., cur
+[匹配 43] (索引 9873095):
+  Code: onfigures how the agent tries to access files outside of its working folders.",value:et===Ju.ALLOW?"Allow":et===Ju.DENY?"Deny":"Always Ask",options:[Ju.ASK,Ju.ALLOW,Ju.DENY],displayResolver:it=>it===Ju.ALL
+[匹配 44] (索引 9873204):
+  Code: ===Ju.DENY?"Deny":"Always Ask",options:[Ju.ASK,Ju.ALLOW,Ju.DENY],displayResolver:it=>it===Ju.ALLOW?"Allow":it===Ju.DENY?"Deny":"Always Ask",onSelect:it=>{ze(it),d?.(it)},wide:!0}),p(eae,{label:"Terminal Co
+[匹配 45] (索引 9880529):
+  Code: w&&p("div",{className:"px-3 py-2",children:p(RE,{settingKey:Mr.SANDBOX_ALLOW_NETWORK,label:"Sandbox Allow Network",description:"When enabled, sandboxed commands are allowed to make network requests."})}),!
+[匹配 46] (索引 9881217):
+  Code: gKey:Mr.ALLOW_AGENT_ACCESS_NON_WORKSPACE_FILES,label:"Agent Non-Workspace File Access",description:"Allows the agent to access files outside of your current workspace."}):p("div",{children:[p("div",{classN
+[匹配 47] (索引 9881459):
+  Code: gent Non-Workspace File Access"}),p("div",{className:"text-xs text-muted-foreground mb-1",children:"Allows the agent to access files outside of your current workspace."}),!U&&p("div",{className:"text-xs te
+[匹配 48] (索引 9889234):
+  Code: )=>{u("main")},children:p(yo,{children:p(s0,{action:"execute_url",label:"Execute URLs",description:"Allow/deny agent browser actuation access to specific URLs.",grants:r,onChangeGrants:f=>{t.setPrefValue(M
+[匹配 49] (索引 11518572):
+  Code: elKey:YKi,defaultValue:Y0.knowledgeEnabled}),_Et=tIn.get,rIn=tIn.constructUpdateRequest,PKi="sandboxAllowNetworkSentinelKey",nIn=FE({topic:"uss-agentPreferences",sentinelKey:PKi,defaultValue:Y0.sandboxAllo
+[匹配 50] (索引 11518673):
+  Code: llowNetworkSentinelKey",nIn=FE({topic:"uss-agentPreferences",sentinelKey:PKi,defaultValue:Y0.sandboxAllowNetwork}),MKi=nIn.get,aIn=nIn.constructUpdateRequest,JKi="verboseAgentChatSentinelKey",iIn=FE({topic
+[匹配 51] (索引 11518909):
+  Code: lKey:JKi,defaultValue:Y0.verboseAgentChat}),QKi=iIn.get,jKi=iIn.constructUpdateRequest,HKi="terminalAllowedCommandsSentinelKey",sIn=NVn({topic:"uss-agentPreferences",sentinelKey:HKi,defaultValue:Y0.termina
+[匹配 52] (索引 11519015):
+  Code: dCommandsSentinelKey",sIn=NVn({topic:"uss-agentPreferences",sentinelKey:HKi,defaultValue:Y0.terminalAllowedCommands}),wEt=sIn.get,BEt=sIn.constructUpdateRequest,KKi="terminalAutoExecutionPolicySentinelKey"
+[匹配 53] (索引 11853908):
+  Code: s,vY(t)?xA.CACHE_VALUE:xA.RESTORE_VALUE):await O5e(n,this,vY(t)?xA.CACHE_VALUE:xA.RESTORE_VALUE)}getAllowCascadeAccessGitignoreFiles(){return wVn(this.agentPreferencesTopic)}async setAllowCascadeAccessGiti
+[匹配 54] (索引 11913967):
+  Code: XVn(t)},r.explainAndFixInCurrentConversation={value:DEt(t)},r.planningMode={value:B2t(t)},r.terminalAllowedCommands={value:wEt(t)},r.terminalAutoExecutionPolicy={value:kEt(t)},r.terminalDeniedCommands={val
+[匹配 55] (索引 12128903):
+  Code: actions:[{label:"Block",onClick:()=>{t.dismissPermission("notifications")},style:"outline"},{label:"Allow",onClick:()=>{e.openSystemPreferences(),t.dismissPermission("notifications")},style:"primary"}]})})
+
+--- 词条: "Deny" ---
+[匹配 1] (索引 4434284):
+  Code: e:PFt,_guessExecutionStatusRelativeTo:ple,resolve:jFt,isConstantExpression:HFt,isInStrictMode:KFt,isDenylisted:DNe,visit:l5t,skip:u5t,skipKey:c5t,stop:d5t,setContext:h5t,requeue:g5t,requeueComputedKeyAndD
+[匹配 2] (索引 8522180):
+  Code: span",{className:"ml-0.5 opacity-40",children:e.keybindingLabel})]})]})},jEi=({onAddToWhitelist:e,onDenyAddToWhiteList:t,onApproveJustThisStep:r,onShowWhitelist:n,url:a,error:i,clearError:s})=>{let o=Ft(n
+[匹配 3] (索引 8522425):
+  Code: name}catch{return a}},[a]),d=Ve(()=>({label:"Always Allow",onClick:()=>e()}),[e]),f=Ve(()=>({label:"Deny",onClick:()=>t()}),[t]),g=Ve(()=>({label:"Allow Once",onClick:()=>r()}),[r]);return p("div",{ref:o,
+[匹配 4] (索引 8524672):
+  Code: -row gap-x-1",children:[p(lo,{onClick:F,className:"!px-2 !py-0.5 rounded-sm !font-normal",children:"Deny"}),p(Eo,{onClick:y,className:"!px-2 !py-0.5 rounded-sm !font-normal","aria-label":"Confirm Browser
+[匹配 5] (索引 8886189):
+  Code: ny browser setup interaction",o)})},className:"!px-2 !py-0.5 rounded-sm !font-normal","aria-label":"Deny setting up browser",children:"Deny"}),p(Eo,{onClick:()=>{n(!0),i(!0),setTimeout(()=>{i(!1)},1e4),s(
+[匹配 6] (索引 8886224):
+  Code: ,className:"!px-2 !py-0.5 rounded-sm !font-normal","aria-label":"Deny setting up browser",children:"Deny"}),p(Eo,{onClick:()=>{n(!0),i(!0),setTimeout(()=>{i(!1)},1e4),s(At(Yg,{trajectoryId:e,stepIndex:t,i
+[匹配 7] (索引 8899073):
+  Code: rounded-sm text-sm text-secondary-foreground transition-[opacity] hover:text-foreground",children:"Deny"}),p(zon,{label:"Allow in Conversation",onClick:()=>g(!0,s1.CONVERSATION),subOptions:y,onSubOptionC
+[匹配 8] (索引 8911466):
+  Code: },[i,a,y]),N=de(w=>{i?.setBrowserJsExecutionPolicy?.(w),w===vh.TURBO&&y()},[i,y]),V=Ve(()=>({label:"Deny",onClick:F}),[F]),I=Ve(()=>({label:"Allow once",onClick:y}),[y]),x=Ve(()=>{if(!a)return null;try{re
+[匹配 9] (索引 8912344):
+  Code: ption:D,collapsableOption:I,containerRef:U}):p(jt,{children:[p(lo,{onClick:F,className:qW,children:"Deny"}),p(Eo,{onClick:y,className:qW,children:["Allow",o&&p("span",{className:"ml-0.5 text-muted-foregro
+[匹配 10] (索引 9188833):
+  Code: rtAlphabetically:!0}],[Mr.CASCADE_DENIED_COMMANDS,{isProviderSetting:!0,screen:"Permissions",label:"Deny List Terminal Commands",description:"Agent asks for permission before executing commands matched by
+[匹配 11] (索引 9873116):
+  Code: nt tries to access files outside of its working folders.",value:et===Ju.ALLOW?"Allow":et===Ju.DENY?"Deny":"Always Ask",options:[Ju.ASK,Ju.ALLOW,Ju.DENY],displayResolver:it=>it===Ju.ALLOW?"Allow":it===Ju.D
+[匹配 12] (索引 9873225):
+  Code: ways Ask",options:[Ju.ASK,Ju.ALLOW,Ju.DENY],displayResolver:it=>it===Ju.ALLOW?"Allow":it===Ju.DENY?"Deny":"Always Ask",onSelect:it=>{ze(it),d?.(it)},wide:!0}),p(eae,{label:"Terminal Command Auto Execution
+[匹配 13] (索引 10117995):
+  Code: T||ge===s1.WORKSPACE?w:U,Ye=f(ae,ge,Se);await s(n,t,r,{case:"permission",value:At(_Hr,{allow:ae,userDenyInstruction:ie,turnGrants:Ye,editedTarget:fe})})},[i,Z,j,Y,f,U,w,s,n,t,r,F]),ee=de(()=>{Z?H(!1,P):H(
+[匹配 14] (索引 10212180):
+  Code: px-1.5 py-px bg-secondary text-secondary-foreground hover:opacity-90 transition-opacity",children:"Deny"})]}):p("span",{className:"text-xs text-secondary-foreground",children:"Blocked, needs input"})]}):
+
+--- 词条: "Always allow" ---
+未找到相关 UI 上下文。
+
+--- 词条: "Always deny" ---
+未找到相关 UI 上下文。
+
+--- 词条: "Allow once" ---
+[匹配 1] (索引 8911507):
+  Code: ionPolicy?.(w),w===vh.TURBO&&y()},[i,y]),V=Ve(()=>({label:"Deny",onClick:F}),[F]),I=Ve(()=>({label:"Allow once",onClick:y}),[y]),x=Ve(()=>{if(!a)return null;try{return new URL(a).hostname}catch{return a}},[a]),
+
+--- 词条: "Approved" ---
+未找到相关 UI 上下文。
+
+--- 词条: "Rejected" ---
+[匹配 1] (索引 2762385):
+  Code: atus:"pending"}})),s=dI(t+"/rejected",(u,d,f,g,b)=>({payload:g,error:(n&&n.serializeError||mxa)(u||"Rejected"),meta:{...b||{},arg:f,requestId:d,rejectedWithValue:!!g,requestStatus:"rejected",aborted:u?.name==
+[匹配 2] (索引 8954344):
+  Code: =r;return n?.interaction?.case==="permission"?null:p(aFi,{trajectoryId:i,stepIndex:a})}return e.userRejected?p("span",{className:"text-secondary-foreground truncate",children:"Read URL rejected"}):null},sFi=(
+[匹配 3] (索引 8958233):
+  Code: er flex items-center justify-between",children:[(()=>{let F=e.commandLine||"terminal",C=nfn(t,e.userRejected),N=t===On.WAITING?"?":"";return p(Es,{prefix:C,content:p("span",{className:"truncate",children:[p("
+[匹配 4] (索引 8963226):
+  Code: ,onToggle:N,supplementaryView:U,permissionView:null,cta:null}):p(So,{title:p(Es,{prefix:nfn(t,r.userRejected),content:p("span",{className:"truncate font-mono text-[13px] mt-px ml-px",children:r.commandLine||"
+[匹配 5] (索引 8967972):
+  Code: dInteraction:i})]})};function yFi(e,t){let r=e.terminate?"termination request":"input";return e.userRejected?`Rejected sending ${r} to command`:t===On.DONE?`Sent ${r} to command`:t===On.WAITING?`Suggested sen
+[匹配 6] (索引 8968354):
+  Code: i,error:s,clearError:o}=F4();return p(So,{title:p(Es,{content:a}),loading:za(t),errorView:r&&!e.userRejected?p("div",{className:"flex flex-col gap-1",children:[p("span",{className:"text-sm",children:"Error De
+[匹配 7] (索引 9540278):
+  Code: n.acknowledgementScope===fW.ALL){let i=p("div",{children:p("span",{children:[n.isAccept?"Accepted":"Rejected"," all changes to the below files"]})});return p(SB,{title:i,children:n.codeAcknowledgementInfos.ma
+[匹配 8] (索引 9540890):
+  Code: ("div",{className:"flex flex-row items-center",children:[p("span",{children:[n.isAccept?"Accepted":"Rejected"," ",i]})," ",p(uR,{fileUri:s.uriPath,getFileIcon:r?.getFileIcon,openUri:(o,u)=>r?.openFile(o,void
+
+--- 词条: "Allowed" ---
+[匹配 1] (索引 3809747):
+  Code: ",PipelineTopicUnused:"Pipeline is in topic style but does not use topic reference.",PrimaryTopicNotAllowed:"Topic reference was used in a lexical context without topic binding.",PrimaryTopicRequiresSmartPip
+[匹配 2] (索引 3955234):
+  Code: ature.",IndexSignatureHasStatic:"Index signatures cannot have the 'static' modifier.",InitializerNotAllowedInAmbientContext:"Initializers are not allowed in ambient contexts.",InvalidHeritageClauseType:funct
+[匹配 3] (索引 4046799):
+  Code: Unbound,R),this.registerTopicReference(),this.finishNode(E,"TopicReference")):(this.topicReferenceIsAllowedInCurrentContext()||this.raise(Nr.PrimaryTopicNotAllowed,R),this.registerTopicReference(),this.finis
+[匹配 4] (索引 4046855):
+  Code: (E,"TopicReference")):(this.topicReferenceIsAllowedInCurrentContext()||this.raise(Nr.PrimaryTopicNotAllowed,R),this.registerTopicReference(),this.finishNode(E,"PipelinePrimaryTopicReference"));throw this.rai
+[匹配 5] (索引 8519113):
+  Code: ainerRef:n,handleChange:a}}function JEi({option:e}){return p(Jf.Option,{value:e.value,disabled:!e.isAllowed,className:({selected:t,active:r})=>Mt("cursor-pointer px-2 py-1 text-sm",t||r?"bg-muted":"",e.isAll
+[匹配 6] (索引 8519217):
+  Code: wed,className:({selected:t,active:r})=>Mt("cursor-pointer px-2 py-1 text-sm",t||r?"bg-muted":"",e.isAllowed?t?"":"hover:bg-muted":"opacity-50 cursor-not-allowed"),children:p("div",{className:"flex flex-col",
+[匹配 7] (索引 8519458):
+  Code: l}),e.description&&p("div",{className:"text-xs text-muted-foreground",children:e.description}),!e.isAllowed&&e.disabledReason&&p("span",{className:"text-xs text-muted-foreground italic mt-1",children:e.disab
+[匹配 8] (索引 8521306):
+  Code: t;return u&&o.observe(u),()=>o.disconnect()},[n]);let s=Ve(()=>[{value:"irrelevent",label:r.label,isAllowed:!0}],[r.label]);return a?p("div",{className:"flex flex-row items-center gap-x-2 min-w-0 max-w-full"
+[匹配 9] (索引 8898280):
+  Code: n null;let b=h4(t.absolutePathUri,s.homeDir,s.workspaceUris),y=[{value:s1.ONCE,label:"Allow Once",isAllowed:!0}];return p("div",{className:"my-1 flex w-full flex-col gap-y-2",children:n?p(gre,{message:n,onTr
+[匹配 10] (索引 8910109):
+  Code: 0px",className:"mb-1"})})]})})}function t9i(e){return Ve(()=>[{value:vh.DISABLED,label:"Disabled",isAllowed:!0},{value:vh.ALWAYS_ASK,label:"Ask first",isAllowed:!e,disabledReason:"JavaScript execution disabl
+[匹配 11] (索引 8910162):
+  Code: Ve(()=>[{value:vh.DISABLED,label:"Disabled",isAllowed:!0},{value:vh.ALWAYS_ASK,label:"Ask first",isAllowed:!e,disabledReason:"JavaScript execution disabled in strict mode"},{value:vh.TURBO,label:"Always run
+[匹配 12] (索引 8910273):
+  Code: disabledReason:"JavaScript execution disabled in strict mode"},{value:vh.TURBO,label:"Always run",isAllowed:!e,disabledReason:"JavaScript execution disabled in strict mode"}],[e])}var r9i=({cascadeId:e,traje
+[匹配 13] (索引 8957096):
+  Code: ldren:e.tooltipText})})]})};function lFi(e,t){return Ve(()=>[{value:rl.OFF,label:"Ask every time",isAllowed:t},{value:rl.EAGER,label:"Always run",isAllowed:t&&!e,disabledReason:t?"Disabled in strict mode":"R
+[匹配 14] (索引 8957144):
+  Code: turn Ve(()=>[{value:rl.OFF,label:"Ask every time",isAllowed:t},{value:rl.EAGER,label:"Always run",isAllowed:t&&!e,disabledReason:t?"Disabled in strict mode":"Requires limited-internet host."}],[e,t])}functio
+[匹配 15] (索引 9030227):
+  Code: edGlobalAttributes.has(e)?{policyAction:nf.KEEP}:this.globalAttributePolicies.get(e)||(this.globallyAllowedAttributePrefixes&&[...this.globallyAllowedAttributePrefixes].some(a=>e.indexOf(a)===0)?{policyActio
+[匹配 16] (索引 9030270):
+  Code: KEEP}:this.globalAttributePolicies.get(e)||(this.globallyAllowedAttributePrefixes&&[...this.globallyAllowedAttributePrefixes].some(a=>e.indexOf(a)===0)?{policyAction:nf.KEEP}:{policyAction:nf.DROP})}},nf;(fu
+[匹配 17] (索引 11518909):
+  Code: lKey:JKi,defaultValue:Y0.verboseAgentChat}),QKi=iIn.get,jKi=iIn.constructUpdateRequest,HKi="terminalAllowedCommandsSentinelKey",sIn=NVn({topic:"uss-agentPreferences",sentinelKey:HKi,defaultValue:Y0.terminalA
+[匹配 18] (索引 11519015):
+  Code: dCommandsSentinelKey",sIn=NVn({topic:"uss-agentPreferences",sentinelKey:HKi,defaultValue:Y0.terminalAllowedCommands}),wEt=sIn.get,BEt=sIn.constructUpdateRequest,KKi="terminalAutoExecutionPolicySentinelKey",o
+[匹配 19] (索引 11913967):
+  Code: XVn(t)},r.explainAndFixInCurrentConversation={value:DEt(t)},r.planningMode={value:B2t(t)},r.terminalAllowedCommands={value:wEt(t)},r.terminalAutoExecutionPolicy={value:kEt(t)},r.terminalDeniedCommands={value
+
+--- 词条: "Denied" ---
+[匹配 1] (索引 8891764):
+  Code: ",className:"h-3 w-3 flex-none"}),p("span",{className:"text-xs text-secondary-foreground",children:"Denied Sites"})]}),p("div",{className:"flex items-center justify-between",children:[p("span",{className:"t
+[匹配 2] (索引 11519277):
+  Code: faultValue:Y0.terminalAutoExecutionPolicy}),kEt=oIn.get,A5e=oIn.constructUpdateRequest,zKi="terminalDeniedCommandsSentinelKey",lIn=NVn({topic:"uss-agentPreferences",sentinelKey:zKi,defaultValue:Y0.terminalD
+[匹配 3] (索引 11519382):
+  Code: dCommandsSentinelKey",lIn=NVn({topic:"uss-agentPreferences",sentinelKey:zKi,defaultValue:Y0.terminalDeniedCommands}),UEt=lIn.get,GEt=lIn.constructUpdateRequest;function u7(e,t,r){return E5e("uss-browserPref
+[匹配 4] (索引 11914053):
+  Code: t)},r.terminalAllowedCommands={value:wEt(t)},r.terminalAutoExecutionPolicy={value:kEt(t)},r.terminalDeniedCommands={value:UEt(t)},r.conversationHistoryEnabled={value:xEt(t)},r.knowledgeEnabled={value:_Et(t)
+
+--- 词条: "Pending" ---
+[匹配 1] (索引 2999915):
+  Code: us==="pending"?"success":d.status,isFetching:!1,context:xw(e,n)}));return}const u=i._nonReactive.minPendingPromise;u&&await u,Wp(s)&&await a.options.notFoundComponent?.preload?.(),_I(e,e.router.getMatch(r),s
+[匹配 2] (索引 3021930):
+  Code: matches.some(t=>t.status==="notFound"||t.globalNotFound),this.update({defaultPreloadDelay:50,defaultPendingMs:1e3,defaultPendingMinMs:500,context:void 0,...e,caseSensitive:e.caseSensitive??!1,notFoundMode:e.
+[匹配 3] (索引 3021951):
+  Code: tus==="notFound"||t.globalNotFound),this.update({defaultPreloadDelay:50,defaultPendingMs:1e3,defaultPendingMinMs:500,context:void 0,...e,caseSensitive:e.caseSensitive??!1,notFoundMode:e.notFoundMode??"fuzzy"
+[匹配 4] (索引 3046384):
+  Code: routeId&&C.routeId!==n.routeId||!C.routeId&&!a.isRoot)throw C;return Ca(d,C)},children:f||n._displayPending?p(Dka,{fallback:s,children:p(pZr,{matchId:t})}):p(pZr,{matchId:t})})})})}),n.parentRouteId===I2&&r.
+[匹配 5] (索引 8075305):
+  Code: ci}=Iye.actions,dgs=Iye.reducer,Eci={workspaceUrisByCascadeId:{},projectIdsByCascadeId:{},convosWithPendingCreationEnvs:{}},Yen=cc({name:"newConvoWorkspace",initialState:Eci,reducers:{setWorkspaceUrisForConv
+[匹配 6] (索引 8443440):
+  Code: und":"text-secondary-foreground"}`,children:n})]})},l1=e=>{let t=Ft(e);return t.current=e,t},FB=({isPendingUserInteraction:e,waitingStepCase:t,toolName:r,permissionAction:n,isLoading:a,isUnread:i,isSelected:
+[匹配 7] (索引 8452989):
+  Code: children:[p("div",{className:"p-0.5 flex items-center justify-center min-h-[21px]",children:p(FB,{isPendingUserInteraction:!0,waitingStepCase:w,toolName:k,permissionAction:G,isLoading:!1,isUnread:!1,showPing
+[匹配 8] (索引 8924105):
+  Code: ame:"progress_activity",size:12,className:"animate-spin text-muted-foreground shrink-0"})}):p(FB,{isPendingUserInteraction:V,waitingStepCase:x,toolName:D,isLoading:N===On.RUNNING,isUnread:!1,idleFallback:C?.
+[匹配 9] (索引 8993085):
+  Code: ilter(u=>u!==s))},[]),a=de(async s=>{await cqr(t.current,o=>!o.includes(s))},[]),i=Ve(()=>({registerPendingConvo:r,unregisterPendingConvo:n,awaitConvoCreation:a}),[r,n,a]);return p(ofn.Provider,{value:i,chil
+[匹配 10] (索引 8993110):
+  Code: e(async s=>{await cqr(t.current,o=>!o.includes(s))},[]),i=Ve(()=>({registerPendingConvo:r,unregisterPendingConvo:n,awaitConvoCreation:a}),[r,n,a]);return p(ofn.Provider,{value:i,children:e})},lfn=()=>{let e=
+[匹配 11] (索引 9109611):
+  Code: i(e),a=ogn(e),i=lgn(e),s=In(f=>Aye(f)===e),o=P1t(e,s),u=H3i(e),d=a===ji.IDLE&&i===!1;return p(FB,{isPendingUserInteraction:t,waitingStepCase:r?.step?.case,toolName:r?.metadata?.toolCall?.name,isLoading:n,isB
+[匹配 12] (索引 9444403):
+  Code: Height:g},events:{sendUserInteraction:O,cancelInvocation:Y,sendMessage:P,cancelStepIndices:Z,sendAllPendingMessages:W,getArtifactMetadata:H,getFilesNeedingReview:q,getCommentCount:ie,addToBrowserWhitelist:y,
+[匹配 13] (索引 9454349):
+  Code: r] Failed to create workspace:",F)}finally{u(!1)}s(!1)}},[t,d,o]);return r?p(Lft.Provider,{value:{isPendingNewWorkspace:i,isCreatingWorkspace:o,setPendingNewWorkspace:f,resolveNewWorkspace:g},children:e}):p(
+[匹配 14] (索引 9454396):
+  Code: )}s(!1)}},[t,d,o]);return r?p(Lft.Provider,{value:{isPendingNewWorkspace:i,isCreatingWorkspace:o,setPendingNewWorkspace:f,resolveNewWorkspace:g},children:e}):p(Lft.Provider,{value:void 0,children:e})},L4i="N
+[匹配 15] (索引 9456332):
+  Code: Standalone Conversation",isSelected:!d?.isPendingNewWorkspace&&e===Cs(o1),onSelectSection:C=>{d?.setPendingNewWorkspace(!1),t(C)},setIsOpen:r}),d&&p(Mi.Item,{selected:d.isPendingNewWorkspace,onClick:()=>{d.s
+[匹配 16] (索引 9456403):
+  Code: 1),onSelectSection:C=>{d?.setPendingNewWorkspace(!1),t(C)},setIsOpen:r}),d&&p(Mi.Item,{selected:d.isPendingNewWorkspace,onClick:()=>{d.setPendingNewWorkspace(!0),r(!1)},icon:p(qe,{name:"auto_awesome",size:12
+[匹配 17] (索引 9456441):
+  Code: wWorkspace(!1),t(C)},setIsOpen:r}),d&&p(Mi.Item,{selected:d.isPendingNewWorkspace,onClick:()=>{d.setPendingNewWorkspace(!0),r(!1)},icon:p(qe,{name:"auto_awesome",size:12}),children:"New Workspace"}),p(Mi.Ite
+[匹配 18] (索引 9456902):
+  Code: edium",children:"Projects"}),y.map(C=>p(Xft,{id:C.id,detail:C.detail,symbol:"work",isSelected:!d?.isPendingNewWorkspace&&e===C.id,onSelectSection:N=>{d?.setPendingNewWorkspace(!1),t(N)},setIsOpen:r},Hi(C.id)
+[匹配 19] (索引 9593404):
+  Code: Click:()=>{},disabled:!0}),o},[s,n,i,t]),onMenuOpen:()=>{a()}}},EDi=({isRunning:e,isInputEmpty:t,hasPendingComments:r,isConvoLoading:n,cancelInvocation:a,submit:i,hasAttachments:s,attachmentsError:o,isUpload
+[匹配 20] (索引 9598010):
+  Code: eft",children:"View MCP settings"})]})},yDi=({cancelInvocation:e,isRunning:t,isConvoInputEmpty:r,hasPendingComments:n,isConvoLoading:a,handleSubmit:i,modelSelector:s,optOutButton:o,currentModelConfig:u,handl
+[匹配 21] (索引 9598593):
+  Code: dEnvironment:P,environmentSelectorCompact:W,isCreatingEnvironment:Z,isGitRepo:J,isCitcWorkspace:Q,isPendingNewWorkspace:j,hasMcpErrors:H,onMcpErrorClick:ee,disabled:q,battleMode:re,isSignedIn:ae,getSlashComm
+[匹配 22] (索引 9601052):
+  Code: cement:g,inExistingConversation:G,compact:W,isCreatingEnvironment:Z,isGitRepo:J,isCitcWorkspace:Q,isPendingNewWorkspace:j}),Y&&p("div",{className:"py-1 px-2 flex items-center gap-1 rounded-md text-secondary-
+[匹配 23] (索引 9602989):
+  Code: p("div",{className:"shrink-0 flex items-center gap-1",children:p(EDi,{isRunning:t,isInputEmpty:r,hasPendingComments:n,isConvoLoading:a,cancelInvocation:e,submit:er,hasAttachments:I,attachmentsError:b,isUploa
+[匹配 24] (索引 9610048):
+  Code: dEnvironment:a,environmentSelectorCompact:i,isCreatingEnvironment:s,isGitRepo:o,isCitcWorkspace:u,isPendingNewWorkspace:d})=>e?.mode==="standalone"?null:p("div",{className:"flex items-center gap-1",children:
+[匹配 25] (索引 9610731):
+  Code: ,inputClassName:r,mentionsConfig:n,comments:a=[],inputPlaceholder:i,initialContent:s,isRunning:o,hasPendingComments:u,isConvoLoading:d,modelSelector:f,optOutButton:g,optOutBanner:b,agentSelector:y,showBottom
+[匹配 26] (索引 9611352):
+  Code: nvironment:j,environmentSelectorCompact:H,isCreatingEnvironment:ee,isGitRepo:q,isCitcWorkspace:re,isPendingNewWorkspace:ae,hasMcpErrors:ie,onMcpErrorClick:ge,topToolbarContent:fe,disableAutoFocus:Se,battleMo
+[匹配 27] (索引 9615122):
+  Code: sabled:ze,disableAutoFocus:Se})]})]}),p(yDi,{cancelInvocation:t,isRunning:o,isConvoInputEmpty:Da,hasPendingComments:u,isConvoLoading:d,handleSubmit:Dn,modelSelector:f,optOutButton:g,currentModelConfig:C,hand
+[匹配 28] (索引 9615675):
+  Code: t:F?void 0:j,environmentSelectorCompact:H,isCreatingEnvironment:ee,isGitRepo:q,isCitcWorkspace:re,isPendingNewWorkspace:ae,hasMcpErrors:ie,onMcpErrorClick:ge,isSignedIn:Je,getSlashCommandItems:w})]}),on&&p("
+[匹配 29] (索引 9616102):
+  Code: nvironment:j,environmentSelectorCompact:H,isCreatingEnvironment:ee,isGitRepo:q,isCitcWorkspace:re,isPendingNewWorkspace:ae}),y&&p("div",{className:"shrink-0 whitespace-nowrap ml-auto",children:y})]})]})});zf
+[匹配 30] (索引 9641353):
+  Code: en:i.toolSummary??i.subagentName}),p("div",{className:"flex items-center shrink-0",children:p(FB,{isPendingUserInteraction:i.needsAttention||!1,waitingStepCase:i.firstWaitingStep?.step?.case,isLoading:i.stat
+[匹配 31] (索引 9756783):
+  Code: ,inputClassName:t,mentionsConfig:fo,resolveWorkspaceUrlPreview:Z,comments:m1,ref:it,isRunning:St,hasPendingComments:nr,isConvoLoading:e,modelSelector:Ol,optOutButton:vt,agentSelector:i,showBottomToolbar:s,dr
+[匹配 32] (索引 9768845):
+  Code: },sendUserInteraction:()=>Promise.resolve(),cancelInvocation:()=>{},cancelStepIndices:()=>{},sendAllPendingMessages:async()=>{},getArtifactMetadata:()=>{},getFilesNeedingReview:()=>[],getCommentCount:()=>0,s
+[匹配 33] (索引 9780552):
+  Code: ]},V)})})},aBi=({pendingAgentMessages:e,status:t,cascadeId:r})=>{let{cascadeContext:{events:{sendAllPendingMessages:n}}}=jn(),{deleteAgentMessage:a}=as(),i=Ve(()=>{let o=[];return e.forEach(u=>{if(u.payload.
+[匹配 34] (索引 9781171):
+  Code: iv",{className:"flex justify-start gap-1",children:[p("p",{className:"text-xs opacity-50",children:"Pending messages"}),p(qe,{name:"info","data-tooltip-id":"pendingMessages",size:16,className:"opacity-50 hov
+[匹配 35] (索引 10119610):
+  Code: activity",className:"animate-spin opacity-50"}}},D=[...V.map(U=>({key:U.conversationId,icon:p(FB,{isPendingUserInteraction:U.needsAttention||!1,waitingStepCase:U.firstWaitingStep?.step?.case,toolName:U.first
+[匹配 36] (索引 10132468):
+  Code: n"Busy";case ji.IDLE:return"Idle";case ji.CANCELING:return"Canceling"}return"N/A"},wZi=({status:e,isPendingUserInteraction:t,notFullyIdle:r})=>{if(!r)return null;let n=r&&e===ji.IDLE?ji.RUNNING:e;return p("d
+[匹配 37] (索引 10133482):
+  Code: ",{className:"min-w-0 truncate opacity-50 text-sm",children:r})]}),p(wZi,{status:e.summary.status,isPendingUserInteraction:n,notFullyIdle:e.summary.notFullyIdle})]})},cyn=3,kZi=()=>{let e=Bc(),t=Mqr(e),r=D1t
+[匹配 38] (索引 10211066):
+  Code: er:text-foreground"}`,children:I}),p("div",{className:"flex items-center shrink-0",children:p(FB,{isPendingUserInteraction:V.needsAttention||!1,waitingStepCase:V.firstWaitingStep?.step?.case,toolName:V.first
+[匹配 39] (索引 10256088):
+  Code: {name:w?.toolSummary||w?.subagentName||"Subagent",icon:w?p("div",{className:"ml-1",children:p(FB,{isPendingUserInteraction:w.needsAttention||!1,waitingStepCase:w.firstWaitingStep?.step?.case,toolName:w.first
+[匹配 40] (索引 10377231):
+  Code: utoFocus:!y&&s&&De==="Cider",handleSubmit:dt,topToolbarContent:e,cancelInvocation:r,isRunning:rr,hasPendingComments:bt||qt,comments:me,isConvoLoading:!1,modelSelector:xt,optOutButton:Vn,optOutBanner:Zn,curre
+
+--- 词条: "Ask permission" ---
+未找到相关 UI 上下文。

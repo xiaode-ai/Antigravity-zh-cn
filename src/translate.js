@@ -130,7 +130,7 @@ export function translate(config, translations, translationsPath) {
   console.log(`[SAFEGUARD] ✅ 安全写入成功！译后文件已通过全部预检。`);
   console.log(`[OK] 汉化代码已成功写入运行库。`);
 
-  // 4b. 对 workbench.desktop.main.js 应用纯净性绕过补丁
+  // 4b. 对 workbench.desktop.main.js 应用汉化与纯净性绕过补丁
   const workbenchPath = path.join(path.dirname(targetFilePath), '..', 'vs', 'workbench', 'workbench.desktop.main.js');
   const workbenchBackupPath = workbenchPath + backupSuffix;
 
@@ -146,13 +146,37 @@ export function translate(config, translations, translationsPath) {
       return false;
     }
 
+    let workbenchModified = false;
+
+    // 对 workbench.desktop.main.js 应用 translations.json 中的汉化词典
+    console.log(`[INFO] 开始对 workbench.desktop.main.js 应用汉化词典...`);
+    let workbenchReplacedCount = 0;
+    for (let i = 0; i < sortedTranslations.length; i++) {
+      const pair = sortedTranslations[i];
+      if (workbenchContent.includes(pair.old)) {
+        workbenchContent = workbenchContent.replaceAll(pair.old, pair.new);
+        workbenchReplacedCount++;
+        workbenchModified = true;
+      }
+    }
+    console.log(`[INFO] workbench.desktop.main.js 汉化替换完毕，成功应用 ${workbenchReplacedCount} 组映射。`);
+
     const targetPure = 'async _isPure(){const e=this.productService.checksums||{};await this.lifecycleService.when(4);const i=await Promise.all(Object.keys(e).map(r=>this._resolve(r,e[r])));let n=!0;for(let r=0,s=i.length;r<s;r++)if(!i[r].isPure){n=!1;break}return{isPure:n,proof:i}}';
     const replacementPure = 'async _isPure(){return{isPure:!0}}';
 
     if (workbenchContent.includes(targetPure)) {
       console.log(`[INFO] 正在应用 workbench.desktop.main.js 纯净性检查绕过补丁...`);
       workbenchContent = workbenchContent.replace(targetPure, replacementPure);
-      
+      workbenchModified = true;
+    } else {
+      if (workbenchContent.includes(replacementPure)) {
+        console.log(`[INFO] workbench 绕过补丁已经存在。`);
+      } else {
+        console.warn(`[WARN] 找不到 workbench 纯净性检查方法特征码，跳过绕过补丁。`);
+      }
+    }
+
+    if (workbenchModified) {
       console.log(`[SAFEGUARD] 正在执行 workbench 安全写入...`);
       const wbWriteResult = safeWriteWithValidation(workbenchPath, workbenchContent, workbenchBackupPath);
       if (!wbWriteResult.success) {
@@ -160,16 +184,187 @@ export function translate(config, translations, translationsPath) {
         autoRollbackOnFailure(config, wbWriteResult.error);
         return false;
       }
-      console.log(`[SAFEGUARD] ✅ workbench 安全写入成功！补丁已通过全部预检。`);
+      console.log(`[SAFEGUARD] ✅ workbench 安全写入成功！已通过全部预检。`);
     } else {
-      if (workbenchContent.includes(replacementPure)) {
-        console.log(`[INFO] workbench 绕过补丁已经存在，跳过。`);
-      } else {
-        console.warn(`[WARN] 找不到 workbench 纯净性检查方法特征码，跳过绕过补丁。`);
-      }
+      console.log(`[INFO] workbench.desktop.main.js 无需修改，跳过写入。`);
     }
   } else {
-    console.warn(`[WARN] 未找到 workbench 文件: "${workbenchPath}"，跳过补丁应用。`);
+    console.warn(`[WARN] 未找到 workbench 文件: "${workbenchPath}"，跳过补丁与汉化应用。`);
+  }
+
+  // 4c. 对 nls.messages.json 进行特定索引的汉化替换
+  const nlsPath = path.join(path.dirname(targetFilePath), '..', 'nls.messages.json');
+  const nlsBackupPath = nlsPath + backupSuffix;
+
+  if (fs.existsSync(nlsPath)) {
+    console.log(`[INFO] 正在载入 nls.messages.json...`);
+    let nlsData;
+    try {
+      const sourcePath = fs.existsSync(nlsBackupPath) ? nlsBackupPath : nlsPath;
+      nlsData = JSON.parse(fs.readFileSync(sourcePath, 'utf8'));
+    } catch (err) {
+      console.error(`[ERROR] 读取或解析 nls.messages.json 失败:`, err.message);
+      return false;
+    }
+
+    if (Array.isArray(nlsData)) {
+      console.log(`[INFO] 开始对 nls.messages.json 应用汉化映射...`);
+      const nlsMappings = [
+        { index: 4968, oldVal: "Toggle Agent", newVal: "切换智能体" },
+        { index: 3310, oldVal: "Quick Open", newVal: "快速打开" },
+        { index: 4206, oldVal: "Quick Open", newVal: "快速打开" },
+        { index: 4967, oldVal: "Open Browser (Preview)", newVal: "打开浏览器 (预览)" },
+        { index: 3104, oldVal: "Profile", newVal: "个人资料" },
+        { index: 4034, oldVal: "Profile", newVal: "个人资料" },
+        { index: 16330, oldVal: "Profile", newVal: "个人资料" },
+        { index: 5927, oldVal: "Review", newVal: "审核" },
+        { index: 8471, oldVal: "Review", newVal: "审核" },
+        { index: 6012, oldVal: "{0} files changed", newVal: "{0} 个文件已更改" }
+      ];
+
+      let nlsModifiedCount = 0;
+      nlsMappings.forEach(mapping => {
+        if (nlsData[mapping.index] === mapping.oldVal) {
+          nlsData[mapping.index] = mapping.newVal;
+          nlsModifiedCount++;
+        } else if (nlsData[mapping.index] === mapping.newVal) {
+          // Already translated, do nothing
+        } else {
+          console.warn(`[WARN] nls.messages.json 索引 ${mapping.index} 现为 "${nlsData[mapping.index]}"，与预期 "${mapping.oldVal}" 不符，跳过。`);
+        }
+      });
+
+      if (nlsModifiedCount > 0) {
+        console.log(`[INFO] nls.messages.json 汉化完成，成功更新 ${nlsModifiedCount} 个条目。`);
+        console.log(`[SAFEGUARD] 正在执行 nls.messages.json 安全写入...`);
+        const nlsContent = JSON.stringify(nlsData);
+        const nlsWriteResult = safeWriteWithValidation(nlsPath, nlsContent, nlsBackupPath);
+        if (!nlsWriteResult.success) {
+          console.error(`\x1b[31m[SAFEGUARD] ❌ nls.messages.json 安全写入失败：${nlsWriteResult.error}\x1b[0m`);
+          autoRollbackOnFailure(config, nlsWriteResult.error);
+          return false;
+        }
+        console.log(`[SAFEGUARD] ✅ nls.messages.json 安全写入成功！`);
+      } else {
+        console.log(`[INFO] nls.messages.json 所有条目已处于汉化状态，无需重写。`);
+      }
+    } else {
+      console.warn(`[WARN] nls.messages.json 根对象不是 Array，跳过汉化。`);
+    }
+  } else {
+    console.warn(`[WARN] 未找到 nls.messages.json 文件: "${nlsPath}"，跳过逆波兰或汉化应用。`);
+  }
+
+  // 4d. 对 Roaming AppData 中的 CLP (Cached Language Pack) 缓存 NLS 文件进行特定索引的汉化替换
+  const clpDir = process.env.APPDATA ? path.join(process.env.APPDATA, 'Antigravity IDE', 'clp') : 'C:\\Users\\i-cgh\\AppData\\Roaming\\Antigravity IDE\\clp';
+  if (fs.existsSync(clpDir)) {
+    console.log(`[INFO] 正在扫描 CLP 缓存目录: "${clpDir}"...`);
+    const clpNlsFiles = [];
+    
+    function walkClp(dir) {
+      const list = fs.readdirSync(dir);
+      list.forEach(file => {
+        const fullPath = path.join(dir, file);
+        const stat = fs.statSync(fullPath);
+        if (stat && stat.isDirectory()) {
+          walkClp(fullPath);
+        } else {
+          if (file.toLowerCase() === 'nls.messages.json') {
+            clpNlsFiles.push(fullPath);
+          }
+        }
+      });
+    }
+    
+    try {
+      walkClp(clpDir);
+    } catch (walkErr) {
+      console.warn(`[WARN] 扫描 CLP 目录失败:`, walkErr.message);
+    }
+
+    console.log(`[INFO] 找到 ${clpNlsFiles.length} 个 CLP NLS 缓存文件。`);
+
+    for (const clpNlsPath of clpNlsFiles) {
+      const clpNlsBackupPath = clpNlsPath + backupSuffix;
+      console.log(`[INFO] 正在处理 CLP 文件: "${clpNlsPath}"...`);
+
+      let clpNlsData;
+      try {
+        const sourcePath = fs.existsSync(clpNlsBackupPath) ? clpNlsBackupPath : clpNlsPath;
+        clpNlsData = JSON.parse(fs.readFileSync(sourcePath, 'utf8'));
+      } catch (err) {
+        console.error(`[ERROR] 读取或解析 CLP 文件失败: ${clpNlsPath},`, err.message);
+        continue;
+      }
+
+      if (Array.isArray(clpNlsData)) {
+        const clpMappings = [
+          { index: 4968, oldVal: "Toggle Agent", newVal: "切换智能体" },
+          { index: 3310, oldVal: "Quick Open", newVal: "快速打开" },
+          { index: 4206, oldVal: "Quick Open", newVal: "快速打开" },
+          { index: 4967, oldVal: "Open Browser (Preview)", newVal: "打开浏览器 (预览)" },
+          { index: 3104, oldVal: "Profile", newVal: "个人资料" },
+          { index: 4034, oldVal: "Profile", newVal: "个人资料" },
+          { index: 16330, oldVal: "Profile", newVal: "个人资料" },
+          { index: 5927, oldVal: "Review", newVal: "审核" },
+          { index: 8471, oldVal: "Review", newVal: "审核" },
+          { index: 6012, oldVal: "{0} files changed", newVal: "{0} 个文件已更改" }
+        ];
+
+        let clpModifiedCount = 0;
+        // 已知的原生中文语言包翻译，需要覆盖为我们的统一翻译
+        const nativeChineseOverrides = {
+          3104: { '配置文件': '个人资料' },
+          16330: { '配置文件': '个人资料' },
+          5927: { '审阅': '审核' },
+          8471: { '审阅': '审核' },
+          6012: { '已更改 {0} 个文件': '{0} 个文件已更改' },
+        };
+        clpMappings.forEach(mapping => {
+          const currentVal = clpNlsData[mapping.index];
+          if (currentVal === mapping.oldVal) {
+            clpNlsData[mapping.index] = mapping.newVal;
+            clpModifiedCount++;
+          } else if (currentVal === mapping.newVal) {
+            // Already our preferred translation, skip
+          } else if (nativeChineseOverrides[mapping.index] && nativeChineseOverrides[mapping.index][currentVal]) {
+            // Override native Chinese Language Pack translation with our preferred one
+            clpNlsData[mapping.index] = nativeChineseOverrides[mapping.index][currentVal];
+            clpModifiedCount++;
+          } else {
+            console.warn(`[WARN] CLP 缓存文件索引 ${mapping.index} 现为 "${currentVal}"，与预期 "${mapping.oldVal}" 不符，跳过。`);
+          }
+        });
+
+        if (clpModifiedCount > 0) {
+          console.log(`[INFO] CLP 缓存文件汉化完成，成功更新 ${clpModifiedCount} 个条目。`);
+          console.log(`[SAFEGUARD] 正在执行 CLP 文件备份与安全写入...`);
+          
+          if (!fs.existsSync(clpNlsBackupPath)) {
+            try {
+              fs.copyFileSync(clpNlsPath, clpNlsBackupPath);
+              console.log(`[OK] CLP 原始文件已成功备份至 "${clpNlsBackupPath}"。`);
+            } catch (backupErr) {
+              console.error(`[ERROR] 备份 CLP 文件失败: ${clpNlsPath},`, backupErr.message);
+              continue;
+            }
+          }
+
+          const clpContent = JSON.stringify(clpNlsData);
+          const clpWriteResult = safeWriteWithValidation(clpNlsPath, clpContent, clpNlsBackupPath);
+          if (!clpWriteResult.success) {
+            console.error(`\x1b[31m[SAFEGUARD] ❌ CLP 缓存文件安全写入失败：${clpWriteResult.error}\x1b[0m`);
+            autoRollbackOnFailure(config, clpWriteResult.error);
+            return false;
+          }
+          console.log(`[SAFEGUARD] ✅ CLP 缓存文件安全写入成功！`);
+        } else {
+          console.log(`[INFO] CLP 缓存文件所有条目已处于汉化状态，无需更新。`);
+        }
+      } else {
+        console.warn(`[WARN] CLP 缓存文件根对象不是 Array，跳过。`);
+      }
+    }
   }
 
   // 5. 自动更新 product.json 中的完整性哈希校验，防止报"安装已损坏"错误

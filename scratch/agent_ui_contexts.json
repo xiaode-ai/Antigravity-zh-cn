@@ -1,0 +1,400 @@
+{
+  "New Conversation": [
+    {
+      "index": 8432580,
+      "context": "{mod:!0,alt:!0,code:\"KeyB\",isMacOnly:!0}}]},HW={id:\"openNewConversation\",label:\"New Conversation\",icon:\"chat_add_on\",keybindings:[{binding:{mod:!0,key:\"n\"},disableInWeb:!0},{bi"
+    },
+    {
+      "index": 9466547,
+      "context": "b,e]),I=g===Cs(o1),x=!I&&g?Hi(g):\"\",D=e.getProjectStateProvider(x),U=gs(D),w=I?\"New Conversation\":U?.project?.name??\"Select Project\",k=!I&&!x;return p(\"div\",{className:\"flex it"
+    },
+    {
+      "index": 9802914,
+      "context": "ection:flex\"),children:[p(TBi,{sectionId:e,onOpenChange:F}),p(_n,{id:b,content:\"New Conversation in Workspace\",place:\"top\"}),!f&&p(\"button\",{\"data-tooltip-id\":b,className:\"w-6 "
+    },
+    {
+      "index": 9814707,
+      "context": " for Updates\",onClick:()=>{n.checkForUpdates?.()}}),F},[r,n]),g=Ve(()=>[{label:\"New Conversation\",shortcut:fE(HW),onClick:()=>{i(s)}},{label:\"Create Project\",onClick:()=>{e(Vye"
+    },
+    {
+      "index": 10030755,
+      "context": "etProjectId:b})},children:p(qe,{name:\"settings\",size:16})}),p(_n,{id:g,content:\"New Conversation in Project\",place:\"top\"}),p(\"button\",{\"data-tooltip-id\":g,className:\"text-muted"
+    }
+  ],
+  "No Model Selected": [
+    {
+      "index": 9182790,
+      "context": "u!==hte.OFF?\"true\":\"false\";e(\"CASCADE_MESSAGE_SENT\",si({extra:{model:n?n.label:\"No Model Selected\",num_images:a.toFixed(0),num_audio:i.toFixed(0),num_videos:s.toFixed(0),plannin"
+    },
+    {
+      "index": 9645827,
+      "context": "ditAmountForUsage),d=Zbi(t),{label:f,tooltipContent:g}=Ve(()=>{let b=t?.label??\"No Model Selected\",y=\"\",F=r?.isBestOfNEnabled??!1,C=r?.selectedBestOfNModels??[];return F&&C.leng"
+    }
+  ],
+  "Select Model": [
+    {
+      "index": 9647085,
+      "context": "place:\"top\",children:p(\"div\",{className:\"text-xs\",children:[p(\"span\",{children:\"Select Model\"}),p(\"span\",{className:\"ml-1 opacity-50\",children:a?\"\\u2318/\":\"Ctrl+/\"})]})})]}"
+    },
+    {
+      "index": 10105632,
+      "context": "if(!(e||n!==\"signedIn\"&&a!==\"Cider\"))return{id:\"no-model-error\",icon:wrt,title:\"Select Model to Send Message\",message:\"Select a model using the model selector in the input "
+    },
+    {
+      "index": 10105751,
+      "context": "Select a model using the model selector in the input box\",primaryAction:{label:\"Select Model\",onClick:()=>{t(!0)}}}},eZi=()=>{let e=zGi(),t=$Gi(),r=qGi();return e||t||r},ty"
+    }
+  ],
+  "Select another model": [
+    {
+      "index": 10103668,
+      "context": "urn{id:t,icon:r,title:\"Model quota reached\",message:n,secondaryAction:C?{label:\"Select another model\",onClick:C}:void 0,primaryAction:{label:d||\"Upgrade\",onClick:()=>{b(I),y(\"upgra"
+    }
+  ],
+  "Copy conversation markdown": [
+    {
+      "index": 8043892,
+      "context": "\"feedback\"},copyMarkdown:{id:\"conversationView.copyConversationMarkdown\",label:\"Copy conversation markdown\",icon:\"content_copy\"},openSettings:{id:\"settings.open\",label:\"Open Settings\",ic"
+    }
+  ],
+  "Archive this conversation": [
+    {
+      "index": 8044214,
+      "context": "art_alt\"},archiveConversation:{id:\"conversationView.archiveConversation\",label:\"Archive this conversation\",icon:\"archive\"}},Qfs=ga(null),Woi=class{requests=new Map;provider=new Qp([]);f"
+    }
+  ],
+  "Delete Conversation": [
+    {
+      "index": 8436182,
+      "context": "nread\",keybindings:{binding:{shift:!0,key:\"u\"}}},$gi={id:\"deleteHistory\",label:\"Delete Conversation\",icon:\"delete\",keybindings:{binding:{shift:!0,key:\"#\"}}},qgi={id:\"archiveRestor"
+    },
+    {
+      "index": 9108600,
+      "context": "ame:\"delete\",size:16,className:\"text-secondary-foreground shrink-0\"}),children:\"Delete Conversation\"}),a?p(ns.Item,{value:\"debug\",onSelect:a,icon:p(qe,{name:\"bug_report\",size:16,c"
+    },
+    {
+      "index": 9110073,
+      "context": ",{className:\"flex items-center justify-between mb-2\",children:[p(Kte,{children:\"Delete Conversation\"}),p(\"button\",{onClick:t,className:\"opacity-50 hover:opacity-70 rounded transit"
+    },
+    {
+      "index": 9113046,
+      "context": ")=>Et(!0):void 0,We=de(()=>[{label:\"Rename\",click:()=>Ye(),enabled:!!e},{label:\"Delete Conversation\",click:()=>Z(!0),enabled:!!e}],[e,Z,Ye]),cr=P1t(e,D);XW(Be,We);let ct=de(()=>{o"
+    },
+    {
+      "index": 10086186,
+      "context": "(I,X),ge=P1t(e,D),fe=de(()=>[{label:\"Rename\",click:()=>q(),enabled:!!e},{label:\"Delete Conversation\",click:()=>P(!0),enabled:!!e}],[e,P,q]);XW(a,fe);let Se=de(()=>{i(dB(e))},[e,i]"
+    }
+  ],
+  "Other Conversations": [
+    {
+      "index": 10057976,
+      "context": "ap(D=>({label:D.label,workspaceGroup:I.kind,cascadeIds:D.cascadeIds})):[{label:\"Other Conversations\",workspaceGroup:I.kind,cascadeIds:I.cascadeIds}]).flat(),[u.summaries,o,b,y]),C"
+    }
+  ],
+  "Ask Agent for Help": [
+    {
+      "index": 9516441,
+      "context": "\"Failed to move changes\"})]}),description:e,onDismiss:r,secondaryAction:{label:\"Ask Agent for Help\",onClick:i=>{i.stopPropagation();let s=t?[\"I tried to move the worktree changes"
+    }
+  ],
+  "Blocked on Your Input": [
+    {
+      "index": 10056858,
+      "context": "n a.length>0&&u.push({label:\"Current\",cascadeIds:a}),i.length>0&&u.push({label:\"Blocked on Your Input\"+n,cascadeIds:i}),s.length>0&&u.push({label:\"Running\"+n,cascadeIds:s}),o.length"
+    }
+  ],
+  "User cancelled agent execution.": [
+    {
+      "index": 9790150,
+      "context": "rent=!0)},[o]),tt(()=>{if(o===ji.IDLE&&X.current!==ji.IDLE&&Y.current){if(G)mE(\"User cancelled agent execution.\");else if(k===hW.ERROR)mE(\"Agent execution failed.\");else if(e.isLatest){let H="
+    },
+    {
+      "index": 9791847,
+      "context": "),G&&p(\"div\",{className:\"px-2 py-1 text-sm text-secondary-foreground\",children:\"User cancelled agent execution.\"}),(!e.isLatest||o===ji.IDLE)&&p(\"div\",{className:\"flex flex-col py-1 gap-1.5\","
+    }
+  ],
+  "Thinking...": [
+    {
+      "index": 9749701,
+      "context": "loading&&V.length===0&&p(\"span\",{className:\"opacity-70 animate-pulse\",children:\"Thinking...\"}),n.error&&p(\"span\",{className:\"text-red-500\",children:n.error}),V.length>0?p("
+    }
+  ],
+  "Thinking": [
+    {
+      "index": 8884016,
+      "context": "iew:a?p(jt,{children:a}):null,cta:null})},D1n=bd(({step:e,debugMode:t,shouldHideThinking:r})=>{let n=Vvi(e,t),{getStepRendererConfig:a,chatParams:i}=jn();if(tt(()=>{e.s"
+    },
+    {
+      "index": 8884361,
+      "context": "i(s)){let u=s.renderer;return p(u,{...e,step:e.step.value,debugMode:t,shouldHideThinking:r})}let o=s;return p(xvi,{status:e.status,icon:o.icon,title:o.title(e),secondar"
+    },
+    {
+      "index": 8884573,
+      "context": "nt?.(e)})});D1n.displayName=\"CortexStep\";var _1n=({step:e,debugMode:t,shouldHideThinking:r})=>{let{chatParams:n,getStepRendererConfig:a}=jn();return a(e).isRendered(e,t"
+    },
+    {
+      "index": 8884837,
+      "context": "p(\"div\",{className:\"min-w-0 grow\",children:[p(D1n,{step:e,debugMode:t,shouldHideThinking:r}),p(pln,{stepIndex:oh(e.metadata,null)}),t&&p(\"div\",{className:\"flex flex-col"
+    },
+    {
+      "index": 8946490,
+      "context": "(n.nanos??0)/1e6;r(Math.floor((Date.now()-a)/1e3))}},1e3),t>=0?p(jt,{children:[\"Thinking for \",Math.max(1,t),\"s\"]}):p(jt,{children:[\"Thinking\",p(mAe,{})]})},o1t=({think"
+    }
+  ],
+  "Running": [
+    {
+      "index": 1089860,
+      "context": ")},\"addToAnimationPool\"),stopAnimationLoop:A(function(){this._private.animationsRunning=!1},\"stopAnimationLoop\"),startAnimationLoop:A(function(){var t=this;if(t._priva"
+    },
+    {
+      "index": 1089960,
+      "context": "mationLoop\"),startAnimationLoop:A(function(){var t=this;if(t._private.animationsRunning=!0,!t.styleEnabled())return;function r(){t._private.animationsRunning&&gK(A(fun"
+    },
+    {
+      "index": 1090030,
+      "context": "animationsRunning=!0,!t.styleEnabled())return;function r(){t._private.animationsRunning&&gK(A(function(i){wPe(i,t),r()},\"animationStep\"))}A(r,\"headlessStep\");var n=t.r"
+    },
+    {
+      "index": 1445513,
+      "context": "domId=U,o.debug(`Node ${x.id} dimensions: ${w.width}x${w.height}`)}})),o.debug(\"Running cose-bilkent layout algorithm\");const V={...e,nodes:e.nodes.map(x=>{const D=f[x"
+    },
+    {
+      "index": 7681976,
+      "context": "urn g}var aut=!1,iut=1,dE=function(e){return e[e.NotStarted=0]=\"NotStarted\",e[e.Running=1]=\"Running\",e[e.Stopped=2]=\"Stopped\",e}({}),Zni={clock:{setTimeout:(e,t)=>setT"
+    }
+  ],
+  "Stopped": [
+    {
+      "index": 1055268,
+      "context": "event\"},\"instanceString\"),recycle:A(function(t,r){if(this.isImmediatePropagationStopped=this.isPropagationStopped=this.isDefaultPrevented=hZ,t!=null&&t.preventDefault?"
+    },
+    {
+      "index": 1055294,
+      "context": "recycle:A(function(t,r){if(this.isImmediatePropagationStopped=this.isPropagationStopped=this.isDefaultPrevented=hZ,t!=null&&t.preventDefault?(this.type=t.type,this.isD"
+    },
+    {
+      "index": 1056095,
+      "context": "ventDefault()},\"preventDefault\"),stopPropagation:A(function(){this.isPropagationStopped=iK;var t=this.originalEvent;t&&t.stopPropagation&&t.stopPropagation()},\"stopPro"
+    },
+    {
+      "index": 1056258,
+      "context": "pPropagation\"),stopImmediatePropagation:A(function(){this.isImmediatePropagationStopped=iK,this.stopPropagation()},\"stopImmediatePropagation\"),isDefaultPrevented:hZ,is"
+    },
+    {
+      "index": 1056356,
+      "context": "opPropagation()},\"stopImmediatePropagation\"),isDefaultPrevented:hZ,isPropagationStopped:hZ,isImmediatePropagationStopped:hZ},DQe=/^([^.]+)(\\.(?:[^.]+))?$/,y2r=\".*\",_Qe"
+    }
+  ],
+  "Idle": [
+    {
+      "index": 5625655,
+      "context": "ChangeEvent\",\"IdentityCredential\",\"IdentityCredentialError\",\"IdentityProvider\",\"IdleDeadline\",\"IdleDetector\",\"IIRFilterNode\",\"Image\",\"ImageBitmap\",\"ImageBitmapRende"
+    },
+    {
+      "index": 5625670,
+      "context": "dentityCredential\",\"IdentityCredentialError\",\"IdentityProvider\",\"IdleDeadline\",\"IdleDetector\",\"IIRFilterNode\",\"Image\",\"ImageBitmap\",\"ImageBitmapRenderingContext\",\"I"
+    },
+    {
+      "index": 7550645,
+      "context": "eDiffs:[],backgroundCommands:[],pendingAgentMessages:[],costSummary:void 0,fullyIdle:!0}}function gC(e,t,r){return JSON.stringify(e,(n,a)=>{if(!(r?.removeTypeNames&"
+    },
+    {
+      "index": 7556855,
+      "context": "tableStatus=t.executableStatus,r.executorLoopStatus=t.executorLoopStatus,r.fullyIdle=t.fullyIdle,t.compactionInfo?.compactedAtStepIndices!==void 0&&t.compactionInfo"
+    },
+    {
+      "index": 7556867,
+      "context": "t.executableStatus,r.executorLoopStatus=t.executorLoopStatus,r.fullyIdle=t.fullyIdle,t.compactionInfo?.compactedAtStepIndices!==void 0&&t.compactionInfo.compactedAt"
+    }
+  ],
+  "In Progress": [
+    {
+      "index": 10041530,
+      "context": "r\",size:16,className:\"text-muted-foreground\"})},{id:\"status-in-progress\",label:\"In Progress\",items:ge,icon:p(qe,{name:\"schedule\",size:16,className:\"text-muted-foreground\"}"
+    }
+  ],
+  "Skipped": [
+    {
+      "index": 8442922,
+      "context": "on=({entry:e})=>{let{renderers:t}=jn(),r=t.markdown,n=(()=>{if(e.skipped)return\"Skipped\";let i=e.options.filter(s=>e.selectedOptionIds.includes(s.id)).map(s=>s.text);r"
+    },
+    {
+      "index": 8455715,
+      "context": "ceTrajectoryStepInfo?.cascadeId??\"\";if(!H||ee===-1||!q){console.warn(\"submitWithSkipped early return: missing trajectoryId, stepIndex, or cascadeId\",{trajectoryId:H,st"
+    },
+    {
+      "index": 8456068,
+      "context": ";o(\"ask_question_submitted\",si({extra:{questionsAnswered:re.toString(),questionsSkipped:ae.toString(),questionsWriteIn:ie.toString()}},\"user-provided strings\")),await "
+    },
+    {
+      "index": 8889819,
+      "context": "condary-foreground text-muted-foreground cursor-not-allowed shrink-0\",children:\"Skipped\"}),n===On.RUNNING&&!e.skipped&&p(cA,{onClick:y,disabled:g,className:\"px-2 py-1 "
+    },
+    {
+      "index": 10111315,
+      "context": "x,D]);let w=de(async Y=>{if(!t||r===void 0||r===-1||!n){console.warn(\"submitWithSkipped early return: missing trajectoryId, stepIndex, or cascadeId\",{trajectoryId:t,st"
+    }
+  ],
+  "Tool Output": [
+    {
+      "index": 8939004,
+      "context": "-1\",children:[p(\"span\",{className:\"text-sm text-secondary-foreground\",children:\"Tool Output\"}),p(s,{children:k9i(V)?q1n(V):V})]},\"result\")),I&&N.push(p(\"div\",{className:\"f"
+    }
+  ],
+  "Tool arguments": [
+    {
+      "index": 8938701,
+      "context": "ol\",children:[p(\"span\",{className:\"text-sm text-secondary-foreground\",children:\"Tool arguments\"}),p(s,{children:q1n(o.argumentsJson)})]},\"args\"));let V=e.result.case===\"resul"
+    }
+  ],
+  "Task Logs": [
+    {
+      "index": 10282979,
+      "context": "reground\"}),p(\"h2\",{className:\"text-lg font-semibold text-foreground\",children:\"Task Logs\"})]}),i.length>0&&p(ns.Root,{value:o,onValueChange:u,children:[p(ns.Trigger,{as"
+    }
+  ],
+  "View Debug": [
+    {
+      "index": 9108757,
+      "context": "\"bug_report\",size:16,className:\"text-secondary-foreground shrink-0\"}),children:\"View Debug\"}):p(jt,{})]})},Xgn=({onDeleteClick:e,onRenameClick:t,onMarkAsReadClick:r,isUnr"
+    }
+  ],
+  "View Diff": [
+    {
+      "index": 9523576,
+      "context": "nClick:()=>{t(e)},className:\"!hidden group-hover/file-summary:!block\",children:\"View Diff\"})]})},Yxi=({setShowModal:e,onConfirm:t})=>p(\"div\",{className:\"flex items-cente"
+    },
+    {
+      "index": 10205568,
+      "context": "w Split Diff\"}),(V||N)&&U.push({iconName:\"difference\",tooltip:V?\"Viewing Diff\":\"View Diff\",onClick:I,state:V?\"selected\":void 0,ariaLabel:V?\"View File\":\"View Diff\"}),a.pr"
+    },
+    {
+      "index": 10205640,
+      "context": " Diff\":\"View Diff\",onClick:I,state:V?\"selected\":void 0,ariaLabel:V?\"View File\":\"View Diff\"}),a.product.isGoogleInternal&&y?.endsWith(\".ipynb\")&&U.push({iconName:\"article"
+    }
+  ],
+  "View Logs": [
+    {
+      "index": 10290839,
+      "context": "me:\"w-full\",icon:p(lA,{className:\"w-4 h-4 text-secondary-secondary\"}),children:\"View Logs\"},\"view_logs\"),!Oe&&p(ns.Item,{value:\"delete\",className:\"w-full !text-red-500 h"
+    }
+  ],
+  "View network requests": [
+    {
+      "index": 8544111,
+      "context": "ldren:p(\"div\",{className:\"max-w-[45vw] whitespace-normal break-words\",children:\"View network requests\"})})]})]})}),supplementaryView:r?null:p(ebi,{step:e}),cta:null,status:t,sourceT"
+    }
+  ],
+  "Toggle Sidebar": [
+    {
+      "index": 8043673,
+      "context": "ntext.Provider\");return e},sA={toggleSidebar:{id:\"sidebar.toggleSidebar\",label:\"Toggle Sidebar\",icon:\"dock_to_right\",keybindings:{binding:{mod:!0,key:\"b\"}}},feedback:{id:\"sid"
+    },
+    {
+      "index": 10223479,
+      "context": ",{treeId:e,tabId:t}),D&&p(jt,{children:[p(_n,{id:k,place:\"bottom-end\",children:\"Toggle Sidebar\"}),p(WC,{iconName:\"toc\",state:G?\"selected\":\"normal\",onClick:X,dataTooltipId:k,d"
+    },
+    {
+      "index": 10239760,
+      "context": "k_to_right\",onClick:t,dataTooltipId:e,dataTestId:\"sidebar-toggle\",\"aria-label\":\"Toggle Sidebar\"}),p(Tbn,{id:e,text:\"Toggle Sidebar\",keybinding:sA.toggleSidebar.keybindings,pl"
+    },
+    {
+      "index": 10239796,
+      "context": "e,dataTestId:\"sidebar-toggle\",\"aria-label\":\"Toggle Sidebar\"}),p(Tbn,{id:e,text:\"Toggle Sidebar\",keybinding:sA.toggleSidebar.keybindings,place:\"bottom\"})]})},rWi=16,nWi=54,aWi"
+    }
+  ],
+  "Toggle Auxiliary Pane": [
+    {
+      "index": 8432349,
+      "context": "omputer\",keybindings:{binding:{mod:!0,key:\".\"}}},fAe={id:\"toggleAuxPane\",label:\"Toggle Auxiliary Pane\",icon:\"dock_to_left\",keybindings:[{binding:{mod:!0,shift:!0,key:\"b\"},disableInW"
+    },
+    {
+      "index": 10232207,
+      "context": "\"Close Auxiliary Pane\"}),p(_n,{id:d,delayShow:300,place:\"bottom-end\",children:[\"Toggle Auxiliary Pane\",p(\"span\",{className:\"ml-1 text-muted-foreground\",children:fE(fAe)})]})]}),p(\"d"
+    },
+    {
+      "index": 10266327,
+      "context": "_left\",onClick:re,dataTooltipId:g,dataTestId:\"toggle-aux-sidebar\",\"aria-label\":\"Toggle Auxiliary Pane\"}),p(_n,{id:g,delayShow:300,place:\"bottom-end\",children:[\"Toggle Auxiliary Pane"
+    },
+    {
+      "index": 10266407,
+      "context": "Toggle Auxiliary Pane\"}),p(_n,{id:g,delayShow:300,place:\"bottom-end\",children:[\"Toggle Auxiliary Pane\",p(\"span\",{className:\"ml-1 text-muted-foreground\",children:fE(fAe)})]})]})]})})"
+    }
+  ],
+  "Toggle Terminal": [
+    {
+      "index": 8431804,
+      "context": "c\",keybindings:[{binding:{ctrl:!0,key:\"m\"}}]},dAe={id:\"toggleBottomPane\",label:\"Toggle Terminal\",icon:\"terminal\",keybindings:[{binding:{mod:!0,key:\"j\"}},{binding:{mod:!0,key:\""
+    },
+    {
+      "index": 10252169,
+      "context": "ursor-pointer\",\"data-tooltip-id\":o}),p(_n,{id:o,place:\"bottom-start\",children:[\"Toggle Terminal\",p(\"span\",{className:\"ml-1 opacity-50\",children:[\"(\",i,\")\"]})]})]})]}),p(\"div\","
+    }
+  ],
+  "Toggle Model Selector": [
+    {
+      "index": 8431297,
+      "context": "eybindings:{binding:{alt:!0,key:\"Enter\"}}},Ksn={id:\"toggleModelSelector\",label:\"Toggle Model Selector\",icon:\"auto_awesome\",keybindings:{binding:{mod:!0,key:\"/\"}}},ldt={id:\"startVoic"
+    }
+  ],
+  "Toggle Project Selector": [
+    {
+      "index": 8432111,
+      "context": "l:\"Open Launchpad\",icon:\"select_window\"},Mgi={id:\"toggleProjectSelector\",label:\"Toggle Project Selector\",icon:\"folder\",keybindings:{binding:{mod:!0,key:\";\"}}},zsn={id:\"toggleEnvironme"
+    }
+  ],
+  "Open Conversation History": [
+    {
+      "index": 8435180,
+      "context": "s:{binding:{mod:!0,shift:!0,key:\"c\"}}},oon={id:\"openConversationHistory\",label:\"Open Conversation History\",icon:\"history\",keybindings:{binding:{mod:!0,key:\"y\"}}},pAe={id:\"openScheduledT"
+    }
+  ],
+  "Open Conversation Picker": [
+    {
+      "index": 8433671,
+      "context": "ybindings:{binding:{mod:!0,shift:!0,key:\"p\"}}},fre={id:\"openConvoPicker\",label:\"Open Conversation Picker\",icon:\"chat\",keybindings:{binding:{mod:!0,key:\"k\"}}},A4={id:\"openWorkspaceSelec"
+    }
+  ],
+  "Select workspace": [
+    {
+      "index": 9127573,
+      "context": "lace:\"bottom\",id:b}),a&&p(q9,{items:[{id:d,items:f,barrier:{type:\"label\",label:\"Select workspace\"}}],selectOrClose:g,inputBoxProps:{placeholder:\"Select workspace to delete all "
+    },
+    {
+      "index": 9127638,
+      "context": "\"label\",label:\"Select workspace\"}}],selectOrClose:g,inputBoxProps:{placeholder:\"Select workspace to delete all conversations...\"},scorer:QC})]})},FSi=e=>{let t=new Blob([e],{ty"
+    },
+    {
+      "index": 9459006,
+      "context": "&!d&&!I&&(x.stopPropagation(),g(!0))},children:I?\"Creating workspace\\u2026\":N??\"Select workspace...\"}),!I&&p(qe,{name:\"keyboard_arrow_down\",className:\"size-4 stroke-1 text-seco"
+    },
+    {
+      "index": 9736319,
+      "context": "spaceUri,er=st.agentWorkspaceUri,n(st.sectionId)}if(!ct)if(Z)ct=Cs(o1);else{Je(\"Select workspace to send message\");return}if(!e&&r===Ad.BACKGROUND_WORKTREE){H(!0);try{let st=b?"
+    }
+  ],
+  "Close Workspace": [
+    {
+      "index": 9801243,
+      "context": ",()=>{D=!0}},[a,u]);let b=Ll(),[y,F]=_e(!1),C=Ft(null),N=de(()=>{let D=[{label:\"Close Workspace\",click:()=>s()}];return o&&a&&D.push({label:\"Hide Editor\",click:()=>o.setWindow"
+    }
+  ],
+  "Skills and Customizations": [
+    {
+      "index": 12372267,
+      "context": "barItemsFeature={items:[{id:\"skills-and-customizations\",icon:\"edit_note\",label:\"Skills and Customizations\",onSelect:fr=>fr.showView(),ViewComponent:lAn}]});const _a=Jus(Y,{isGoogleInter"
+    }
+  ],
+  "Skills are instructions that extend what Agent can do.": [
+    {
+      "index": 10353680,
+      "context": "ldren:\"Skills\"})}),p(\"div\",{className:\"text-sm text-muted-foreground\",children:\"Skills are instructions that extend what Agent can do.\"})]}),p(\"div\",{className:\"flex items-center gap-1.5 shrink-0 h-7\",children:[p(\""
+    }
+  ],
+  "This skill is installed in your workspace": [
+    {
+      "index": 10346929,
+      "context": "m text-green-500\",children:\"Installed\"})]}),p(_n,{place:\"bottom\",id:n,children:\"This skill is installed in your workspace\"})]}),r&&e.path&&!t&&p(\"button\",{className:\"absolute top-1.5 right-1.5 z-10 rou"
+    }
+  ]
+}

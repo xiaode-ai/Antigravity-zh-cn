@@ -2142,5 +2142,597 @@
   {
     "old": "p(\"h2\",{className:\"text-lg font-medium\",children:\"Build With Google Plugins\"})",
     "new": "p(\"h2\",{className:\"text-lg font-medium\",children:\"使用 Google 插件\"})"
+  },
+  {
+    "old": "HW={id:\"openNewConversation\",label:\"New Conversation\"",
+    "new": "HW={id:\"openNewConversation\",label:\"新建对话\""
+  },
+  {
+    "old": "label:\"New Conversation\",shortcut:",
+    "new": "label:\"新建对话\",shortcut:"
+  },
+  {
+    "old": "I?\"New Conversation\":",
+    "new": "I?\"新建对话\":"
+  },
+  {
+    "old": "content:\"New Conversation in Workspace\"",
+    "new": "content:\"在工作区中新建对话\""
+  },
+  {
+    "old": "content:\"New Conversation in Project\"",
+    "new": "content:\"在项目中新建对话\""
+  },
+  {
+    "old": "extra:{model:n?n.label:\"No Model Selected\"",
+    "new": "extra:{model:n?n.label:\"未选择模型\""
+  },
+  {
+    "old": "b=t?.label??\"No Model Selected\"",
+    "new": "b=t?.label??\"未选择模型\""
+  },
+  {
+    "old": "children:[p(\"span\",{children:\"Select Model\"}),p(\"span\",{className:\"ml-1 opacity-50\",children:a?\"\\u2318/\":\"Ctrl+/\"})]",
+    "new": "children:[p(\"span\",{children:\"选择模型\"}),p(\"span\",{className:\"ml-1 opacity-50\",children:a?\"\\u2318/\":\"Ctrl+/\"})]"
+  },
+  {
+    "old": "title:\"Select Model to Send Message\"",
+    "new": "title:\"选择模型以发送消息\""
+  },
+  {
+    "old": "message:\"Select a model using the model selector in the input box\"",
+    "new": "message:\"请使用输入框中的模型选择器来选择模型\""
+  },
+  {
+    "old": "primaryAction:{label:\"Select Model\",onClick:",
+    "new": "primaryAction:{label:\"选择模型\",onClick:"
+  },
+  {
+    "old": "secondaryAction:C?{label:\"Select another model\",onClick:C}",
+    "new": "secondaryAction:C?{label:\"选择其他模型\",onClick:C}"
+  },
+  {
+    "old": "copyMarkdown:{id:\"conversationView.copyConversationMarkdown\",label:\"Copy conversation markdown\"",
+    "new": "copyMarkdown:{id:\"conversationView.copyConversationMarkdown\",label:\"复制对话 Markdown\""
+  },
+  {
+    "old": "archiveConversation:{id:\"conversationView.archiveConversation\",label:\"Archive this conversation\"",
+    "new": "archiveConversation:{id:\"conversationView.archiveConversation\",label:\"归档此对话\""
+  },
+  {
+    "old": "$gi={id:\"deleteHistory\",label:\"Delete Conversation\"",
+    "new": "$gi={id:\"deleteHistory\",label:\"删除对话\""
+  },
+  {
+    "old": "children:\"Delete Conversation\"",
+    "new": "children:\"删除对话\""
+  },
+  {
+    "old": "label:\"Delete Conversation\",click:",
+    "new": "label:\"删除对话\",click:"
+  },
+  {
+    "old": "[{label:\"Other Conversations\",",
+    "new": "[{label:\"其他对话\","
+  },
+  {
+    "old": "secondaryAction:{label:\"Ask Agent for Help\",",
+    "new": "secondaryAction:{label:\"向智能体寻求帮助\","
+  },
+  {
+    "old": "label:\"Blocked on Your Input\"+n,",
+    "new": "label:\"等待您的输入\"+n,"
+  },
+  {
+    "old": "mE(\"User cancelled agent execution.\")",
+    "new": "mE(\"用户取消了智能体执行。\")"
+  },
+  {
+    "old": "children:\"User cancelled agent execution.\"",
+    "new": "children:\"用户取消了智能体执行。\""
+  },
+  {
+    "old": "children:\"Thinking...\"",
+    "new": "children:\"思考中...\""
+  },
+  {
+    "old": "children:[\"Thinking for \",Math.max(1,t),\"s\"]",
+    "new": "children:[\"已思考 \",Math.max(1,t),\" 秒\"]"
+  },
+  {
+    "old": "children:[\"Thinking\",p(mAe,{})]",
+    "new": "children:[\"思考中\",p(mAe,{})]"
+  },
+  {
+    "old": "label:\"Running\"+n,",
+    "new": "label:\"运行中\"+n,"
+  },
+  {
+    "old": "e[e.Running=1]=\"Running\"",
+    "new": "e[e.Running=1]=\"运行中\""
+  },
+  {
+    "old": "e[e.Stopped=2]=\"Stopped\"",
+    "new": "e[e.Stopped=2]=\"已停止\""
+  },
+  {
+    "old": "{id:\"status-in-progress\",label:\"In Progress\",",
+    "new": "{id:\"status-in-progress\",label:\"进行中\","
+  },
+  {
+    "old": "if(e.skipped)return\"Skipped\"",
+    "new": "if(e.skipped)return\"已跳过\""
+  },
+  {
+    "old": "children:\"Skipped\"",
+    "new": "children:\"已跳过\""
+  },
+  {
+    "old": "children:\"Tool Output\"",
+    "new": "children:\"工具输出\""
+  },
+  {
+    "old": "children:\"Tool arguments\"",
+    "new": "children:\"工具参数\""
+  },
+  {
+    "old": "children:\"Task Logs\"",
+    "new": "children:\"任务日志\""
+  },
+  {
+    "old": "children:\"View Debug\"",
+    "new": "children:\"查看调试\""
+  },
+  {
+    "old": "children:\"View Diff\"",
+    "new": "children:\"查看差异\""
+  },
+  {
+    "old": "tooltip:V?\"Viewing Diff\":\"View Diff\"",
+    "new": "tooltip:V?\"正在查看差异\":\"查看差异\""
+  },
+  {
+    "old": "ariaLabel:V?\"View File\":\"View Diff\"",
+    "new": "ariaLabel:V?\"查看文件\":\"查看差异\""
+  },
+  {
+    "old": "children:\"View Logs\"",
+    "new": "children:\"查看日志\""
+  },
+  {
+    "old": "children:\"View network requests\"",
+    "new": "children:\"查看网络请求\""
+  },
+  {
+    "old": "sA={toggleSidebar:{id:\"sidebar.toggleSidebar\",label:\"Toggle Sidebar\",",
+    "new": "sA={toggleSidebar:{id:\"sidebar.toggleSidebar\",label:\"切换侧边栏\","
+  },
+  {
+    "old": "children:\"Toggle Sidebar\"",
+    "new": "children:\"切换侧边栏\""
+  },
+  {
+    "old": "text:\"Toggle Sidebar\"",
+    "new": "text:\"切换侧边栏\""
+  },
+  {
+    "old": "\"aria-label\":\"Toggle Sidebar\"",
+    "new": "\"aria-label\":\"切换侧边栏\""
+  },
+  {
+    "old": "fAe={id:\"toggleAuxPane\",label:\"Toggle Auxiliary Pane\"",
+    "new": "fAe={id:\"toggleAuxPane\",label:\"切换辅助面板\""
+  },
+  {
+    "old": "children:[\"Toggle Auxiliary Pane\",",
+    "new": "children:[\"切换辅助面板\","
+  },
+  {
+    "old": "\"aria-label\":\"Toggle Auxiliary Pane\"",
+    "new": "\"aria-label\":\"切换辅助面板\""
+  },
+  {
+    "old": "dAe={id:\"toggleBottomPane\",label:\"Toggle Terminal\"",
+    "new": "dAe={id:\"toggleBottomPane\",label:\"切换终端\""
+  },
+  {
+    "old": "children:[\"Toggle Terminal\",",
+    "new": "children:[\"切换终端\","
+  },
+  {
+    "old": "Ksn={id:\"toggleModelSelector\",label:\"Toggle Model Selector\"",
+    "new": "Ksn={id:\"toggleModelSelector\",label:\"切换模型选择器\""
+  },
+  {
+    "old": "Mgi={id:\"toggleProjectSelector\",label:\"Toggle Project Selector\"",
+    "new": "Mgi={id:\"toggleProjectSelector\",label:\"切换项目选择器\""
+  },
+  {
+    "old": "oon={id:\"openConversationHistory\",label:\"Open Conversation History\"",
+    "new": "oon={id:\"openConversationHistory\",label:\"打开对话历史\""
+  },
+  {
+    "old": "fre={id:\"openConvoPicker\",label:\"Open Conversation Picker\"",
+    "new": "fre={id:\"openConvoPicker\",label:\"打开对话选择器\""
+  },
+  {
+    "old": "barrier:{type:\"label\",label:\"Select workspace\"}",
+    "new": "barrier:{type:\"label\",label:\"选择工作区\"}"
+  },
+  {
+    "old": "placeholder:\"Select workspace to delete all conversations...\"",
+    "new": "placeholder:\"选择工作区以删除所有对话...\""
+  },
+  {
+    "old": "N??\"Select workspace...\"",
+    "new": "N??\"选择工作区...\""
+  },
+  {
+    "old": "Je(\"Select workspace to send message\")",
+    "new": "Je(\"选择工作区以发送消息\")"
+  },
+  {
+    "old": "{label:\"Close Workspace\",",
+    "new": "{label:\"关闭工作区\","
+  },
+  {
+    "old": "label:\"Skills and Customizations\"",
+    "new": "label:\"技能与自定义设置\""
+  },
+  {
+    "old": "children:\"Skills are instructions that extend what Agent can do.\"",
+    "new": "children:\"技能是扩展智能体能力的指令集。\""
+  },
+  {
+    "old": "children:\"This skill is installed in your workspace\"",
+    "new": "children:\"此技能已安装在您的工作区\""
+  },
+  {
+    "old": "title:\"Subagents\"",
+    "new": "title:\"子智能体\""
+  },
+  {
+    "old": "{icon:\"stop_circle\",tooltip:\"Stop All Subagents\",onClick:()=>{b({conversationId:a})}}",
+    "new": "{icon:\"stop_circle\",tooltip:\"停止所有子智能体\",onClick:()=>{b({conversationId:a})}}"
+  },
+  {
+    "old": "p(\"button\",{onClick:X=>{i(ds.STEP_ACCEPT,\"subagent_approve_button\"),k(X)},className:\"text-xs cursor-pointer rounded px-1.5 py-px bg-primary text-primary-foreground hover:opacity-90 transition-opacity\",children:\"Approve\"}),p(\"button\",{onClick:X=>{i(ds.STEP_REJECT,\"subagent_deny_button\"),G(X)},className:\"text-xs cursor-pointer rounded px-1.5 py-px bg-secondary text-secondary-foreground hover:opacity-90 transition-opacity\",children:\"Deny\"})",
+    "new": "p(\"button\",{onClick:X=>{i(ds.STEP_ACCEPT,\"subagent_approve_button\"),k(X)},className:\"text-xs cursor-pointer rounded px-1.5 py-px bg-primary text-primary-foreground hover:opacity-90 transition-opacity\",children:\"批准\"}),p(\"button\",{onClick:X=>{i(ds.STEP_REJECT,\"subagent_deny_button\"),G(X)},className:\"text-xs cursor-pointer rounded px-1.5 py-px bg-secondary text-secondary-foreground hover:opacity-90 transition-opacity\",children:\"拒绝\"})"
+  },
+  {
+    "old": "children:\"Blocked, needs input\"",
+    "new": "children:\"已受阻，需要输入\""
+  },
+  {
+    "old": "children:V.waitingStepSummary||\"Needs attention\"",
+    "new": "children:V.waitingStepSummary||\"需要关注\""
+  },
+  {
+    "old": "n1t=({promptText:e,handleUserInteraction:t})=>{let{inputBoxRef:r}=jn();return p(\"div\",{className:\"text-sm flex w-full items-center justify-between flex-wrap\",children:[p(\"p\",{children:e}),p(\"div\",{className:\"flex gap-2 ml-auto\",children:[p(lo,{onClick:()=>{t(!1)},children:\"Reject\"}),p(Eo,{onClick:()=>{t(!0)},children:\"Accept\"})]})]})}",
+    "new": "n1t=({promptText:e,handleUserInteraction:t})=>{let{inputBoxRef:r}=jn();return p(\"div\",{className:\"text-sm flex w-full items-center justify-between flex-wrap\",children:[p(\"p\",{children:e}),p(\"div\",{className:\"flex gap-2 ml-auto\",children:[p(lo,{onClick:()=>{t(!1)},children:\"拒绝\"}),p(Eo,{onClick:()=>{t(!0)},children:\"接受\"})]})]})}"
+  },
+  {
+    "old": "X=U?p(n1t,{promptText:\"Approve?\",handleUserInteraction:G}):null",
+    "new": "X=U?p(n1t,{promptText:\"批准？\",handleUserInteraction:G}):null"
+  },
+  {
+    "old": "p(n1t,{promptText:\"Send command input?\",handleUserInteraction:s=>{i?.(e,t,r,{case:\"sendCommandInput\",value:At(uei,{confirm:s})}",
+    "new": "p(n1t,{promptText:\"发送终端输入？\",handleUserInteraction:s=>{i?.(e,t,r,{case:\"sendCommandInput\",value:At(uei,{confirm:s})}"
+  },
+  {
+    "old": "children:[p(\"span\",{className:\"text-secondary-foreground\",children:\"Read URL content?\"}),p(\"div\",{className:\"flex gap-2 ml-auto\",children:[p(lo,{onClick:()=>{n(!1)},children:\"Reject\"}),p(Eo,{onClick:()=>{n(!0)},children:\"Accept\"})]})]",
+    "new": "children:[p(\"span\",{className:\"text-secondary-foreground\",children:\"读取 URL 内容？\"}),p(\"div\",{className:\"flex gap-2 ml-auto\",children:[p(lo,{onClick:()=>{n(!1)},children:\"拒绝\"}),p(Eo,{onClick:()=>{n(!0)},children:\"接受\"})]})]"
+  },
+  {
+    "old": "return e.userRejected?p(\"span\",{className:\"text-secondary-foreground truncate\",children:\"Read URL rejected\"}):null",
+    "new": "return e.userRejected?p(\"span\",{className:\"text-secondary-foreground truncate\",children:\"读取 URL 被拒绝\"}):null"
+  },
+  {
+    "old": "children:[k===Of.KILL&&p(ef,{size:12,className:\"flex-shrink-0\"}),\"Reject All\"]}),p(_n,{id:O,delayShow:300,place:\"bottom\",children:\"Reject all generated responses and revert to the state before triggering battle mode.\"})",
+    "new": "children:[k===Of.KILL&&p(ef,{size:12,className:\"flex-shrink-0\"}),\"全部拒绝\"]}),p(_n,{id:O,delayShow:300,place:\"bottom\",children:\"拒绝所有生成的响应，并恢复到触发对决模式之前的状态。\"})"
+  },
+  {
+    "old": "function lFi(e,t){return Ve(()=>[{value:rl.OFF,label:\"Ask every time\",isAllowed:t},{value:rl.EAGER,label:\"Always run\",isAllowed:t&&!e,disabledReason:t?\"Disabled in strict mode\":\"Requires limited-internet host.\"}],[e,t])}",
+    "new": "function lFi(e,t){return Ve(()=>[{value:rl.OFF,label:\"每次询问\",isAllowed:t},{value:rl.EAGER,label:\"始终运行\",isAllowed:t&&!e,disabledReason:t?\"在严格模式下禁用\":\"需要受限网络主机。\"}],[e,t])}"
+  },
+  {
+    "old": "function t9i(e){return Ve(()=>[{value:vh.DISABLED,label:\"Disabled\",isAllowed:!0},{value:vh.ALWAYS_ASK,label:\"Ask first\",isAllowed:!e,disabledReason:\"JavaScript execution disabled in strict mode\"},{value:vh.TURBO,label:\"Always run\",isAllowed:!e,disabledReason:\"JavaScript execution disabled in strict mode\"}],[e])}",
+    "new": "function t9i(e){return Ve(()=>[{value:vh.DISABLED,label:\"已禁用\",isAllowed:!0},{value:vh.ALWAYS_ASK,label:\"先询问\",isAllowed:!e,disabledReason:\"严格模式下已禁用 JavaScript 执行\"},{value:vh.TURBO,label:\"始终运行\",isAllowed:!e,disabledReason:\"严格模式下已禁用 JavaScript 执行\"}],[e])}"
+  },
+  {
+    "old": "d=Ve(()=>({label:\"Always Allow\",onClick:()=>e()}),[e]),f=Ve(()=>({label:\"Deny\",onClick:()=>t()}),[t]),g=Ve(()=>({label:\"Allow Once\",onClick:()=>r()}),[r])",
+    "new": "d=Ve(()=>({label:\"始终允许\",onClick:()=>e()}),[e]),f=Ve(()=>({label:\"拒绝\",onClick:()=>t()}),[t]),g=Ve(()=>({label:\"允许一次\",onClick:()=>r()}),[r])"
+  },
+  {
+    "old": "V=Ve(()=>({label:\"Deny\",onClick:F}),[F]),I=Ve(()=>({label:\"Allow once\",onClick:y}),[y]),x=Ve(()=>{if(!a)return null;try{return new URL(a).hostname}catch{return a}},[a]),D=Ve(()=>({label:`Allow ${x}`,onClick:C,keybindingLabel:\"\"}),[C,x])",
+    "new": "V=Ve(()=>({label:\"拒绝\",onClick:F}),[F]),I=Ve(()=>({label:\"允许一次\",onClick:y}),[y]),x=Ve(()=>{if(!a)return null;try{return new URL(a).hostname}catch{return a}},[a]),D=Ve(()=>({label:`允许 ${x}`,onClick:C,keybindingLabel:\"\"}),[C,x])"
+  },
+  {
+    "old": "children:[p(lo,{onClick:F,className:qW,children:\"Deny\"}),p(Eo,{onClick:y,className:qW,children:[\"Allow\",o&&p(\"span\",{className:\"ml-0.5 text-muted-foreground\",children:o})]})]",
+    "new": "children:[p(lo,{onClick:F,className:qW,children:\"拒绝\"}),p(Eo,{onClick:y,className:qW,children:[\"允许\",o&&p(\"span\",{className:\"ml-0.5 text-muted-foreground\",children:o})]})]"
+  },
+  {
+    "old": "p(\"button\",{onClick:()=>{g(!1,s1.UNSPECIFIED)},className:\"px-2 py-1 cursor-pointer rounded-sm text-sm text-secondary-foreground transition-[opacity] hover:text-foreground\",children:\"Deny\"}),p(zon,{label:\"Allow in Conversation\",onClick:()=>g(!0,s1.CONVERSATION),subOptions:y,onSubOptionChange:F=>g(!0,F),header:\"Allow options\"})",
+    "new": "p(\"button\",{onClick:()=>{g(!1,s1.UNSPECIFIED)},className:\"px-2 py-1 cursor-pointer rounded-sm text-sm text-secondary-foreground transition-[opacity] hover:text-foreground\",children:\"拒绝\"}),p(zon,{label:\"在对话中允许\",onClick:()=>g(!0,s1.CONVERSATION),subOptions:y,onSubOptionChange:F=>g(!0,F),header:\"允许选项\"})"
+  },
+  {
+    "old": "function yFi(e,t){let r=e.terminate?\"termination request\":\"input\";return e.userRejected?`Rejected sending ${r} to command`:t===On.DONE?`Sent ${r} to command`:t===On.WAITING?`Suggested sending ${r} to command`:t===On.ERROR?`Error sending ${r} to command`:`Sending ${r} to command`}",
+    "new": "function yFi(e,t){let r=e.terminate?\"终止请求\":\"输入\";return e.userRejected?`已拒绝向命令发送${r}`:t===On.DONE?`已向命令发送${r}`:t===On.WAITING?`建议向命令发送${r}`:t===On.ERROR?`向命令发送${r}时出错`:`正在向命令发送${r}`}"
+  },
+  {
+    "old": "children:[n.isAccept?\"Accepted\":\"Rejected\",\" all changes to the below files\"]",
+    "new": "children:[n.isAccept?\"已接受\":\"已拒绝\",\" 对以下文件的所有更改\"]"
+  },
+  {
+    "old": "children:[p(\"span\",{children:[n.isAccept?\"Accepted\":\"Rejected\",\" \",i]}),\" \",p(uR,{fileUri:s.uriPath",
+    "new": "children:[p(\"span\",{children:[n.isAccept?\"已接受\":\"已拒绝\",\" \",i]}),\" \",p(uR,{fileUri:s.uriPath"
+  },
+  {
+    "old": "PendingNewWorkspace,onClick:()=>{d.setPendingNewWorkspace(!0),r(!1)},icon:p(qe,{name:\"auto_awesome\",size:12}),children:\"New Workspace\"",
+    "new": "PendingNewWorkspace,onClick:()=>{d.setPendingNewWorkspace(!0),r(!1)},icon:p(qe,{name:\"auto_awesome\",size:12}),children:\"新建工作区\""
+  },
+  {
+    "old": "N=d?p(\"span\",{style:{display:\"inline-flex\",alignItems:\"center\",gap:\"4px\"},children:[p(qe,{name:\"auto_awesome\",size:12}),\"New Workspace\"]}):u",
+    "new": "N=d?p(\"span\",{style:{display:\"inline-flex\",alignItems:\"center\",gap:\"4px\"},children:[p(qe,{name:\"auto_awesome\",size:12}),\"新建工作区\"]}):u"
+  },
+  {
+    "old": "return p(Hft,{title:i?\"New Workspace\":\"New Worktree\",icon:p(qe,{name:\"call_split\",size:14,className:\"mt-0.5\"}),subtitle:g,onClick:()=>{t(),r(!1)}})",
+    "new": "return p(Hft,{title:i?\"新建工作区\":\"新建工作树\",icon:p(qe,{name:\"call_split\",size:14,className:\"mt-0.5\"}),subtitle:g,onClick:()=>{t(),r(!1)}})"
+  },
+  {
+    "old": "p(\"p\",{className:\"text-xs opacity-50\",children:\"Pending messages\"})",
+    "new": "p(\"p\",{className:\"text-xs opacity-50\",children:\"等待处理的消息\"})"
+  },
+  {
+    "old": "children:\"Reject all\"}),p(\"span\",{className:\"hover:bg-secondary cursor-pointer select-none rounded bg-primary px-1 text-sm text-primary-foreground\",onClick:()=>{(async()=>{let a=n.getState(),i=nB(a),s=Cte(a);r(\"CASCADE_CHANGES_ACCEPT_ALL\",si({extra:{trajectoryId:i??\"\",stepIndex:s?(s-1).toString():\"\"}},\"system-generated trajectory/step identifiers\")),await e()})()},children:\"Accept all\"})",
+    "new": "children:\"全部拒绝\"}),p(\"span\",{className:\"hover:bg-secondary cursor-pointer select-none rounded bg-primary px-1 text-sm text-primary-foreground\",onClick:()=>{(async()=>{let a=n.getState(),i=nB(a),s=Cte(a);r(\"CASCADE_CHANGES_ACCEPT_ALL\",si({extra:{trajectoryId:i??\"\",stepIndex:s?(s-1).toString():\"\"}},\"system-generated trajectory/step identifiers\")),await e()})()},children:\"全部接受\"})"
+  },
+  {
+    "old": "Ebn={files:[\"file\",\"files\"],folders:[\"folder\",\"folders\"],edits:[\"file\",\"files\"],searches:[\"search\",\"searches\"],terminal:[\"command\",\"commands\"],tasks:[\"task\",\"tasks\"],web:[\"page\",\"pages\"],browser:[\"browser\",\"browsers\"],images:[\"image\",\"images\"],actions:[\"action\",\"actions\"],artifacts:[\"artifact\",\"artifacts\"]}",
+    "new": "Ebn={files:[\"个文件\",\"个文件\"],folders:[\"个文件夹\",\"个文件夹\"],edits:[\"个文件\",\"个文件\"],searches:[\"次搜索\",\"次搜索\"],terminal:[\"个命令\",\"个命令\"],tasks:[\"个任务\",\"个任务\"],web:[\"个页面\",\"个页面\"],browser:[\"个浏览器\",\"个浏览器\"],images:[\"张图片\",\"张图片\"],actions:[\"个操作\",\"个操作\"],artifacts:[\"个产物\",\"个产物\"]}"
+  },
+  {
+    "old": "dOo={files:[\"file\",\"files\"],folders:[\"folder\",\"folders\"],edits:[\"file\",\"files\"],searches:[\"search\",\"searches\"],terminal:[\"command\",\"commands\"],tasks:[\"task\",\"tasks\"],web:[\"page\",\"pages\"],browser:[\"browser\",\"browsers\"],images:[\"image\",\"images\"],actions:[\"action\",\"actions\"],artifacts:[\"artifact\",\"artifacts\"]}",
+    "new": "dOo={files:[\"个文件\",\"个文件\"],folders:[\"个文件夹\",\"个文件夹\"],edits:[\"个文件\",\"个文件\"],searches:[\"次搜索\",\"次搜索\"],terminal:[\"个命令\",\"个命令\"],tasks:[\"个任务\",\"个任务\"],web:[\"个页面\",\"个页面\"],browser:[\"个浏览器\",\"个浏览器\"],images:[\"张图片\",\"张图片\"],actions:[\"个操作\",\"个操作\"],artifacts:[\"个产物\",\"个产物\"]}"
+  },
+  {
+    "old": "u=a?n?\"Editing\":\"Edited\":i?n?\"Running\":\"Ran\":n?\"Exploring\":\"Explored\"",
+    "new": "u=a?n?\"正在编辑 \":\"已编辑 \":i?n?\"正在运行 \":\"已运行 \":n?\"正在探索 \":\"已探索 \""
+  },
+  {
+    "old": "l=r?n?\"Editing\":\"Edited\":s?n?\"Running\":\"Ran\":n?\"Exploring\":\"Explored\"",
+    "new": "l=r?n?\"正在编辑 \":\"已编辑 \":s?n?\"正在运行 \":\"已运行 \":n?\"正在探索 \":\"已探索 \""
+  },
+  {
+    "old": "o=a?`${s} ${s===1?\"file\":\"files\"}`:t",
+    "new": "o=a?`${s} ${s===1?\"个文件\":\"个文件\"}`:t"
+  },
+  {
+    "old": "a=r?`${o} ${o===1?\"file\":\"files\"}`:e",
+    "new": "a=r?`${o} ${o===1?\"个文件\":\"个文件\"}`:e"
+  },
+  {
+    "old": "children:[g,\" \",g===1?\"file\":\"files\",\" \",\"updated\"]",
+    "new": "children:[g,\" 个文件已更新\"]"
+  },
+  {
+    "old": "i.terminatedEarly?\"Stopped after\":\"Worked for\"",
+    "new": "i.terminatedEarly?\"已停止，耗时\":\"运行了\""
+  },
+  {
+    "old": "V=`Worked for ${Qdt(N)}`",
+    "new": "V=`运行了 ${Qdt(N)}`"
+  },
+  {
+    "old": "V.terminatedEarly?\"Stopped after\":\"Worked for\"",
+    "new": "V.terminatedEarly?\"已停止，耗时\":\"运行了\""
+  },
+  {
+    "old": "t?`Thought for ${Math.max(1,Number(t.seconds))}s`:\"Thought Process\"",
+    "new": "t?`思考了 ${Math.max(1,Number(t.seconds))} 秒`:\"思考过程\""
+  },
+  {
+    "old": "children:[\"Thinking\",p(mAe,{})]",
+    "new": "children:[\"思考中\",p(mAe,{})]"
+  },
+  {
+    "old": "s.terminatedEarly?\"Stopped after\":\"Worked for\"",
+    "new": "s.terminatedEarly?\"已停止，耗时\":\"运行了\""
+  },
+  {
+    "old": "S=`Worked for ${vgn(E)}`",
+    "new": "S=`运行了 ${vgn(E)}`"
+  },
+  {
+    "old": "S.terminatedEarly?\"Stopped after\":\"Worked for\"",
+    "new": "S.terminatedEarly?\"已停止，耗时\":\"运行了\""
+  },
+  {
+    "old": "e?`Thought for ${Math.max(1,Number(e.seconds))}s`:\"Thought Process\"",
+    "new": "e?`思考了 ${Math.max(1,Number(e.seconds))} 秒`:\"思考过程\""
+  },
+  {
+    "old": "children:[\"Thinking\",R(Y8t,{})]",
+    "new": "children:[\"思考中\",R(Y8t,{})]"
+  },
+  {
+    "old": "children:[\"Thinking for \",Math.max(1,e),\"s\"]",
+    "new": "children:[\"已思考 \",Math.max(1,e),\" 秒\"]"
+  },
+  {
+    "old": "\"aria-label\":\"Good response\"",
+    "new": "\"aria-label\":\"好评\""
+  },
+  {
+    "old": "\"aria-label\":\"Bad response\"",
+    "new": "\"aria-label\":\"差评\""
+  },
+  {
+    "old": "children:\"Good response\"}),p(_n,{id:s,place:\"top-end\",children:\"Bad response\"})",
+    "new": "children:\"好评\"}),p(_n,{id:s,place:\"top-end\",children:\"差评\"})"
+  },
+  {
+    "old": "children:\"Good response\"}),R(cs,{id:o,place:\"top-end\",children:\"Bad response\"})",
+    "new": "children:\"好评\"}),R(cs,{id:o,place:\"top-end\",children:\"差评\"})"
+  },
+  {
+    "old": "\"aria-label\":X?\"Copied\":\"Copy\"",
+    "new": "\"aria-label\":X?\"已复制\":\"复制\""
+  },
+  {
+    "old": "children:X?\"Copied\":\"Copy\"",
+    "new": "children:X?\"已复制\":\"复制\""
+  },
+  {
+    "old": "\"aria-label\":t?\"Copied\":\"Copy\"",
+    "new": "\"aria-label\":t?\"已复制\":\"复制\""
+  },
+  {
+    "old": "children:t?\"Copied\":\"Copy\"",
+    "new": "children:t?\"已复制\":\"复制\""
+  },
+  {
+    "old": "children:r?\"Copied!\":\"Copy Command\"",
+    "new": "children:r?\"已复制！\":\"复制命令\""
+  },
+  {
+    "old": "\"aria-label\":a?\"Copied\":\"Copy code\"",
+    "new": "\"aria-label\":a?\"已复制\":\"复制代码\""
+  },
+  {
+    "old": "children:\"Copied\"}),!y&&p(\"span\"",
+    "new": "children:\"已复制\"}),!y&&p(\"span\""
+  },
+  {
+    "old": "mE(\"Copied to clipboard\")",
+    "new": "mE(\"已复制到剪贴板\")"
+  },
+  {
+    "old": "\"aria-label\":M?\"Copied\":\"Copy\"",
+    "new": "\"aria-label\":M?\"已复制\":\"复制\""
+  },
+  {
+    "old": "children:M?\"Copied\":\"Copy\"",
+    "new": "children:M?\"已复制\":\"复制\""
+  },
+  {
+    "old": "\"aria-label\":e?\"Copied\":\"Copy\"",
+    "new": "\"aria-label\":e?\"已复制\":\"复制\""
+  },
+  {
+    "old": "children:e?\"Copied\":\"Copy\"",
+    "new": "children:e?\"已复制\":\"复制\""
+  },
+  {
+    "old": "children:i?\"Copied!\":\"Copy Command\"",
+    "new": "children:i?\"已复制！\":\"复制命令\""
+  },
+  {
+    "old": "\"aria-label\":r?\"Copied\":\"Copy code\"",
+    "new": "\"aria-label\":r?\"已复制\":\"复制代码\""
+  },
+  {
+    "old": "MP(\"Copied to clipboard\")",
+    "new": "MP(\"已复制到剪贴板\")"
+  },
+  {
+    "old": "default:return\"Move changes to main\"",
+    "new": "default:return\"应用更改到主工作区\""
+  },
+  {
+    "old": "title:\"Editor-Specific Settings\"",
+    "new": "title:\"编辑器特定设置\""
+  },
+  {
+    "old": "case\"command\":case\"sed\":return r?\"Editing\":n?\"Canceled edit to\":\"Edited\";case\"createFile\":return e.spec.value?.overwrite?r?\"Editing\":n?\"Canceled edit to\":\"Edited\":r?\"Creating\":n?\"Canceled creation of\":\"Created\";case\"deleteFile\":return r?\"Deleting\":n?\"Canceled deletion of\":\"Deleted\"",
+    "new": "case\"command\":case\"sed\":return r?\"正在编辑\":n?\"已取消编辑\":\"已编辑\";case\"createFile\":return e.spec.value?.overwrite?r?\"正在编辑\":n?\"已取消编辑\":\"已编辑\":r?\"正在创建\":n?\"已取消创建\":\"已创建\";case\"deleteFile\":return r?\"正在删除\":n?\"已取消删除\":\"已删除\""
+  },
+  {
+    "old": "case\"command\":case\"sed\":return i?\"Editing\":n?\"Canceled edit to\":\"Edited\";case\"createFile\":return t.spec.value?.overwrite?i?\"Editing\":n?\"Canceled edit to\":\"Edited\":i?\"Creating\":n?\"Canceled creation of\":\"Created\";case\"deleteFile\":return i?\"Deleting\":n?\"Canceled deletion of\":\"Deleted\"",
+    "new": "case\"command\":case\"sed\":return i?\"正在编辑\":n?\"已取消编辑\":\"已编辑\";case\"createFile\":return t.spec.value?.overwrite?i?\"正在编辑\":n?\"已取消编辑\":\"已编辑\":i?\"正在创建\":n?\"已取消创建\":\"已创建\";case\"deleteFile\":return i?\"正在删除\":n?\"已取消删除\":\"已删除\""
+  },
+  {
+    "old": "switch(C){case\"command\":case\"sed\":I=N?\"Editing\":V?\"Canceled edit to\":\"Edited\";break;case\"createFile\":i.actionSpec?.spec.value?.overwrite?I=N?\"Editing\":V?\"Canceled edit to\":\"Edited\":I=N?\"Creating\":V?\"Canceled creation of\":\"Created\";break;case\"deleteFile\":I=N?\"Deleting\":V?\"Canceled deletion of\":\"Deleted\";break;",
+    "new": "switch(C){case\"command\":case\"sed\":I=N?\"正在编辑\":V?\"已取消编辑\":\"已编辑\";break;case\"createFile\":i.actionSpec?.spec.value?.overwrite?I=N?\"正在编辑\":V?\"已取消编辑\":\"已编辑\":I=N?\"正在创建\":V?\"已取消创建\":\"已创建\";break;case\"deleteFile\":I=N?\"正在删除\":V?\"已取消删除\":\"已删除\";break;"
+  },
+  {
+    "old": "switch(b){case\"command\":case\"sed\":A=E?\"Editing\":S?\"Canceled edit to\":\"Edited\";break;case\"createFile\":s.actionSpec?.spec.value?.overwrite?A=E?\"Editing\":S?\"Canceled edit to\":\"Edited\":A=E?\"Creating\":S?\"Canceled creation of\":\"Created\";break;case\"deleteFile\":A=E?\"Deleting\":S?\"Canceled deletion of\":\"Deleted\";break;",
+    "new": "switch(b){case\"command\":case\"sed\":A=E?\"正在编辑\":S?\"已取消编辑\":\"已编辑\";break;case\"createFile\":s.actionSpec?.spec.value?.overwrite?A=E?\"正在编辑\":S?\"已取消编辑\":\"已编辑\":A=E?\"正在创建\":S?\"已取消创建\":\"已创建\";break;case\"deleteFile\":A=E?\"正在删除\":S?\"已取消删除\":\"已删除\";break;"
+  },
+  {
+    "old": "prefix:za(e)?\"Editing\":s?\"Failed to edit\":\"Edited\"",
+    "new": "prefix:za(e)?\"正在编辑\":s?\"编辑失败\":\"已编辑\""
+  },
+  {
+    "old": "prefix:ll(t)?\"Editing\":o?\"Failed to edit\":\"Edited\"",
+    "new": "prefix:ll(t)?\"正在编辑\":o?\"编辑失败\":\"已编辑\""
+  },
+  {
+    "old": "case\"command\":case\"sed\":return`Edited ${n}`;case\"createFile\":return t.actionSpec?.spec.value?.overwrite?`Edited ${n}`:`Created ${n}`;case\"deleteFile\":return`Deleted ${n}`;default:return r?`Editing ${n}`:`Edited ${n}`",
+    "new": "case\"command\":case\"sed\":return`已编辑 ${n}`;case\"createFile\":return t.actionSpec?.spec.value?.overwrite?`已编辑 ${n}`:`已创建 ${n}`;case\"deleteFile\":return`已删除 ${n}`;default:return r?`正在编辑 ${n}`:`已编辑 ${n}`"
+  },
+  {
+    "old": "case\"command\":case\"sed\":return`Edited ${a}`;case\"createFile\":return t.actionSpec?.spec.value?.overwrite?`Edited ${a}`:`Created ${a}`;case\"deleteFile\":return`Deleted ${a}`;default:return i?`Editing ${a}`:`Edited ${a}`",
+    "new": "case\"command\":case\"sed\":return`已编辑 ${a}`;case\"createFile\":return t.actionSpec?.spec.value?.overwrite?`已编辑 ${a}`:`已创建 ${a}`;case\"deleteFile\":return`已删除 ${a}`;default:return i?`正在编辑 ${a}`:`已编辑 ${a}`"
+  },
+  {
+    "old": "id:\"history-tooltip\",place:\"bottom-end\",children:\"Past Conversations\"",
+    "new": "id:\"history-tooltip\",place:\"bottom-end\",children:\"历史对话\""
+  },
+  {
+    "old": "id:f,place:\"bottom-end\",children:\"Additional Options\"",
+    "new": "id:f,place:\"bottom-end\",children:\"更多选项\""
+  },
+  {
+    "old": "id:h,place:\"bottom-end\",children:\"Close Agent View\"",
+    "new": "id:h,place:\"bottom-end\",children:\"关闭智能体视图\""
+  },
+  {
+    "old": "children:\"AI may make mistakes. Double-check all generated code.\"",
+    "new": "children:\"AI 可能会犯错。请仔细检查生成的代码。\""
+  },
+  {
+    "old": "H=x?p(jt,{children:[\"Record Audio \",p(\"span\",{className:\"opacity-50\",children:j})]}):\"Record Audio\",ee=x?p(jt,{children:[\"Stop Recording \",p(\"span\",{className:\"opacity-50\",children:j})]}):\"Recording\"",
+    "new": "H=x?p(jt,{children:[\"录制音频 \",p(\"span\",{className:\"opacity-50\",children:j})]}):\"录制音频\",ee=x?p(jt,{children:[\"停止录音 \",p(\"span\",{className:\"opacity-50\",children:j})]}):\"正在录音\""
+  },
+  {
+    "old": "z=x?R(tn,{children:[\"Record Audio \",R(\"span\",{className:\"opacity-50\",children:J})]}):\"Record Audio\",ne=x?R(tn,{children:[\"Stop Recording \",R(\"span\",{className:\"opacity-50\",children:J})]}):\"Recording\"",
+    "new": "z=x?R(tn,{children:[\"录制音频 \",R(\"span\",{className:\"opacity-50\",children:J})]}):\"录制音频\",ne=x?R(tn,{children:[\"停止录音 \",R(\"span\",{className:\"opacity-50\",children:J})]}):\"正在录音\""
+  },
+  {
+    "old": "label:\"Media\",onClick:Ye",
+    "new": "label:\"媒体\",onClick:Ye"
+  },
+  {
+    "old": "label:\"Mentions\",onClick:Wt",
+    "new": "label:\"提及\",onClick:Wt"
+  },
+  {
+    "old": "label:\"Media\",onClick:rt",
+    "new": "label:\"媒体\",onClick:rt"
+  },
+  {
+    "old": "label:\"Mentions\",onClick:Gi",
+    "new": "label:\"提及\",onClick:Gi"
+  },
+  {
+    "old": "title:{value:\"Agent\",original:\"Agent\"}",
+    "new": "title:{value:\"智能体\",original:\"Agent\"}"
+  },
+  {
+    "old": "name:{value:\"Agent\",original:\"Agent\"}",
+    "new": "name:{value:\"智能体\",original:\"Agent\"}"
+  },
+  {
+    "old": "className:\"text-muted-foreground\",children:\"Agent\"",
+    "new": "className:\"text-muted-foreground\",children:\"智能体\""
+  },
+  {
+    "old": "[cW.CASCADE]:{colorClass:\"bg-blue-500\",displayName:\"Agent\"}",
+    "new": "[cW.CASCADE]:{colorClass:\"bg-blue-500\",displayName:\"智能体\"}"
+  },
+  {
+    "old": "[wBe.CASCADE]:{colorClass:\"bg-blue-500\",displayName:\"Agent\"}",
+    "new": "[wBe.CASCADE]:{colorClass:\"bg-blue-500\",displayName:\"智能体\"}"
   }
 ]

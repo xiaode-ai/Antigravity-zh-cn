@@ -1,0 +1,285 @@
+=== Filtered Results ===
+
+--- Term: "Toggle Agent (Ctrl+Alt+B)" ---
+(No active matches found)
+
+--- Term: "Toggle Agent" ---
+(No active matches found)
+
+--- Term: "Quick Open" ---
+[JS MATCH] File: workbench.desktop.main.js, Term: "Quick Open", Occur: 1, Index: 17177990
+   Context: ... s zna{constructor(){super({id:"workbench.action.quickOpenRecent",title:te(3349,"Quick Open Recent..."),category:Di.File,f1:!1})}isQuickNavigate(){return!0}},wJu=class ext ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Quick Open", Occur: 2, Index: 17194123
+   Context: ... ctor(){super("workbench.action.quickOpenNavigateNext",te(3312,"Navigate Next in Quick Open"),!0,!0)}},FJu=class extends jKt{constructor(){super("workbench.action.quickOpe ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Quick Open", Occur: 3, Index: 17194262
+   Context: ... uper("workbench.action.quickOpenNavigatePrevious",te(3313,"Navigate Previous in Quick Open"),!1,!0)}},TJu=class extends jKt{constructor(){super("workbench.action.quickOpe ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Quick Open", Occur: 4, Index: 17194389
+   Context: ... structor(){super("workbench.action.quickOpenSelectNext",te(3314,"Select Next in Quick Open"),!0,!1,{weight:250,when:A8,primary:0,mac:{primary:300}})}},kJu=class extends j ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Quick Open", Occur: 5, Index: 17194573
+   Context: ... (){super("workbench.action.quickOpenSelectPrevious",te(3315,"Select Previous in Quick Open"),!1,!1,{weight:250,when:A8,primary:0,mac:{primary:302}})}};me(TJu),me(kJu),me( ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Quick Open", Occur: 6, Index: 17442376
+   Context: ... super({id:"workbench.action.quickOpenPreviousRecentlyUsedEditor",title:te(3791,"Quick Open Previous Recently Used Editor"),f1:!0,category:Di.View},MIe.PREFIX,void 0)}},NQ ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Quick Open", Occur: 7, Index: 17442577
+   Context: ... (){super({id:"workbench.action.quickOpenLeastRecentlyUsedEditor",title:te(3792,"Quick Open Least Recently Used Editor"),f1:!0,category:Di.View},MIe.PREFIX,void 0)}},VQu=c ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Quick Open", Occur: 8, Index: 17442785
+   Context: ... id:"workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",title:te(3793,"Quick Open Previous Recently Used Editor in Group"),f1:!0,keybinding:{weight:200,primary:2 ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Quick Open", Occur: 9, Index: 17443086
+   Context: ... r({id:"workbench.action.quickOpenLeastRecentlyUsedEditorInGroup",title:te(3794,"Quick Open Least Recently Used Editor in Group"),f1:!0,keybinding:{weight:200,primary:3074 ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Quick Open", Occur: 10, Index: 17443401
+   Context: ... on.openPreviousEditorFromHistory"}constructor(){super({id:Ocr.ID,title:te(3795,"Quick Open Previous Editor from History"),f1:!0})}async run(e){const i=e.get(fn),n=e.get(j ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Quick Open", Occur: 11, Index: 23187131
+   Context: ... {primary:303},linux:{primary:0}}}constructor(){super({id:P0i.ID,title:te(11459,"Quick Open View"),category:Di.View,f1:!1,keybinding:{weight:200,when:void 0,...P0i.KEYBIND ...
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 3312, Term: "Quick Open", Value: "Navigate Next in Quick Open"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 3313, Term: "Quick Open", Value: "Navigate Previous in Quick Open"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 3314, Term: "Quick Open", Value: "Select Next in Quick Open"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 3315, Term: "Quick Open", Value: "Select Previous in Quick Open"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 3349, Term: "Quick Open", Value: "Quick Open Recent..."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 3791, Term: "Quick Open", Value: "Quick Open Previous Recently Used Editor"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 3792, Term: "Quick Open", Value: "Quick Open Least Recently Used Editor"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 3793, Term: "Quick Open", Value: "Quick Open Previous Recently Used Editor in Group"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 3794, Term: "Quick Open", Value: "Quick Open Least Recently Used Editor in Group"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 3795, Term: "Quick Open", Value: "Quick Open Previous Editor from History"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 4328, Term: "Quick Open", Value: "Controls whether editors opened from Quick Open show as preview editors. Preview editors do not stay open, and are reused until explicitly set to be kept open (via double-click or editing). When enabled, hold Ctrl before selection to open an editor as a non-preview. This value is ignored when {0} is not set to {1}."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 4369, Term: "Quick Open", Value: "Controls whether Quick Open should close automatically once it loses focus."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 4370, Term: "Quick Open", Value: "Controls whether the last typed input to Quick Open should be restored when opening it the next time."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 11459, Term: "Quick Open", Value: "Quick Open View"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 12011, Term: "Quick Open", Value: "Whether to include results from a global symbol search in the file results for Quick Open."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 12013, Term: "Quick Open", Value: "Whether to include results from recently opened files in the file results for Quick Open."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 13209, Term: "Quick Open", Value: "A set of command IDs whose keybindings will not be sent to the shell but instead always be handled by {2}. This allows keybindings that would normally be consumed by the shell to act instead the same as when the terminal is not focused, for example `Ctrl+P` to launch Quick Open.
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14796, Term: "Quick Open", Value: "Quick Open a File"
+
+--- Term: "Open Browser (Preview)" ---
+(No active matches found)
+
+--- Term: "Profile" ---
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 2374, Term: "Profile", Value: "A set of terminal profile customizations for {0} which allows adding, removing or changing how terminals are launched. Profiles are made up of a mandatory path, optional arguments and other presentation options.
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 4030, Term: "Profile", Value: "Manage {0} (Profile)"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 4040, Term: "Profile", Value: "Manage {0} (Profile)"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 4440, Term: "Profile", Value: "`${profileName}`: name of the profile in which the workspace is opened (e.g. Data Science (Profile)). Ignored if default profile is used."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 4688, Term: "Profile", Value: "Profile badge background color. The profile badge shows on top of the settings gear icon in the activity bar."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 4689, Term: "Profile", Value: "Profile badge foreground color. The profile badge shows on top of the settings gear icon in the activity bar."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 8398, Term: "Profile", Value: "Apply Extension to all Profiles"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 8462, Term: "Profile", Value: "Uninstall (All Profiles)"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 8788, Term: "Profile", Value: "Uninstall (All Profiles)"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 8838, Term: "Profile", Value: "Extension Profiler"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 8843, Term: "Profile", Value: "Profile Extensions"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 8853, Term: "Profile", Value: "Did you attach the CPU-Profile?"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 8856, Term: "Profile", Value: "Did you attach the CPU-Profile?"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 8858, Term: "Profile", Value: "Start Extension Host Profile"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 8859, Term: "Profile", Value: "Stop Extension Host Profile"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 8860, Term: "Profile", Value: "Open Extension Host Profile"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 8861, Term: "Profile", Value: "Save Extension Host Profile"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 8862, Term: "Profile", Value: "Save Extension Host Profile"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 9524, Term: "Profile", Value: "Issue troubleshooting has identified that the issue is caused by your configurations. Please report the issue by exporting your configurations using "Export Profile" command and share the file in the issue report."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 10482, Term: "Profile", Value: "Set Profile"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 11018, Term: "Profile", Value: "Print Emitter Profiles"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 11335, Term: "Profile", Value: "Apply Setting to all Profiles"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 12908, Term: "Profile", Value: "Select Default Profile"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 12913, Term: "Profile", Value: "Create New Terminal (With Profile)"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 12970, Term: "Profile", Value: "New Terminal With Profile..."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 12992, Term: "Profile", Value: "Split Terminal with Profile"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 12993, Term: "Profile", Value: "Launch Profile..."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 12994, Term: "Profile", Value: "Select Default Profile"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 13008, Term: "Profile", Value: "Configure Terminal Profile"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 13323, Term: "Profile", Value: "The Create New Terminal (With Profile) command<keybinding:{0}> allows for easy terminal creation using a specific profile."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 13602, Term: "Profile", Value: "Create New Terminal With Profile..."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 13870, Term: "Profile", Value: "Execute Using Profile..."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 13872, Term: "Profile", Value: "Select Default Profile"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 13875, Term: "Profile", Value: "Configure Test Profiles"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 13878, Term: "Profile", Value: "Get Selected Profiles"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 13938, Term: "Profile", Value: "Execute Using Profile..."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 13959, Term: "Profile", Value: "Select Default Profile"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 13960, Term: "Profile", Value: "Configure Test Profiles"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14315, Term: "Profile", Value: "Profiles Editor"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14316, Term: "Profile", Value: "Profile ({0})"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14317, Term: "Profile", Value: "New Window with Profile"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14318, Term: "Profile", Value: "New Window with Profile"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14319, Term: "Profile", Value: "Select Profile"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14320, Term: "Profile", Value: "Select Profile"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14321, Term: "Profile", Value: "&&Profiles"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14323, Term: "Profile", Value: "Delete Profile..."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14324, Term: "Profile", Value: "Select Profiles to Delete"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14326, Term: "Profile", Value: "New Window with Profile..."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14328, Term: "Profile", Value: "Open New Window with {0} Profile"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14329, Term: "Profile", Value: "Open {0} Profile"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14330, Term: "Profile", Value: "Switch Profile..."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14331, Term: "Profile", Value: "Profiles"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14332, Term: "Profile", Value: "Open Profiles (UI)"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14333, Term: "Profile", Value: "Export Profile..."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14334, Term: "Profile", Value: "Export Profile ({0})..."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14335, Term: "Profile", Value: "Save Current Profile As..."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14336, Term: "Profile", Value: "New Profile..."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14337, Term: "Profile", Value: "Delete Profile..."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14338, Term: "Profile", Value: "New Window with Temporary Profile"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14339, Term: "Profile", Value: "Cleanup Profiles"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14340, Term: "Profile", Value: "Reset Workspace Profiles Associations"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14343, Term: "Profile", Value: "The color of the Profiles editor splitview sash border."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14344, Term: "Profile", Value: "Profiles"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14346, Term: "Profile", Value: "Import Profile..."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14347, Term: "Profile", Value: "New Profile"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14348, Term: "Profile", Value: "New Profile"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14349, Term: "Profile", Value: "New Profile From Template"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14350, Term: "Profile", Value: "Import Profile..."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14353, Term: "Profile", Value: "Import from Profile Template..."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14354, Term: "Profile", Value: "Provide Profile Template URL"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14355, Term: "Profile", Value: "Select Profile Template File"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14364, Term: "Profile", Value: "Profile Name"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14365, Term: "Profile", Value: "Profile Name"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14366, Term: "Profile", Value: "Profile name is required and must be a non-empty value."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14367, Term: "Profile", Value: "Profile with name {0} already exists."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14369, Term: "Profile", Value: "Profile Name"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14371, Term: "Profile", Value: "Profile Icon"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14372, Term: "Profile", Value: "Profile icon to be shown in the activity bar"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14383, Term: "Profile", Value: "Profile Templates"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14384, Term: "Profile", Value: "Existing Profiles"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14416, Term: "Profile", Value: "Change Profile"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14420, Term: "Profile", Value: "Profiles"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14421, Term: "Profile", Value: "Profile name is required and must be a non-empty value."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14422, Term: "Profile", Value: "Profile with name {0} already exists."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14426, Term: "Profile", Value: "Apply Extension to all Profiles"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14429, Term: "Profile", Value: "Use this Profile for Current Window"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14433, Term: "Profile", Value: "Open New Window with this Profile"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 16271, Term: "Profile", Value: "All Profiles"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 16281, Term: "Profile", Value: "Create Profile: {0}"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 16283, Term: "Profile", Value: "Create Profile: {0}"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 16291, Term: "Profile", Value: "Setting up Troubleshoot Profile: {0}"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 16293, Term: "Profile", Value: "Switching Profile..."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 16295, Term: "Profile", Value: "Profile '{0}' was exported successfully."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 16309, Term: "Profile", Value: "Profile with name '{0}' already exists. Do you want to replace its contents?"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 16313, Term: "Profile", Value: "Save Profile"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 16314, Term: "Profile", Value: "Select Profile"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 16317, Term: "Profile", Value: "From Default Profile"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 16319, Term: "Profile", Value: "Export Profile"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 16320, Term: "Profile", Value: "Profile name must be provided."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 16329, Term: "Profile", Value: "Icon for Default Profile."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 16331, Term: "Profile", Value: "Profiles"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 16371, Term: "Profile", Value: "Profiles"
+
+--- Term: "Agent" ---
+[JS MATCH] File: jetskiAgent/main.js, Term: "Agent", Occur: 125, Index: 8558186
+   Context: ... l:p(mln,{metadata:t})},Dbi={[cW.CASCADE]:{colorClass:"bg-blue-500",displayName:"Agent"},[cW.USER_IMPLICIT]:{colorClass:"bg-purple-500",displayName:"User Implicit"},[ ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Agent", Occur: 146, Index: 13315616
+   Context: ... :R(kxo,{metadata:e})},Osu={[wBe.CASCADE]:{colorClass:"bg-blue-500",displayName:"Agent"},[wBe.USER_IMPLICIT]:{colorClass:"bg-purple-500",displayName:"User Implicit"}, ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Agent", Occur: 284, Index: 14959174
+   Context: ... c(),b=Wa(i),E=qs(O=>O.agentTab.activeTab),{currentModelConfig:S}=Vdt(),A=nOo(a,"Agent"),x=nOo(l,"Parent"),{getLogs:F}=j$c(),T=Ze(async()=>{let O=o.getState().traject ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Agent", Occur: 308, Index: 15004388
+   Context: ... b border-border",children:R("span",{className:"text-muted-foreground",children:"Agent"})}),R("div",{className:"flex-1 overflow-auto px-4 pt-[30vh]",children:[R("div" ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Agent", Occur: 617, Index: 20118760
+   Context: ... =new s6n(pa.Ask,"Ask",p(6675,null)),t.Edit=new s6n(pa.Edit,"编辑",p(6676,null)),t.Agent=new s6n(pa.Agent,"Agent",p(6677,null))})(ew||(ew={}));function o6n(t){return t. ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Agent", Occur: 618, Index: 20118777
+   Context: ... Ask",p(6675,null)),t.Edit=new s6n(pa.Edit,"编辑",p(6676,null)),t.Agent=new s6n(pa.Agent,"Agent",p(6677,null))})(ew||(ew={}));function o6n(t){return t.id===ew.Ask.id||t ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Agent", Occur: 619, Index: 20118784
+   Context: ... 6675,null)),t.Edit=new s6n(pa.Edit,"编辑",p(6676,null)),t.Agent=new s6n(pa.Agent,"Agent",p(6677,null))})(ew||(ew={}));function o6n(t){return t.id===ew.Ask.id||t.id===e ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Agent", Occur: 685, Index: 20615967
+   Context: ... ve={}));var X$;(function(t){t[t.Global=0]="Global",t[t.Session=1]="Session",t[t.Agent=2]="Agent",t[t.Agent_ReadOnly=3]="Agent_ReadOnly"})(X$||(X$={}));var BMn=class  ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Agent", Occur: 686, Index: 20615977
+   Context: ... r X$;(function(t){t[t.Global=0]="Global",t[t.Session=1]="Session",t[t.Agent=2]="Agent",t[t.Agent_ReadOnly=3]="Agent_ReadOnly"})(X$||(X$={}));var BMn=class extends re ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Agent", Occur: 687, Index: 20615988
+   Context: ... ion(t){t[t.Global=0]="Global",t[t.Session=1]="Session",t[t.Agent=2]="Agent",t[t.Agent_ReadOnly=3]="Agent_ReadOnly"})(X$||(X$={}));var BMn=class extends re{constructo ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Agent", Occur: 688, Index: 20616007
+   Context: ... ]="Global",t[t.Session=1]="Session",t[t.Agent=2]="Agent",t[t.Agent_ReadOnly=3]="Agent_ReadOnly"})(X$||(X$={}));var BMn=class extends re{constructor(e,i,n,r){super(), ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Agent", Occur: 1377, Index: 25889189
+   Context: ... "keybindings"})(LYe||(LYe={}));var U3;(function(t){t.EDITOR="Editor",t.CASCADE="Agent",t.GENERAL="General",t.ACCOUNT="Account",t.ADVANCED="Advanced",t.SHORTCUTS="Sho ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Agent", Occur: 1379, Index: 25889545
+   Context: ... "Browser"})(U3||(U3={}));var W7;(function(t){t.ANTIGRAVITY_TAB="Tab",t.CASCADE="Agent"})(W7||(W7={}));var OJd=class extends re{constructor(t,e,i,n,r){super(),this.pa ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Agent", Occur: 1401, Index: 25949577
+   Context: ... (ql.ViewContainersRegistry),CKd=_Kd.registerViewContainer({id:wIe,title:{value:"Agent",original:"Agent"},icon:de.robot,order:0,ctorDescriptor:new es(WS,[wIe,{mergeVi ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Agent", Occur: 1402, Index: 25949594
+   Context: ... sRegistry),CKd=_Kd.registerViewContainer({id:wIe,title:{value:"Agent",original:"Agent"},icon:de.robot,order:0,ctorDescriptor:new es(WS,[wIe,{mergeViewWithContainerWh ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Agent", Occur: 1403, Index: 25949785
+   Context: ... mpty:!1},2),wKd=xt.as(ql.ViewsRegistry);wKd.registerViews([{id:coe,name:{value:"Agent",original:"Agent"},order:0,canToggleVisibility:!0,canMoveView:!0,ctorDescriptor ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Agent", Occur: 1404, Index: 25949802
+   Context: ... t.as(ql.ViewsRegistry);wKd.registerViews([{id:coe,name:{value:"Agent",original:"Agent"},order:0,canToggleVisibility:!0,canMoveView:!0,ctorDescriptor:new es(Ktr,[])}] ...
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 2145, Term: "Agent", Value: "Agent Window"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 2973, Term: "Agent", Value: "Contributes views to Agent Sessions container in the Activity bar. To contribute to this container, the 'chatSessionsProvider' API proposal must be enabled."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 3869, Term: "Agent", Value: "Code with Agent"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 4964, Term: "Agent", Value: "Developer: Reload Agent Side Panel"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 4966, Term: "Agent", Value: "{0}: Send Prompt to Agent Panel"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 5004, Term: "Agent", Value: "Contributes plugins for Antigravity agent. Each plugin folder is copied to `~/.gemini/<ideName>/plugins/<extensionId>.<pluginName>/` when the extension is installed.\n\n**Expected plugin folder structure:**\n\n```\nplugins/my-plugin/\n  skills/             # Agent skills\n    my-skill/\n      SKILL.md\n  mcp_config.json     # MCP server definitions (optional)\n```\n\nWhen the extension is uninstalled, the plugin folder is automatically removed."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 5006, Term: "Agent", Value: "Open Chat with Agent"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 5306, Term: "Agent", Value: "Open Agent Sessions"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 5358, Term: "Agent", Value: "Send to Agent"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 5359, Term: "Agent", Value: "Set Agent"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 5363, Term: "Agent", Value: "Switch to Next Agent"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 5366, Term: "Agent", Value: "Open Agent Picker"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 5486, Term: "Agent", Value: "Agents"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 5487, Term: "Agent", Value: "Filter Agent Sessions"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 5488, Term: "Agent", Value: "Filter Agent Sessions"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 5502, Term: "Agent", Value: "Refresh Agent Sessions"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 5503, Term: "Agent", Value: "Find Agent Session"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 5504, Term: "Agent", Value: "Refresh Agent Sessions"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 5505, Term: "Agent", Value: "Find Agent Session"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 5506, Term: "Agent", Value: "Show Agent Sessions Sidebar"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 5507, Term: "Agent", Value: "Hide Agent Sessions Sidebar"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 5529, Term: "Agent", Value: "Agent Sessions"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 6003, Term: "Agent", Value: "(Agent), edit files in your workspace."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 6071, Term: "Agent", Value: "Agent Mode"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 6081, Term: "Agent", Value: "Agent Mode"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 6212, Term: "Agent", Value: "No local chat agent sessions
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 6214, Term: "Agent", Value: "Agent Sessions"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 6215, Term: "Agent", Value: "Agent Sessions"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 6226, Term: "Agent", Value: "Install Agents..."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 6311, Term: "Agent", Value: "Agent Sessions"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 6312, Term: "Agent", Value: "View Agent Sessions"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 6313, Term: "Agent", Value: "View Agent Sessions"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 6378, Term: "Agent", Value: "{0} Agent Session"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 6383, Term: "Agent", Value: "[Generate Agent Instructions]({0}) to onboard AI onto your codebase."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 6389, Term: "Agent", Value: "Build with Agent"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 6491, Term: "Agent", Value: "Custom Agents"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 6493, Term: "Agent", Value: "Configure Custom Agents..."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 6494, Term: "Agent", Value: "Configure Custom Agents..."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 6500, Term: "Agent", Value: "New Custom Agent..."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 6543, Term: "Agent", Value: "Agent Instructions"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 6570, Term: "Agent", Value: "Save As Agent File"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 6805, Term: "Agent", Value: "The 'excludeAgent' attribute must be an array."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 6948, Term: "Agent", Value: "Write your global rules for Agent here"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 13267, Term: "Agent", Value: "Whether a terminal in the Agent panel is focused."
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14719, Term: "Agent", Value: "Code with Agent"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14720, Term: "Agent", Value: "Code with Agent"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14731, Term: "Agent", Value: "Code with Agent"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14732, Term: "Agent", Value: "Code with Agent"
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 15686, Term: "Agent", Value: "Disconnect Remote Agent"
+
+--- Term: "Past Conversations" ---
+[JS MATCH] File: workbench.desktop.main.js, Term: "Past Conversations", Occur: 1, Index: 14962325
+   Context: ... 4 w-4 stroke-[1.5px]"}),R(cs,{id:"history-tooltip",place:"bottom-end",children:"Past Conversations"})]}),r!=="Cider"&&R(yc.Root,{open:L,onOpenChange:M,children:[R(yc.Trigger,{chi ...
+
+--- Term: "Additional Options" ---
+[JS MATCH] File: workbench.desktop.main.js, Term: "Additional Options", Occur: 1, Index: 14962631
+   Context: ... ,children:[R(zJc,{className:"h-4 w-4"}),R(cs,{id:f,place:"bottom-end",children:"Additional Options"})]})}),R(yc.Content,{className:"w-max border-gray-500/20",children:R("div",{cl ...
+
+--- Term: "Close Agent View" ---
+[JS MATCH] File: workbench.desktop.main.js, Term: "Close Agent View", Occur: 1, Index: 14963068
+   Context: ... h,children:[R(Xz,{className:"h-4 w-4"}),R(cs,{id:h,place:"bottom-end",children:"Close Agent View"})]})]})]})},NTu=()=>{let t=qs(s=>s.modal),e=t.isOpen&&t.modalType==="BROWSER_S ...
+
+--- Term: "Media" ---
+[JS MATCH] File: jetskiAgent/main.js, Term: "Media", Occur: 106, Index: 9592962
+   Context: ... {name:"image",size:hr.width?Number(hr.width):14,className:hr.className}),label:"Media",onClick:Ye}),Cr.push({icon:hr=>p(qe,{name:"alternate_email",size:hr.width?Numb ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Media", Occur: 150, Index: 14337256
+   Context: ... {name:"image",size:cn.width?Number(cn.width):14,className:cn.className}),label:"Media",onClick:rt}),xn.push({icon:cn=>R(Ut,{name:"alternate_email",size:cn.width?Numb ...
+[JSON PARTIAL MATCH] File: nls.messages.json, Index: 14678, Term: "Media", Value: "Media to show alongside this step, either an image or markdown content."
+
+--- Term: "Mentions" ---
+[JS MATCH] File: jetskiAgent/main.js, Term: "Mentions", Occur: 2, Index: 9593095
+   Context: ... ernate_email",size:hr.width?Number(hr.width):14,className:hr.className}),label:"Mentions",onClick:Wt}),ge!=="Cider"&&Cr.push({icon:hr=>p(van,{width:hr.width,height:hr.h ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Mentions", Occur: 2, Index: 14337389
+   Context: ... ernate_email",size:cn.width?Number(cn.width):14,className:cn.className}),label:"Mentions",onClick:Gi}),Ee!=="Cider"&&xn.push({icon:cn=>R(MRo,{width:cn.width,height:cn.h ...
+
+--- Term: "Limited time" ---
+(No active matches found)
+
+--- Term: "Record Audio" ---
+[JS MATCH] File: jetskiAgent/main.js, Term: "Record Audio", Occur: 1, Index: 9587354
+   Context: ... !Y,J=P&&!F&&(Z||!W),Q=n||u||d||g,j=zp()?"\u2303M":"Ctrl+M",H=x?p(jt,{children:["Record Audio ",p("span",{className:"opacity-50",children:j})]}):"Record Audio",ee=x?p(jt,{ch ...
+[JS MATCH] File: jetskiAgent/main.js, Term: "Record Audio", Occur: 2, Index: 9587419
+   Context: ... jt,{children:["Record Audio ",p("span",{className:"opacity-50",children:j})]}):"Record Audio",ee=x?p(jt,{children:["Stop Recording ",p("span",{className:"opacity-50",childr ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Record Audio", Occur: 1, Index: 14331646
+   Context: ... !B,Y=X&&!v&&(O||!Z),K=n||l||u||h,J=NN()?"\u2303M":"Ctrl+M",z=x?R(tn,{children:["Record Audio ",R("span",{className:"opacity-50",children:J})]}):"Record Audio",ne=x?R(tn,{ch ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "Record Audio", Occur: 2, Index: 14331711
+   Context: ... tn,{children:["Record Audio ",R("span",{className:"opacity-50",children:J})]}):"Record Audio",ne=x?R(tn,{children:["Stop Recording ",R("span",{className:"opacity-50",childr ...
+
+--- Term: "AI may make mistakes. Double-check all generated code." ---
+[JS MATCH] File: workbench.desktop.main.js, Term: "AI may make mistakes. Double-check all generated code.", Occur: 1, Index: 15000973
+   Context: ... [R(X1u,{}),R("div",{className:"mt-auto pb-4 text-xs text-placeholder",children:"AI may make mistakes. Double-check all generated code."})]})]})]})},mku=()=>R(O$c,{children:R(pku,{})}),vku=({inputBoxRef:t})=>{let{fi ...
+[JS MATCH] File: workbench.desktop.main.js, Term: "AI may make mistakes. Double-check all generated code.", Occur: 2, Index: 15005380
+   Context: ... ll"})})]})]}),R("div",{className:"px-4 pb-4 text-xs text-placeholder",children:"AI may make mistakes. Double-check all generated code."})]}),Cku="antigravityDiagnosticsService",xFh=rpe(Cku),FBo=function(t,e,i,n){va ...

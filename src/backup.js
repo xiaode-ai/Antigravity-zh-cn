@@ -13,6 +13,9 @@ export function backup(config) {
   const workbenchPath = path.join(path.dirname(targetFilePath), '..', 'vs', 'workbench', 'workbench.desktop.main.js');
   const workbenchBackupPath = workbenchPath + backupSuffix;
 
+  const nlsPath = path.join(path.dirname(targetFilePath), '..', 'nls.messages.json');
+  const nlsBackupPath = nlsPath + backupSuffix;
+
   // 1. 备份 main.js
   let mainBackupSuccess = true;
   if (!fs.existsSync(targetFilePath)) {
@@ -46,5 +49,21 @@ export function backup(config) {
     }
   }
 
-  return mainBackupSuccess && workbenchBackupSuccess;
+  // 3. 备份 nls.messages.json
+  let nlsBackupSuccess = true;
+  if (!fs.existsSync(nlsPath)) {
+    console.warn(`[WARN] 找不到 nls.messages.json 文件: "${nlsPath}"，跳过备份。`);
+  } else if (fs.existsSync(nlsBackupPath)) {
+    console.log(`[INFO] 备份文件 "${nlsBackupPath}" 已存在，跳过备份以保护原始文件。`);
+  } else {
+    try {
+      fs.copyFileSync(nlsPath, nlsBackupPath);
+      console.log(`[OK] 备份成功！已将原始 nls.messages.json 文件安全复制为: "${nlsBackupPath}"`);
+    } catch (err) {
+      console.error(`[ERROR] 安全备份 nls.messages.json 时发生错误:`, err.message);
+      nlsBackupSuccess = false;
+    }
+  }
+
+  return mainBackupSuccess && workbenchBackupSuccess && nlsBackupSuccess;
 }
