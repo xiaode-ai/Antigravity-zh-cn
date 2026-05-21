@@ -1,0 +1,18 @@
+import fs from 'fs';
+const content = fs.readFileSync('C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out\\jetskiAgent\\main.js.bak', 'utf8');
+
+// Find all occurrences of label:"Email" with surrounding context
+const searchStr = 'label:"Email"';
+let pos = 0;
+let count = 0;
+while ((pos = content.indexOf(searchStr, pos)) !== -1) {
+  count++;
+  const start = Math.max(0, pos - 200);
+  const end = Math.min(content.length, pos + searchStr.length + 200);
+  const context = content.substring(start, end);
+  console.log(`\n===== Match ${count} at position ${pos} =====`);
+  console.log(context);
+  console.log('');
+  pos += searchStr.length;
+}
+console.log(`\nTotal matches: ${count}`);

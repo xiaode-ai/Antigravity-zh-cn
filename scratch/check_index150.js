@@ -1,13 +1,13 @@
 import fs from 'fs';
 
-const mainPath = 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out\\jetskiAgent\\main.js';
-const content = fs.readFileSync(mainPath, 'utf8');
+const targetPath = 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out\\jetskiAgent\\main.js.bak';
+const content = fs.readFileSync(targetPath, 'utf8');
 
 const searchTerms = [
-  'Rules',
-  'Skills',
-  '{"Rules":"规则"',
-  'getRenderInfo(){return{label:'
+  'tabular-nums text-muted-foreground',
+  'b.label',
+  'b.color',
+  'iFe(b.tokens)'
 ];
 
 searchTerms.forEach(term => {
@@ -17,10 +17,9 @@ searchTerms.forEach(term => {
   while ((idx = content.indexOf(term, idx + 1)) !== -1) {
     count++;
     console.log(`[FOUND #${count}] index: ${idx}`);
-    const start = Math.max(0, idx - 100);
+    const start = Math.max(0, idx - 150);
     const end = Math.min(content.length, idx + term.length + 150);
     console.log(content.substring(start, end));
     if (count >= 10) break;
   }
 });
-

@@ -1,15 +1,13 @@
 import fs from 'fs';
 
-const targetPath = 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out\\jetskiAgent\\main.js';
-const content = fs.readFileSync(targetPath, 'utf8');
+const translations = JSON.parse(fs.readFileSync('translations.json', 'utf8'));
+translations.forEach((t, i) => {
+  if (t.new && (t.new.includes('(Science)') || t.new.includes('(Chrome DevTools)') || t.new.includes('(Modern Web Guidance)'))) {
+    console.log(`Index ${i}:`);
+    console.log(JSON.stringify(t, null, 2));
+  }
+});
 
-console.log('=== 检测主运行库 main.js 中 qne Trigger 的编译现状 ===');
 
-let idx = 0;
-let count = 0;
-while ((idx = content.indexOf('className:"capitalize"', idx)) !== -1) {
-  count++;
-  console.log(`[Occurrence ${count}] index ${idx}:`);
-  console.log(content.substring(idx - 100, idx + 300));
-  idx += 'className:"capitalize"'.length;
-}
+
+

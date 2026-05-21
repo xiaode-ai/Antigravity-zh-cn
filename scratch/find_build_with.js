@@ -1,13 +1,13 @@
 import fs from 'fs';
 
-const mainPath = 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out\\jetskiAgent\\main.js';
-const content = fs.readFileSync(mainPath, 'utf8');
+const targetPath = 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out\\jetskiAgent\\main.js.bak';
+const content = fs.readFileSync(targetPath, 'utf8');
 
 const searchTerms = [
+  'Build with',
   'Rules',
   'Skills',
-  '{"Rules":"规则"',
-  'getRenderInfo(){return{label:'
+  'Build With Google'
 ];
 
 searchTerms.forEach(term => {
@@ -23,4 +23,3 @@ searchTerms.forEach(term => {
     if (count >= 10) break;
   }
 });
-
