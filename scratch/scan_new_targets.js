@@ -1,73 +1,70 @@
 import fs from 'fs';
 import path from 'path';
 
-const files = {
-  jetskiAgent: 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out\\jetskiAgent\\main.js.bak',
-  workbench: 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out\\vs\\workbench\\workbench.desktop.main.js.bak',
-  nls: 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out\\nls.messages.json'
-};
+const targetDir = 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out';
+const mainBakPath = path.join(targetDir, 'jetskiAgent', 'main.js.bak');
+const mainContent = fs.readFileSync(mainBakPath, 'utf8');
 
-const terms = [
-  'Toggle Agent',
-  'Quick Open',
-  'Open Browser (Preview)',
-  'Editor-Specific Settings',
-  'Profile',
-  'Move changes to main',
-  'coy',
-  'copy',
-  'Good response',
-  'Bad response',
-  'files changed',
-  'Review',
-  'Worked for',
-  'Thought for',
-  'Explored',
-  'Edited'
+const targets = [
+  'Changes Overview',
+  'Files With Changes',
+  'Terminal (',
+  'Background Processes Running',
+  'Artifacts (',
+  'Files for Conversation',
+  'Reject all',
+  'Browser',
+  'Ask anything',
+  'Your plan\'s baseline quota',
+  'Enable Overages',
+  'See plans.',
+  'minutes ago',
+  'View conversation',
+  'Copy to clipboard',
+  'Export artifact',
+  'Submit comment',
+  'Add a message...',
+  'Select text in the artifact to add a comment',
+  'Proceed',
+  'Proceed with implementation plan',
+  'Implementation Plan',
+  'Individual quota reached',
+  'task',
+  'Send Queued Message',
+  'cancel',
+  'Timed 60 seconds',
+  'Walkthrough',
+  'Customization',
+  'Fast',
+  'Analyzed',
+  'Edited',
+  'Ran',
+  'Working'
 ];
 
-Object.entries(files).forEach(([name, filePath]) => {
-  if (!fs.existsSync(filePath)) {
-    console.log(`File not found: ${filePath}`);
-    return;
+console.log('=== EXACT MATCH CONTEXTS IN main.js.bak ===');
+targets.forEach(term => {
+  let idx = 0;
+  let count = 0;
+  while (true) {
+    idx = mainContent.indexOf(term, idx);
+    if (idx === -1) break;
+    count++;
+    
+    // Only print first 5 matches per term to keep output clean and readable
+    if (count <= 5) {
+      const start = Math.max(0, idx - 120);
+      const end = Math.min(mainContent.length, idx + term.length + 120);
+      const context = mainContent.substring(start, end).replace(/\r?\n/g, ' ');
+      console.log(`[FOUND] "${term}" at ${idx}`);
+      console.log(`   Context: ... ${context} ...`);
+    }
+    idx += term.length;
   }
-  
-  console.log(`\n=================== SEARCHING IN ${name} (${filePath}) ===================`);
-  
-  if (name === 'nls') {
-    const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-    terms.forEach(term => {
-      console.log(`\n--- Term: "${term}" ---`);
-      let foundCount = 0;
-      data.forEach((val, idx) => {
-        if (typeof val === 'string') {
-          if (val === term) {
-            console.log(`  [EXACT] Index ${idx}: "${val}"`);
-            foundCount++;
-          } else if (val.toLowerCase().includes(term.toLowerCase())) {
-            console.log(`  [PARTIAL] Index ${idx}: "${val}"`);
-            foundCount++;
-          }
-        }
-      });
-      if (foundCount === 0) {
-        console.log(`  Not found in NLS`);
-      }
-    });
-  } else {
-    const content = fs.readFileSync(filePath, 'utf8');
-    terms.forEach(term => {
-      console.log(`\n--- Term: "${term}" ---`);
-      let idx = -1;
-      let count = 0;
-      while ((idx = content.indexOf(term, idx + 1)) !== -1) {
-        count++;
-        const context = content.substring(Math.max(0, idx - 80), Math.min(content.length, idx + term.length + 80));
-        console.log(`  [Match ${count}] Index ${idx}: ... ${context.trim().replace(/\s+/g, ' ')} ...`);
-      }
-      if (count === 0) {
-        console.log(`  Not found`);
-      }
-    });
+  if (count > 5) {
+    console.log(`   ... and ${count - 5} more matches for "${term}"`);
+  }
+  if (count === 0) {
+    console.log(`[NOT FOUND] "${term}"`);
   }
 });

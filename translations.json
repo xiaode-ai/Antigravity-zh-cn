@@ -2652,28 +2652,12 @@
     "new": "case\"command\":case\"sed\":return i?\"正在编辑\":n?\"已取消编辑\":\"已编辑\";case\"createFile\":return t.spec.value?.overwrite?i?\"正在编辑\":n?\"已取消编辑\":\"已编辑\":i?\"正在创建\":n?\"已取消创建\":\"已创建\";case\"deleteFile\":return i?\"正在删除\":n?\"已取消删除\":\"已删除\""
   },
   {
-    "old": "switch(C){case\"command\":case\"sed\":I=N?\"Editing\":V?\"Canceled edit to\":\"Edited\";break;case\"createFile\":i.actionSpec?.spec.value?.overwrite?I=N?\"Editing\":V?\"Canceled edit to\":\"Edited\":I=N?\"Creating\":V?\"Canceled creation of\":\"Created\";break;case\"deleteFile\":I=N?\"Deleting\":V?\"Canceled deletion of\":\"Deleted\";break;",
-    "new": "switch(C){case\"command\":case\"sed\":I=N?\"正在编辑\":V?\"已取消编辑\":\"已编辑\";break;case\"createFile\":i.actionSpec?.spec.value?.overwrite?I=N?\"正在编辑\":V?\"已取消编辑\":\"已编辑\":I=N?\"正在创建\":V?\"已取消创建\":\"已创建\";break;case\"deleteFile\":I=N?\"正在删除\":V?\"已取消删除\":\"已删除\";break;"
-  },
-  {
-    "old": "switch(b){case\"command\":case\"sed\":A=E?\"Editing\":S?\"Canceled edit to\":\"Edited\";break;case\"createFile\":s.actionSpec?.spec.value?.overwrite?A=E?\"Editing\":S?\"Canceled edit to\":\"Edited\":A=E?\"Creating\":S?\"Canceled creation of\":\"Created\";break;case\"deleteFile\":A=E?\"Deleting\":S?\"Canceled deletion of\":\"Deleted\";break;",
-    "new": "switch(b){case\"command\":case\"sed\":A=E?\"正在编辑\":S?\"已取消编辑\":\"已编辑\";break;case\"createFile\":s.actionSpec?.spec.value?.overwrite?A=E?\"正在编辑\":S?\"已取消编辑\":\"已编辑\":A=E?\"正在创建\":S?\"已取消创建\":\"已创建\";break;case\"deleteFile\":A=E?\"正在删除\":S?\"已取消删除\":\"已删除\";break;"
-  },
-  {
     "old": "prefix:za(e)?\"Editing\":s?\"Failed to edit\":\"Edited\"",
     "new": "prefix:za(e)?\"正在编辑\":s?\"编辑失败\":\"已编辑\""
   },
   {
     "old": "prefix:ll(t)?\"Editing\":o?\"Failed to edit\":\"Edited\"",
     "new": "prefix:ll(t)?\"正在编辑\":o?\"编辑失败\":\"已编辑\""
-  },
-  {
-    "old": "case\"command\":case\"sed\":return`Edited ${n}`;case\"createFile\":return t.actionSpec?.spec.value?.overwrite?`Edited ${n}`:`Created ${n}`;case\"deleteFile\":return`Deleted ${n}`;default:return r?`Editing ${n}`:`Edited ${n}`",
-    "new": "case\"command\":case\"sed\":return`已编辑 ${n}`;case\"createFile\":return t.actionSpec?.spec.value?.overwrite?`已编辑 ${n}`:`已创建 ${n}`;case\"deleteFile\":return`已删除 ${n}`;default:return r?`正在编辑 ${n}`:`已编辑 ${n}`"
-  },
-  {
-    "old": "case\"command\":case\"sed\":return`Edited ${a}`;case\"createFile\":return t.actionSpec?.spec.value?.overwrite?`Edited ${a}`:`Created ${a}`;case\"deleteFile\":return`Deleted ${a}`;default:return i?`Editing ${a}`:`Edited ${a}`",
-    "new": "case\"command\":case\"sed\":return`已编辑 ${a}`;case\"createFile\":return t.actionSpec?.spec.value?.overwrite?`已编辑 ${a}`:`已创建 ${a}`;case\"deleteFile\":return`已删除 ${a}`;default:return i?`正在编辑 ${a}`:`已编辑 ${a}`"
   },
   {
     "old": "id:\"history-tooltip\",place:\"bottom-end\",children:\"Past Conversations\"",
@@ -2734,5 +2718,433 @@
   {
     "old": "[wBe.CASCADE]:{colorClass:\"bg-blue-500\",displayName:\"Agent\"}",
     "new": "[wBe.CASCADE]:{colorClass:\"bg-blue-500\",displayName:\"智能体\"}"
+  },
+  {
+    "old": "description:[\"Set the speed of tab suggestions\"],topic:\"uss-tabPreferences\",options:[{label:\"Slow\",value:",
+    "new": "description:[\"设置 Tab 补全建议的显示速度\"],topic:\"uss-tabPreferences\",options:[{label:\"慢速\",value:"
+  },
+  {
+    "old": "},{label:\"Fast\",value:Fwe.FAST,isDefaultWhenAvailable:!0}]",
+    "new": "},{label:\"快速\",value:Fwe.FAST,isDefaultWhenAvailable:!0}]"
+  },
+  {
+    "old": "options:[SBe.FAST,SBe.SLOW],resolveOptionToString:e=>{switch(e){case SBe.FAST:return\"Fast\";case SBe.SLOW:return\"Slow\";default:return\"Fast\"}}",
+    "new": "options:[SBe.FAST,SBe.SLOW],resolveOptionToString:e=>{if(e===SBe.SLOW||e===\"slow\"||e===\"Slow\"||e===\"慢速\")return\"慢速\";return\"快速\"}"
+  },
+  {
+    "old": "label:\"Tab Speed\",type:E1e.Enum",
+    "new": "label:\"建议速度\",type:E1e.Enum"
+  },
+  {
+    "old": "prefix:\"Analyzed\"",
+    "new": "prefix:\"已分析\""
+  },
+  {
+    "old": "prefix:za(e)?\"Analyzing content\":\"Analyzed content\"",
+    "new": "prefix:za(e)?\"正在分析内容\":\"已分析内容\""
+  },
+  {
+    "old": "prefix:ll(t)?\"Analyzing content\":\"Analyzed content\"",
+    "new": "prefix:ll(t)?\"正在分析内容\":\"已分析内容\""
+  },
+  {
+    "old": "b?\"Analyzing Task Log\":\"Analyzed Task Log\"",
+    "new": "b?\"正在分析任务日志\":\"已分析任务日志\""
+  },
+  {
+    "old": "f?\"Analyzing Task Log\":\"Analyzed Task Log\"",
+    "new": "f?\"正在分析任务日志\":\"已分析任务日志\""
+  },
+  {
+    "old": "prefix:b?\"Analyzing\":\"Analyzed\"",
+    "new": "prefix:b?\"正在分析\":\"已分析\""
+  },
+  {
+    "old": "prefix:g?\"Analyzing\":\"Analyzed\"",
+    "new": "prefix:g?\"正在分析\":\"已分析\""
+  },
+  {
+    "old": "prefix:f?\"Analyzing\":\"Analyzed\"",
+    "new": "prefix:f?\"正在分析\":\"已分析\""
+  },
+  {
+    "old": "prefix:d?\"Analyzing\":\"Analyzed\"",
+    "new": "prefix:d?\"正在分析\":\"已分析\""
+  },
+  {
+    "old": "return r?\"Editing\":n?\"Canceled edit to\":\"Edited\"",
+    "new": "return r?\"正在修改\":n?\"已取消修改\":\"已修改\""
+  },
+  {
+    "old": "return i?\"Editing\":n?\"Canceled edit to\":\"Edited\"",
+    "new": "return i?\"正在修改\":n?\"已取消修改\":\"已修改\""
+  },
+  {
+    "old": "return e.spec.value?.overwrite?r?\"Editing\":n?\"Canceled edit to\":\"Edited\"",
+    "new": "return e.spec.value?.overwrite?r?\"正在修改\":n?\"已取消修改\":\"已修改\""
+  },
+  {
+    "old": "return t.spec.value?.overwrite?i?\"Editing\":n?\"Canceled edit to\":\"Edited\"",
+    "new": "return t.spec.value?.overwrite?i?\"正在修改\":n?\"已取消修改\":\"已修改\""
+  },
+  {
+    "old": "I=N?\"Editing\":V?\"Canceled edit to\":\"Edited\"",
+    "new": "I=N?\"正在修改\":V?\"已取消修改\":\"已修改\""
+  },
+  {
+    "old": "A=E?\"Editing\":S?\"Canceled edit to\":\"Edited\"",
+    "new": "A=E?\"正在修改\":S?\"已取消修改\":\"已修改\""
+  },
+  {
+    "old": "prefix:za(e)?\"Editing\":s?\"Failed to edit\":\"Edited\"",
+    "new": "prefix:za(e)?\"正在修改\":s?\"修改失败\":\"已修改\""
+  },
+  {
+    "old": "prefix:ll(t)?\"Editing\":o?\"Failed to edit\":\"Edited\"",
+    "new": "prefix:ll(t)?\"正在修改\":o?\"修改失败\":\"已修改\""
+  },
+  {
+    "old": "label:\"Auto-Open Edited Files\",description:\"Open files in the background if Agent creates or edits them\"",
+    "new": "label:\"自动打开修改的文件\",description:\"如果智能体创建或修改了文件，则在后台打开这些文件\""
+  },
+  {
+    "old": "Edited ${n}",
+    "new": "已修改 ${n}"
+  },
+  {
+    "old": "default:return r?`Edited ${n}`:null",
+    "new": "default:return r?`已修改 ${n}`:null"
+  },
+  {
+    "old": "mE(\"Working...\")",
+    "new": "mE(\"正在工作...\")"
+  },
+  {
+    "old": "MP(\"Working...\")",
+    "new": "MP(\"正在工作...\")"
+  },
+  {
+    "old": "q4i=\"Working\"",
+    "new": "q4i=\"正在工作\""
+  },
+  {
+    "old": "C1u=\"Working\"",
+    "new": "C1u=\"正在工作\""
+  },
+  {
+    "old": "liveToolSummary??\"Working...\"",
+    "new": "liveToolSummary??\"正在工作...\""
+  },
+  {
+    "old": "liveToolSummary||\"Working...\"",
+    "new": "liveToolSummary||\"正在工作...\""
+  },
+  {
+    "old": "s.liveToolSummary??\"Working...\"",
+    "new": "s.liveToolSummary??\"正在工作...\""
+  },
+  {
+    "old": "S.liveToolSummary||\"Working...\"",
+    "new": "S.liveToolSummary||\"正在工作...\""
+  },
+  {
+    "old": "\"Working directory: \"",
+    "new": "\"工作目录: \""
+  },
+  {
+    "old": "tooltip:()=>`Changes Overview (${f})`",
+    "new": "tooltip:()=>`更改概览 (${f})`"
+  },
+  {
+    "old": "tooltip:()=>`Changes Overview (${d})`",
+    "new": "tooltip:()=>`更改概览 (${d})`"
+  },
+  {
+    "old": "`${s.length} File${s.length===1?\"\":\"s\"} With Changes`",
+    "new": "`${s.length} 个文件已更改`"
+  },
+  {
+    "old": "`${o.length} File${o.length===1?\"\":\"s\"} With Changes`",
+    "new": "`${o.length} 个文件已更改`"
+  },
+  {
+    "old": "label:\"Auto-Expand Changes Overview\",description:\"When enabled, the Changes Overview toolbar will automatically expand when Agent finishes generating a response.\"",
+    "new": "label:\"自动展开更改概览\",description:\"启用后，当智能体完成生成响应时，更改概览工具栏将自动展开。\""
+  },
+  {
+    "old": "`${t} Background Process${t===1?\"\":\"es\"} Running`",
+    "new": "`${t} 个后台进程正在运行`"
+  },
+  {
+    "old": "n=`Artifacts (${r.length} Files for Conversation)`",
+    "new": "n=`产物 (${r.length} 个用于对话的文件)`"
+  },
+  {
+    "old": "n=`Artifacts (${i.length} Files for Conversation)`",
+    "new": "n=`产物 (${i.length} 个用于对话的文件)`"
+  },
+  {
+    "old": "title:\"Artifacts\"",
+    "new": "title:\"产物\""
+  },
+  {
+    "old": "\"Artifacts are created when the agent performs more complex, longer running tasks while in Planning mode.\"",
+    "new": "\"当智能体在规划模式下执行更复杂、运行时间更长的任务时，会创建产物。\""
+  },
+  {
+    "old": "children:\"Reject all\"",
+    "new": "children:\"全部拒绝\""
+  },
+  {
+    "old": "\"Reject all generated responses and revert to the state before triggering battle mode.\"",
+    "new": "\"拒绝所有生成的响应，并恢复到触发对决模式之前的状态。\""
+  },
+  {
+    "old": "e.Browser=\"Browser\"",
+    "new": "e.Browser=\"浏览器\""
+  },
+  {
+    "old": "t.Browser=\"Browser\"",
+    "new": "t.Browser=\"浏览器\""
+  },
+  {
+    "old": "t.Customization=\"Customizations\"",
+    "new": "t.Customization=\"自定义设置\""
+  },
+  {
+    "old": "Wt=i||\"Ask anything, @ to mention\"+(Be?\", / for actions\":\"\")",
+    "new": "Wt=i||\"问任何问题，使用 @ 提及\"+(Be?\", 使用 / 执行操作\":\"\")"
+  },
+  {
+    "old": "Gi=s||\"Ask anything, @ to mention\"+(Ke?\", / for actions\":\"\")",
+    "new": "Gi=s||\"问任何问题，使用 @ 提及\"+(Ke?\", 使用 / 执行操作\":\"\")"
+  },
+  {
+    "old": "Your plan's baseline quota will refresh on ${o}.",
+    "new": "您的方案基线配额将在 ${o} 刷新。"
+  },
+  {
+    "old": "Your plan's baseline quota will refresh on ${a}.",
+    "new": "您的方案基线配额将在 ${a} 刷新。"
+  },
+  {
+    "old": "\"Baseline model quota reached\"",
+    "new": "\"已达到基线模型额度\""
+  },
+  {
+    "old": "\"Enable Overages\"",
+    "new": "\"启用超额模型点数\""
+  },
+  {
+    "old": "label:\"See Plans\"",
+    "new": "label:\"查看方案\""
+  },
+  {
+    "old": "content:\"View conversation\"",
+    "new": "content:\"查看对话\""
+  },
+  {
+    "old": "content:\"Copy to clipboard\"",
+    "new": "content:\"复制到剪贴板\""
+  },
+  {
+    "old": "title:t?\"Copied!\":\"Copy to clipboard\"",
+    "new": "title:t?\"已复制!\":\"复制到剪贴板\""
+  },
+  {
+    "old": "title:\"Copy to clipboard\"",
+    "new": "title:\"复制到剪贴板\""
+  },
+  {
+    "old": "content:\"Export artifact\"",
+    "new": "content:\"导出产物\""
+  },
+  {
+    "old": "children:[\"Submit comment\",n.length<=1?\"\":\"s\"]",
+    "new": "children:[\"提交意见\",n.length<=1?\"\":\"\"]"
+  },
+  {
+    "old": "WLi=\"Add a message...\"",
+    "new": "WLi=\"添加消息...\""
+  },
+  {
+    "old": "iIu=\"Add a message...\"",
+    "new": "iIu=\"添加消息...\""
+  },
+  {
+    "old": "OLi=\"Add an optional message, \\u23CE to submit comments\"",
+    "new": "OLi=\"添加可选消息，按下 ↵ 提交意见\""
+  },
+  {
+    "old": "nIu=\"Add an optional message, \\u23CE to submit comments\"",
+    "new": "nIu=\"添加可选消息，按下 ↵ 提交意见\""
+  },
+  {
+    "old": "children:\"Select text in the artifact to add a comment\"",
+    "new": "children:\"在产物中选择文本以添加意见\""
+  },
+  {
+    "old": "label:\"Always Proceed\"",
+    "new": "label:\"始终执行\""
+  },
+  {
+    "old": "\"Proceed in Sandbox\"",
+    "new": "\"在沙箱中执行\""
+  },
+  {
+    "old": "children:\"Proceed\"",
+    "new": "children:\"继续执行\""
+  },
+  {
+    "old": "\"Proceed Anyways\"",
+    "new": "\"仍然执行\""
+  },
+  {
+    "old": "e===\"Task\"?j5u:e===\"Implementation Plan\"?J5u:e===\"Walkthrough\"?K5u:",
+    "new": "e===\"Task\"||e===\"任务\"?j5u:e===\"Implementation Plan\"||e===\"实施方案\"?J5u:e===\"Walkthrough\"||e===\"演示/演练\"?K5u:"
+  },
+  {
+    "old": "\"Task\"",
+    "new": "\"任务\""
+  },
+  {
+    "old": "\"Implementation Plan\"",
+    "new": "\"实施方案\""
+  },
+  {
+    "old": "\"Walkthrough\"",
+    "new": "\"演示/演练\""
+  },
+  {
+    "old": "\"Customization\"",
+    "new": "\"自定义设置\""
+  },
+  {
+    "old": "\"Customizations\"",
+    "new": "\"自定义设置\""
+  },
+  {
+    "old": "\"Cancel\"",
+    "new": "\"取消\""
+  },
+  {
+    "old": "\"cancel\"",
+    "new": "\"取消\""
+  },
+  {
+    "old": "children:\"Cancel\"",
+    "new": "children:\"取消\""
+  },
+  {
+    "old": "\"Send Queued Message\"",
+    "new": "\"发送队列消息\""
+  },
+  {
+    "old": "[Mr.ARTIFACT_REVIEW_MODE,{isProviderSetting:!0,screen:\"Permissions\",label:\"Review Policy\",description:\"Specifies Agent's behavior when asking for review on artifacts, which are documents it creates to enable a richer conversation experience.\",options:$1t.map(t=>t.value),resolveOptionToString:t=>$1t.find(r=>r.value===t)?.label||\"Request Review\",resolveOptionToDescription:t=>{switch(t){case e0.TURBO:return\"Agent never asks for review. This maximizes the autonomy of the Agent, but also has the highest risk of the Agent operating over unsafe or injected Artifact content.\";case e0.ALWAYS:return\"Agent always asks for review.\";default:return\"\"}},settingType:\"dropdown\"}]",
+    "new": "[Mr.ARTIFACT_REVIEW_MODE,{isProviderSetting:!0,screen:\"Permissions\",label:\"产物审核策略\",description:\"指定智能体在请求审核产物时的行为，产物是它创建的用于提供更丰富对话体验的文档。\",options:$1t.map(t=>t.value),resolveOptionToString:t=>$1t.find(r=>r.value===t)?.label||\"每次询问\",resolveOptionToDescription:t=>{switch(t){case e0.TURBO:return\"智能体从不请求审核。这最大化了智能体的自主性，但也有智能体在不安全或被注入的产物内容上运行的最高风险。\";case e0.ALWAYS:return\"智能体总是请求审核。\";default:return\"\"}},settingType:\"dropdown\"}]"
+  },
+  {
+    "old": "[Mr.ENABLE_SOUNDS_FOR_SPECIAL_EVENTS,{isProviderSetting:!0,screen:\"Permissions\",label:\"Enable Sounds for Agent\",description:\"When enabled, Antigravity will play a sound when Agent finishes generating a response.\",settingType:\"switch\"}]",
+    "new": "[Mr.ENABLE_SOUNDS_FOR_SPECIAL_EVENTS,{isProviderSetting:!0,screen:\"Permissions\",label:\"启用智能体声音提示\",description:\"启用后，当智能体完成生成响应时，Antigravity 将播放提示音。\",settingType:\"switch\"}]"
+  },
+  {
+    "old": "[Mr.ENABLE_AUTO_EXPAND_TOOLBAR,{isProviderSetting:!0,screen:\"Permissions\",label:\"Auto-Expand Changes Overview\",description:\"When enabled, the Changes Overview toolbar will automatically expand when Agent finishes generating a response.\",settingType:\"switch\"}]",
+    "new": "[Mr.ENABLE_AUTO_EXPAND_TOOLBAR,{isProviderSetting:!0,screen:\"Permissions\",label:\"自动展开更改概览\",description:\"启用后，当智能体完成生成响应时，更改概览工具栏将自动展开。\",settingType:\"switch\"}]"
+  },
+  {
+    "old": "[Mr.CONVERSATION_HISTORY_ENABLED,{isProviderSetting:!0,screen:\"Permissions\",label:\"Conversation History\",description:\"When enabled, the agent will be able to access past conversations to inform its responses.\",settingType:\"switch\"}]",
+    "new": "[Mr.CONVERSATION_HISTORY_ENABLED,{isProviderSetting:!0,screen:\"Permissions\",label:\"历史对话\",description:\"启用后，智能体将能够访问过去的对话来提供更准确的响应。\",settingType:\"switch\"}]"
+  },
+  {
+    "old": "[Mr.KNOWLEDGE_ENABLED,{isProviderSetting:!0,screen:\"Permissions\",label:\"Knowledge\",description:\"When enabled, the agent will be able to access its knowledge base to inform its responses and automatically generate knowledge items in the background. Disabling this will prevent the agent from accessing existing knowledge items, but will not delete them.\",settingType:\"switch\"}]",
+    "new": "[Mr.KNOWLEDGE_ENABLED,{isProviderSetting:!0,screen:\"Permissions\",label:\"知识库\",description:\"启用后，智能体将能够访问其知识库以辅助生成响应并在后台自动生成知识项。禁用此项将阻止智能体访问已有的知识项，但不会删除它们。\",settingType:\"switch\"}]"
+  },
+  {
+    "old": "[Mr.DISABLE_AUTO_OPEN_EDITED_FILES,{isProviderSetting:!0,screen:\"Permissions\",label:\"Auto-Open Edited Files\",description:\"Open files in the background if Agent creates or edits them\",settingType:\"switch\"}]",
+    "new": "[Mr.DISABLE_AUTO_OPEN_EDITED_FILES,{isProviderSetting:!0,screen:\"Permissions\",label:\"自动打开已编辑的文件\",description:\"若智能体创建或编辑了文件，则在后台自动打开它们\",settingType:\"switch\"}]"
+  },
+  {
+    "old": "[Mr.DISABLE_OPEN_CASCADE_ON_RELOAD,{isProviderSetting:!0,screen:\"Permissions\",label:\"Open Agent on Reload\",description:\"Open Agent panel on window reload\",settingType:\"switch\"}]",
+    "new": "[Mr.DISABLE_OPEN_CASCADE_ON_RELOAD,{isProviderSetting:!0,screen:\"Permissions\",label:\"重载时打开智能体\",description:\"窗口重新加载时自动打开智能体面板\",settingType:\"switch\"}]"
+  },
+  {
+    "old": "[Mr.VERBOSE_AGENT_CHAT,{isProviderSetting:!0,screen:\"Appearance\",label:\"Verbose agent chat\",description:\"Display and preserve intermediate thinking steps\",settingType:\"switch\"}]",
+    "new": "[Mr.VERBOSE_AGENT_CHAT,{isProviderSetting:!0,screen:\"Appearance\",label:\"详细智能体对话\",description:\"显示并保留中间思考步骤\",settingType:\"switch\"}]"
+  },
+  {
+    "old": "[Mr.AUTOCOMPLETE_SPEED,{isProviderSetting:!0,screen:\"Tab\",label:\"Tab Speed\",description:\"Set the speed of tab suggestions\",settingType:\"dropdown\",options:[sW.FAST,sW.SLOW],resolveOptionToString:t=>{switch(t){case sW.FAST:return\"Fast\";case sW.SLOW:return\"Slow\";default:return\"Fast\"}}}]",
+    "new": "[Mr.AUTOCOMPLETE_SPEED,{isProviderSetting:!0,screen:\"Tab\",label:\"Tab 速度\",description:\"设置 Tab 键提示的速度\",settingType:\"dropdown\",options:[sW.FAST,sW.SLOW],resolveOptionToString:t=>{switch(t){case sW.FAST:return\"快\";case sW.SLOW:return\"慢\";default:return\"快\"}}}]"
+  },
+  {
+    "old": "[Mr.BROWSER_JS_EXECUTION_POLICY,{isProviderSetting:!0,screen:\"Browser\",label:\"Browser Javascript Execution Policy\",description:\"Controls whether the agent can run custom JavaScript to automate complex browser actions.\",options:[vh.DISABLED,vh.ALWAYS_ASK,vh.TURBO],resolveOptionToString:t=>{switch(t){case vh.DISABLED:return\"Disabled\";case vh.ALWAYS_ASK:return\"Request Review\";case vh.TURBO:return\"Always Proceed\";default:return\"Request Review\"}},resolveOptionToDescription:t=>{switch(t){case vh.DISABLED:return\"Block all browser JavaScript execution.\";case vh.ALWAYS_ASK:return\"Prompt for approval before running browser scripts.\";case vh.TURBO:return\"Allow full browser script execution without prompting.\";default:return\"Prompt for approval before running browser scripts.\"}},settingType:\"dropdown\"}]",
+    "new": "[Mr.BROWSER_JS_EXECUTION_POLICY,{isProviderSetting:!0,screen:\"Browser\",label:\"浏览器 Javascript 执行策略\",description:\"控制智能体是否可以运行自定义 JavaScript 来自动执行复杂的浏览器操作。\",options:[vh.DISABLED,vh.ALWAYS_ASK,vh.TURBO],resolveOptionToString:t=>{switch(t){case vh.DISABLED:return\"已禁用\";case vh.ALWAYS_ASK:return\"需要审核\";case vh.TURBO:return\"始终执行\";default:return\"需要审核\"}},resolveOptionToDescription:t=>{switch(t){case vh.DISABLED:return\"阻止所有浏览器 JavaScript 执行。\";case vh.ALWAYS_ASK:return\"在运行浏览器脚本前提示审核。\";case vh.TURBO:return\"允许完全执行浏览器脚本而无需提示。\";default:return\"在运行浏览器脚本前提示审核。\"}},settingType:\"dropdown\"}]"
+  },
+  {
+    "old": "[Mr.BROWSER_CHROME_PATH,{isProviderSetting:!0,screen:\"Browser\",label:\"Chrome Binary Path\",description:\"Path to the Chrome/Chromium executable. Leave empty for auto-detection.\",settingType:\"text\",placeholder:\"Absolute path to the Chrome/Chromium executable\",type:\"string\"}]",
+    "new": "[Mr.BROWSER_CHROME_PATH,{isProviderSetting:!0,screen:\"Browser\",label:\"Chrome 二进制文件路径\",description:\"指向 Chrome/Chromium 可执行文件的路径。留空以进行自动检测。\",settingType:\"text\",placeholder:\"指向 Chrome/Chromium 可执行文件的绝对路径\",type:\"string\"}]"
+  },
+  {
+    "old": "[Mr.BROWSER_USER_PROFILE_PATH,{isProviderSetting:!0,screen:\"Browser\",label:\"Browser User Profile Path\",description:\"Custom path for the browser user profile directory. Leave empty for default (~/.gemini/antigravity-browser-profile).\",settingType:\"text\",placeholder:\"~/.gemini/antigravity-browser-profile\",type:\"string\"}]",
+    "new": "[Mr.BROWSER_USER_PROFILE_PATH,{isProviderSetting:!0,screen:\"Browser\",label:\"浏览器用户配置文件路径\",description:\"浏览器用户配置文件目录的自定义路径。留空以使用默认路径 (~/.gemini/antigravity-browser-profile)。\",settingType:\"text\",placeholder:\"~/.gemini/antigravity-browser-profile\",type:\"string\"}]"
+  },
+  {
+    "old": "getRenderInfo(){let e=this.type===0?\"Files\":this.type===1?\"Directories\":\"Code Context Items\",t=this.type===0?p(Trt,{size:14}):this.type===1?p(PBr,{size:14}):p(ldi",
+    "new": "getRenderInfo(){let e=this.type===0?\"文件\":this.type===1?\"文件夹\":\"代码上下文项\",t=this.type===0?p(Trt,{size:14}):this.type===1?p(PBr,{size:14}):p(ldi"
+  },
+  {
+    "old": "getRenderInfo(){let t=this.type===0?\"Files\":this.type===1?\"Directories\":\"Code Context Items\",e=this.type===0?R(msn,{size:14}):this.type===1?R(Xio,{size:14}):R(HJc",
+    "new": "getRenderInfo(){let t=this.type===0?\"文件\":this.type===1?\"文件夹\":\"代码上下文项\",e=this.type===0?R(msn,{size:14}):this.type===1?R(Xio,{size:14}):R(HJc"
+  },
+  {
+    "old": "p(zB,{icon:{type:\"googleSymbol\",name:\"settings\"},text:\"Settings\",onClick:()=>{e(ds.SETTINGS_OPEN,G0.SETTINGS),n(a?{targetProjectId:a}:void 0)},tooltipText:\"Settings\",tooltipKeybinding:sA.openSettings.keybindings,\"data-testid\":\"settings-button\"})",
+    "new": "p(zB,{icon:{type:\"googleSymbol\",name:\"settings\"},text:\"设置\",onClick:()=>{e(ds.SETTINGS_OPEN,G0.SETTINGS),n(a?{targetProjectId:a}:void 0)},tooltipText:\"设置\",tooltipKeybinding:sA.openSettings.keybindings,\"data-testid\":\"settings-button\"})"
+  },
+  {
+    "old": "R(qAe,{icon:{type:\"googleSymbol\",name:\"settings\"},text:\"Settings\",onClick:()=>{t(Mu.SETTINGS_OPEN,TN.SETTINGS),n(r?{targetProjectId:r}:void 0)},tooltipText:\"Settings\",tooltipKeybinding:dAe.openSettings.keybindings,\"data-testid\":\"settings-button\"})",
+    "new": "R(qAe,{icon:{type:\"googleSymbol\",name:\"settings\"},text:\"设置\",onClick:()=>{t(Mu.SETTINGS_OPEN,TN.SETTINGS),n(r?{targetProjectId:r}:void 0)},tooltipText:\"设置\",tooltipKeybinding:dAe.openSettings.keybindings,\"data-testid\":\"settings-button\"})"
+  },
+  {
+    "old": "ZJd={[LYe.Settings]:{create:(t,e)=>t.get(be).createInstance(Wtr,e),label:\"Settings\"},[LYe.Keybindings]:{create:(t,e)=>t.get(be).createInstance(Gtr,e),label:\"AI Shortcuts\"}}",
+    "new": "ZJd={[LYe.Settings]:{create:(t,e)=>t.get(be).createInstance(Wtr,e),label:\"设置\"},[LYe.Keybindings]:{create:(t,e)=>t.get(be).createInstance(Gtr,e),label:\"AI 快捷键\"}}"
+  },
+  {
+    "old": "_getSettingsItems(){const e=[{isUssSetting:!0,label:\"Tab Speed\",type:E1e.Enum,description:[\"Set the speed of tab suggestions\"],topic:\"uss-tabPreferences\",options:[{label:\"Slow\",value:Fwe.SLOW},{label:\"Fast\",value:Fwe.FAST,isDefaultWhenAvailable:!0}],category:U3.ANTIGRAVITY_TAB,statusBarCategory:W7.ANTIGRAVITY_TAB,resolveTopicToValue:i=>YBo(i),generateSettingUpdate:i=>QBo(i)},{isUssSetting:!0,label:\"Auto-Open Edited Files\",type:E1e.Boolean,description:[\"Open files in the background if the agent creates or edits them\"],topic:\"uss-agentPreferences\",options:[{label:E2.OFF,value:!0},{label:E2.ON,value:!1}],category:U3.CASCADE_CONFIGURATION,resolveTopicToValue:i=>!j3a(i),generateSettingUpdate:i=>J3a(!i)},{isUssSetting:!0,label:\"Open Agent on Reload\",type:E1e.Boolean,description:[\"Open Agent panel on window reload\"],topic:\"uss-agentPreferences\",options:[{label:E2.OFF,value:!0},{label:E2.ON,value:!1}],category:U3.CASCADE_CONFIGURATION,resolveTopicToValue:i=>Vtr(i),generateSettingUpdate:i=>q3a(i)},{isUssSetting:!0,label:\"Tab to Jump\",type:E1e.Enum,description:[\"Predict the location of your next edit and navigates you there with a tab keypress\"],topic:\"uss-tabPreferences\",options:[{label:E2.OFF,value:Ene.DISABLED},{label:E2.ON,value:Ene.ENABLED,description:\"Enable navigation suggestions that predict your next edit\",isDefaultWhenAvailable:!0}],category:U3.ANTIGRAVITY_TAB,statusBarCategory:W7.ANTIGRAVITY_TAB,resolveTopicToValue:i=>GBo(i),generateSettingUpdate:i=>jBo(i)},{isUssSetting:!0,label:\"Auto Execution\",type:E1e.Enum,description:[\"Always Proceed - Agent never asks for confirmation before executing terminal commands (except those in the Deny List)\",\"Request Review - Agent always asks for confirmation before executing terminal commands (except those in the Allow List)\"],topic:\"uss-agentPreferences\",options:[{label:\"Always Proceed\",value:$U.EAGER,description:\"Always auto-execute commands unless they are in your deny list. This also allows Agent to auto-execute Browser controls.\"},{label:\"Request Review\",value:$U.OFF,description:\"Never auto-execute commands unless they are in your allow list.\",isDefaultWhenAvailable:!0}],category:U3.CASCADE_CONFIGURATION,statusBarCategory:W7.CASCADE,overrideSentinelKey:fw.TERMINAL_AUTO_EXECUTION_POLICY,resolveTopicToValue:J2n,generateSettingUpdate:npt},{isUssSetting:!0,label:\"Review Policy\",type:E1e.Enum,description:[\"Always Proceed - Trust the agent to do tasks end-to-end\",\"Agent Decides - Assist the agent to complete tasks\",\"Request Review - Collaborate with the agent to complete tasks\"],topic:\"uss-agentPreferences\",options:[{label:\"Always Proceed\",value:Q9.TURBO,description:\"Trust the agent to do tasks end-to-end\",isDefaultWhenAvailable:!0},{label:\"Agent Decides\",value:Q9.AUTO,description:\"Assist the agent to complete tasks\"},{label:\"Request Review\",value:Q9.ALWAYS,description:\"Collaborate with the agent to complete tasks\"}],category:U3.CASCADE_CONFIGURATION,statusBarCategory:W7.CASCADE,overrideSentinelKey:fw.ARTIFACT_REVIEW_POLICY,resolveTopicToValue:j2n,generateSettingUpdate:ipt},{isUssSetting:!0,label:\"Suggestions in Editor\",description:[\"Show AI autocomplete suggestions in the editor\"],topic:\"uss-tabPreferences\",options:[{label:E2.OFF,value:Jhe.OFF},{label:E2.ON,value:Jhe.ON}],category:U3.ANTIGRAVITY_TAB,statusBarCategory:W7.ANTIGRAVITY_TAB,resolveTopicToValue:i=>WBo(i),generateSettingUpdate:i=>HBo(i)},{isUssSetting:!0,label:\"Tab Gitignore Access\",description:[\"Allow Tab to view and edit the files in .gitignore. Use with caution if your .gitignore lists files containing credentials, secrets, or other sensitive information.\"],topic:\"uss-tabPreferences\",options:[{label:E2.OFF,value:!1},{label:E2.ON,value:!0}],category:U3.ANTIGRAVITY_TAB,statusBarCategory:W7.ANTIGRAVITY_TAB,resolveTopicToValue:i=>YZt(i),generateSettingUpdate:i=>j1n(i)},{isUssSetting:!0,category:U3.CASCADE_CONFIGURATION,statusBarCategory:W7.CASCADE,label:\"Agent Auto-Fix Lints\",description:[\"When enabled, Agent is given awareness of lint errors created by its edits and may fix them without explicit user prompting. Note that this may increase Agent's tool usage.\"],topic:\"uss-agentPreferences\",options:[{label:E2.OFF,value:!0},{label:E2.ON,value:!1}],resolveTopicToValue:i=>z3a(i),generateSettingUpdate:i=>Q3a(i)},{isUssSetting:!0,category:U3.ANTIGRAVITY_TAB,statusBarCategory:W7.ANTIGRAVITY_TAB,label:\"Tab to Import\",description:[\"Quickly add and update imports with a tab keypress.\"],topic:\"uss-tabPreferences\",options:[{label:E2.OFF,value:!0},{label:E2.ON,value:!1}],resolveTopicToValue:i=>ZBo(i),generateSettingUpdate:i=>KBo(i)},{isUssSetting:!0,category:U3.ANTIGRAVITY_TAB,label:\"Highlight After Accept\",description:[\"Highlight newly inserted text after accepting a Tab completion.\"],topic:\"uss-tabPreferences\",options:[{label:E2.OFF,value:!0},{label:E2.ON,value:!1}],resolveTopicToValue:i=>XBo(i),generateSettingUpdate:i=>zBo(i)}];return Xsc(this.contextKeyService)&&e.push({isUssSetting:!0,category:U3.ANTIGRAVITY_TAB,label:\"Enable Tab Sounds (Beta)\",description:[\"Turn this on for some sick beats. The more Tab suggestions you accept in a row, the better.\"],topic:\"uss-tabPreferences\",options:[{label:E2.OFF,value:!1},{label:E2.ON,value:!0}],resolveTopicToValue:i=>Yku(i),generateSettingUpdate:i=>Hku(i)}),e}",
+    "new": "_getSettingsItems(){const e=[{isUssSetting:!0,label:\"Tab 速度\",type:E1e.Enum,description:[\"设置 Tab 键提示的速度\"],topic:\"uss-tabPreferences\",options:[{label:\"慢\",value:Fwe.SLOW},{label:\"快\",value:Fwe.FAST,isDefaultWhenAvailable:!0}],category:U3.ANTIGRAVITY_TAB,statusBarCategory:W7.ANTIGRAVITY_TAB,resolveTopicToValue:i=>YBo(i),generateSettingUpdate:i=>QBo(i)},{isUssSetting:!0,label:\"自动打开已编辑的文件\",type:E1e.Boolean,description:[\"若智能体创建或编辑了文件，则在后台自动打开它们\"],topic:\"uss-agentPreferences\",options:[{label:E2.OFF,value:!0},{label:E2.ON,value:!1}],category:U3.CASCADE_CONFIGURATION,resolveTopicToValue:i=>!j3a(i),generateSettingUpdate:i=>J3a(!i)},{isUssSetting:!0,label:\"重载时打开智能体\",type:E1e.Boolean,description:[\"窗口重新加载时自动打开智能体面板\"],topic:\"uss-agentPreferences\",options:[{label:E2.OFF,value:!0},{label:E2.ON,value:!1}],category:U3.CASCADE_CONFIGURATION,resolveTopicToValue:i=>Vtr(i),generateSettingUpdate:i=>q3a(i)},{isUssSetting:!0,label:\"Tab 键跳转\",type:E1e.Enum,description:[\"预测下一个编辑位置，并在按下 Tab 键时导航至该处\"],topic:\"uss-tabPreferences\",options:[{label:E2.OFF,value:Ene.DISABLED},{label:E2.ON,value:Ene.ENABLED,description:\"启用预测您下一个编辑位置的导航提示\",isDefaultWhenAvailable:!0}],category:U3.ANTIGRAVITY_TAB,statusBarCategory:W7.ANTIGRAVITY_TAB,resolveTopicToValue:i=>GBo(i),generateSettingUpdate:i=>jBo(i)},{isUssSetting:!0,label:\"终端命令自动执行\",type:E1e.Enum,description:[\"始终执行 - 智能体在执行终端命令前从不请求确认（排除列表中的命令除外）\",\"需要审核 - 智能体在执行终端命令前总是请求确认（允许列表中的命令除外）\"],topic:\"uss-agentPreferences\",options:[{label:\"始终执行\",value:$U.EAGER,description:\"始终自动执行命令，除非它们在您的排除列表中。这也允许智能体自动执行浏览器控制。\"},{label:\"需要审核\",value:$U.OFF,description:\"从不自动执行命令，除非它们在您的允许列表中。\",isDefaultWhenAvailable:!0}],category:U3.CASCADE_CONFIGURATION,statusBarCategory:W7.CASCADE,overrideSentinelKey:fw.TERMINAL_AUTO_EXECUTION_POLICY,resolveTopicToValue:J2n,generateSettingUpdate:npt},{isUssSetting:!0,label:\"产物审核策略\",type:E1e.Enum,description:[\"始终执行 - 信任智能体端到端地完成任务\",\"智能体决定 - 辅助智能体完成任务\",\"需要审核 - 与智能体协作完成任务\"],topic:\"uss-agentPreferences\",options:[{label:\"始终执行\",value:Q9.TURBO,description:\"信任智能体端到端地完成任务\",isDefaultWhenAvailable:!0},{label:\"智能体决定\",value:Q9.AUTO,description:\"辅助智能体完成任务\"},{label:\"需要审核\",value:Q9.ALWAYS,description:\"与智能体协作完成任务\"}],category:U3.CASCADE_CONFIGURATION,statusBarCategory:W7.CASCADE,overrideSentinelKey:fw.ARTIFACT_REVIEW_POLICY,resolveTopicToValue:j2n,generateSettingUpdate:ipt},{isUssSetting:!0,label:\"编辑器内提示\",description:[\"在编辑器中显示 AI 自动补全提示\"],topic:\"uss-tabPreferences\",options:[{label:E2.OFF,value:Jhe.OFF},{label:E2.ON,value:Jhe.ON}],category:U3.ANTIGRAVITY_TAB,statusBarCategory:W7.ANTIGRAVITY_TAB,resolveTopicToValue:i=>WBo(i),generateSettingUpdate:i=>HBo(i)},{isUssSetting:!0,label:\"Tab 访问 Gitignore 文件\",description:[\"允许 Tab 查看和编辑 .gitignore 中的文件。如果您的 .gitignore 列出了包含凭据、密钥或其他敏感信息的文件，请谨慎使用。\"],topic:\"uss-tabPreferences\",options:[{label:E2.OFF,value:!1},{label:E2.ON,value:!0}],category:U3.ANTIGRAVITY_TAB,statusBarCategory:W7.ANTIGRAVITY_TAB,resolveTopicToValue:i=>YZt(i),generateSettingUpdate:i=>j1n(i)},{isUssSetting:!0,category:U3.CASCADE_CONFIGURATION,statusBarCategory:W7.CASCADE,label:\"智能体自动修复 Lint 错误\",description:[\"启用后，智能体将能够感知由其编辑所创建的 lint 错误，并可能在没有用户显式提示的情况下修复它们。请注意，这可能会增加智能体对工具的使用。\"],topic:\"uss-agentPreferences\",options:[{label:E2.OFF,value:!0},{label:E2.ON,value:!1}],resolveTopicToValue:i=>z3a(i),generateSettingUpdate:i=>Q3a(i)},{isUssSetting:!0,category:U3.ANTIGRAVITY_TAB,statusBarCategory:W7.ANTIGRAVITY_TAB,label:\"Tab 键导入\",description:[\"在按下 Tab 键时快速添加和更新导入项。\"],topic:\"uss-tabPreferences\",options:[{label:E2.OFF,value:!0},{label:E2.ON,value:!1}],resolveTopicToValue:i=>ZBo(i),generateSettingUpdate:i=>KBo(i)},{isUssSetting:!0,category:U3.ANTIGRAVITY_TAB,label:\"采纳提示后高亮\",description:[\"在采纳 Tab 自动补全后高亮新插入的文本。\"],topic:\"uss-tabPreferences\",options:[{label:E2.OFF,value:!0},{label:E2.ON,value:!1}],resolveTopicToValue:i=>XBo(i),generateSettingUpdate:i=>zBo(i)}];return Xsc(this.contextKeyService)&&e.push({isUssSetting:!0,category:U3.ANTIGRAVITY_TAB,label:\"启用 Tab 声音提示（公测版）\",description:[\"开启此项以体验动感音效。连续采纳的 Tab 提示越多，效果越好。\"],topic:\"uss-tabPreferences\",options:[{label:E2.OFF,value:!1},{label:E2.ON,value:!0}],resolveTopicToValue:i=>Yku(i),generateSettingUpdate:i=>Hku(i)}),e}"
+  },
+  {
+    "old": "case i.K_D.FAST:e=\"Fast\";break;case i.K_D.SLOW:e=\"Slow\";break;default:e=\"Fast\"}return`Autocomplete Speed: ${e}`",
+    "new": "case i.K_D.FAST:e=\"快\";break;case i.K_D.SLOW:e=\"慢\";break;default:e=\"快\"}return`自动补全速度: ${e}`"
+  },
+  {
+    "old": "isGoogleInternal?\"Jetski - Settings\":\"Antigravity - Settings\"",
+    "new": "isGoogleInternal?\"Jetski - 设置\":\"Antigravity - 设置\""
+  },
+  {
+    "old": "getRenderInfo(){let e=this.type===0?\"Files\":this.type===1?\"Directories\":\"Code Context Items\"",
+    "new": "getRenderInfo(){let e=this.type===0?\"文件\":this.type===1?\"文件夹\":\"代码上下文项\""
+  },
+  {
+    "old": "getRenderInfo(){let t=this.type===0?\"Files\":this.type===1?\"Directories\":\"Code Context Items\"",
+    "new": "getRenderInfo(){let t=this.type===0?\"文件\":this.type===1?\"文件夹\":\"代码上下文项\""
+  },
+  {
+    "old": "displayName:\"Agent\"",
+    "new": "displayName:\"智能体\""
+  },
+  {
+    "old": "resolveOptionToString:t=>{switch(t){case sW.FAST:return\"Fast\";case sW.SLOW:return\"Slow\";default:return\"Fast\"}}",
+    "new": "resolveOptionToString:t=>{switch(t){case sW.FAST:return\"快\";case sW.SLOW:return\"慢\";default:return\"快\"}}"
+  },
+  {
+    "old": "resolveOptionToString:e=>{switch(e){case SBe.FAST:return\"Fast\";case SBe.SLOW:return\"Slow\";default:return\"Fast\"}}",
+    "new": "resolveOptionToString:e=>{switch(e){case SBe.FAST:return\"快\";case SBe.SLOW:return\"慢\";default:return\"快\"}}"
+  },
+  {
+    "old": "options:[{label:\"Slow\",value:Fwe.SLOW},{label:\"Fast\",value:Fwe.FAST,isDefaultWhenAvailable:!0}]",
+    "new": "options:[{label:\"慢\",value:Fwe.SLOW},{label:\"快\",value:Fwe.FAST,isDefaultWhenAvailable:!0}]"
+  },
+  {
+    "old": "if(!e||e<=new Date)return\"Quota Available\";",
+    "new": "if(!e||e<=new Date)return\"额度可用\";"
   }
 ]

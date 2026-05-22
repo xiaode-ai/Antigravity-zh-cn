@@ -1,0 +1,390 @@
+Searching all files in resources/app (excluding node_modules)...
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\extensions\antigravity\dist\extension.js
+  Term: "Antigravity - Settings" (#1)
+  Snippet: ... ,17022:(e,t,n)=>{n.d(t,{Sm:()=>r,ed:()=>i,u5:()=>l});var o=n(68956);const i=o.env.isGoogleInternal?"Jetski - Settings":"Antigravity - Settings",l="workbench.action.showAntigravityStatusBarSettings";class r{providers=new Map;updateEmitter=new o.EventEmitter;onDid ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\extensions\antigravity\dist\extension.js
+  Term: "Report Issue" (#1)
+  Snippet: ... ion has been shown yet.");const e=await o.window.showQuickPick(["Model Quality","Render","Speed","Other"],{title:"Tab - Report Issue",canPickMany:!1,placeHolder:"Select issue",ignoreFocusOut:!0});if(void 0===e)return;if(void 0===await o.window.showInpu ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\extensions\antigravity\package.json
+  Term: "Changelog" (#1)
+  Snippet: ... and":"antigravity.copyApiKey","title":"Copy API Key to Clipboard"},{"command":"antigravity.openChangeLog","title":"Open Changelog"},{"command":"antigravity.openBrowser","title":"Open Browser"},{"command":"antigravity.showBrowserAllowlist","title":"S ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\extensions\typescript-language-features\dist\extension.js
+  Term: "Report Issue" (#1)
+  Snippet: ... ;this.numberRestarts++;let n=!0;const r=this.pluginManager.plugins.map(e=>e.extension.id).join(", "),i={title:l.l10n.t("Report Issue")};let o;this.numberRestarts>5?(this.numberRestarts=0,e<1e4?(this.lastStart=Date.now(),n=!1,this.hasServerFatallyCrashe ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\main.js
+  Term: "Code Context Items" (#1)
+  Snippet: ... his.trigger=kUe[this.type]}trigger;useCache=!1;getRenderInfo(){let e=this.type===0?"Files":this.type===1?"Directories":"Code Context Items",t=this.type===0?v(zFe,{size:14}):this.type===1?v(oct,{size:14}):v(pba,{width:14,height:14});return{label:e,icon:t}}han ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\main.js
+  Term: "Changelog" (#1)
+  Snippet: ... function MHt(e,t,r,n,a,i){const s=e.versions[0],o={manifest:tV(t,pp.Manifest),readme:tV(t,pp.Details),changelog:tV(t,pp.Changelog),license:tV(t,pp.License),repository:oPs(t),download:lPs(t),icon:tV(t,pp.Icon),signature:tV(t,pp.Signature),coreTransla ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\main.js
+  Term: "Changelog" (#2)
+  Snippet: ... eid",pp={Icon:"Microsoft.VisualStudio.Services.Icons.Default",Details:"Microsoft.VisualStudio.Services.Content.Details",Changelog:"Microsoft.VisualStudio.Services.Content.Changelog",Manifest:"Microsoft.VisualStudio.Code.Manifest",VSIX:"Microsoft.Vis ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\main.js
+  Term: "Changelog" (#3)
+  Snippet: ... s.Default",Details:"Microsoft.VisualStudio.Services.Content.Details",Changelog:"Microsoft.VisualStudio.Services.Content.Changelog",Manifest:"Microsoft.VisualStudio.Code.Manifest",VSIX:"Microsoft.VisualStudio.Services.VSIXPackage",License:"Microsoft. ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\main.js
+  Term: "Changelog" (#4)
+  Snippet: ... await this.getAsset(t.identifier.id,n[1],n[0],t.version),i=await DY(a);return i?JSON.parse(i):null}return null}async getChangelog(t,r){if(t.assets.changelog){const n=await this.getAsset(t.identifier.id,t.assets.changelog,pp.Changelog,t.version,{},r) ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\main.js
+  Term: "Changelog" (#5)
+  Snippet: ... n null}async getChangelog(t,r){if(t.assets.changelog){const n=await this.getAsset(t.identifier.id,t.assets.changelog,pp.Changelog,t.version,{},r);return await DY(n)||""}return""}async getAllVersions(t){return this.getVersions(t)}async getAllCompatib ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\nls.keys.json
+  Term: "Changelog" (#1)
+  Snippet: ... s/workbench/contrib/antigravityFeedback/browser/antigravityFeedback.contribution",["openDocs","reportIssue","AntigravityChangelog","AntigravityDiagnostics"]],["vs/workbench/contrib/antigravityMcpService/browser/antigravityMcp.contribution",["antigra ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\nls.keys.json
+  Term: "Changelog" (#2)
+  Snippet: ... tooltip","extensionpack","extensionpacktooltip","noReadme","Readme title","extension pack","noReadme","Readme title","noChangelog","Changelog title","noDependencies","categories","repository","issues","license","Marketplace","resources","Install Inf ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\nls.keys.json
+  Term: "Changelog" (#3)
+  Snippet: ... tensionpack","extensionpacktooltip","noReadme","Readme title","extension pack","noReadme","Readme title","noChangelog","Changelog title","noDependencies","categories","repository","issues","license","Marketplace","resources","Install Info","id","Ver ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\nls.messages.json
+  Term: "Report Issue" (#1)
+  Snippet: ... } files in your working set since this request. Do you want to proceed?","Yes","Don't ask again","Helpful","Unhelpful","Report Issue","Retry","Insert into Notebook","Configure Tools...","Select tools for this chat session","The selected tools were conf ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\nls.messages.json
+  Term: "Report Issue" (#2)
+  Snippet: ... n't Verify Signature)","Cannot install '{0}' extension because {1} cannot verify the extension signature","Learn More","Report Issue","Extension Signature Verification Failed: {0}","Please include following log `F1 > Open View... > Shared` below.\n\n", ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\nls.messages.json
+  Term: "Report Issue" (#3)
+  Snippet: ...  extensions, click **Continue** to proceed.","Following extensions are installed: {0}","No extensions were installed.","Report Issue","Icon of the runtime extensions editor label.","Running Extensions","Search Extensions","Search for VS Code extensions ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\nls.messages.json
+  Term: "Report Issue" (#4)
+  Snippet: ... complete its last operation and it has prevented other extensions from running.","Show Extensions","Performance Issue","Report Issue","Did you attach the CPU-Profile?","This is a reminder to make sure that you have not forgotten to attach '{0}' to the  ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\nls.messages.json
+  Term: "Report Issue" (#5)
+  Snippet: ... u can safely use {0} insiders until the new stable version is available.","Troubleshoot Issue","Download {0} Insiders","Report Issue Anyway","Please try to download and reproduce the issue in {0} insiders.","Troubleshoot Issue","I can't reproduce","I c ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\nls.messages.json
+  Term: "Report Issue" (#6)
+  Snippet: ... "&&Restart","&&Reload","Changing workspace folders","Switch Remote","Get Started","Read Documentation","Review Issues","Report Issue","Select url to open","Remote Help","Remote Explorer","Attempting to reconnect in {0} second...","Attempting to reconne ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\nls.messages.json
+  Term: "Report Issue" (#7)
+  Snippet: ... d In","Others","Sign in with {0}","Remote Tunnels is currently in preview. Please report any problems using the \"Help: Report Issue\" command.","&&Enable","Select how you want to enable access","Turn on for this session","Run whenever {0} is open","In ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\nls.messages.json
+  Term: "Report Issue" (#8)
+  Snippet: ... d because the client is making invalid requests. Please report an issue with the logs.","Operation Id: {0}","Show Log","Report Issue","Settings sync is disabled because your data in the cloud is older than that of the client. Please clear your data in  ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\nls.messages.json
+  Term: "Report Issue" (#9)
+  Snippet: ... Extension Bisect is done but no extension has been identified. This might be a problem with {0}.","Extension Bisect","&&Report Issue & Continue","Continue","Extension Bisect is done and has identified {0} as the extension causing the problem.","Keep th ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\nls.messages.json
+  Term: "Changelog" (#1)
+  Snippet: ... ion details, rendered from the extension's 'README.md' file","Features","Lists features contributed by this extension","Changelog","Extension update history, rendered from the extension's 'CHANGELOG.md' file","Dependencies","Lists extensions this ex ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\nls.messages.json
+  Term: "Changelog" (#2)
+  Snippet: ... ogether with this extension","No README available.","Readme","Extension Pack ({0})","No README available.","Readme","No Changelog available.","Changelog","No Dependencies","Categories","Repository","Issues","License","Marketplace","Resources","Insta ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\nls.messages.json
+  Term: "Changelog" (#3)
+  Snippet: ... sion","No README available.","Readme","Extension Pack ({0})","No README available.","Readme","No Changelog available.","Changelog","No Dependencies","Categories","Repository","Issues","License","Marketplace","Resources","Installation","Identifier"," ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\code\electron-utility\sharedProcess\sharedProcessMain.js
+  Term: "Changelog" (#1)
+  Snippet: ... eid",yi={Icon:"Microsoft.VisualStudio.Services.Icons.Default",Details:"Microsoft.VisualStudio.Services.Content.Details",Changelog:"Microsoft.VisualStudio.Services.Content.Changelog",Manifest:"Microsoft.VisualStudio.Code.Manifest",VSIX:"Microsoft.Vis ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\code\electron-utility\sharedProcess\sharedProcessMain.js
+  Term: "Changelog" (#2)
+  Snippet: ... s.Default",Details:"Microsoft.VisualStudio.Services.Content.Details",Changelog:"Microsoft.VisualStudio.Services.Content.Changelog",Manifest:"Microsoft.VisualStudio.Code.Manifest",VSIX:"Microsoft.VisualStudio.Services.VSIXPackage",License:"Microsoft. ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\code\electron-utility\sharedProcess\sharedProcessMain.js
+  Term: "Changelog" (#3)
+  Snippet: ... }function C1(e,t,i,s,r,n){const o=e.versions[0],a={manifest:dr(t,yi.Manifest),readme:dr(t,yi.Details),changelog:dr(t,yi.Changelog),license:dr(t,yi.License),repository:c3(t),download:l3(t),icon:dr(t,yi.Icon),signature:dr(t,yi.Signature),coreTranslati ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\code\electron-utility\sharedProcess\sharedProcessMain.js
+  Term: "Changelog" (#4)
+  Snippet: ... await this.getAsset(t.identifier.id,s[1],s[0],t.version),n=await ur(r);return n?JSON.parse(n):null}return null}async getChangelog(t,i){if(t.assets.changelog){const s=await this.getAsset(t.identifier.id,t.assets.changelog,yi.Changelog,t.version,{},i) ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\code\electron-utility\sharedProcess\sharedProcessMain.js
+  Term: "Changelog" (#5)
+  Snippet: ... n null}async getChangelog(t,i){if(t.assets.changelog){const s=await this.getAsset(t.identifier.id,t.assets.changelog,yi.Changelog,t.version,{},i);return await ur(s)||""}return""}async getAllVersions(t){return this.getVersions(t)}async getAllCompatib ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\code\node\cliProcessMain.js
+  Term: "Changelog" (#1)
+  Snippet: ... eid",er={Icon:"Microsoft.VisualStudio.Services.Icons.Default",Details:"Microsoft.VisualStudio.Services.Content.Details",Changelog:"Microsoft.VisualStudio.Services.Content.Changelog",Manifest:"Microsoft.VisualStudio.Code.Manifest",VSIX:"Microsoft.Vis ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\code\node\cliProcessMain.js
+  Term: "Changelog" (#2)
+  Snippet: ... s.Default",Details:"Microsoft.VisualStudio.Services.Content.Details",Changelog:"Microsoft.VisualStudio.Services.Content.Changelog",Manifest:"Microsoft.VisualStudio.Code.Manifest",VSIX:"Microsoft.VisualStudio.Services.VSIXPackage",License:"Microsoft. ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\code\node\cliProcessMain.js
+  Term: "Changelog" (#3)
+  Snippet: ... }function Of(e,t,r,i,s,n){const o=e.versions[0],a={manifest:Ii(t,er.Manifest),readme:Ii(t,er.Details),changelog:Ii(t,er.Changelog),license:Ii(t,er.License),repository:o9(t),download:a9(t),icon:Ii(t,er.Icon),signature:Ii(t,er.Signature),coreTranslati ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\code\node\cliProcessMain.js
+  Term: "Changelog" (#4)
+  Snippet: ... await this.getAsset(t.identifier.id,i[1],i[0],t.version),n=await Wn(s);return n?JSON.parse(n):null}return null}async getChangelog(t,r){if(t.assets.changelog){const i=await this.getAsset(t.identifier.id,t.assets.changelog,er.Changelog,t.version,{},r) ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\code\node\cliProcessMain.js
+  Term: "Changelog" (#5)
+  Snippet: ... n null}async getChangelog(t,r){if(t.assets.changelog){const i=await this.getAsset(t.identifier.id,t.assets.changelog,er.Changelog,t.version,{},r);return await Wn(i)||""}return""}async getAllVersions(t){return this.getVersions(t)}async getAllCompatib ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\api\node\extensionHostProcess.js
+  Term: "Changelog" (#1)
+  Snippet: ... stall"})(Az||(Az={}));var Rz=ue("extensionsWorkbenchService"),gz;(function(e){e.Readme="readme",e.Features="features",e.Changelog="changelog",e.Dependencies="dependencies",e.ExtensionPack="extensionPack"})(gz||(gz={}));var mz=class extends ge{constr ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\api\worker\extensionHostWorkerMain.js
+  Term: "Changelog" (#1)
+  Snippet: ... createDecorator("extensionsWorkbenchService"),ExtensionEditorTab;(function(e){e.Readme="readme",e.Features="features",e.Changelog="changelog",e.Dependencies="dependencies",e.ExtensionPack="extensionPack"})(ExtensionEditorTab||(ExtensionEditorTab={}) ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Quick Settings Panel" (#1)
+  Snippet: ... o),Ztr(2,Pmt)],Xtr),Tt.appendMenuItem($.GlobalActivity,{command:{id:"antigravity.openQuickSettingsPanel",title:te(5015,"Quick Settings Panel"),category:te(5016,"{0}",nu.name),metadata:{description:te(5017,"Open the {0} quick settings panel.",nu.name)}},group:" ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Quick Settings Panel" (#2)
+  Snippet: ... uration",order:4});var XJd=class extends xe{constructor(){super({id:"antigravity.openQuickSettingsPanel",title:te(5018,"Quick Settings Panel"),category:te(5019,"{0}",nu.name),metadata:{description:te(5020,"Open the {0} quick settings panel.",nu.name)},f1:!0})} ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Report Issue" (#1)
+  Snippet: ... rdBreak:"break-all"},children:[v,R("br",{}),R("br",{}),b]}),R("h6",{className:"mt-2 text-base font-medium",children:"1. Report Issue"}),R("p",{className:"mb-2 grow",children:["If you are having difficulty using ",u,", please report the issue using our  ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Report Issue" (#2)
+  Snippet: ... -secondary text-secondary-foreground hover:opacity-90":"bg-primary text-primary-foreground hover:opacity-90"),children:"Report Issue"})}),R("div",{className:"mt-4",children:[R("h6",{className:"text-base font-medium",children:"2. Resetting Agent"}),R("p ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Report Issue" (#3)
+  Snippet: ... actions:{primary:[fs({id:"Show Sync Logs",label:p(14474,null),run:()=>this.commandService.executeCommand(Toe)}),fs({id:"Report Issue",label:p(14475,null),run:()=>this.workbenchIssueService.openReporter()})]}});break}case"IncompatibleRemoteContent":this ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Report Issue" (#4)
+  Snippet: ... lassName:"flex flex-row items-center gap-6",children:[R(hir,{onClick:i,children:"Get Logs"}),R(hir,{onClick:e,children:"Report Issue"}),R(hir,{onClick:r,children:"忽略"})]}),R(cb,{onClick:n,disabled:!1,children:"Reload Window"})]})})},hir=({onClick:t,chi ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#1)
+  Snippet: ... ll"})(Xjo||(Xjo={}));var Ho=qt("extensionsWorkbenchService"),Yjo;(function(t){t.Readme="readme",t.Features="features",t.Changelog="changelog",t.Dependencies="dependencies",t.ExtensionPack="extensionPack"})(Yjo||(Yjo={}));var o8="extensions.autoUpdat ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#2)
+  Snippet: ... eid",SD={Icon:"Microsoft.VisualStudio.Services.Icons.Default",Details:"Microsoft.VisualStudio.Services.Content.Details",Changelog:"Microsoft.VisualStudio.Services.Content.Changelog",Manifest:"Microsoft.VisualStudio.Code.Manifest",VSIX:"Microsoft.Vis ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#3)
+  Snippet: ... s.Default",Details:"Microsoft.VisualStudio.Services.Content.Details",Changelog:"Microsoft.VisualStudio.Services.Content.Changelog",Manifest:"Microsoft.VisualStudio.Code.Manifest",VSIX:"Microsoft.VisualStudio.Services.VSIXPackage",License:"Microsoft. ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#4)
+  Snippet: ... function mTn(t,e,i,n,r,s){const o=t.versions[0],a={manifest:_$(e,SD.Manifest),readme:_$(e,SD.Details),changelog:_$(e,SD.Changelog),license:_$(e,SD.License),repository:Xid(e),download:Yid(e),icon:_$(e,SD.Icon),signature:_$(e,SD.Signature),coreTransla ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#5)
+  Snippet: ... await this.getAsset(e.identifier.id,n[1],n[0],e.version),s=await GW(r);return s?JSON.parse(s):null}return null}async getChangelog(e,i){if(e.assets.changelog){const n=await this.getAsset(e.identifier.id,e.assets.changelog,SD.Changelog,e.version,{},i) ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#6)
+  Snippet: ... n null}async getChangelog(e,i){if(e.assets.changelog){const n=await this.getAsset(e.identifier.id,e.assets.changelog,SD.Changelog,e.version,{},i);return await GW(n)||""}return""}async getAllVersions(e){return this.getVersions(e)}async getAllCompatib ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#7)
+  Snippet: ... ull),run:()=>"review"},{label:p(8472,null),run:()=>"取消"}]});if(n==="取消")return;if(n==="review")return this.extension.hasChangelog()?this.extensionsWorkbenchService.open(this.extension,{tab:"changelog"}):this.extension.repository?this.openerService.o ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#8)
+  Snippet: ... tToUpdate(this.extension);if(s){const o=new Fi;o.appendMarkdown(`${s} `),o.appendMarkdown(p(8535,null,this.extension.hasChangelog()?R1("extension.open",this.extension.identifier.id,"changelog").toString():this.extension.repository?this.extension.rep ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#9)
+  Snippet: ... Change.fire({id:t,focus:!!e}),this.actions.forEach(i=>i.checked=i.id===t)}},m_a;(function(t){t[t.Readme=0]="Readme",t[t.Changelog=1]="Changelog"})(m_a||(m_a={}));var Qxd=new Te("showPreReleaseVersion",!1),$xd=class extends TT{constructor(){super(... ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#10)
+  Snippet: ... d:t,focus:!!e}),this.actions.forEach(i=>i.checked=i.id===t)}},m_a;(function(t){t[t.Readme=0]="Readme",t[t.Changelog=1]="Changelog"})(m_a||(m_a={}));var Qxd=new Te("showPreReleaseVersion",!1),$xd=class extends TT{constructor(){super(...arguments),thi ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#11)
+  Snippet: ... ew ge),this.transientDisposables=this._register(new ge),this.activeElement=null,this.extensionReadme=null,this.extensionChangelog=null,this.extensionManifest=null}get scopedContextKeyService(){return this._scopedContextKeyService.value}createEditor( ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#12)
+  Snippet: ... ted)return;this.extensionReadme=new Cit(()=>s?this.extensionGalleryService.getReadme(s,r):e.getReadme(r)),this.extensionChangelog=new Cit(()=>s?this.extensionGalleryService.getChangelog(s,r):e.getChangelog(r)),this.extensionManifest=new Cit(()=>s?th ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#13)
+  Snippet: ... sionGalleryService.getReadme(s,r):e.getReadme(r)),this.extensionChangelog=new Cit(()=>s?this.extensionGalleryService.getChangelog(s,r):e.getChangelog(r)),this.extensionManifest=new Cit(()=>s?this.extensionGalleryService.getManifest(s,r):e.getManifes ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#14)
+  Snippet: ... etReadme(s,r):e.getReadme(r)),this.extensionChangelog=new Cit(()=>s?this.extensionGalleryService.getChangelog(s,r):e.getChangelog(r)),this.extensionManifest=new Cit(()=>s?this.extensionGalleryService.getManifest(s,r):e.getManifest(r)),i.extension=e, ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#15)
+  Snippet: ... ifier.id),n.navbar.push("readme",p(8176,null),p(8177,null)),i&&n.navbar.push("features",p(8178,null),p(8179,null)),e.hasChangelog()&&n.navbar.push("changelog",p(8180,null),p(8181,null)),e.dependencies.length&&n.navbar.push("dependencies",p(8182,null ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#16)
+  Snippet: ... ase"readme":return this.openDetails(i,n,r);case"features":return this.openFeatures(n,r);case"changelog":return this.openChangelog(i,n,r);case"dependencies":return this.openExtensionDependencies(i,n,r);case"extensionPack":return this.openExtensionPac ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#17)
+  Snippet: ... this.contentDisposables.add(this.instantiationService.createInstance(q8n,n,i)),oe(e,r.getDomNode()),r.scanDomNode()}openChangelog(e,i,n){return this.openMarkdown(e,this.extensionChangelog.get(),p(8191,null),i.content,1,p(8192,null),n)}async openFeat ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#18)
+  Snippet: ... teInstance(q8n,n,i)),oe(e,r.getDomNode()),r.scanDomNode()}openChangelog(e,i,n){return this.openMarkdown(e,this.extensionChangelog.get(),p(8191,null),i.content,1,p(8192,null),n)}async openFeatures(e,i){const n=await this.loadContents(()=>this.extensi ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#19)
+  Snippet: ... fileService.readFile(this.resourceExtension?.readmeUri)).value.toString():Promise.reject(new Error("not available"))}hasChangelog(){return this.local&&this.local.changelogUrl||this.gallery&&this.gallery.assets.changelog?!0:this.type===0}async getCha ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#20)
+  Snippet: ... log(){return this.local&&this.local.changelogUrl||this.gallery&&this.gallery.assets.changelog?!0:this.type===0}async getChangelog(e){const i=this.getLocal();return i?.changelogUrl?(await this.fileService.readFile(i.changelogUrl)).value.toString():th ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#21)
+  Snippet: ... await this.fileService.readFile(i.changelogUrl)).value.toString():this.gallery?.assets.changelog?this.galleryService.getChangelog(this.gallery,e):this.type===0?Promise.resolve(`Please check the [${this.productService.nameLong} Release Notes](command ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#22)
+  Snippet: ... Change.fire({id:t,focus:!!e}),this.actions.forEach(i=>i.checked=i.id===t)}},K_a;(function(t){t[t.Readme=0]="Readme",t[t.Changelog=1]="Changelog"})(K_a||(K_a={}));var Hai=class extends _0{static{aGn=this}static{this.ID="workbench.editor.mcpServer"}co ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#23)
+  Snippet: ... d:t,focus:!!e}),this.actions.forEach(i=>i.checked=i.id===t)}},K_a;(function(t){t[t.Readme=0]="Readme",t[t.Changelog=1]="Changelog"})(K_a||(K_a={}));var Hai=class extends _0{static{aGn=this}static{this.ID="workbench.editor.mcpServer"}constructor(e,i, ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#24)
+  Snippet: ... return r>3&&s&&Object.defineProperty(e,i,s),s},LVa=function(t,e){return function(i,n){e(i,n,t)}},XYe,MTe=qt("antigravityChangelogService"),Dnr=class extends re{static{XYe=this}static{this.LAST_VERSION_KEY="antigravityChangelog/lastVersion"}static{th ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#25)
+  Snippet: ... XYe,MTe=qt("antigravityChangelogService"),Dnr=class extends re{static{XYe=this}static{this.LAST_VERSION_KEY="antigravityChangelog/lastVersion"}static{this.DISMISSED_VERSION_KEY="antigravityChangelog/dismissedVersion"}get shouldShowChangelog(){return ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#26)
+  Snippet: ... {XYe=this}static{this.LAST_VERSION_KEY="antigravityChangelog/lastVersion"}static{this.DISMISSED_VERSION_KEY="antigravityChangelog/dismissedVersion"}get shouldShowChangelog(){return this._shouldShowChangelog}constructor(e,i){super(),this.storageServi ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#27)
+  Snippet: ... tigravityChangelog/lastVersion"}static{this.DISMISSED_VERSION_KEY="antigravityChangelog/dismissedVersion"}get shouldShowChangelog(){return this._shouldShowChangelog}constructor(e,i){super(),this.storageService=e,this.productService=i,this._onDidChan ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#28)
+  Snippet: ... tic{this.DISMISSED_VERSION_KEY="antigravityChangelog/dismissedVersion"}get shouldShowChangelog(){return this._shouldShowChangelog}constructor(e,i){super(),this.storageService=e,this.productService=i,this._onDidChangeShowChangelog=this._register(new  ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#29)
+  Snippet: ... urn this._shouldShowChangelog}constructor(e,i){super(),this.storageService=e,this.productService=i,this._onDidChangeShowChangelog=this._register(new q),this.onDidChangeShowChangelog=this._onDidChangeShowChangelog.event,this._shouldShowChangelog=!1,t ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#30)
+  Snippet: ... (),this.storageService=e,this.productService=i,this._onDidChangeShowChangelog=this._register(new q),this.onDidChangeShowChangelog=this._onDidChangeShowChangelog.event,this._shouldShowChangelog=!1,this.initialize()}initialize(){const e=this.productSe ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#31)
+  Snippet: ... roductService=i,this._onDidChangeShowChangelog=this._register(new q),this.onDidChangeShowChangelog=this._onDidChangeShowChangelog.event,this._shouldShowChangelog=!1,this.initialize()}initialize(){const e=this.productService.ideVersion,i=this.storage ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#32)
+  Snippet: ... eShowChangelog=this._register(new q),this.onDidChangeShowChangelog=this._onDidChangeShowChangelog.event,this._shouldShowChangelog=!1,this.initialize()}initialize(){const e=this.productService.ideVersion,i=this.storageService.get(XYe.LAST_VERSION_KEY ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#33)
+  Snippet: ... (e):null,s=i?_Xo(i):null,o=this.productService.quality;e&&r&&(!i||!s||Vpe(r,s))&&e!==n&&o!=="insider"&&(this._shouldShowChangelog=!0,this._onDidChangeShowChangelog.fire(!0)),this.storageService.store(XYe.LAST_VERSION_KEY,e,-1,1)}dismissChangelog(){c ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#34)
+  Snippet: ... oductService.quality;e&&r&&(!i||!s||Vpe(r,s))&&e!==n&&o!=="insider"&&(this._shouldShowChangelog=!0,this._onDidChangeShowChangelog.fire(!0)),this.storageService.store(XYe.LAST_VERSION_KEY,e,-1,1)}dismissChangelog(){const e=this.productService.ideVers ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#35)
+  Snippet: ... ShowChangelog=!0,this._onDidChangeShowChangelog.fire(!0)),this.storageService.store(XYe.LAST_VERSION_KEY,e,-1,1)}dismissChangelog(){const e=this.productService.ideVersion;this.storageService.store(XYe.DISMISSED_VERSION_KEY,e,-1,1),this._shouldShowCh ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#36)
+  Snippet: ... og(){const e=this.productService.ideVersion;this.storageService.store(XYe.DISMISSED_VERSION_KEY,e,-1,1),this._shouldShowChangelog=!1,this._onDidChangeShowChangelog.fire(!1)}};Dnr=XYe=neh([LVa(0,ui),LVa(1,ir)],Dnr),_i(MTe,Dnr,1);var PVa=function(t,e, ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#37)
+  Snippet: ... deVersion;this.storageService.store(XYe.DISMISSED_VERSION_KEY,e,-1,1),this._shouldShowChangelog=!1,this._onDidChangeShowChangelog.fire(!1)}};Dnr=XYe=neh([LVa(0,ui),LVa(1,ir)],Dnr),_i(MTe,Dnr,1);var PVa=function(t,e,i,n){var r=arguments.length,s=r<3? ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#38)
+  Snippet: ... this.authWorkbenchService=E,this.commandService=S,this.updateService=A,this.antigravityCascadeService=x,this.antigravityChangelogService=F,this.unifiedStateSyncService=T,this.onboardingService=k,this.minimumWidth=0,this.maximumWidth=Number.POSITIVE_ ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#39)
+  Snippet: ... DidChangeAuthState(V=>{this._authState=V,this.updateLoginNudgeVisibility(),this.updateVersionUpdateNudgeUI(),this.updateChangelogNudgeUI(),this.updateClientExperiencePillUI()})),this.updateService.onStateChange(()=>{this.updateLoginNudgeVisibility() ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#40)
+  Snippet: ... )),this.updateService.onStateChange(()=>{this.updateLoginNudgeVisibility(),this.updateVersionUpdateNudgeUI(),this.updateChangelogNudgeUI()}),this._register(this.antigravityChangelogService.onDidChangeShowChangelog(()=>this.updateChangelogNudgeUI())) ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#41)
+  Snippet: ... LoginNudgeVisibility(),this.updateVersionUpdateNudgeUI(),this.updateChangelogNudgeUI()}),this._register(this.antigravityChangelogService.onDidChangeShowChangelog(()=>this.updateChangelogNudgeUI()))}registerListeners(e){this._register(this.hostServic ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#42)
+  Snippet: ... teVersionUpdateNudgeUI(),this.updateChangelogNudgeUI()}),this._register(this.antigravityChangelogService.onDidChangeShowChangelog(()=>this.updateChangelogNudgeUI()))}registerListeners(e){this._register(this.hostService.onDidChangeFocus(i=>i?this.onF ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#43)
+  Snippet: ... this.updateChangelogNudgeUI()}),this._register(this.antigravityChangelogService.onDidChangeShowChangelog(()=>this.updateChangelogNudgeUI()))}registerListeners(e){this._register(this.hostService.onDidChangeFocus(i=>i?this.onFocus():this.onBlur())),th ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#44)
+  Snippet: ... isplay].includes(i)?this.versionUpdateNudge.style.cursor="pointer":this.versionUpdateNudge.style.cursor="default"}updateChangelogNudgeUI(){if(!this.changelogNudge||!this.antigravityChangelogService)return;const e=this.antigravityChangelogService.sho ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#45)
+  Snippet: ... nter":this.versionUpdateNudge.style.cursor="default"}updateChangelogNudgeUI(){if(!this.changelogNudge||!this.antigravityChangelogService)return;const e=this.antigravityChangelogService.shouldShowChangelog&&this.getVersionUpdateNudgeLabel()===null&&( ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#46)
+  Snippet: ... ult"}updateChangelogNudgeUI(){if(!this.changelogNudge||!this.antigravityChangelogService)return;const e=this.antigravityChangelogService.shouldShowChangelog&&this.getVersionUpdateNudgeLabel()===null&&(!this.loginNudge||this.loginNudge.style.display= ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#47)
+  Snippet: ... (){if(!this.changelogNudge||!this.antigravityChangelogService)return;const e=this.antigravityChangelogService.shouldShowChangelog&&this.getVersionUpdateNudgeLabel()===null&&(!this.loginNudge||this.loginNudge.style.display==="none");this.changelogNud ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#48)
+  Snippet: ... e("span.dismiss-button.codicon.codicon-close",{title:"忽略"});this.changelogNudge=ee("a.action-nudge-button",void 0,"View Changelog",i),this.changelogNudge.classList.add(Gre.Dismissible),this._register(Ne(i,It.CLICK,n=>{n.stopPropagation(),this.change ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#49)
+  Snippet: ... lassList.add(Gre.Dismissible),this._register(Ne(i,It.CLICK,n=>{n.stopPropagation(),this.changelogNudge&&this.antigravityChangelogService.dismissChangelog()})),this._register(Ne(this.changelogNudge,It.CLICK,()=>{this.commandService.executeCommand(If. ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#50)
+  Snippet: ... ible),this._register(Ne(i,It.CLICK,n=>{n.stopPropagation(),this.changelogNudge&&this.antigravityChangelogService.dismissChangelog()})),this._register(Ne(this.changelogNudge,It.CLICK,()=>{this.commandService.executeCommand(If.OPEN_CHANGELOG.id),this. ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#51)
+  Snippet: ... _register(Ne(this.changelogNudge,It.CLICK,()=>{this.commandService.executeCommand(If.OPEN_CHANGELOG.id),this.antigravityChangelogService.dismissChangelog(),this.updateChangelogNudgeUI()})),oe(this.rightContent,this.changelogNudge),this.updateChangel ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#52)
+  Snippet: ... logNudge,It.CLICK,()=>{this.commandService.executeCommand(If.OPEN_CHANGELOG.id),this.antigravityChangelogService.dismissChangelog(),this.updateChangelogNudgeUI()})),oe(this.rightContent,this.changelogNudge),this.updateChangelogNudgeUI(),this.createA ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#53)
+  Snippet: ... this.commandService.executeCommand(If.OPEN_CHANGELOG.id),this.antigravityChangelogService.dismissChangelog(),this.updateChangelogNudgeUI()})),oe(this.rightContent,this.changelogNudge),this.updateChangelogNudgeUI(),this.createActionToolBar(),this.cre ...
+
+[FOUND] File: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  Term: "Changelog" (#54)
+  Snippet: ... angelogService.dismissChangelog(),this.updateChangelogNudgeUI()})),oe(this.rightContent,this.changelogNudge),this.updateChangelogNudgeUI(),this.createActionToolBar(),this.createActionToolBarMenus()}if(!zU(this.configurationService,this.titleBarStyle ...
+
+Search finished.

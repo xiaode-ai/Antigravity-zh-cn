@@ -23,6 +23,8 @@
 
 在当前项目目录（建议在 Antigravity 中将本文件夹打开为 **Active Workspace**），您可以直接在终端中运行以下三组 `npm scripts`：
 
+npm run prune
+
 ### 1. ⚙️ 一键汉化特定页面
 ```bash
 npm run translate

@@ -17,8 +17,11 @@ export function rollback(config) {
   const nlsPath = path.join(path.dirname(targetFilePath), '..', 'nls.messages.json');
   const nlsBackupPath = nlsPath + backupSuffix;
 
+  const extensionPath = path.join(path.dirname(targetFilePath), '..', '..', 'extensions', 'antigravity', 'dist', 'extension.js');
+  const extensionBackupPath = extensionPath + backupSuffix;
+
   // 1. 检查是否存在任何备份文件
-  if (!fs.existsSync(backupPath) && !fs.existsSync(workbenchBackupPath) && !fs.existsSync(nlsBackupPath)) {
+  if (!fs.existsSync(backupPath) && !fs.existsSync(workbenchBackupPath) && !fs.existsSync(nlsBackupPath) && !fs.existsSync(extensionBackupPath)) {
     console.warn(`[WARN] 找不到任何备份文件。可能还从未汉化过，无需回滚。`);
     return false;
   }
@@ -63,6 +66,13 @@ export function rollback(config) {
     if (fs.existsSync(nlsBackupPath)) {
       fs.copyFileSync(nlsBackupPath, nlsPath);
       console.log(`[OK] 原始 nls.messages.json 文件已覆盖还原。`);
+    }
+
+    // 4b. 执行 rollback extension.js
+    if (fs.existsSync(extensionBackupPath)) {
+      fs.copyFileSync(extensionBackupPath, extensionPath);
+      fs.unlinkSync(extensionBackupPath);
+      console.log(`[OK] 原始 extension.js 文件已覆盖还原并清理了备份文件。`);
     }
 
     // 5. 执行 CLP cached NLS files rollback

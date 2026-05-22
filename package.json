@@ -9,6 +9,7 @@
     "rollback": "node src/index.js rollback",
     "check": "node src/index.js check",
     "scan": "node src/index.js scan",
+    "prune": "node src/index.js prune",
     "find-context": "node scratch/find_exact_context.js"
   },
   "keywords": [

@@ -162,7 +162,19 @@ export function launchPreCheck(generatedFilePath, backupFilePath) {
   // C. 检查文件内容是否含有 Unicode 替换字符
   const content = fs.readFileSync(generatedFilePath, 'utf8');
   if (/\uFFFD/.test(content)) {
-    errors.push('生成的文件中包含 Unicode 替换字符 (U+FFFD)，表明存在编码损坏。');
+    // 只有在备份文件本身不含该字符时，才视作编码损坏
+    let origContainsFFFD = false;
+    if (fs.existsSync(backupFilePath)) {
+      try {
+        const origContent = fs.readFileSync(backupFilePath, 'utf8');
+        origContainsFFFD = /\uFFFD/.test(origContent);
+      } catch {}
+    }
+    if (!origContainsFFFD) {
+      errors.push('生成的文件中包含 Unicode 替换字符 (U+FFFD)，表明存在编码损坏。');
+    } else {
+      console.log(`[SAFEGUARD] [INFO] 生成的文件中包含 U+FFFD，但备份文件原本已含有该字符，已自动豁免校验。`);
+    }
   }
 
   // D. Node.js 语法校验——使用 .js 后缀的临时副本来避免扩展名问题

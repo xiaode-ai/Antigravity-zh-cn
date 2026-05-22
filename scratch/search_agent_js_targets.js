@@ -1,37 +1,45 @@
 import fs from 'fs';
 import path from 'path';
 
-const files = [
-  'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out\\jetskiAgent\\main.js.bak',
-  'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out\\vs\\workbench\\workbench.desktop.main.js.bak'
-];
+const extJsPath = 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\extensions\\antigravity\\dist\\extension.js';
+
+if (!fs.existsSync(extJsPath)) {
+  console.log('antigravity/dist/extension.js not found.');
+  process.exit(1);
+}
+
+const content = fs.readFileSync(extJsPath, 'utf8');
 
 const targets = [
-  'Editor-Specific Settings',
-  'Move changes to main',
-  'Good response',
-  'Bad response',
-  'Toggle Agent',
-  'Quick Open'
+  'Limited time',
+  'Limited-time',
+  'limited time',
+  'Limited',
+  'limited',
+  'Fast',
+  'Slow',
+  'Open Antigravity IDE User Settings',
+  'Quick Settings Panel',
+  'Antigravity - Settings',
+  'Code Context Items',
+  'Report Issue',
+  'Changelog',
+  'Docs'
 ];
 
-files.forEach(filePath => {
-  if (!fs.existsSync(filePath)) return;
-  console.log(`\n================== Searching in: ${path.basename(filePath)} ==================`);
-  const content = fs.readFileSync(filePath, 'utf8');
-  
-  targets.forEach(target => {
-    let idx = 0;
-    let count = 0;
-    while (true) {
-      idx = content.indexOf(target, idx);
-      if (idx === -1) break;
-      count++;
-      const start = Math.max(0, idx - 80);
-      const end = Math.min(content.length, idx + target.length + 80);
-      console.log(`\n  [MATCH #${count}] Target: "${target}" at index ${idx}`);
-      console.log(`  Context: ${content.substring(start, end).trim().replace(/\s+/g, ' ')}`);
-      idx += target.length;
-    }
-  });
+targets.forEach(t => {
+  let idx = 0;
+  let count = 0;
+  console.log(`\n=== Matches for "${t}" ===`);
+  while (true) {
+    idx = content.indexOf(t, idx);
+    if (idx === -1) break;
+    count++;
+    const start = Math.max(0, idx - 100);
+    const end = Math.min(content.length, idx + t.length + 100);
+    const snippet = content.substring(start, end).replace(/\r?\n/g, ' ');
+    console.log(`Match ${count} at index ${idx}: "${t}"`);
+    console.log(`  Snippet: ... ${snippet} ...`);
+    idx += t.length;
+  }
 });

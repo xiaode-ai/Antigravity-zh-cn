@@ -2,78 +2,83 @@ import fs from 'fs';
 import path from 'path';
 
 const targetDir = 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out';
-const files = [
-  { name: 'jetskiAgent/main.js.bak', path: path.join(targetDir, 'jetskiAgent', 'main.js.bak') },
-  { name: 'workbench.desktop.main.js.bak', path: path.join(targetDir, 'vs', 'workbench', 'workbench.desktop.main.js.bak') }
+const mainBakPath = path.join(targetDir, 'jetskiAgent', 'main.js.bak');
+const mainContent = fs.readFileSync(mainBakPath, 'utf8');
+
+const targets = [
+  'Changes Overview',
+  'Files With Changes',
+  'Terminal (',
+  'Processes Running',
+  'Artifacts (',
+  'Files for Conversation',
+  'Reject all',
+  'Browser',
+  'Ask anything',
+  'Your plan\'s baseline quota',
+  'Enable Overages',
+  'See plans.',
+  'minutes ago',
+  'View conversation',
+  'Copy to clipboard',
+  'Export artifact',
+  'Submit comment',
+  'Add a message...',
+  'Select text in the artifact to add a comment',
+  'Proceed',
+  'Proceed with implementation plan',
+  'Implementation Plan',
+  'Individual quota reached',
+  'Send Queued Message',
+  'cancel',
+  'Timed 60 seconds',
+  'Walkthrough',
+  'Customization',
+  'Fast',
+  'Analyzed',
+  'Edited',
+  'Ran',
+  'Working'
 ];
 
-const searchTerms = [
-  'Toggle Agent (Ctrl+Alt+B)',
-  'Toggle Agent',
-  'Quick Open',
-  'Open Browser (Preview)',
-  'Profile',
-  'Agent',
-  'Past Conversations',
-  'Additional Options',
-  'Close Agent View',
-  'Limited time',
-  'Record Audio',
-  'Stop Recording',
-  'AI may make mistakes. Double-check all generated code.'
-];
+console.log('=== TARGETED SEARCH IN main.js.bak ===');
 
-// For Media and Mentions, we only want matches that look like UI labels/strings (e.g. quotes, label, children, title)
-const specialTerms = [
-  { term: 'Media', pattern: /["']Media["']|label:\s*["']Media["']|children:\s*["']Media["']|title:\s*["']Media["']/ },
-  { term: 'Mentions', pattern: /["']Mentions["']|label:\s*["']Mentions["']|children:\s*["']Mentions["']|title:\s*["']Mentions["']/ }
-];
+targets.forEach(term => {
+  let idx = 0;
+  let count = 0;
+  console.log(`\n--- Results for "${term}" ---`);
+  while (true) {
+    idx = mainContent.indexOf(term, idx);
+    if (idx === -1) break;
+    
+    // Extract context
+    const start = Math.max(0, idx - 150);
+    const end = Math.min(mainContent.length, idx + term.length + 150);
+    const context = mainContent.substring(start, end).replace(/\r?\n/g, ' ');
+    
+    // We only want matches that are likely UI strings (e.g. quotes around it, react children, label:, title:, placeholder:, etc.)
+    const isUIString = 
+      context.includes(`"${term}"`) || 
+      context.includes(`'${term}'`) || 
+      context.includes(`\`${term}\``) ||
+      context.includes(`>${term}<`) ||
+      context.includes(`:${term}`) ||
+      context.includes(`"${term} `) ||
+      context.includes(` ${term}"`) ||
+      context.includes(`children:[`) ||
+      context.includes(`children:"`) ||
+      context.includes(`label:"`) ||
+      context.includes(`title:"`) ||
+      context.includes(`placeholder:"`);
 
-files.forEach(f => {
-  if (!fs.existsSync(f.path)) {
-    console.log(`[File Not Found] ${f.name}`);
-    return;
-  }
-  
-  console.log(`\n=================== FILE: ${f.name} ===================`);
-  const content = fs.readFileSync(f.path, 'utf8');
-  
-  searchTerms.forEach(term => {
-    let idx = 0;
-    let count = 0;
-    while (true) {
-      idx = content.indexOf(term, idx);
-      if (idx === -1) break;
-      
+    if (isUIString) {
       count++;
-      const start = Math.max(0, idx - 80);
-      const end = Math.min(content.length, idx + term.length + 80);
-      const context = content.substring(start, end).replace(/\r?\n/g, ' ');
-      console.log(`  ▶ Term: "${term}" (Occur #${count}, Index: ${idx})`);
-      console.log(`    Context: ... ${context} ...`);
-      
-      idx += term.length;
+      console.log(`  Match ${count} at ${idx}: ... ${context} ...`);
     }
-  });
-
-  specialTerms.forEach(({ term, pattern }) => {
-    let idx = 0;
-    let count = 0;
-    while (true) {
-      idx = content.indexOf(term, idx);
-      if (idx === -1) break;
-      
-      const start = Math.max(0, idx - 40);
-      const end = Math.min(content.length, idx + term.length + 40);
-      const snippet = content.substring(start, end);
-      
-      if (pattern.test(snippet)) {
-        count++;
-        console.log(`  ▶ Special Term: "${term}" (Occur #${count}, Index: ${idx})`);
-        console.log(`    Context: ... ${snippet.replace(/\r?\n/g, ' ')} ...`);
-      }
-      
-      idx += term.length;
-    }
-  });
+    
+    idx += term.length;
+  }
+  if (count === 0) {
+    console.log('  No UI matches found.');
+  }
 });

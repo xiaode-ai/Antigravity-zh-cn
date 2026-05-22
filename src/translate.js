@@ -77,8 +77,34 @@ export function translate(config, translations, translationsPath) {
 
   const originalContent = content; // 保留最原始备份内容，用于识别映射是否在源码中根本不存在
 
+  // 2b. 预载入原始 workbench 代码，用于精准识别是否存在于 workbench (避免误报失效警告)
+  const workbenchPath = path.join(path.dirname(targetFilePath), '..', 'vs', 'workbench', 'workbench.desktop.main.js');
+  const workbenchBackupPath = workbenchPath + backupSuffix;
+  let workbenchOriginalContent = '';
+  if (fs.existsSync(workbenchPath)) {
+    const sourcePath = fs.existsSync(workbenchBackupPath) ? workbenchBackupPath : workbenchPath;
+    try {
+      workbenchOriginalContent = fs.readFileSync(sourcePath, 'utf8');
+    } catch (err) {
+      console.warn(`[WARN] 预载入 workbench 备份文件失败:`, err.message);
+    }
+  }
+
+  // 2c. 预载入原始 extension 代码，用于精准识别是否存在于 extension (避免误报失效警告)
+  const checkExtensionPath = path.join(path.dirname(targetFilePath), '..', '..', 'extensions', 'antigravity', 'dist', 'extension.js');
+  const checkExtensionBackupPath = checkExtensionPath + backupSuffix;
+  let extensionOriginalContent = '';
+  if (fs.existsSync(checkExtensionPath)) {
+    const sourcePath = fs.existsSync(checkExtensionBackupPath) ? checkExtensionBackupPath : checkExtensionPath;
+    try {
+      extensionOriginalContent = fs.readFileSync(sourcePath, 'utf8');
+    } catch (err) {
+      console.warn(`[WARN] 预载入 extension 备份文件失败:`, err.message);
+    }
+  }
+
   // 3. 执行翻译对照替换
-  // 最佳实践：按照原始代码段 (old) 的长度进行由长到短的降序排序。
+  // 最佳实践：按照原始代码段 (old) 的长度进行由长到短 of 降序排序。
   // 这能强力确保包含子短语的长句（如长反馈文本段落）在子短语（如 "Allow", "Deny", "Actual behavior"）被翻译前，
   // 得到优先完整匹配并汉化。从而完美避开因短条目提前全局替换把长句"撕碎"导致的汉化失效，最大化匹配成功率！
   const sortedTranslations = [...translations].sort((a, b) => b.old.length - a.old.length);
@@ -93,12 +119,12 @@ export function translate(config, translations, translationsPath) {
       content = content.replaceAll(pair.old, pair.new);
       replacedCount++;
     } else {
-      // 检查该词条是否在原始源码中就完全不存在
-      if (!originalContent.includes(pair.old)) {
+      // 检查该词条是否在原始源码、workbench 源码或 extension 源码中都完全不存在
+      if (!originalContent.includes(pair.old) && !workbenchOriginalContent.includes(pair.old) && !extensionOriginalContent.includes(pair.old)) {
         unappliedAbsolute.push(pair);
       } else {
-        // 如果原始代码里有，但当前 content 中已经找不到了，
-        // 说明它作为子词条已经被前序更长的词条合并替换（即已汉化）。计入成功数。
+        // 如果原始代码、workbench 代码或 extension 代码里有，但当前 content 中已经找不到了，
+        // 说明它作为子词条已被前序更长的词条合并替换，或者活跃在其他模块中。计入匹配成功数。
         replacedCount++;
       }
     }
@@ -107,7 +133,7 @@ export function translate(config, translations, translationsPath) {
   console.log(`[INFO] 替换完毕，成功应用 ${replacedCount} / ${sortedTranslations.length} 组映射。`);
 
   if (unappliedAbsolute.length > 0) {
-    console.log(`\n\x1b[33m[WARN] 发现 ${unappliedAbsolute.length} 组失效的映射 (源码中未找到对应的英文词条，可能已过期)：\x1b[0m`);
+    console.log(`\n\x1b[33m[WARN] 发现 ${unappliedAbsolute.length} 组失效的映射 (源码中均未找到对应的英文词条，可能已过期)：\x1b[0m`);
     unappliedAbsolute.forEach((pair, index) => {
       const snippet = pair.old.substring(0, 50).replace(/\n/g, ' ');
       console.log(`  ▶ [失效 ${index + 1}] "${snippet}${pair.old.length > 50 ? '...' : ''}"`);
@@ -131,9 +157,6 @@ export function translate(config, translations, translationsPath) {
   console.log(`[OK] 汉化代码已成功写入运行库。`);
 
   // 4b. 对 workbench.desktop.main.js 应用汉化与纯净性绕过补丁
-  const workbenchPath = path.join(path.dirname(targetFilePath), '..', 'vs', 'workbench', 'workbench.desktop.main.js');
-  const workbenchBackupPath = workbenchPath + backupSuffix;
-
   if (fs.existsSync(workbenchPath)) {
     console.log(`[INFO] 正在载入原始 workbench 代码...`);
     let workbenchContent;
@@ -210,6 +233,21 @@ export function translate(config, translations, translationsPath) {
     if (Array.isArray(nlsData)) {
       console.log(`[INFO] 开始对 nls.messages.json 应用汉化映射...`);
       const nlsMappings = [
+        { index: 48, oldVal: "now", newVal: "刚刚" },
+        { index: 49, oldVal: "{0} second ago", newVal: "{0} 秒前" },
+        { index: 50, oldVal: "{0} sec ago", newVal: "{0} 秒前" },
+        { index: 51, oldVal: "{0} seconds ago", newVal: "{0} 秒前" },
+        { index: 52, oldVal: "{0} secs ago", newVal: "{0} 秒前" },
+        { index: 57, oldVal: "{0} minute ago", newVal: "{0} 分钟前" },
+        { index: 58, oldVal: "{0} min ago", newVal: "{0} 分钟前" },
+        { index: 59, oldVal: "{0} minutes ago", newVal: "{0} 分钟前" },
+        { index: 60, oldVal: "{0} mins ago", newVal: "{0} 分钟前" },
+        { index: 65, oldVal: "{0} hour ago", newVal: "{0} 小时前" },
+        { index: 66, oldVal: "{0} hr ago", newVal: "{0} 小时前" },
+        { index: 67, oldVal: "{0} hours ago", newVal: "{0} 小时前" },
+        { index: 68, oldVal: "{0} hrs ago", newVal: "{0} 小时前" },
+        { index: 73, oldVal: "{0} day ago", newVal: "{0} 天前" },
+        { index: 74, oldVal: "{0} days ago", newVal: "{0} 天前" },
         { index: 4968, oldVal: "Toggle Agent", newVal: "切换智能体" },
         { index: 3310, oldVal: "Quick Open", newVal: "快速打开" },
         { index: 4206, oldVal: "Quick Open", newVal: "快速打开" },
@@ -219,7 +257,16 @@ export function translate(config, translations, translationsPath) {
         { index: 16330, oldVal: "Profile", newVal: "个人资料" },
         { index: 5927, oldVal: "Review", newVal: "审核" },
         { index: 8471, oldVal: "Review", newVal: "审核" },
-        { index: 6012, oldVal: "{0} files changed", newVal: "{0} 个文件已更改" }
+        { index: 6012, oldVal: "{0} files changed", newVal: "{0} 个文件已更改" },
+        { index: 5008, oldVal: "Open {0} User Settings", newVal: "打开 {0} 用户设置" },
+        { index: 5015, oldVal: "Quick Settings Panel", newVal: "快速设置面板" },
+        { index: 5018, oldVal: "Quick Settings Panel", newVal: "快速设置面板" },
+        { index: 4978, oldVal: "Docs", newVal: "文档" },
+        { index: 4979, oldVal: "Report Issue", newVal: "报告问题" },
+        { index: 4980, oldVal: "Changelog", newVal: "更新日志" },
+        { index: 6128, oldVal: "Limited", newVal: "受限" },
+        { index: 6307, oldVal: "Limited", newVal: "受限" },
+        { index: 6309, oldVal: "Limited", newVal: "受限" }
       ];
 
       let nlsModifiedCount = 0;
@@ -299,6 +346,21 @@ export function translate(config, translations, translationsPath) {
 
       if (Array.isArray(clpNlsData)) {
         const clpMappings = [
+          { index: 48, oldVal: "now", newVal: "刚刚" },
+          { index: 49, oldVal: "{0} second ago", newVal: "{0} 秒前" },
+          { index: 50, oldVal: "{0} sec ago", newVal: "{0} 秒前" },
+          { index: 51, oldVal: "{0} seconds ago", newVal: "{0} 秒前" },
+          { index: 52, oldVal: "{0} secs ago", newVal: "{0} 秒前" },
+          { index: 57, oldVal: "{0} minute ago", newVal: "{0} 分钟前" },
+          { index: 58, oldVal: "{0} min ago", newVal: "{0} 分钟前" },
+          { index: 59, oldVal: "{0} minutes ago", newVal: "{0} 分钟前" },
+          { index: 60, oldVal: "{0} mins ago", newVal: "{0} 分钟前" },
+          { index: 65, oldVal: "{0} hour ago", newVal: "{0} 小时前" },
+          { index: 66, oldVal: "{0} hr ago", newVal: "{0} 小时前" },
+          { index: 67, oldVal: "{0} hours ago", newVal: "{0} 小时前" },
+          { index: 68, oldVal: "{0} hrs ago", newVal: "{0} 小时前" },
+          { index: 73, oldVal: "{0} day ago", newVal: "{0} 天前" },
+          { index: 74, oldVal: "{0} days ago", newVal: "{0} 天前" },
           { index: 4968, oldVal: "Toggle Agent", newVal: "切换智能体" },
           { index: 3310, oldVal: "Quick Open", newVal: "快速打开" },
           { index: 4206, oldVal: "Quick Open", newVal: "快速打开" },
@@ -308,7 +370,16 @@ export function translate(config, translations, translationsPath) {
           { index: 16330, oldVal: "Profile", newVal: "个人资料" },
           { index: 5927, oldVal: "Review", newVal: "审核" },
           { index: 8471, oldVal: "Review", newVal: "审核" },
-          { index: 6012, oldVal: "{0} files changed", newVal: "{0} 个文件已更改" }
+          { index: 6012, oldVal: "{0} files changed", newVal: "{0} 个文件已更改" },
+          { index: 5008, oldVal: "Open {0} User Settings", newVal: "打开 {0} 用户设置" },
+          { index: 5015, oldVal: "Quick Settings Panel", newVal: "快速设置面板" },
+          { index: 5018, oldVal: "Quick Settings Panel", newVal: "快速设置面板" },
+          { index: 4978, oldVal: "Docs", newVal: "文档" },
+          { index: 4979, oldVal: "Report Issue", newVal: "报告问题" },
+          { index: 4980, oldVal: "Changelog", newVal: "更新日志" },
+          { index: 6128, oldVal: "Limited", newVal: "受限" },
+          { index: 6307, oldVal: "Limited", newVal: "受限" },
+          { index: 6309, oldVal: "Limited", newVal: "受限" }
         ];
 
         let clpModifiedCount = 0;
@@ -365,6 +436,62 @@ export function translate(config, translations, translationsPath) {
         console.warn(`[WARN] CLP 缓存文件根对象不是 Array，跳过。`);
       }
     }
+  }
+
+  // 4e. 对 Antigravity 扩展主运行文件 extension.js 进行硬编码汉化替换
+  const extensionPath = path.join(path.dirname(targetFilePath), '..', '..', 'extensions', 'antigravity', 'dist', 'extension.js');
+  const extensionBackupPath = extensionPath + backupSuffix;
+
+  if (fs.existsSync(extensionPath)) {
+    console.log(`[INFO] 正在载入 Antigravity 扩展主运行文件 extension.js...`);
+    
+    // 自动备份
+    if (!fs.existsSync(extensionBackupPath)) {
+      try {
+        fs.copyFileSync(extensionPath, extensionBackupPath);
+        console.log(`[OK] Antigravity 扩展原始文件已成功备份至 "${extensionBackupPath}"。`);
+      } catch (backupErr) {
+        console.error(`[ERROR] 备份 Antigravity 扩展文件失败:`, backupErr.message);
+        return false;
+      }
+    }
+
+    let extensionContent;
+    try {
+      extensionContent = fs.readFileSync(extensionBackupPath, 'utf8');
+    } catch (err) {
+      console.error(`[ERROR] 读取 Antigravity 扩展备份文件失败:`, err.message);
+      return false;
+    }
+
+    let extensionModified = false;
+    let extReplacedCount = 0;
+
+    console.log(`[INFO] 开始对 extension.js 应用汉化词典...`);
+    for (let i = 0; i < sortedTranslations.length; i++) {
+      const pair = sortedTranslations[i];
+      if (extensionContent.includes(pair.old)) {
+        extensionContent = extensionContent.replaceAll(pair.old, pair.new);
+        extReplacedCount++;
+        extensionModified = true;
+      }
+    }
+
+    if (extensionModified) {
+      console.log(`[INFO] extension.js 汉化替换完毕，成功应用 ${extReplacedCount} 组映射。`);
+      console.log(`[SAFEGUARD] 正在执行 extension.js 安全写入...`);
+      const extWriteResult = safeWriteWithValidation(extensionPath, extensionContent, extensionBackupPath);
+      if (!extWriteResult.success) {
+        console.error(`\x1b[31m[SAFEGUARD] ❌ extension.js 安全写入失败：${extWriteResult.error}\x1b[0m`);
+        autoRollbackOnFailure(config, extWriteResult.error);
+        return false;
+      }
+      console.log(`[SAFEGUARD] ✅ extension.js 安全写入成功！已通过全部预检。`);
+    } else {
+      console.log(`[INFO] extension.js 所有条目已处于汉化状态，无需更新。`);
+    }
+  } else {
+    console.warn(`[WARN] 未找到 Antigravity 扩展文件: "${extensionPath}"，跳过扩展汉化。`);
   }
 
   // 5. 自动更新 product.json 中的完整性哈希校验，防止报"安装已损坏"错误

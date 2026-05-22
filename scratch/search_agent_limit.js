@@ -1,25 +1,47 @@
 import fs from 'fs';
 import path from 'path';
 
-const targetDir = 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out';
-const filePath = path.join(targetDir, 'jetskiAgent', 'main.js.bak');
+const appDir = 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app';
 
-if (!fs.existsSync(filePath)) {
-  console.log(`[File Not Found] ${filePath}`);
-  process.exit(1);
+function walkAndSearch(dir) {
+  const list = fs.readdirSync(dir);
+  list.forEach(file => {
+    const fullPath = path.join(dir, file);
+    let stat;
+    try {
+      stat = fs.statSync(fullPath);
+    } catch (e) {
+      return;
+    }
+    if (stat && stat.isDirectory()) {
+      if (file === 'node_modules' || file === '.git') return;
+      walkAndSearch(fullPath);
+    } else if (file.endsWith('.js') || file.endsWith('.json') || file.endsWith('.html') || file.endsWith('.txt')) {
+      if (file.endsWith('.bak')) return;
+      
+      let content;
+      try {
+        content = fs.readFileSync(fullPath, 'utf8');
+      } catch (err) {
+        return;
+      }
+      
+      const regex = /limit/gi;
+      let match;
+      while ((match = regex.exec(content)) !== null) {
+        const idx = match.index;
+        const start = Math.max(0, idx - 80);
+        const end = Math.min(content.length, idx + match[0].length + 80);
+        const snippet = content.substring(start, end).replace(/\r?\n/g, ' ');
+        if (snippet.toLowerCase().includes('time')) {
+          console.log(`[FOUND LIMIT+TIME] File: ${fullPath}`);
+          console.log(`  Snippet: ... ${snippet} ...\n`);
+        }
+      }
+    }
+  });
 }
 
-const content = fs.readFileSync(filePath, 'utf8');
-let idx = 0;
-let count = 0;
-const term = 'limit';
-while (true) {
-  idx = content.toLowerCase().indexOf(term, idx);
-  if (idx === -1) break;
-  count++;
-  const start = Math.max(0, idx - 80);
-  const end = Math.min(content.length, idx + term.length + 80);
-  console.log(`[MATCH #${count}] Index: ${idx}`);
-  console.log(content.substring(start, end).replace(/\r?\n/g, ' '));
-  idx += term.length;
-}
+console.log('Searching for limit + time...');
+walkAndSearch(appDir);
+console.log('Search finished.');

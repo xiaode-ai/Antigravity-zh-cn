@@ -1,55 +1,104 @@
 import fs from 'fs';
 import path from 'path';
 
-const filesToSearch = [
-  'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out\\jetskiAgent\\main.js.bak',
-  'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out\\vs\\workbench\\workbench.desktop.main.js.bak'
-];
+const targetDir = 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out';
+const mainBakPath = path.join(targetDir, 'jetskiAgent', 'main.js.bak');
+const workbenchBakPath = path.join(targetDir, 'vs', 'workbench', 'workbench.desktop.main.js.bak');
 
 const searchTerms = [
-  'Toggle Agent',
-  'Quick Open',
-  'Open Browser (Preview)',
-  'Editor-Specific Settings',
-  'Profile',
-  'Move changes to main',
-  'coy',
-  'copy',
-  'Good response',
-  'Bad response',
-  'files changed',
-  'Review',
-  'Worked for',
-  'Thought for',
-  'Explored 1 task',
-  'Explored 1 search',
-  'Explored',
+  'Fast',
+  'Analyzed',
   'Edited',
-  'Explored 1 folder',
-  'Explored 1 file'
+  'Ran',
+  'Working',
+  'Changes Overview',
+  'Files With Changes',
+  'Terminal',
+  'Background Processes Running',
+  'Artifacts',
+  'Files for Conversation',
+  'Reject all',
+  'Browser',
+  'Ask anything',
+  'to mention',
+  'for actions',
+  'Your plan\'s baseline quota',
+  'You can upgrade to a Google AI Ultra plan',
+  'Enable Overages',
+  'See plans.',
+  'minutes ago',
+  'View conversation',
+  'Copy to clipboard',
+  'Export artifact',
+  'Submit comment',
+  'Add a message...',
+  'Select text in the artifact to add a comment',
+  'Proceed',
+  'Proceed with implementation plan',
+  'Implementation Plan',
+  'Error Individual quota reached.',
+  'task',
+  'Send Queued Message',
+  'cancel',
+  'Timed 60 seconds',
+  'Walkthrough',
+  'Customization'
 ];
 
-filesToSearch.forEach(filePath => {
-  if (!fs.existsSync(filePath)) {
-    console.log(`[File Not Found] ${filePath}`);
-    return;
+if (!fs.existsSync(mainBakPath)) {
+  console.error(`Error: ${mainBakPath} not found`);
+  process.exit(1);
+}
+
+const mainContent = fs.readFileSync(mainBakPath, 'utf8');
+
+console.log('=== SEARCHING main.js.bak ===');
+searchTerms.forEach(term => {
+  let idx = 0;
+  let matches = [];
+  while (true) {
+    idx = mainContent.indexOf(term, idx);
+    if (idx === -1) break;
+    matches.push(idx);
+    idx += term.length;
   }
   
-  console.log(`\nSearching in: ${filePath}`);
-  const content = fs.readFileSync(filePath, 'utf8');
-  
-  searchTerms.forEach(term => {
-    // Exact search
-    const index = content.indexOf(term);
-    if (index !== -1) {
-      console.log(`  [MATCH] "${term}" found at index ${index}`);
-      // Print context of 100 characters around the index
-      const start = Math.max(0, index - 80);
-      const end = Math.min(content.length, index + term.length + 80);
-      const context = content.substring(start, end).replace(/\n/g, '\\n');
+  if (matches.length > 0) {
+    console.log(`\nFound "${term}" in main.js.bak ${matches.length} times:`);
+    matches.forEach((pos, mIdx) => {
+      const start = Math.max(0, pos - 150);
+      const end = Math.min(mainContent.length, pos + term.length + 150);
+      const context = mainContent.substring(start, end).replace(/\r?\n/g, ' ');
+      console.log(`  [Match ${mIdx + 1}] Pos: ${pos}`);
       console.log(`    Context: ... ${context} ...`);
-    } else {
-      console.log(`  [NOT FOUND] "${term}"`);
+    });
+  } else {
+    console.log(`\n"${term}" not found in main.js.bak`);
+  }
+});
+
+if (fs.existsSync(workbenchBakPath)) {
+  const wbContent = fs.readFileSync(workbenchBakPath, 'utf8');
+  console.log('\n=== SEARCHING workbench.desktop.main.js.bak ===');
+  searchTerms.forEach(term => {
+    let idx = 0;
+    let matches = [];
+    while (true) {
+      idx = wbContent.indexOf(term, idx);
+      if (idx === -1) break;
+      matches.push(idx);
+      idx += term.length;
+    }
+    
+    if (matches.length > 0) {
+      console.log(`\nFound "${term}" in workbench.desktop.main.js.bak ${matches.length} times:`);
+      matches.forEach((pos, mIdx) => {
+        const start = Math.max(0, pos - 150);
+        const end = Math.min(wbContent.length, pos + term.length + 150);
+        const context = wbContent.substring(start, end).replace(/\r?\n/g, ' ');
+        console.log(`  [Match ${mIdx + 1}] Pos: ${pos}`);
+        console.log(`    Context: ... ${context} ...`);
+      });
     }
   });
-});
+}

@@ -1,43 +1,45 @@
 import fs from 'fs';
 import path from 'path';
 
-const appDir = 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app';
+const outDir = 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out';
 
-function walk(dir) {
-  let results = [];
+function walkAndSearch(dir) {
   const list = fs.readdirSync(dir);
   list.forEach(file => {
     const fullPath = path.join(dir, file);
     const stat = fs.statSync(fullPath);
     if (stat && stat.isDirectory()) {
-      if (file !== 'node_modules' && file !== '.git') {
-        results = results.concat(walk(fullPath));
-      }
-    } else {
-      if (file.endsWith('.js') || file.endsWith('.json') || file.endsWith('.html') || file.endsWith('.css')) {
-        results.push(fullPath);
-      }
+      walkAndSearch(fullPath);
+    } else if (file.endsWith('.js') || file.endsWith('.json') || file.endsWith('.css')) {
+      // 排除备份文件以避免重复
+      if (file.endsWith('.bak')) return;
+      const content = fs.readFileSync(fullPath, 'utf8');
+      
+      const regexes = [
+        /limited\s*time/gi,
+        /Limited-time/gi,
+        /Open Antigravity IDE User Settings/gi,
+        /Antigravity - Settings/gi,
+        /Quick Settings Panel/gi
+      ];
+
+      regexes.forEach(regex => {
+        let match;
+        while ((match = regex.exec(content)) !== null) {
+          const idx = match.index;
+          const start = Math.max(0, idx - 150);
+          const end = Math.min(content.length, idx + match[0].length + 150);
+          const snippet = content.substring(start, end).replace(/\r?\n/g, ' ');
+          console.log(`[FOUND] file: ${fullPath}`);
+          console.log(`  Pattern: ${regex.toString()}`);
+          console.log(`  Index: ${idx}`);
+          console.log(`  Snippet: ... ${snippet} ...\n`);
+        }
+      });
     }
   });
-  return results;
 }
 
-console.log('Scanning files...');
-const files = walk(appDir);
-console.log(`Found ${files.length} text files. Searching for "limited time"...`);
-
-files.forEach(filePath => {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const idx = content.toLowerCase().indexOf('limited time');
-    if (idx !== -1) {
-      console.log(`\n[FOUND] File: ${filePath} at index ${idx}`);
-      const start = Math.max(0, idx - 100);
-      const end = Math.min(content.length, idx + 120);
-      console.log(`Context: ... ${content.substring(start, end).replace(/\r?\n/g, ' ')} ...`);
-    }
-  } catch (e) {
-    // ignore read errors
-  }
-});
-console.log('Search complete.');
+console.log('Searching for target phrases in all files under out/');
+walkAndSearch(outDir);
+console.log('Done searching.');

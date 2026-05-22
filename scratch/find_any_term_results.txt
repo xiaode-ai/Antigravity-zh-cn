@@ -1,0 +1,679 @@
+
+=== Searching for: "Code Context Items" ===
+  [jetskiAgent/main.js.bak] Found at index 10366794: ... .type]}trigger;useCache=!1;getRenderInfo(){let e=this.type===0?"Files":this.type===1?"Directories":"Code Context Items",t=this.type===0?p(Trt,{size:14}):this.type===1?p(PBr,{size:14}):p(ldi,{width:14,height:14});return ...
+  [workbench.desktop.main.js.bak] Found at index 14988033: ... .type]}trigger;useCache=!1;getRenderInfo(){let t=this.type===0?"Files":this.type===1?"Directories":"Code Context Items",e=this.type===0?R(msn,{size:14}):this.type===1?R(Xio,{size:14}):R(HJc,{width:14,height:14});return ...
+
+=== Searching for: "Code Context" ===
+  [jetskiAgent/main.js.bak] Found at index 10366794: ... .type]}trigger;useCache=!1;getRenderInfo(){let e=this.type===0?"Files":this.type===1?"Directories":"Code Context Items",t=this.type===0?p(Trt,{size:14}):this.type===1?p(PBr,{size:14}):p(ldi,{width:14,height:14}); ...
+  [workbench.desktop.main.js.bak] Found at index 14988033: ... .type]}trigger;useCache=!1;getRenderInfo(){let t=this.type===0?"Files":this.type===1?"Directories":"Code Context Items",e=this.type===0?R(msn,{size:14}):this.type===1?R(Xio,{size:14}):R(HJc,{width:14,height:14}); ...
+
+=== Searching for: "Limited time" ===
+
+=== Searching for: "Fast" ===
+  [jetskiAgent/main.js.bak] Found at index 1264390: ... for(d||a.flushRenderedStyleQueue();;){var V=Yv(),I=V-g,x=V-f;if(y<vfe){var D=vfe-(d?b:0);if(x>=t.deqFastCost*D)break}else if(d){if(I>=t.deqCost*y||I>=t.deqAvgCost*b)break}else if(x>=t.deqNoDrawCost*vfe)br ...
+  [jetskiAgent/main.js.bak] Found at index 1272883: ... ueueing=hje.setupDequeueing({deqRedrawThreshold:Dbr,deqCost:Vbr,deqAvgCost:Ibr,deqNoDrawCost:xbr,deqFastCost:Tbr,deq:A(function(t,r,n){return t.dequeue(r,n)},"deq"),onDeqd:A(function(t,r){for(var n=0;n<t. ...
+  [jetskiAgent/main.js.bak] Found at index 1278935: ... ueueing=hje.setupDequeueing({deqRedrawThreshold:Ubr,deqCost:Zbr,deqAvgCost:Lbr,deqNoDrawCost:Xbr,deqFastCost:Wbr,deq:A(function(t,r){return t.dequeue(r)},"deq"),onDeqd:j1e,shouldRedraw:BMe,priority:A(func ...
+  [jetskiAgent/main.js.bak] Found at index 1725869: ... "),A(MHe,"createGrammarConfig"),A(hge,"PRINT_ERROR"),A(JHe,"PRINT_WARNING"),A(QHe,"timer"),A(jHe,"toFastProperties"),A(VAr,"tokenLabel"),A(IAr,"hasTokenLabel"),Ny=class{static{A(this,"AbstractProduction") ...
+  [jetskiAgent/main.js.bak] Found at index 1739402: ...  resolve these issues.`)}),this.TRACE_INIT("clearRegExpParserCache",()=>{GAr()}),this.TRACE_INIT("toFastProperties",()=>{jHe(this)})})}tokenize(e,t=this.defaultMode){if(!gu(this.lexerDefinitionErrors)){co ...
+  [jetskiAgent/main.js.bak] Found at index 1790369: ... "performSelfAnalysis",()=>{let t;this.selfAnalysisDone=!0;const r=this.className;this.TRACE_INIT("toFastProps",()=>{jHe(this)}),this.TRACE_INIT("Grammar Recording",()=>{try{this.enableRecording(),hn(this. ...
+  [jetskiAgent/main.js.bak] Found at index 3787008: ... Expression:S1,toIdentifier:aU,toKeyAlias:RN,toStatement:syt,topicReference:noe,traverse:goe,traverseFast:e2,tryStatement:nse,tsAnyKeyword:h8,tsArrayType:N8,tsAsExpression:X8,tsBigIntKeyword:g8,tsBooleanKe ...
+  [jetskiAgent/main.js.bak] Found at index 9007191: ... ,0,"","",""],[1,167,"MediaPlay",0,"",0,"","",""],[1,168,"MediaRecord",0,"",0,"","",""],[1,169,"MediaFastForward",0,"",0,"","",""],[1,170,"MediaRewind",0,"",0,"","",""],[1,171,"MediaTrackNext",124,"MediaTr ...
+  [jetskiAgent/main.js.bak] Found at index 9116451: ... e:t}};return p(Ygn.Provider,{value:r,children:e})},Pgn=()=>{let e=Fa(Ygn);if(!e)throw new Error("useFastPickContext must be used within a FastPickProvider");return e},uSi=e=>{let[t,r]=_e({}),n=de(i=>e?e&& ...
+  [jetskiAgent/main.js.bak] Found at index 9116489: ... hildren:e})},Pgn=()=>{let e=Fa(Ygn);if(!e)throw new Error("useFastPickContext must be used within a FastPickProvider");return e},uSi=e=>{let[t,r]=_e({}),n=de(i=>e?e&&t[i]===void 0?!0:t[i]:!1,[t,e]),a=de(i ...
+  [jetskiAgent/main.js.bak] Found at index 9118459: ... x:I}};return p(Jgn.Provider,{value:w,children:t})},Ane=()=>{let e=Fa(Jgn);if(!e)throw new Error("useFastPickItemsContext must be used within a FastPickItemsProvider");return e};function i9e(e){return!!(e& ...
+  [jetskiAgent/main.js.bak] Found at index 9118502: ... en:t})},Ane=()=>{let e=Fa(Jgn);if(!e)throw new Error("useFastPickItemsContext must be used within a FastPickItemsProvider");return e};function i9e(e){return!!(e&&(e.metaKey||e.ctrlKey))}var fSi=({item:e,i ...
+  [jetskiAgent/main.js.bak] Found at index 9124906: ... p(qe,{name:"keyboard_return",size:14}),p("span",{children:"to select"})]})]})]})});Qgn.displayName="FastPick";var vO=globalThis.vscode,sps=vO?.ipcRenderer,ops=vO?.ipcMessagePort,lps=vO?.webFrame,ups=vO?.p ...
+  [jetskiAgent/main.js.bak] Found at index 9197421: ... ngType:"dropdown",options:[sW.FAST,sW.SLOW],resolveOptionToString:t=>{switch(t){case sW.FAST:return"Fast";case sW.SLOW:return"Slow";default:return"Fast"}}}],[Mr.DISABLE_HIGHLIGHT_AFTER_ACCEPT,{isProviderS ...
+  [jetskiAgent/main.js.bak] Found at index 9197468: ... olveOptionToString:t=>{switch(t){case sW.FAST:return"Fast";case sW.SLOW:return"Slow";default:return"Fast"}}}],[Mr.DISABLE_HIGHLIGHT_AFTER_ACCEPT,{isProviderSetting:!0,screen:"Tab",label:"Highlight After A ...
+  [jetskiAgent/main.js.bak] Found at index 9817587: ... unchpad()},inputBoxProps:{placeholder:"Open window..."},scorer:QC,occupyFullWindow:!0})},MBi=({closeFastpick:e,closeFullModal:t})=>{let r=jp(),n=jne(),a=Ve(()=>n.filter(o=>Fi.parse(o.uri).scheme===k0.vsco ...
+  [jetskiAgent/main.js.bak] Found at index 9819020: ... it a?.createRemoteConnectionSetupWindow()},children:"Open Setup Window"})]})]})]})}),r&&p(MBi,{closeFastpick:()=>{n(!1)},closeFullModal:()=>{n(!1),t()}})]})};function QBi({uri:e,label:t,path:r,authority:n ...
+  [jetskiAgent/main.js.bak] Found at index 11940411: ... wn=166]="BrightnessDown",e[e.MediaPlay=167]="MediaPlay",e[e.MediaRecord=168]="MediaRecord",e[e.MediaFastForward=169]="MediaFastForward",e[e.MediaRewind=170]="MediaRewind",e[e.MediaTrackNext=171]="MediaTra ...
+  [jetskiAgent/main.js.bak] Found at index 11940434: ... ",e[e.MediaPlay=167]="MediaPlay",e[e.MediaRecord=168]="MediaRecord",e[e.MediaFastForward=169]="MediaFastForward",e[e.MediaRewind=170]="MediaRewind",e[e.MediaTrackNext=171]="MediaTrackNext",e[e.MediaTrackP ...
+  [jetskiAgent/main.js.bak] Found at index 11948865: ... ssDown",0,e,0,e,e,e],[1,167,"MediaPlay",0,e,0,e,e,e],[1,168,"MediaRecord",0,e,0,e,e,e],[1,169,"MediaFastForward",0,e,0,e,e,e],[1,170,"MediaRewind",0,e,0,e,e,e],[1,171,"MediaTrackNext",124,"MediaTrackNext" ...
+  [jetskiAgent/main.js.bak] Too many matches, skipping remaining...
+  [workbench.desktop.main.js.bak] Found at index 1267676: ... for(u||r.flushRenderedStyleQueue();;){var S=RJ(),A=S-h,x=S-d;if(g<KTt){var F=KTt-(u?f:0);if(x>=e.deqFastCost*F)break}else if(u){if(A>=e.deqCost*g||A>=e.deqAvgCost*f)break}else if(x>=e.deqNoDrawCost*KTt)br ...
+  [workbench.desktop.main.js.bak] Found at index 1276198: ... ueueing=a4i.setupDequeueing({deqRedrawThreshold:Qcs,deqCost:jcs,deqAvgCost:Jcs,deqNoDrawCost:Kcs,deqFastCost:zcs,deq:I(function(e,i,n){return e.dequeue(i,n)},"deq"),onDeqd:I(function(e,i){for(var n=0;n<e. ...
+  [workbench.desktop.main.js.bak] Found at index 1282267: ... ueueing=a4i.setupDequeueing({deqRedrawThreshold:ius,deqCost:rus,deqAvgCost:sus,deqNoDrawCost:ous,deqFastCost:aus,deq:I(function(e,i){return e.dequeue(i)},"deq"),onDeqd:STt,shouldRedraw:DOi,priority:I(func ...
+  [workbench.desktop.main.js.bak] Found at index 1730433: ... "),I(UUi,"createGrammarConfig"),I(Bkt,"PRINT_ERROR"),I(WUi,"PRINT_WARNING"),I(GUi,"timer"),I(ZUi,"toFastProperties"),I(jhs,"tokenLabel"),I(Jhs,"hasTokenLabel"),cZ=class{static{I(this,"AbstractProduction") ...
+  [workbench.desktop.main.js.bak] Found at index 1743998: ...  resolve these issues.`)}),this.TRACE_INIT("clearRegExpParserCache",()=>{nfs()}),this.TRACE_INIT("toFastProperties",()=>{ZUi(this)})})}tokenize(t,e=this.defaultMode){if(!Fv(this.lexerDefinitionErrors)){co ...
+  [workbench.desktop.main.js.bak] Found at index 1795076: ... "performSelfAnalysis",()=>{let e;this.selfAnalysisDone=!0;const i=this.className;this.TRACE_INIT("toFastProps",()=>{ZUi(this)}),this.TRACE_INIT("Grammar Recording",()=>{try{this.enableRecording(),zr(this. ...
+  [workbench.desktop.main.js.bak] Found at index 3104352: ... wn=166]="BrightnessDown",t[t.MediaPlay=167]="MediaPlay",t[t.MediaRecord=168]="MediaRecord",t[t.MediaFastForward=169]="MediaFastForward",t[t.MediaRewind=170]="MediaRewind",t[t.MediaTrackNext=171]="MediaTra ...
+  [workbench.desktop.main.js.bak] Found at index 3104375: ... ",t[t.MediaPlay=167]="MediaPlay",t[t.MediaRecord=168]="MediaRecord",t[t.MediaFastForward=169]="MediaFastForward",t[t.MediaRewind=170]="MediaRewind",t[t.MediaTrackNext=171]="MediaTrackNext",t[t.MediaTrackP ...
+  [workbench.desktop.main.js.bak] Found at index 3112885: ... ssDown",0,t,0,t,t,t],[1,167,"MediaPlay",0,t,0,t,t,t],[1,168,"MediaRecord",0,t,0,t,t,t],[1,169,"MediaFastForward",0,t,0,t,t,t],[1,170,"MediaRewind",0,t,0,t,t,t],[1,171,"MediaTrackNext",124,"MediaTrackNext" ...
+  [workbench.desktop.main.js.bak] Found at index 3457304: ... ator=2]="Separator"})(xVs||(xVs={}));var DVs;(function(t){t[t.WordStart=0]="WordStart",t[t.WordStartFast=1]="WordStartFast",t[t.WordEnd=2]="WordEnd",t[t.WordAccessibility=3]="WordAccessibility"})(DVs||(DV ...
+  [workbench.desktop.main.js.bak] Found at index 3457322: ... "})(xVs||(xVs={}));var DVs;(function(t){t[t.WordStart=0]="WordStart",t[t.WordStartFast=1]="WordStartFast",t[t.WordEnd=2]="WordEnd",t[t.WordAccessibility=3]="WordAccessibility"})(DVs||(DVs={}));var bA=clas ...
+  [workbench.desktop.main.js.bak] Found at index 3709290: ... s,this._onDidChange=this._register(new q),this.onDidChange=this._onDidChange.event,this._onDidChangeFast=this._register(new q),this.onDidChangeFast=this._onDidChangeFast.event,this._isDominatedByLongLines ...
+  [workbench.desktop.main.js.bak] Found at index 3709333: ... his.onDidChange=this._onDidChange.event,this._onDidChangeFast=this._register(new q),this.onDidChangeFast=this._onDidChangeFast.event,this._isDominatedByLongLines=!1,this._viewLineCount=1,this._lineNumbers ...
+  [workbench.desktop.main.js.bak] Found at index 3709355: ... onDidChange.event,this._onDidChangeFast=this._register(new q),this.onDidChangeFast=this._onDidChangeFast.event,this._isDominatedByLongLines=!1,this._viewLineCount=1,this._lineNumbersDigitCount=1,this._res ...
+  [workbench.desktop.main.js.bak] Found at index 3710546: ... this._computeOptions(),i=wnt.checkEquals(this.options,e);i!==null&&(this.options=e,this._onDidChangeFast.fire(i),this._onDidChange.fire(i))}_computeOptions(){const e=this._readEnvConfiguration(),i=vWl(thi ...
+  [workbench.desktop.main.js.bak] Found at index 3795785: ... =G6.RTL:!1}getWidth(e){return this._renderedViewLine?this._renderedViewLine.getWidth(e):0}getWidthIsFast(){return this._renderedViewLine?this._renderedViewLine.getWidthIsFast():!0}needsMonospaceFontCheck( ...
+  [workbench.desktop.main.js.bak] Found at index 3795855: ... wLine.getWidth(e):0}getWidthIsFast(){return this._renderedViewLine?this._renderedViewLine.getWidthIsFast():!0}needsMonospaceFontCheck(){return this._renderedViewLine?this._renderedViewLine instanceof MLt: ...
+  [workbench.desktop.main.js.bak] Found at index 3797670: ... this._getReadingTarget(this.domNode).offsetWidth,t?.markDidDomLayout()),this._cachedWidth}getWidthIsFast(){return this.input.lineContent.length<300||this._cachedWidth!==-1}monospaceAssumptionsAreValid(){i ...
+  [workbench.desktop.main.js.bak] Found at index 3799821: ... s._getReadingTarget(this.domNode).offsetWidth,t?.markDidDomLayout()),this._cachedWidth):0}getWidthIsFast(){return this._cachedWidth!==-1}getVisibleRangesForRange(t,e,i,n){if(!this.domNode)return null;if(t ...
+  [workbench.desktop.main.js.bak] Found at index 3981183: ... eRenderedLine,i.ranges[0].left):null}updateLineWidths(){this._updateLineWidths(!1)}_updateLineWidthsFast(){return this._updateLineWidths(!0)}_updateLineWidthsSlow(){this._updateLineWidths(!1)}_updateLineW ...
+  [workbench.desktop.main.js.bak] Too many matches, skipping remaining...
+  [NLS] Found at index 374: "Assumes that all characters are of the same width. This is a fast algorithm that works correctly for monospace fonts and certain scripts (like Latin characters) where glyphs are of equal width."
+  [NLS] Found at index 12520: "Causes the Tasks: Run Task command to use the slower "show all" behavior instead of the faster two level picker where tasks are grouped by provider."
+  [NLS] Found at index 14776: "The full menu bar is available in the dropdown menu to make room for your code. Toggle its appearance for faster access. 
+{0}"
+  [extension.js] Found at index 1498143: ... witch(await o.antigravityUnifiedStateSync.TabPreferences.getAutocompleteSpeed()){case i.K_D.FAST:e="Fast";break;case i.K_D.SLOW:e="Slow";break;default:e="Fast"}return`Autocomplete Speed: ${e}`}setState(e, ...
+  [extension.js] Found at index 1498197: ... es.getAutocompleteSpeed()){case i.K_D.FAST:e="Fast";break;case i.K_D.SLOW:e="Slow";break;default:e="Fast"}return`Autocomplete Speed: ${e}`}setState(e,t){this.throttleUpdate(e,t)}async doSetState(e,t){cons ...
+
+=== Searching for: "Open Antigravity IDE User Settings" ===
+
+=== Searching for: "Quick Settings Panel" ===
+  [workbench.desktop.main.js.bak] Found at index 25912551: ... Tt.appendMenuItem($.GlobalActivity,{command:{id:"antigravity.openQuickSettingsPanel",title:te(5015,"Quick Settings Panel"),category:te(5016,"{0}",nu.name),metadata:{description:te(5017,"Open the {0} quick settings panel. ...
+  [workbench.desktop.main.js.bak] Found at index 25912819: ... ar XJd=class extends xe{constructor(){super({id:"antigravity.openQuickSettingsPanel",title:te(5018,"Quick Settings Panel"),category:te(5019,"{0}",nu.name),metadata:{description:te(5020,"Open the {0} quick settings panel. ...
+  [NLS] Found at index 5015: "Quick Settings Panel"
+  [NLS] Found at index 5017: "Open the {0} quick settings panel."
+  [NLS] Found at index 5018: "Quick Settings Panel"
+  [NLS] Found at index 5020: "Open the {0} quick settings panel."
+
+=== Searching for: "Docs" ===
+  [jetskiAgent/main.js.bak] Found at index 8098832: ... >rrn,DifferenceIcon:()=>nrn,DockToBottomIcon:()=>arn,DockToLeftIcon:()=>irn,DockToRightIcon:()=>srn,DocsIcon:()=>orn,DominoMaskIcon:()=>lrn,DoneAllIcon:()=>urn,DownloadIcon:()=>crn,DraftIcon:()=>drn,DragI ...
+  [jetskiAgent/main.js.bak] Found at index 8135634: ... 0v447.69q0,4.62 0,8.46t0,3.85q0,0 0-3.85t0-8.46V-787.69q0-4.62 0-8.46t0-3.85Z"})});orn.displayName="DocsIcon";var lrn=({...e})=>p("svg",{xmlns:"http://www.w3.org/2000/svg",width:e.width||16,height:e.heigh ...
+  [jetskiAgent/main.js.bak] Found at index 12045640: ... cceptCompletion"},OPEN_GENERIC_URL:{id:"antigravity.openGenericUrl"},OPEN_DOCS:{id:"antigravity.openDocs"},OPEN_TROUBLESHOOTING:{id:"antigravity.openTroubleshooting"},OPEN_ISSUE_REPORTER:{id:"antigravity. ...
+  [jetskiAgent/main.js.bak] Found at index 12045915: ... NLOAD_DIAGNOSTICS:{id:"antigravity.downloadDiagnostics"},OPEN_MCP_DOCS_PAGE:{id:"antigravity.openMcpDocsPage"},RESTART_LS:{id:"antigravity.restartLanguageServer"},COMMAND_OPEN:{id:"antigravity.prioritized ...
+  [workbench.desktop.main.js.bak] Found at index 5512180: ... cceptCompletion"},OPEN_GENERIC_URL:{id:"antigravity.openGenericUrl"},OPEN_DOCS:{id:"antigravity.openDocs"},OPEN_TROUBLESHOOTING:{id:"antigravity.openTroubleshooting"},OPEN_ISSUE_REPORTER:{id:"antigravity. ...
+  [workbench.desktop.main.js.bak] Found at index 5512455: ... NLOAD_DIAGNOSTICS:{id:"antigravity.downloadDiagnostics"},OPEN_MCP_DOCS_PAGE:{id:"antigravity.openMcpDocsPage"},RESTART_LS:{id:"antigravity.restartLanguageServer"},COMMAND_OPEN:{id:"antigravity.prioritized ...
+  [workbench.desktop.main.js.bak] Found at index 7172009: ... ize:new Ts(430,n+12*i)}}_isDetailsVisible(){return this._storageService.getBoolean("expandSuggestionDocs",0,!1)}_setDetailsVisible(e){this._storageService.store("expandSuggestionDocs",e,0,0)}forceRenderin ...
+  [workbench.desktop.main.js.bak] Found at index 7172087: ... lean("expandSuggestionDocs",0,!1)}_setDetailsVisible(e){this._storageService.store("expandSuggestionDocs",e,0,0)}forceRenderingAbove(){this._forceRenderingAbove||(this._forceRenderingAbove=!0,this._layout ...
+  [workbench.desktop.main.js.bak] Found at index 7478865: ... );if(typeof a.documentation=="string")u.textContent=a.documentation;else{const d=this.renderMarkdownDocs(a.documentation);u.appendChild(d.element)}oe(this.domNodes.docs,vP("p",{},u))}if(n.documentation!== ...
+  [workbench.desktop.main.js.bak] Found at index 7479094: ... ntation=="string")oe(this.domNodes.docs,vP("p",{},n.documentation));else{const u=this.renderMarkdownDocs(n.documentation);oe(this.domNodes.docs,u.element)}const l=this.hasDocs(n,a);if(this.domNodes.signat ...
+  [workbench.desktop.main.js.bak] Found at index 7479165: ... e{const u=this.renderMarkdownDocs(n.documentation);oe(this.domNodes.docs,u.element)}const l=this.hasDocs(n,a);if(this.domNodes.signature.classList.toggle("has-docs",l),this.domNodes.docs.classList.toggle( ...
+  [workbench.desktop.main.js.bak] Found at index 7479905: ... dLabel=u)}this.editor.layoutContentWidget(this),this.domNodes.scrollbar.scanDomNode()}renderMarkdownDocs(e){const i=this.renderDisposeables.add(this.markdownRendererService.render(e,{context:this.editor,a ...
+  [workbench.desktop.main.js.bak] Found at index 7480129: ... )=>{this.domNodes?.scrollbar.scanDomNode()}}));return i.element.classList.add("markdown-docs"),i}hasDocs(e,i){return!!(i&&typeof i.documentation=="string"&&Fs(i.documentation).length>0||i&&typeof i.docume ...
+  [workbench.desktop.main.js.bak] Found at index 12867528: ... >vCo,DifferenceIcon:()=>bCo,DockToBottomIcon:()=>yCo,DockToLeftIcon:()=>ECo,DockToRightIcon:()=>SCo,DocsIcon:()=>_Co,DominoMaskIcon:()=>CCo,DoneAllIcon:()=>wCo,DownloadIcon:()=>RCo,DraftIcon:()=>ACo,DragI ...
+  [workbench.desktop.main.js.bak] Found at index 12904330: ... 0v447.69q0,4.62 0,8.46t0,3.85q0,0 0-3.85t0-8.46V-787.69q0-4.62 0-8.46t0-3.85Z"})});_Co.displayName="DocsIcon";var CCo=({...t})=>R("svg",{xmlns:"http://www.w3.org/2000/svg",width:t.width||16,height:t.heigh ...
+  [workbench.desktop.main.js.bak] Found at index 15119602: ... 2,ls),sQ(3,JX)],lbn),_i(op,obn,0);var Gg;(function(t){t.accessibilityHelpTitle=p(907,null),t.openingDocs=p(908,null),t.readonlyDiffEditor=p(909,null),t.editableDiffEditor=p(910,null),t.readonlyEditor=p(91 ...
+  [workbench.desktop.main.js.bak] Found at index 22137704: ... executeCommand(L.id,...L.arguments??[]);break}case"chat.internal.review":case"chat.internal.generateDocs":case"chat.internal.generateTests":await S.executeCommand(Lti)&&await S.executeCommand(b)}})}f("cha ...
+  [workbench.desktop.main.js.bak] Found at index 22137988: ... .copilot.chat.fix"),f("chat.internal.review","github.copilot.chat.review"),f("chat.internal.generateDocs","github.copilot.chat.generateDocs"),f("chat.internal.generateTests","github.copilot.chat.generateT ...
+  [workbench.desktop.main.js.bak] Found at index 22138023: ... l.review","github.copilot.chat.review"),f("chat.internal.generateDocs","github.copilot.chat.generateDocs"),f("chat.internal.generateTests","github.copilot.chat.generateTests");const g=H.and(Yi.Setup.hidde ...
+  [workbench.desktop.main.js.bak] Found at index 22138675: ... action",order:2,when:g}),Tt.appendMenuItem($.ChatTextEditorMenu,{command:{id:"chat.internal.generateDocs",title:p(6233,null)},group:"2_generate",order:1,when:H.and(g,vt.readOnly.negate())}),Tt.appendMenuI ...
+  [workbench.desktop.main.js.bak] Found at index 24763068: ... :this._completionModel}}_isDetailsVisible(){return this._storageService.getBoolean("expandSuggestionDocs",0,!1)}_setDetailsVisible(e){this._storageService.store("expandSuggestionDocs",e,0,0)}forceRenderin ...
+  [workbench.desktop.main.js.bak] Found at index 24763146: ... lean("expandSuggestionDocs",0,!1)}_setDetailsVisible(e){this._storageService.store("expandSuggestionDocs",e,0,0)}forceRenderingAbove(){this._forceRenderingAbove||(this._forceRenderingAbove=!0,this._layout ...
+  [workbench.desktop.main.js.bak] Found at index 25778884: ... ice))a(u);else if(u.keyCode===38&&e.options.readMoreUrl){const d=e.options.readMoreUrl;tu(Gg.openingDocs),this._openerService.open(ue.parse(d)),u.preventDefault(),u.stopPropagation()}e instanceof TA&&e.on ...
+  [workbench.desktop.main.js.bak] Found at index 25894838: ... ctor(e,i){super(),Tt.appendMenuItem($.GlobalActivity,{group:"7_update",command:{id:"antigravity.openDocs",title:p(4978,null)}}),Tt.appendMenuItem($.GlobalActivity,{group:"7_update",command:{id:If.OPEN_ISS ...
+  [NLS] Found at index 199: "The number of cursors has been limited to {0}. Consider using [find and replace](https://code.visualstudio.com/docs/editor/codebasics#_find-and-replace) for larger changes or increase the editor multi cursor limit setting."
+  [NLS] Found at index 646: "The modifier to be used to add multiple cursors with the mouse. The Go to Definition and Open Link mouse gestures will adapt such that they do not conflict with the [multicursor modifier](https://code.visualstudio.com/docs/editor/codebasics#_multicursor-modifier)."
+  [NLS] Found at index 1667: "{0}, docs: {1}"
+  [NLS] Found at index 1996: "Specify a list of extensions that are allowed to use. This helps maintain a secure and consistent development environment by restricting the use of unauthorized extensions. For more information on how to configure this setting, please visit the [Configure Allowed Extensions](https://code.visualstudio.com/docs/setup/enterprise#_configure-allowed-extensions) section."
+  [NLS] Found at index 1999: "Specify a list of extensions that are allowed to use. This helps maintain a secure and consistent development environment by restricting the use of unauthorized extensions. More information: https://code.visualstudio.com/docs/setup/enterprise#_configure-allowed-extensions"
+  [NLS] Found at index 4978: "Docs"
+  [NLS] Found at index 6233: "Generate Docs"
+  [NLS] Found at index 6468: "Global auto approve also known as "YOLO mode" disables manual approval completely for _all tools in all workspaces_, allowing the agent to act fully autonomously. This is extremely dangerous and is *never* recommended, even containerized environments like [Codespaces](https://github.com/features/codespaces) and [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) have user keys forwarded into the container that could be compromised.
+
+**This feature disables [critical security protections](https://code.visualstudio.com/docs/copilot/security) and makes it much easier for an attacker to compromise the machine.**"
+  [NLS] Found at index 9140: "Controls [auto save](https://code.visualstudio.com/docs/editor/codebasics#_save-auto-save) of editors that have unsaved changes."
+  [NLS] Found at index 9142: "When enabled, will limit [auto save](https://code.visualstudio.com/docs/editor/codebasics#_save-auto-save) of editors to files that are inside the opened workspace. Only applies when {0} is enabled."
+  [NLS] Found at index 9143: "When enabled, will limit [auto save](https://code.visualstudio.com/docs/editor/codebasics#_save-auto-save) of editors to files that have no errors reported in them at the time the auto save is triggered. Only applies when {0} is enabled."
+  [NLS] Found at index 9493: "Before you report an issue here please <a href="https://antigravity.google/docs" target="_blank">review the docs we provide</a>. Please complete the form in English."
+  [NLS] Found at index 10082: "Browse and install [Model Context Protocol (MCP) servers](https://code.visualstudio.com/docs/copilot/customization/mcp-servers) directly from VS Code to extend agent mode with extra tools for connecting to databases, invoking APIs and performing specialized tasks."
+  [NLS] Found at index 10184: "View Docs"
+  [NLS] Found at index 11997: "Configure [glob patterns](https://code.visualstudio.com/docs/editor/codebasics#_advanced-search-options) for excluding files and folders in fulltext searches and file search in quick open. To exclude files from the recently opened list in quick open, patterns must be absolute (for example `**/node_modules/**`). Inherits all glob patterns from the `#files.exclude#` setting."
+  [NLS] Found at index 12336: "One or more snippets from the extension '{0}' very likely confuse snippet-variables and snippet-placeholders (see https://code.visualstudio.com/docs/editor/userdefinedsnippets#_snippet-syntax for more details)"
+  [NLS] Found at index 13246: "Determines whether or not shell integration is auto-injected to support features like enhanced command tracking and current working directory detection. 
+
+Shell integration works by injecting the shell with a startup script. The script gives {2} insight into what is happening within the terminal.
+
+Supported shells:
+
+- Linux/macOS: bash, fish, pwsh, zsh
+ - Windows: pwsh, git bash
+
+This setting applies only when terminals are created, so you will need to restart your terminals for it to take effect.
+
+ Note that the script injection may not work if you have custom arguments defined in the terminal profile, have enabled {1}, have a [complex bash `PROMPT_COMMAND`](https://code.visualstudio.com/docs/editor/integrated-terminal#_complex-bash-promptcommand), or other unsupported setup. To disable decorations, see {0}"
+  [NLS] Found at index 14923: "If you don't want to open untrusted files, we recommend to open them in Restricted Mode in a new window as the files may be malicious. See [our docs](https://aka.ms/vscode-workspace-trust) to learn more."
+  [NLS] Found at index 14936: "An AI agent may take unsafe actions based on the files' content that can result in data exfiltration or data loss. If you don't trust the authors of these files, we recommend to continue in restricted mode as the files may be malicious. See [our docs](https://aka.ms/vscode-workspace-trust) to learn more."
+  [NLS] Found at index 14937: "If you'd like to explore an untrusted workspace with the agent, we recommend enabling strict mode via the settings window. See the [strict mode docs](https://antigravity.google/docs/strict-mode) for details."
+  [NLS] Found at index 14952: "{0} may cause an AI agent to take unsafe actions based on the files' content that can result in data exfiltration or data loss. If you don't trust the authors of these files, we recommend to continue in restricted mode as the files may be malicious. See [our docs](https://aka.ms/vscode-workspace-trust) to learn more."
+  [NLS] Found at index 16024: "{0}, docs: {1}"
+  [NLS] Found at index 16149: "The weight of the font. See https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight for valid values."
+  [NLS] Found at index 16150: "The style of the font. See https://developer.mozilla.org/en-US/docs/Web/CSS/font-style for valid values."
+  [NLS] Found at index 16180: "The weight of the font. See https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight for valid values."
+  [NLS] Found at index 16181: "The style of the font. See https://developer.mozilla.org/en-US/docs/Web/CSS/font-style for valid values."
+
+=== Searching for: "Report Issue" ===
+  [workbench.desktop.main.js.bak] Found at index 14384749: ... ,children:[v,R("br",{}),R("br",{}),b]}),R("h6",{className:"mt-2 text-base font-medium",children:"1. Report Issue"}),R("p",{className:"mb-2 grow",children:["If you are having difficulty using ",u,", please report  ...
+  [workbench.desktop.main.js.bak] Found at index 14385216: ... ndary-foreground hover:opacity-90":"bg-primary text-primary-foreground hover:opacity-90"),children:"Report Issue"})}),R("div",{className:"mt-4",children:[R("h6",{className:"text-base font-medium",children:"2. Res ...
+  [workbench.desktop.main.js.bak] Found at index 25519172: ... ({id:"Show Sync Logs",label:p(14474,null),run:()=>this.commandService.executeCommand(Toe)}),fs({id:"Report Issue",label:p(14475,null),run:()=>this.workbenchIssueService.openReporter()})]}});break}case"Incompatibl ...
+  [workbench.desktop.main.js.bak] Found at index 26000312: ... row items-center gap-6",children:[R(hir,{onClick:i,children:"Get Logs"}),R(hir,{onClick:e,children:"Report Issue"}),R(hir,{onClick:r,children:"Dismiss"})]}),R(cb,{onClick:n,disabled:!1,children:"Reload Window"})] ...
+  [NLS] Found at index 4979: "Report Issue"
+  [NLS] Found at index 5440: "Report Issue"
+  [NLS] Found at index 8283: "When enabled, extensions can be searched for via Quick Access and report issues from there."
+  [NLS] Found at index 8424: "Report Issue"
+  [NLS] Found at index 8824: "Report Issue"
+  [NLS] Found at index 8852: "Report Issue"
+  [NLS] Found at index 9533: "Report Issue Anyway"
+  [NLS] Found at index 11471: "Report Issue"
+  [NLS] Found at index 11511: "Report issue icon in the remote explorer view."
+  [NLS] Found at index 11691: "Remote Tunnels is currently in preview. Please report any problems using the "Help: Report Issue" command."
+  [NLS] Found at index 14475: "Report Issue"
+  [NLS] Found at index 15577: "&&Report Issue & Continue"
+  [extension.js] Found at index 1294500: ... et.");const e=await o.window.showQuickPick(["Model Quality","Render","Speed","Other"],{title:"Tab - Report Issue",canPickMany:!1,placeHolder:"Select issue",ignoreFocusOut:!0});if(void 0===e)return;if(void 0===awa ...
+
+=== Searching for: "Changelog" ===
+  [workbench.desktop.main.js.bak] Found at index 15955729: ... ;var Ho=qt("extensionsWorkbenchService"),Yjo;(function(t){t.Readme="readme",t.Features="features",t.Changelog="changelog",t.Dependencies="dependencies",t.ExtensionPack="extensionPack"})(Yjo||(Yjo={}));var o8=" ...
+  [workbench.desktop.main.js.bak] Found at index 18313374: ... soft.VisualStudio.Services.Icons.Default",Details:"Microsoft.VisualStudio.Services.Content.Details",Changelog:"Microsoft.VisualStudio.Services.Content.Changelog",Manifest:"Microsoft.VisualStudio.Code.Manifest" ...
+  [workbench.desktop.main.js.bak] Found at index 18313425: ... Microsoft.VisualStudio.Services.Content.Details",Changelog:"Microsoft.VisualStudio.Services.Content.Changelog",Manifest:"Microsoft.VisualStudio.Code.Manifest",VSIX:"Microsoft.VisualStudio.Services.VSIXPackage" ...
+  [workbench.desktop.main.js.bak] Found at index 18318911: ... ,r,s){const o=t.versions[0],a={manifest:_$(e,SD.Manifest),readme:_$(e,SD.Details),changelog:_$(e,SD.Changelog),license:_$(e,SD.License),repository:Xid(e),download:Yid(e),icon:_$(e,SD.Icon),signature:_$(e,SD.Si ...
+  [workbench.desktop.main.js.bak] Found at index 18339316: ... e.identifier.id,n[1],n[0],e.version),s=await GW(r);return s?JSON.parse(s):null}return null}async getChangelog(e,i){if(e.assets.changelog){const n=await this.getAsset(e.identifier.id,e.assets.changelog,SD.Chang ...
+  [workbench.desktop.main.js.bak] Found at index 18339420: ... gelog(e,i){if(e.assets.changelog){const n=await this.getAsset(e.identifier.id,e.assets.changelog,SD.Changelog,e.version,{},i);return await GW(n)||""}return""}async getAllVersions(e){return this.getVersions(e)} ...
+  [workbench.desktop.main.js.bak] Found at index 19204090: ... l:p(8472,null),run:()=>"cancel"}]});if(n==="cancel")return;if(n==="review")return this.extension.hasChangelog()?this.extensionsWorkbenchService.open(this.extension,{tab:"changelog"}):this.extension.repository? ...
+  [workbench.desktop.main.js.bak] Found at index 19242621: ... sion);if(s){const o=new Fi;o.appendMarkdown(`${s} `),o.appendMarkdown(p(8535,null,this.extension.hasChangelog()?R1("extension.open",this.extension.identifier.id,"changelog").toString():this.extension.repositor ...
+  [workbench.desktop.main.js.bak] Found at index 22379062: ... cus:!!e}),this.actions.forEach(i=>i.checked=i.id===t)}},m_a;(function(t){t[t.Readme=0]="Readme",t[t.Changelog=1]="Changelog"})(m_a||(m_a={}));var Qxd=new Te("showPreReleaseVersion",!1),$xd=class extends TT{con ...
+  [workbench.desktop.main.js.bak] Found at index 22379076: ... .actions.forEach(i=>i.checked=i.id===t)}},m_a;(function(t){t[t.Readme=0]="Readme",t[t.Changelog=1]="Changelog"})(m_a||(m_a={}));var Qxd=new Te("showPreReleaseVersion",!1),$xd=class extends TT{constructor(){sup ...
+  [workbench.desktop.main.js.bak] Found at index 22380405: ... tDisposables=this._register(new ge),this.activeElement=null,this.extensionReadme=null,this.extensionChangelog=null,this.extensionManifest=null}get scopedContextKeyService(){return this._scopedContextKeyService ...
+  [workbench.desktop.main.js.bak] Found at index 22386412: ... nsionReadme=new Cit(()=>s?this.extensionGalleryService.getReadme(s,r):e.getReadme(r)),this.extensionChangelog=new Cit(()=>s?this.extensionGalleryService.getChangelog(s,r):e.getChangelog(r)),this.extensionManif ...
+  [workbench.desktop.main.js.bak] Found at index 22386468: ... etReadme(s,r):e.getReadme(r)),this.extensionChangelog=new Cit(()=>s?this.extensionGalleryService.getChangelog(s,r):e.getChangelog(r)),this.extensionManifest=new Cit(()=>s?this.extensionGalleryService.getManife ...
+  [workbench.desktop.main.js.bak] Found at index 22386488: ... eadme(r)),this.extensionChangelog=new Cit(()=>s?this.extensionGalleryService.getChangelog(s,r):e.getChangelog(r)),this.extensionManifest=new Cit(()=>s?this.extensionGalleryService.getManifest(s,r):e.getManifes ...
+  [workbench.desktop.main.js.bak] Found at index 22387724: ... ush("readme",p(8176,null),p(8177,null)),i&&n.navbar.push("features",p(8178,null),p(8179,null)),e.hasChangelog()&&n.navbar.push("changelog",p(8180,null),p(8181,null)),e.dependencies.length&&n.navbar.push("depen ...
+  [workbench.desktop.main.js.bak] Found at index 22388993: ... his.openDetails(i,n,r);case"features":return this.openFeatures(n,r);case"changelog":return this.openChangelog(i,n,r);case"dependencies":return this.openExtensionDependencies(i,n,r);case"extensionPack":return t ...
+  [workbench.desktop.main.js.bak] Found at index 22395954: ... les.add(this.instantiationService.createInstance(q8n,n,i)),oe(e,r.getDomNode()),r.scanDomNode()}openChangelog(e,i,n){return this.openMarkdown(e,this.extensionChangelog.get(),p(8191,null),i.content,1,p(8192,nul ...
+  [workbench.desktop.main.js.bak] Found at index 22396012: ... ,oe(e,r.getDomNode()),r.scanDomNode()}openChangelog(e,i,n){return this.openMarkdown(e,this.extensionChangelog.get(),p(8191,null),i.content,1,p(8192,null),n)}async openFeatures(e,i){const n=await this.loadConte ...
+  [workbench.desktop.main.js.bak] Found at index 22516020: ... (this.resourceExtension?.readmeUri)).value.toString():Promise.reject(new Error("not available"))}hasChangelog(){return this.local&&this.local.changelogUrl||this.gallery&&this.gallery.assets.changelog?!0:this.t ...
+  [workbench.desktop.main.js.bak] Found at index 22516146: ... cal&&this.local.changelogUrl||this.gallery&&this.gallery.assets.changelog?!0:this.type===0}async getChangelog(e){const i=this.getLocal();return i?.changelogUrl?(await this.fileService.readFile(i.changelogUrl)) ...
+  [workbench.desktop.main.js.bak] Too many matches, skipping remaining...
+  [NLS] Found at index 4980: "Changelog"
+  [NLS] Found at index 8180: "Changelog"
+  [NLS] Found at index 8181: "Extension update history, rendered from the extension's 'CHANGELOG.md' file"
+  [NLS] Found at index 8191: "No Changelog available."
+  [NLS] Found at index 8192: "Changelog"
+
+=== Searching for: "Antigravity - Settings" ===
+  [extension.js] Found at index 469318: ... (t,{Sm:()=>r,ed:()=>i,u5:()=>l});var o=n(68956);const i=o.env.isGoogleInternal?"Jetski - Settings":"Antigravity - Settings",l="workbench.action.showAntigravityStatusBarSettings";class r{providers=new Map;updateEmitter=new  ...
+
+=== Searching for: "Directories" ===
+  [jetskiAgent/main.js.bak] Found at index 8940800: ... tepInfo??null,status:t,requestedInteraction:a}):null,cta:null})};function L9i(e){return!!e&&e.targetDirectories.length==0&&e.targetFiles.length>0}var X9i=({step:e,status:t,error:r})=>{let n=e.input,a=L9i(n),{wor ...
+  [jetskiAgent/main.js.bak] Found at index 8940950: ... X9i=({step:e,status:t,error:r})=>{let n=e.input,a=L9i(n),{workspaceInfo:i}=jn(),s=Ve(()=>(n?n.targetDirectories.map(u=>h4(u,i.homeDir,i.workspaceUris)):[]).join(", "),[n,i]),o;if(a&&n?.targetFiles[0]){let u=n.ta ...
+  [jetskiAgent/main.js.bak] Found at index 9716714: ... th===0)return[];let s=i.map(async f=>{let g=fs(f);try{return(await n({query:e,workspaceUri:g,includeDirectories:r.includes(1),cancelToken:y6i})).results.map(b=>b.numFiles!==void 0&&b.numFiles>1?{case:1,value:{ab ...
+  [jetskiAgent/main.js.bak] Found at index 10366780: ... igger=Fpt[this.type]}trigger;useCache=!1;getRenderInfo(){let e=this.type===0?"Files":this.type===1?"Directories":"Code Context Items",t=this.type===0?p(Trt,{size:14}):this.type===1?p(PBr,{size:14}):p(ldi,{width: ...
+  [workbench.desktop.main.js.bak] Found at index 13698581: ... tepInfo??null,status:e,requestedInteraction:r}):null,cta:null})};function Huu(t){return!!t&&t.targetDirectories.length==0&&t.targetFiles.length>0}var juu=({step:t,status:e,error:i})=>{let n=t.input,r=Huu(n),{wor ...
+  [workbench.desktop.main.js.bak] Found at index 13698731: ... juu=({step:t,status:e,error:i})=>{let n=t.input,r=Huu(n),{workspaceInfo:s}=xs(),o=mt(()=>(n?n.targetDirectories.map(l=>wW(l,s.homeDir,s.workspaceUris)):[]).join(", "),[n,s]),a;if(r&&n?.targetFiles[0]){let l=n.ta ...
+  [workbench.desktop.main.js.bak] Found at index 14503921: ... th===0)return[];let o=s.map(async d=>{let h=up(d);try{return(await n({query:t,workspaceUri:h,includeDirectories:i.includes(1),cancelToken:C_u})).results.map(f=>f.numFiles!==void 0&&f.numFiles>1?{case:1,value:{ab ...
+  [workbench.desktop.main.js.bak] Found at index 14988019: ... igger=A1n[this.type]}trigger;useCache=!1;getRenderInfo(){let t=this.type===0?"Files":this.type===1?"Directories":"Code Context Items",e=this.type===0?R(msn,{size:14}):this.type===1?R(Xio,{size:14}):R(HJc,{width: ...
+  [workbench.desktop.main.js.bak] Found at index 16220214: ... urces");const a=e.pathSeparator==="\\";a&&(i=i.replaceAll(/[\\/]/g,e.pathSeparator));const l=(e.showDirectories||e.showFiles)??!1,u=e.showFiles??!1,d=e.globPattern??void 0;if(!l&&!u)return;const h=[],f=i.substri ...
+  [workbench.desktop.main.js.bak] Found at index 16911407: ... Service.getWorkspace().folders[0].uri,s=await this._commandService.executeCommand("codesearch.searchDirectories",e),o=[];for(const a of s)a.workspacePath&&o.push({type:"path",uri:ue.joinPath(r,a.workspacePath)}) ...
+  [workbench.desktop.main.js.bak] Found at index 23220075: ... ;function S3d(t,e){return t.length?`[${XRa(e)}] ${t}`:`[${XRa(e)}]`}var YRa="monorepoExplorer.pinnedDirectories",_3d=class extends cmd{constructor(t,e,i,n,r,...s){super(...s),this._storageService=t,this._viewsSe ...
+  [workbench.desktop.main.js.bak] Found at index 23220274: ... his._viewsService=e,this._progressService=i,this._contextKeyService=n,this._lsService=r,this._pinnedDirectories=[],this._isLoadingPinnedDirectories=!0,this._contextKeyService.getContextKeyValue(YV.key)&&this._lo ...
+  [workbench.desktop.main.js.bak] Found at index 23220310: ... rvice=i,this._contextKeyService=n,this._lsService=r,this._pinnedDirectories=[],this._isLoadingPinnedDirectories=!0,this._contextKeyService.getContextKeyValue(YV.key)&&this._loadPinnedDirectoriesWithProgress()}as ...
+  [workbench.desktop.main.js.bak] Found at index 23220393: ... ._isLoadingPinnedDirectories=!0,this._contextKeyService.getContextKeyValue(YV.key)&&this._loadPinnedDirectoriesWithProgress()}async _loadPinnedDirectoriesWithProgress(){await this._progressService.withProgress({ ...
+  [workbench.desktop.main.js.bak] Found at index 23220436: ... xtKeyService.getContextKeyValue(YV.key)&&this._loadPinnedDirectoriesWithProgress()}async _loadPinnedDirectoriesWithProgress(){await this._progressService.withProgress({location:1,delay:800},t=>this._loadPinnedDi ...
+  [workbench.desktop.main.js.bak] Found at index 23220545: ... esWithProgress(){await this._progressService.withProgress({location:1,delay:800},t=>this._loadPinnedDirectories())}async _loadPinnedDirectories(){const t=this._getPinnedUrisFromStorage(),e=this.contextService.ge ...
+  [workbench.desktop.main.js.bak] Found at index 23220577: ... gressService.withProgress({location:1,delay:800},t=>this._loadPinnedDirectories())}async _loadPinnedDirectories(){const t=this._getPinnedUrisFromStorage(),e=this.contextService.getWorkspace().folders,i=t.filter( ...
+  [workbench.desktop.main.js.bak] Found at index 23220748: ... rvice.getWorkspace().folders,i=t.filter(r=>!e.some(s=>s.uri.toString()===r.toString()));this._pinnedDirectories=(await Promise.all(i.map(async r=>{try{const s=await this.fileService.stat(r);return new JS(s.resou ...
+  [workbench.desktop.main.js.bak] Found at index 23221084: ... ed to stat pinned directory ${r.toString()}:`,s),null}}))).filter(r=>r!==null),this._isLoadingPinnedDirectories=!1,this._pinnedDirectories.length>0&&this._setWorkingDirectories(),(await this._getExplorerView()). ...
+  [workbench.desktop.main.js.bak] Found at index 23221111: ...  ${r.toString()}:`,s),null}}))).filter(r=>r!==null),this._isLoadingPinnedDirectories=!1,this._pinnedDirectories.length>0&&this._setWorkingDirectories(),(await this._getExplorerView()).setPinnedDirs()}_getPinnedU ...
+  [workbench.desktop.main.js.bak] Found at index 23221149: ... (r=>r!==null),this._isLoadingPinnedDirectories=!1,this._pinnedDirectories.length>0&&this._setWorkingDirectories(),(await this._getExplorerView()).setPinnedDirs()}_getPinnedUrisFromStorage(){try{const t=this._get ...
+  [workbench.desktop.main.js.bak] Found at index 23221850: ... n.id===wR&&n.visible&&(t=this._viewsService.getViewWithId(wR),t&&(i.dispose(),e(t)))})})}_setWorkingDirectories(){this._lsService.isInitialized().then(async()=>{for(let e=0;e<10;e++)try{if(!this._lsService.lsCli ...
+  [workbench.desktop.main.js.bak] Found at index 23222051: ... vice.lsClient)throw new Error("LS client not initialized");await this._lsService.lsClient.setWorkingDirectories(br(Ucc,{directoryUris:this._pinnedDirectories.map(i=>F1(i.resource.toString()).toString())}));retur ...
+  [workbench.desktop.main.js.bak] Found at index 23222097: ... nitialized");await this._lsService.lsClient.setWorkingDirectories(br(Ucc,{directoryUris:this._pinnedDirectories.map(i=>F1(i.resource.toString()).toString())}));return}catch(i){if(i instanceof E3d&&i.code===OFe.U ...
+  [workbench.desktop.main.js.bak] Too many matches, skipping remaining...
+  [NLS] Found at index 170: "{0}
+
+Please make sure the following directories are writeable:
+
+{1}"
+  [NLS] Found at index 1958: "Run with temporary data and extension directories, as if launched for the first time."
+  [NLS] Found at index 5632: "Controls whether Claude skills found in the workspace and user home directories under `.claude/skills` are listed in all chat requests. The language model can load these skills on-demand if the `read` tool is available."
+  [NLS] Found at index 9002: "Are you sure you want to delete the following {0} files/directories and their contents?"
+  [NLS] Found at index 9003: "Are you sure you want to delete the following {0} directories and their contents?"
+  [NLS] Found at index 9007: "Are you sure you want to permanently delete the following {0} files/directories and their contents?"
+  [NLS] Found at index 9008: "Are you sure you want to permanently delete the following {0} directories and their contents?"
+  [NLS] Found at index 12010: "Controls whether to use `.gitignore` and `.ignore` files in parent directories when searching for files. Requires {0} to be enabled."
+  [NLS] Found at index 12760: "Defines how file names reported in a problem pattern should be interpreted. A relative fileLocation may be an array, where the second element of the array is the path of the relative file location. The search fileLocation mode, performs a deep (and, possibly, heavy) file system search within the directories specified by the include/exclude properties of the second element (or the current workspace directory if not specified)."
+
+=== Searching for: "Files" ===
+  [jetskiAgent/main.js.bak] Found at index 3096361: ... )=>WUa,DRAG_DROP_PASTE:()=>wit,HeadingNode:()=>tbe,QuoteNode:()=>ebe,RichTextExtension:()=>PUa,eventFiles:()=>cee,registerRichText:()=>ULr});function _Lr(e,t){if(document.caretRangeFromPoint!==void 0){cons ...
+  [jetskiAgent/main.js.bak] Found at index 3100643: ... r:bw(e,ClipboardEvent)&&(t=e.clipboardData),t===null)return[!1,[],!1];const r=t.types,n=r.includes("Files"),a=r.includes("text/html")||r.includes("text/plain");return[n,Array.from(t.files),a]}function kLr( ...
+  [jetskiAgent/main.js.bak] Found at index 3106245: ... ode,a1s=T9.DRAG_DROP_PASTE,i1s=T9.HeadingNode,s1s=T9.QuoteNode,o1s=T9.RichTextExtension,l1s=T9.eventFiles,MUa=T9.registerRichText,GLr={};os(GLr,{RichTextPlugin:()=>HUa});function JUa(e,...t){const r=new UR ...
+  [jetskiAgent/main.js.bak] Found at index 4661574: ... mit=m),Object.assign(E,{code:"BABEL_VERSION_UNSUPPORTED",version:xJ,range:l})}}var Q0a=["showIgnoredFiles"],j0a=G().m(iIe),H0a=G().m(gSt);function K0a(l,h){switch(h){case"root":return l;case"upward-optiona ...
+  [jetskiAgent/main.js.bak] Found at index 4663605: ... switch(L.n){case 0:return h=!1,typeof l=="object"&&l!==null&&!Array.isArray(l)&&(m=l,h=m.showIgnoredFiles,l=k(m,Q0a)),L.d(Y(iIe(l)),1);case 1:if(E=L.v,E){L.n=2;break}return L.a(2,null);case 2:if(R=E.option ...
+  [jetskiAgent/main.js.bak] Found at index 4664404: ... =E,this.config=v,this.fileHandling=S,this.files=T,Object.freeze(this)}var h=l.prototype;return h.hasFilesystemConfig=function(){return this.babelrc!==void 0||this.config!==void 0},b(l)}();Object.freeze(pSt ...
+  [jetskiAgent/main.js.bak] Found at index 7976765: ... ENT_ENVIRONMENT:"agentEnvironment",ALLOW_CASCADE_ACCESS_GITIGNORE_FILES:"allowCascadeAccessGitignoreFiles",ALLOW_AGENT_ACCESS_NON_WORKSPACE_FILES:"allowAgentAccessNonWorkspaceFiles",ARTIFACT_REVIEW_MODE:"a ...
+  [jetskiAgent/main.js.bak] Found at index 7976840: ... lowCascadeAccessGitignoreFiles",ALLOW_AGENT_ACCESS_NON_WORKSPACE_FILES:"allowAgentAccessNonWorkspaceFiles",ARTIFACT_REVIEW_MODE:"artifactReviewMode",AGENT_BROWSER_TOOLS:"agentBrowserTools",BROWSER_JS_EXECU ...
+  [jetskiAgent/main.js.bak] Found at index 7977439: ... Speed",ENABLE_TAB_SOUNDS:"enableTabSounds",ALLOW_TAB_ACCESS_GITIGNORE_FILES:"allowTabAccessGitignoreFiles",TAB_ENABLED:"tabEnabled",TAB_TO_JUMP:"tabToJump",DISABLE_TAB_TO_IMPORT:"disableTabToImport",DISABL ...
+  [jetskiAgent/main.js.bak] Found at index 7977861: ... DE_AUTO_FIX_LINTS:"disableCascadeAutoFixLints",DISABLE_AUTO_OPEN_EDITED_FILES:"disableAutoOpenEditedFiles",ENTERPRISE_GCP_PROJECT_ID:"enterpriseGcpProjectId",ENTERPRISE_GCP_PROJECT_REGION:"enterpriseGcpPro ...
+  [jetskiAgent/main.js.bak] Found at index 8072435: ... =xen.reducer,eci=(e=>(e[e.Trajectory=0]="Trajectory",e[e.Static=1]="Static",e))(eci||{}),tci=(e=>(e.FilesChanged="Files Changed",e.SourceControl="Source Control",e))(tci||{});function Ten(e){return e.type= ...
+  [jetskiAgent/main.js.bak] Found at index 8072449: ... ci=(e=>(e[e.Trajectory=0]="Trajectory",e[e.Static=1]="Static",e))(eci||{}),tci=(e=>(e.FilesChanged="Files Changed",e.SourceControl="Source Control",e))(tci||{});function Ten(e){return e.type==="overview"|| ...
+  [jetskiAgent/main.js.bak] Found at index 8076632: ... e.data.kind==="binary"?e.data.blobUrl:null}var Vci={files:{},subscriptionId:0},jen=cc({name:"watchedFiles",initialState:Vci,reducers:{subscribe:(e,t)=>{let r=t.payload;if(!r)return;let n=$i.parse(r).with({ ...
+  [jetskiAgent/main.js.bak] Found at index 8077454: ... te:e,uri:t})=>{if(!t)return null;let r=$i.parse(t).with({fragment:null}).toString();return e.watchedFiles.files[r]?.contents??null},{memoizeOptions:{resultEqualityCheck:sh}}),xci=Lp([e=>e.watchedFiles.file ...
+  [jetskiAgent/main.js.bak] Found at index 8077549: ... tchedFiles.files[r]?.contents??null},{memoizeOptions:{resultEqualityCheck:sh}}),xci=Lp([e=>e.watchedFiles.files],e=>Object.keys(e).map(t=>({uri:t,subscriptionId:e[t].subscriptionId})),{memoizeOptions:{resu ...
+  [jetskiAgent/main.js.bak] Found at index 8077848: ... t.forEach(n=>{if(!n){r[n]=null;return}let a=$i.parse(n).with({fragment:null}).toString(),i=e.watchedFiles.files[a]?.contents??null;r[n]=i}),r},{memoizeOptions:{resultEqualityCheck:sh}}),Dci=jen.reducer,_ci ...
+  [jetskiAgent/main.js.bak] Found at index 8078123: ... rea:Mli,convoPicker:gui,fileComments:Iui,devRerenderEffects:Fui,debugMode:mui,findInPane:Xui,watchedFiles:Dci,lastSidebarFocusedConversation:zui,knowledge:jui,sectionDisplay:nci,agentScript:nct.reducer,mes ...
+  [jetskiAgent/main.js.bak] Found at index 8323522: ... (...i),writeFile:async(a,...i)=>n?.writeFile?n.writeFile(a,...i):(await e(a)).writeFile(...i),searchFiles:async(a,...i)=>n?.searchFiles?n.searchFiles(a,...i):(await e(a)).searchFiles(...i),resolveResource: ...
+  [jetskiAgent/main.js.bak] Found at index 8323552: ... =>n?.writeFile?n.writeFile(a,...i):(await e(a)).writeFile(...i),searchFiles:async(a,...i)=>n?.searchFiles?n.searchFiles(a,...i):(await e(a)).searchFiles(...i),resolveResource:async(a,...i)=>{if(n?.resolveR ...
+  [jetskiAgent/main.js.bak] Found at index 8323566: ... ?n.writeFile(a,...i):(await e(a)).writeFile(...i),searchFiles:async(a,...i)=>n?.searchFiles?n.searchFiles(a,...i):(await e(a)).searchFiles(...i),resolveResource:async(a,...i)=>{if(n?.resolveResource)return ...
+  [jetskiAgent/main.js.bak] Too many matches, skipping remaining...
+  [workbench.desktop.main.js.bak] Found at index 3026443: ... ENT_ENVIRONMENT:"agentEnvironment",ALLOW_CASCADE_ACCESS_GITIGNORE_FILES:"allowCascadeAccessGitignoreFiles",ALLOW_AGENT_ACCESS_NON_WORKSPACE_FILES:"allowAgentAccessNonWorkspaceFiles",ARTIFACT_REVIEW_MODE:"a ...
+  [workbench.desktop.main.js.bak] Found at index 3026518: ... lowCascadeAccessGitignoreFiles",ALLOW_AGENT_ACCESS_NON_WORKSPACE_FILES:"allowAgentAccessNonWorkspaceFiles",ARTIFACT_REVIEW_MODE:"artifactReviewMode",AGENT_BROWSER_TOOLS:"agentBrowserTools",BROWSER_JS_EXECU ...
+  [workbench.desktop.main.js.bak] Found at index 3027117: ... Speed",ENABLE_TAB_SOUNDS:"enableTabSounds",ALLOW_TAB_ACCESS_GITIGNORE_FILES:"allowTabAccessGitignoreFiles",TAB_ENABLED:"tabEnabled",TAB_TO_JUMP:"tabToJump",DISABLE_TAB_TO_IMPORT:"disableTabToImport",DISABL ...
+  [workbench.desktop.main.js.bak] Found at index 3027539: ... DE_AUTO_FIX_LINTS:"disableCascadeAutoFixLints",DISABLE_AUTO_OPEN_EDITED_FILES:"disableAutoOpenEditedFiles",ENTERPRISE_GCP_PROJECT_ID:"enterpriseGcpProjectId",ENTERPRISE_GCP_PROJECT_REGION:"enterpriseGcpPro ...
+  [workbench.desktop.main.js.bak] Found at index 3400038: ... hatInputAttachmentToolbar=new Bn("ChatInputAttachmentToolbar")}static{this.ChatEditingWidgetModifiedFilesToolbar=new Bn("ChatEditingWidgetModifiedFilesToolbar")}static{this.ChatInputResourceAttachmentConte ...
+  [workbench.desktop.main.js.bak] Found at index 3400084: ... achmentToolbar")}static{this.ChatEditingWidgetModifiedFilesToolbar=new Bn("ChatEditingWidgetModifiedFilesToolbar")}static{this.ChatInputResourceAttachmentContext=new Bn("ChatInputResourceAttachmentContext" ...
+  [workbench.desktop.main.js.bak] Found at index 3664664: ... :!0,showConstants:!0,showEnums:!0,showEnumMembers:!0,showKeywords:!0,showWords:!0,showColors:!0,showFiles:!0,showReferences:!0,showFolders:!0,showTypeParameters:!0,showSnippets:!0,showUsers:!0,showIssues:! ...
+  [workbench.desktop.main.js.bak] Found at index 3668250: ... suggest.showColors":{type:"boolean",default:!0,markdownDescription:p(527,null)},"editor.suggest.showFiles":{type:"boolean",default:!0,markdownDescription:p(528,null)},"editor.suggest.showReferences":{type: ...
+  [workbench.desktop.main.js.bak] Found at index 3671318: ... showWords,this.defaultValue.showWords),showColors:ua(e.showColors,this.defaultValue.showColors),showFiles:ua(e.showFiles,this.defaultValue.showFiles),showReferences:ua(e.showReferences,this.defaultValue.sh ...
+  [workbench.desktop.main.js.bak] Found at index 3671333: ... defaultValue.showWords),showColors:ua(e.showColors,this.defaultValue.showColors),showFiles:ua(e.showFiles,this.defaultValue.showFiles),showReferences:ua(e.showReferences,this.defaultValue.showReferences),s ...
+  [workbench.desktop.main.js.bak] Found at index 3671361: ... Colors:ua(e.showColors,this.defaultValue.showColors),showFiles:ua(e.showFiles,this.defaultValue.showFiles),showReferences:ua(e.showReferences,this.defaultValue.showReferences),showFolders:ua(e.showFolders, ...
+  [workbench.desktop.main.js.bak] Found at index 3705699: ... ",enumMember:"showEnumMembers",keyword:"showKeywords",text:"showWords",color:"showColors",file:"showFiles",reference:"showReferences",folder:"showFolders",typeParameter:"showTypeParameters",snippet:"showSn ...
+  [workbench.desktop.main.js.bak] Found at index 4688236: ... .dispose(),this.clearDragTimeout()}},fm={RESOURCES:"ResourceURLs",DOWNLOAD_URL:"DownloadURL",FILES:"Files",TEXT:Iu.text,INTERNAL_URI_LIST:"application/vnd.code.uri-list"},AJl=()=>({get delay(){return-1},di ...
+  [workbench.desktop.main.js.bak] Found at index 5557873: ... 5]):1:void 0},t=t.with({fragment:""})),{selection:e,uri:t}}var dv={EDITORS:"CodeEditors",FILES:"CodeFiles",SYMBOLS:"application/vnd.code.symbols",MARKERS:"application/vnd.code.diagnostics",NOTEBOOK_CELL_OU ...
+  [workbench.desktop.main.js.bak] Found at index 6131603: ... ation",order:2}})}},Roc=class extends nOt{constructor(){super(!0,!0,{id:"editor.action.marker.nextInFiles",label:te(1183,"Go to Next Problem in Files (Error, Warning, Info)"),precondition:void 0,kbOpts:{kb ...
+  [workbench.desktop.main.js.bak] Found at index 6131647: ... nstructor(){super(!0,!0,{id:"editor.action.marker.nextInFiles",label:te(1183,"Go to Next Problem in Files (Error, Warning, Info)"),precondition:void 0,kbOpts:{kbExpr:vt.focus,primary:66,weight:100},menuOpt ...
+  [workbench.desktop.main.js.bak] Found at index 6131912: ... m_nav",order:1}})}},Aoc=class extends nOt{constructor(){super(!1,!0,{id:"editor.action.marker.prevInFiles",label:te(1184,"Go to Previous Problem in Files (Error, Warning, Info)"),precondition:void 0,kbOpts ...
+  [workbench.desktop.main.js.bak] Found at index 6131960: ... uctor(){super(!1,!0,{id:"editor.action.marker.prevInFiles",label:te(1184,"Go to Previous Problem in Files (Error, Warning, Info)"),precondition:void 0,kbOpts:{kbExpr:vt.focus,primary:1090,weight:100},menuO ...
+  [workbench.desktop.main.js.bak] Found at index 7135965: ... umMembers||i.add(16),r.showKeywords||i.add(17),r.showWords||i.add(18),r.showColors||i.add(19),r.showFiles||i.add(20),r.showReferences||i.add(21),r.showColors||i.add(22),r.showFolders||i.add(23),r.showTypeP ...
+  [workbench.desktop.main.js.bak] Found at index 7904123: ... )=>QIc,DRAG_DROP_PASTE:()=>iln,HeadingNode:()=>L4t,QuoteNode:()=>V4t,RichTextExtension:()=>exc,eventFiles:()=>hlt,registerRichText:()=>rco});function eco(t,e){if(document.caretRangeFromPoint!==void 0){cons ...
+  [workbench.desktop.main.js.bak] Too many matches, skipping remaining...
+  [NLS] Found at index 262: "No Changed Files"
+  [NLS] Found at index 269: "Special handling for large files to disable certain memory intensive features."
+  [NLS] Found at index 375: "Delegates wrapping points computation to the browser. This is a slow algorithm, that might cause freezes for large files, but it works correctly in all cases."
+  [NLS] Found at index 545: "Controls if a widget is shown when dropping files into the editor. This widget lets you control how the file is dropped."
+  [NLS] Found at index 654: "Experimental: Highlights occurrences across all valid open files."
+  [NLS] Found at index 655: "Controls whether occurrences should be highlighted across open files."
+  [NLS] Found at index 809: "Whether all files in multi diff editor are collapsed"
+  [NLS] Found at index 943: "Navigate between edits in the editor with navigate previous{0} and next{1} and accept{2}, reject{3} or view the diff{4} for the current change. Accept edits across all files{5}."
+  [NLS] Found at index 954: "Made {0} edits in {1} files"
+  [NLS] Found at index 1183: "Go to Next Problem in Files (Error, Warning, Info)"
+  [NLS] Found at index 1184: "Go to Previous Problem in Files (Error, Warning, Info)"
+  [NLS] Found at index 1255: "Found {0} symbols in {1} files"
+  [NLS] Found at index 1547: "files ({0})"
+  [NLS] Found at index 1898: "...{0} additional files not shown"
+  [NLS] Found at index 1913: "Add files as context to the chat session."
+  [NLS] Found at index 1921: "Compare two files with each other."
+  [NLS] Found at index 1928: "Wait for the files to be closed before returning."
+  [NLS] Found at index 2091: "Rename is only supported for files."
+  [NLS] Found at index 2105: "Unable to resolve filesystem provider with relative file path '{0}'"
+  [NLS] Found at index 2374: "A set of terminal profile customizations for {0} which allows adding, removing or changing how terminals are launched. Profiles are made up of a mandatory path, optional arguments and other presentation options.
+
+To override an existing profile use its profile name as the key, for example:
+
+{1}
+
+{2}Read more about configuring profiles{3}."
+  [NLS] Found at index 2714: "The following files have been closed and modified on disk: {0}."
+  [NLS] Found at index 2715: "The following files have been modified in an incompatible way: {0}."
+  [NLS] Found at index 2716: "Could not undo '{0}' across all files. {1}"
+  [NLS] Found at index 2717: "Could not undo '{0}' across all files. {1}"
+  [NLS] Found at index 2718: "Could not undo '{0}' across all files because changes were made to {1}"
+  [NLS] Found at index 2719: "Could not undo '{0}' across all files because there is already an undo or redo operation running on {1}"
+  [NLS] Found at index 2720: "Could not undo '{0}' across all files because an undo or redo operation occurred in the meantime"
+  [NLS] Found at index 2721: "Would you like to undo '{0}' across all files?"
+  [NLS] Found at index 2722: "&&Undo in {0} Files"
+  [NLS] Found at index 2728: "Could not redo '{0}' across all files. {1}"
+  [NLS] Found at index 2729: "Could not redo '{0}' across all files. {1}"
+  [NLS] Found at index 2730: "Could not redo '{0}' across all files because changes were made to {1}"
+  [NLS] Found at index 2731: "Could not redo '{0}' across all files because there is already an undo or redo operation running on {1}"
+  [NLS] Found at index 2732: "Could not redo '{0}' across all files because an undo or redo operation occurred in the meantime"
+  [NLS] Found at index 2806: "Do you want to clear all recently opened files and workspaces?"
+  [NLS] Found at index 3323: "Folder With Unsaved Files"
+  [NLS] Found at index 3324: "Workspace With Unsaved Files"
+  [NLS] Found at index 3331: "files"
+  [NLS] Found at index 3334: "Workspace with Unsaved Files"
+  [NLS] Found at index 3335: "Folder with Unsaved Files"
+  [NLS] Found at index 3336: "Do you want to open the workspace to review the unsaved files?"
+  [NLS] Found at index 3337: "Do you want to open the folder to review the unsaved files?"
+  [NLS] Found at index 3338: "Workspaces with unsaved files cannot be removed until all unsaved files have been saved or reverted."
+  [NLS] Found at index 3339: "Folders with unsaved files cannot be removed until all unsaved files have been saved or reverted."
+  [NLS] Found at index 3718: "Do you want to clear all recently opened files and workspaces?"
+  [NLS] Found at index 3863: "The default editor for files detected as binary. If undefined, the user will be presented with a picker."
+  [NLS] Found at index 3911: "Find in Files"
+  [NLS] Found at index 4283: "Show the name of the file. When tabs are enabled and two files have the same name in one group the distinguishing sections of each file's path are added. When tabs are disabled, the path relative to the workspace folder is shown if the editor is active."
+  [NLS] Found at index 4335: "Navigate between open files using three-finger swipe horizontally. Note that System Preferences > Trackpad > More Gestures must be set to 'Swipe with two or three fingers'."
+  [NLS] Found at index 4357: "Controls the maximum size of a file (in KB) to be considered for local file history. Files that are larger will not be added to the local file history. Changing this setting has no effect on existing local file history entries."
+  [NLS] Found at index 4359: "Configure paths or [glob patterns](https://aka.ms/vscode-glob-patterns) for excluding files from the local file history. Glob patterns are always evaluated relative to the path of the workspace folder unless they are absolute paths. Changing this setting has no effect on existing local file history entries."
+  [NLS] Found at index 4461: "Files will open in a new window."
+  [NLS] Found at index 4462: "Files will open in the window with the files' folder open or the last active window."
+  [NLS] Found at index 4463: "Files will open in the window with the files' folder open or the last active window unless opened via the Dock or from Finder."
+  [NLS] Found at index 4464: "Files will open in a new window unless picked from within the application (e.g. via the File menu)."
+  [NLS] Found at index 4465: "Controls whether files should open in a new window when using a command line or file dialog.
+Note that there can still be cases where this setting is ignored (e.g. when using the `--new-window` or `--reuse-window` command line option)."
+  [NLS] Found at index 4466: "Controls whether files should open in a new window when using a command line or file dialog.
+Note that there can still be cases where this setting is ignored (e.g. when using the `--new-window` or `--reuse-window` command line option)."
+  [NLS] Found at index 4620: "Foreground color of text shown over editors when dragging files. This text informs the user that they can hold shift to drop into the editor."
+  [NLS] Found at index 4621: "Background color of text shown over editors when dragging files. This text informs the user that they can hold shift to drop into the editor."
+  [NLS] Found at index 4622: "Border color of text shown over editors when dragging files. This text informs the user that they can hold shift to drop into the editor."
+  [NLS] Found at index 4894: "Controls whether files should be opened when the chat agent has applied edits to them."
+  [NLS] Found at index 5097: "Made {0} text edits in {1} files"
+  [NLS] Found at index 5099: "Made {0} text edits in {1} files, also created or deleted {2} files"
+  [NLS] Found at index 5110: "Controls if files that were part of a refactoring are saved automatically"
+  [NLS] Found at index 5133: "Cannot apply refactoring because {0} other files have changed in the meantime."
+  [NLS] Found at index 5195: "The chat agent view is used to apply edits across files in your workspace, enable running commands in the terminal, and more."
+  [NLS] Found at index 5196: "The chat editing view is used to apply edits across files."
+  [NLS] Found at index 5207: "By default, when edits are made to files, they will be opened. To change this behavior, set accessibility.openChatEditedFiles to false in your settings."
+  [NLS] Found at index 5210: "- Attach Files{0}."
+  [NLS] Found at index 5213: "- Save All Files{0}."
+  [NLS] Found at index 5320: "Related Files"
+  [NLS] Found at index 5321: "Add related files to your working set"
+  [NLS] Found at index 5351: "This will remove your last request and undo edits made to {0} files in your working set. Do you want to proceed?"
+  [NLS] Found at index 5353: "This will remove all subsequent requests and undo edits made to {0} files in your working set. Do you want to proceed?"
+  [NLS] Found at index 5435: "This will undo edits made to {0} files in your working set since this request. Do you want to proceed?"
+  [NLS] Found at index 5523: "{0} files"
+  [NLS] Found at index 5564: "Controls whether related files should be rendered in the chat input."
+  [NLS] Found at index 5567: "Controls whether edits made by chat are automatically approved. The default is to approve all edits except those made to certain files which have the potential to cause immediate unintended side-effects, such as `**/.vscode/*.json`.
+
+Set to `true` to automatically approve edits to matching files, `false` to always require explicit approval. The last pattern matching a given file will determine whether the edit is automatically approved."
+  [NLS] Found at index 5621: "Specify location(s) of instructions files (`*{0}`) that can be attached in Chat sessions. [Learn More]({1}).
+
+Relative paths are resolved from the root folder(s) of your workspace."
+  [NLS] Found at index 5623: "Specify location(s) of reusable prompt files (`*{0}`) that can be run in Chat sessions. [Learn More]({1}).
+
+Relative paths are resolved from the root folder(s) of your workspace."
+  [NLS] Found at index 5625: "Specify location(s) of custom chat mode files (`*{0}`). [Learn More]({1}).
+
+Relative paths are resolved from the root folder(s) of your workspace."
+  [NLS] Found at index 5629: "Use nested AGENTS.MD files"
+  [NLS] Found at index 5630: "Controls whether instructions from nested `AGENTS.MD` files found in the workspace are listed in all chat requests. The language model can load these skills on-demand if the `read` tool is available."
+  [NLS] Found at index 5634: "Configure which prompt files to recommend in the chat welcome view. Each key is a prompt file name, and the value can be `true` to always recommend, `false` to never recommend, or a [when clause](https://aka.ms/vscode-when-clause) expression like `resourceExtname == .js` or `resourceLangId == markdown`."
+  [NLS] Found at index 5747: "Changed {0} files"
+  [NLS] Found at index 5883: "This will undo changes made in {0} files. Do you want to proceed?"
+  [NLS] Found at index 5888: "This will remove your last request and undo edits made to {0} files in your working set. Do you want to proceed?"
+  [NLS] Found at index 5890: "This will remove all subsequent requests and undo edits made to {0} files in your working set. Do you want to proceed?"
+  [NLS] Found at index 5908: "Add Files From References"
+  [NLS] Found at index 5942: "1 change in {0} files"
+  [NLS] Found at index 5944: "{0} changes in {1} files"
+  [NLS] Found at index 5984: "Do you want to keep pending edits to {0} files?"
+  [NLS] Found at index 6003: "(Agent), edit files in your workspace."
+  [NLS] Found at index 6004: "(Edit), edit files in your workspace."
+  [NLS] Found at index 6009: "Search for files and context to add to your request"
+  [NLS] Found at index 6010: "Toggle changed files."
+  [NLS] Found at index 6012: "{0} files changed"
+  [NLS] Found at index 6014: "{0} files ready to merge"
+  [NLS] Found at index 6189: "Whether this chat session supports attaching files or file references."
+  [NLS] Found at index 6339: "All files"
+  [NLS] Found at index 6460: "Read files in your workspace"
+  [NLS] Found at index 6485: "Select instructions files to attach"
+  [NLS] Found at index 6495: "Do you want to backup and sync your user prompt, instruction and custom agent files with Setting Sync?'"
+  [NLS] Found at index 6528: "Show help on prompt files"
+  [NLS] Found at index 6529: "Show help on instruction files"
+  [NLS] Found at index 6530: "Show help on custom agent files"
+  [NLS] Found at index 6565: "Configure Prompt Files..."
+  [NLS] Found at index 6566: "Prompt Files"
+  [NLS] Found at index 6667: "Changes to {0} files"
+  [NLS] Found at index 6741: "One or more glob pattern (separated by comma) that describe for which files the instructions apply to. Based on these patterns, the file is automatically included in the prompt, when the context contains a file that matches one or more of these patterns. Use `**` when you want this file to always be added.
+Example: `**/*.ts`, `**/*.js`, `client/**`"
+  [NLS] Found at index 6775: "Attribute '{0}' is not supported in prompt files. Supported: {1}."
+  [NLS] Found at index 6776: "Attribute '{0}' is not supported in custom GitHub Copilot agent files. Supported: {1}."
+  [NLS] Found at index 6778: "Attribute '{0}' is not supported in VS Code agent files. Supported: {1}."
+  [NLS] Found at index 6779: "Attribute '{0}' is not supported in instructions files. Supported: {1}."
+  [NLS] Found at index 6901: "Binary files are not supported at the moment."
+  [NLS] Found at index 8068: "Resuming your working changes from the cloud will overwrite the following {0} files. Do you want to proceed?"
+  [NLS] Found at index 8398: "Apply Extension to all Profiles"
+  [NLS] Found at index 8462: "Uninstall (All Profiles)"
+  [NLS] Found at index 8787: "Would you like to Uninstall {0} from all profiles?"
+  [NLS] Found at index 8788: "Uninstall (All Profiles)"
+  [NLS] Found at index 8802: "This extension is recommended based on the files you recently opened."
+  [NLS] Found at index 8962: "Save All Files"
+  [NLS] Found at index 8976: "You are deleting files with unsaved changes. Do you want to continue?"
+  [NLS] Found at index 8978: "You are deleting a folder {0} with unsaved changes in {1} files. Do you want to continue?"
+  [NLS] Found at index 8981: "You are deleting files that are configured to be read-only. Do you want to continue?"
+  [NLS] Found at index 8987: "You can restore these files using the Undo command."
+  [NLS] Found at index 8989: "You can restore these files from the Recycle Bin."
+  [NLS] Found at index 8991: "You can restore these files from the Trash."
+  [NLS] Found at index 8994: "Delete {0} files"
+  [NLS] Found at index 8996: "Deleting {0} files"
+  [NLS] Found at index 9002: "Are you sure you want to delete the following {0} files/directories and their contents?"
+  [NLS] Found at index 9004: "Are you sure you want to delete the following {0} files?"
+  [NLS] Found at index 9007: "Are you sure you want to permanently delete the following {0} files/directories and their contents?"
+  [NLS] Found at index 9009: "Are you sure you want to permanently delete the following {0} files?"
+  [NLS] Found at index 9033: "Moving {0} files"
+  [NLS] Found at index 9035: "Move {0} files"
+  [NLS] Found at index 9038: "Copying {0} files"
+  [NLS] Found at index 9040: "Paste {0} files"
+  [NLS] Found at index 9047: "Toggle the ability to save files automatically after typing"
+  [NLS] Found at index 9048: "Focus on Files Explorer"
+  [NLS] Found at index 9054: "Compare New Untitled Text Files"
+  [NLS] Found at index 9055: "Opens a new diff editor with two untitled files."
+  [NLS] Found at index 9078: "{0} of {1} files ({2}/s)"
+  [NLS] Found at index 9089: "Some or all of the dropped files could not be accessed for import."
+  [NLS] Found at index 9096: "{0} of {1} files ({2}/s)"
+  [NLS] Found at index 9105: "The following {0} files and/or folders already exist in the destination folder. Do you want to replace them?"
+  [NLS] Found at index 9111: "Hot exit will be triggered when the last window is closed on Windows/Linux or when the `workbench.action.quit` command is triggered (command palette, keybinding, menu). All windows without folders opened will be restored upon next launch. A list of previously opened windows with unsaved files can be accessed via `File > Open Recent > More...`"
+  [NLS] Found at index 9112: "Hot exit will be triggered when the last window is closed on Windows/Linux or when the `workbench.action.quit` command is triggered (command palette, keybinding, menu), and also for any window with a folder opened regardless of whether it's the last window. All windows without folders opened will be restored upon next launch. A list of previously opened windows with unsaved files can be accessed via `File > Open Recent > More...`"
+  [NLS] Found at index 9113: "[Hot Exit](https://aka.ms/vscode-hot-exit) controls whether unsaved files are remembered between sessions, allowing the save prompt when exiting the editor to be skipped."
+  [NLS] Found at index 9116: "[Hot Exit](https://aka.ms/vscode-hot-exit) controls whether unsaved files are remembered between sessions, allowing the save prompt when exiting the editor to be skipped."
+  [NLS] Found at index 9117: "Files"
+  [NLS] Found at index 9118: "Configure [glob patterns](https://aka.ms/vscode-glob-patterns) for excluding files and folders. For example, the File Explorer decides which files and folders to show or hide based on this setting. Refer to the `#search.exclude#` setting to define search-specific excludes. Refer to the `#explorer.excludeGitIgnore#` setting for ignoring files based on your `.gitignore`."
+  [NLS] Found at index 9124: "The default character set encoding to use when reading and writing files. This setting can also be configured per language."
+  [NLS] Found at index 9125: "When enabled, the editor will attempt to guess the character set encoding when opening files. This setting can also be configured per language. Note, this setting is not respected by text search. Only {0} is respected."
+  [NLS] Found at index 9131: "Moves files/folders to the OS trash (recycle bin on Windows) when deleting. Disabling this will delete files/folders permanently."
+  [NLS] Found at index 9137: "An editor with changes is automatically saved after the configured `#files.autoSaveDelay#`."
+  [NLS] Found at index 9141: "Controls the delay in milliseconds after which an editor with unsaved changes is saved automatically. Only applies when `#files.autoSave#` is set to `{0}`."
+  [NLS] Found at index 9142: "When enabled, will limit [auto save](https://code.visualstudio.com/docs/editor/codebasics#_save-auto-save) of editors to files that are inside the opened workspace. Only applies when {0} is enabled."
+  [NLS] Found at index 9143: "When enabled, will limit [auto save](https://code.visualstudio.com/docs/editor/codebasics#_save-auto-save) of editors to files that have no errors reported in them at the time the auto save is triggered. Only applies when {0} is enabled."
+  [NLS] Found at index 9146: "The default language identifier that is assigned to new files. If configured to `${activeEditorLanguage}`, will use the language identifier of the currently active text editor if any."
+  [NLS] Found at index 9147: "Configure paths or [glob patterns](https://aka.ms/vscode-glob-patterns) to mark as read-only. Glob patterns are always evaluated relative to the path of the workspace folder unless they are absolute paths. You can exclude matching paths via the `#files.readonlyExclude#` setting. Files from readonly file system providers will always be read-only independent of this setting."
+  [NLS] Found at index 9148: "Configure paths or [glob patterns](https://aka.ms/vscode-glob-patterns) to exclude from being marked as read-only if they match as a result of the `#files.readonlyInclude#` setting. Glob patterns are always evaluated relative to the path of the workspace folder unless they are absolute paths. Files from readonly file system providers will always be read-only independent of this setting."
+  [NLS] Found at index 9149: "Marks files as read-only when their file permissions indicate as such. This can be overridden via `#files.readonlyInclude#` and `#files.readonlyExclude#` settings."
+  [NLS] Found at index 9156: "Enables the simple file dialog for opening and saving files and folders. The simple file dialog replaces the system file dialog when enabled."
+  [NLS] Found at index 9170: "Files will be revealed and selected."
+  [NLS] Found at index 9171: "Files will not be revealed and selected."
+  [NLS] Found at index 9172: "Files will not be scrolled into view, but will still be focused."
+  [NLS] Found at index 9173: "Controls whether the Explorer should automatically reveal and select files when opening them."
+  [NLS] Found at index 9174: "Configure paths or [glob patterns](https://aka.ms/vscode-glob-patterns) for excluding files and folders from being revealed and selected in the Explorer when they are opened. Glob patterns are always evaluated relative to the path of the workspace folder unless they are absolute paths."
+  [NLS] Found at index 9177: "Controls whether the Explorer should allow to move files and folders via drag and drop. This setting only effects drag and drop from inside the Explorer."
+  [NLS] Found at index 9178: "Controls whether the Explorer should ask for confirmation to move files and folders via drag and drop."
+  [NLS] Found at index 9179: "Controls whether the Explorer should ask for confirmation when pasting native files and folders."
+  [NLS] Found at index 9187: "Files and folders are sorted by their names. Folders are displayed before files."
+  [NLS] Found at index 9188: "Files and folders are sorted by their names. Files are interwoven with folders."
+  [NLS] Found at index 9189: "Files and folders are sorted by their names. Files are displayed before folders."
+  [NLS] Found at index 9190: "Files and folders are grouped by extension type then sorted by their names. Folders are displayed before files."
+  [NLS] Found at index 9191: "Files and folders are sorted by last modified date in descending order. Folders are displayed before files."
+  [NLS] Found at index 9192: "Files and folders are sorted by their names. Folders are displayed before files. Files with nested children are displayed before other files."
+  [NLS] Found at index 9193: "Controls the property-based sorting of files and folders in the Explorer. When `#explorer.fileNesting.enabled#` is enabled, also controls sorting of nested files."
+  [NLS] Found at index 9204: "Disables incremental naming. If two files with the same name exist you will be prompted to overwrite the existing file."
+  [NLS] Found at index 9217: "Controls whether file nesting is enabled in the Explorer. File nesting allows for related files in a directory to be visually grouped together under a single parent file."
+  [NLS] Found at index 9219: "Controls nesting of files in the Explorer. {0} must be set for this to take effect. Each __Item__ represents a parent pattern and may contain a single `*` character that matches any string. Each __Value__ represents a comma separated list of the child patterns that should be shown nested under a given parent. Child patterns may contain several special tokens:
+- `${capture}`: Matches the resolved value of the `*` from the parent pattern
+- `${basename}`: Matches the parent file's basename, the `file` in `file.ts`
+- `${extname}`: Matches the parent file's extension, the `ts` in `file.ts`
+- `${dirname}`: Matches the parent file's directory name, the `src` in `src/file.ts`
+- `*`:  Matches any string, may only be used once per child pattern"
+  [NLS] Found at index 9235: "Files Explorer"
+  [NLS] Found at index 9239: "Are you sure you want to move the following {0} files into '{1}'?"
+  [NLS] Found at index 9249: "{0} files"
+  [NLS] Found at index 9262: "{0} unsaved files"
+  [NLS] Found at index 9289: "Extension '{0}' is configured as formatter but it cannot format '{1}'-files"
+  [NLS] Found at index 9290: "Extension '{0}' is configured as formatter but it can only format '{1}'-files as a whole, not selections or parts of it."
+  [NLS] Found at index 9291: "There are multiple formatters for '{0}' files. One of them should be configured as default formatter."
+  [NLS] Found at index 9296: "Select a default formatter for '{0}' files"
+  [NLS] Found at index 9304: "Select a default formatter for '{0}' files"
+  [NLS] Found at index 9308: "There is no formatter for '{0}' files installed."
+  [NLS] Found at index 9604: "Do you want to delete all entries of all files in local history?"
+  [NLS] Found at index 9709: "Show Excluded Files"
+  [NLS] Found at index 9733: "Show or hide excluded files in the problems view."
+  [NLS] Found at index 9746: "Show Errors & Warnings on files and folder. Overwritten by {0} when it is off."
+  [NLS] Found at index 9762: "Controls whether Problems view should automatically reveal files when opening them."
+  [NLS] Found at index 9775: "Hide Excluded Files"
+  [NLS] Found at index 9983: "Files"
+  [NLS] Found at index 10123: "A glob pattern or list of glob patterns relative to the workspace folder to watch. The MCP server will be restarted when these files change."
+  [NLS] Found at index 10253: "Do you want keep the merge result of {0} files?"
+  [NLS] Found at index 10258: "The files contain unhandled conflicts. The merge results will be lost if you don't save them."
+  [NLS] Found at index 10266: "Do you want to save the changes you made to {0} files?"
+  [NLS] Found at index 10268: "The files contain unhandled conflicts. Your changes will be lost if you don't save them."
+  [NLS] Found at index 10277: "The files contain unhandled conflicts."
+  [NLS] Found at index 10362: "{0} ({1} files)"
+  [NLS] Found at index 10504: "Image Files"
+  [NLS] Found at index 10745: "The limit of notebook output size in kilobytes (KB) where notebook files will no longer be backed up for hot reload. Use 0 for unlimited."
+  [NLS] Found at index 10988: "Log Files"
+  [NLS] Found at index 11018: "Print Emitter Profiles"
+  [NLS] Found at index 11020: "Successfully created profiles."
+  [NLS] Found at index 11021: "Please create an issue and manually attach the following files:
+{0}"
+  [NLS] Found at index 11154: "This setting cannot be applied because it is configured to be applied in all profiles using setting {0}. Value from the default profile will be used instead."
+  [NLS] Found at index 11212: "Applies to all profiles"
+  [NLS] Found at index 11213: "The setting is not specific to the current profile, and will retain its value when switching profiles."
+  [NLS] Found at index 11236: "Setting value retained when switching profiles"
+  [NLS] Found at index 11253: "Files"
+  [NLS] Found at index 11335: "Apply Setting to all Profiles"
+  [NLS] Found at index 11345: "Exclude files matching `{0}`"
+  [NLS] Found at index 11346: "Exclude files matching `{0}`, only when a file matching `{1}` is present"
+  [NLS] Found at index 11353: "Include files matching `{0}`"
+  [NLS] Found at index 11354: "Include files matching `{0}`, only when a file matching `{1}` is present"
+  [NLS] Found at index 11805: "Controls whether the Source Control view should automatically reveal and select files when opening them."
+  [NLS] Found at index 11979: "Use Exclude Settings and Ignore Files"
+  [NLS] Found at index 11981: "See More Files"
+  [NLS] Found at index 11985: "Enter a term to search for across your files."
+  [NLS] Found at index 11990: "Search files by name (append {0} to go to line or {1} to go to symbol)"
+  [NLS] Found at index 11994: "Search for text in your workspace files."
+  [NLS] Found at index 11997: "Configure [glob patterns](https://code.visualstudio.com/docs/editor/codebasics#_advanced-search-options) for excluding files and folders in fulltext searches and file search in quick open. To exclude files from the recently opened list in quick open, patterns must be absolute (for example `**/node_modules/**`). Inherits all glob patterns from the `#files.exclude#` setting."
+  [NLS] Found at index 12000: "Controls where new `Search: Find in Files` and `Find in Folder` operations occur: either in the Search view, or in a search editor."
+  [NLS] Found at index 12008: "Controls whether to use `.gitignore` and `.ignore` files when searching for files."
+  [NLS] Found at index 12009: "Controls whether to use your global gitignore file (for example, from `$HOME/.config/git/ignore`) when searching for files. Requires {0} to be enabled."
+  [NLS] Found at index 12010: "Controls whether to use `.gitignore` and `.ignore` files in parent directories when searching for files. Requires {0} to be enabled."
+  [NLS] Found at index 12013: "Whether to include results from recently opened files in the file results for Quick Open."
+  [NLS] Found at index 12023: "Files with less than 10 results are expanded. Others are collapsed."
+  [NLS] Found at index 12032: "Search all files as you type."
+  [NLS] Found at index 12073: "Find &&in Files"
+  [NLS] Found at index 12081: "Find in Files"
+  [NLS] Found at index 12100: "Replace in Files"
+  [NLS] Found at index 12121: "Files & Folders..."
+  [NLS] Found at index 12148: "Other files"
+  [NLS] Found at index 12149: "Other files"
+  [NLS] Found at index 12150: "{0} files found"
+  [NLS] Found at index 12164: "files to include"
+  [NLS] Found at index 12166: "files to exclude"
+  [NLS] Found at index 12172: "Replaced {0} occurrence across {1} files with '{2}'."
+  [NLS] Found at index 12173: "Replaced {0} occurrence across {1} files."
+  [NLS] Found at index 12176: "Replaced {0} occurrences across {1} files with '{2}'."
+  [NLS] Found at index 12177: "Replaced {0} occurrences across {1} files."
+  [NLS] Found at index 12180: "Replace {0} occurrence across {1} files with '{2}'?"
+  [NLS] Found at index 12181: "Replace {0} occurrence across {1} files?"
+  [NLS] Found at index 12184: "Replace {0} occurrences across {1} files with '{2}'?"
+  [NLS] Found at index 12185: "Replace {0} occurrences across {1} files?"
+  [NLS] Found at index 12191: "No results found in open editors. Review your configured exclusions and check your gitignore files - "
+  [NLS] Found at index 12195: "No results found. Review your configured exclusions and check your gitignore files - "
+  [NLS] Found at index 12197: "Search again in all files"
+  [NLS] Found at index 12199: "Search returned {0} results in {1} files"
+  [NLS] Found at index 12202: "exclude settings and ignore files are disabled"
+  [NLS] Found at index 12204: "Use Exclude Settings and Ignore Files"
+  [NLS] Found at index 12205: "searching only in open files"
+  [NLS] Found at index 12212: "{0} result in {1} files"
+  [NLS] Found at index 12214: "{0} results in {1} files"
+  [NLS] Found at index 12215: "You have not opened or specified a folder. Only open files are currently searched - "
+  [NLS] Found at index 12239: "Focus Search Editor Files to Include"
+  [NLS] Found at index 12240: "Focus Search Editor Files to Exclude"
+  [NLS] Found at index 12249: "files to include"
+  [NLS] Found at index 12251: "files to exclude"
+  [NLS] Found at index 12262: "{0} files"
+  [NLS] Found at index 12442: "Only tasks version 2.0.0 permitted in workspace configuration files."
+  [NLS] Found at index 12457: "Listing and running tasks requires that some of the files in this workspace be executed as code."
+  [NLS] Found at index 12555: "Task detection for {0} tasks causes files in any workspace you open to be run as code. Enabling {0} task detection is a user setting and will apply to any workspace you open. 
+
+ Do you want to enable {0} task detection for all workspaces?"
+  [NLS] Found at index 12854: "Only files on disk can be run in the terminal"
+  [NLS] Found at index 13002: "profiles"
+  [NLS] Found at index 13075: "Defines additional terminal profiles that the user can create."
+  [NLS] Found at index 13514: "Controls whether detected file write operations are blocked in the run in terminal tool. When detected, this will require explicit approval regardless of whether the command would normally be auto approved. Note that this cannot detect all possible methods of writing files, this is what is currently detected:
+
+- File redirection (detected via the bash or PowerShell tree sitter grammar)"
+  [NLS] Found at index 13704: "Icon for files in the terminal suggest widget."
+  [NLS] Found at index 13713: "Icon for symbolic link files in the terminal suggest widget."
+  [NLS] Found at index 13721: "Enable quick suggestions when it's unclear what the best suggestion is, if this is on files and folders will be suggested as a fallback."
+  [NLS] Found at index 13813: "Icon shown to update test profiles."
+  [NLS] Found at index 13837: "Files are sorted alphabetically, declarations are sorted by position"
+  [NLS] Found at index 13839: "Files and declarations are sorted by total coverage"
+  [NLS] Found at index 13841: "Files and declarations are sorted alphabetically"
+  [NLS] Found at index 13848: "No test continuous run-enabled profiles were found"
+  [NLS] Found at index 13849: "Select profiles to run when files change:"
+  [NLS] Found at index 13875: "Configure Test Profiles"
+  [NLS] Found at index 13878: "Get Selected Profiles"
+  [NLS] Found at index 13950: "Show in Opened Files Only"
+  [NLS] Found at index 13960: "Configure Test Profiles"
+  [NLS] Found at index 14096: "No tests found in the files"
+  [NLS] Found at index 14315: "Profiles Editor"
+  [NLS] Found at index 14321: "&&Profiles"
+  [NLS] Found at index 14324: "Select Profiles to Delete"
+  [NLS] Found at index 14331: "Profiles"
+  [NLS] Found at index 14332: "Open Profiles (UI)"
+  [NLS] Found at index 14339: "Cleanup Profiles"
+  [NLS] Found at index 14340: "Reset Workspace Profiles Associations"
+  [NLS] Found at index 14341: "Icon for the edit folder icon in the profiles editor."
+  [NLS] Found at index 14342: "Icon for the remove folder icon in the profiles editor."
+  [NLS] Found at index 14343: "The color of the Profiles editor splitview sash border."
+  [NLS] Found at index 14344: "Profiles"
+  [NLS] Found at index 14384: "Existing Profiles"
+  [NLS] Found at index 14420: "Profiles"
+  [NLS] Found at index 14426: "Apply Extension to all Profiles"
+  [NLS] Found at index 14469: "Disabled syncing profiles because there are too many profiles to sync. Settings Sync supports syncing maximum 20 profiles. Please reduce the number of profiles and enable sync"
+  [NLS] Found at index 14671: "Walkthroughs that match one of these glob patterns appear as 'featured' in workspaces with the specified files. For example, a walkthrough for TypeScript projects might specify `tsconfig.json` here."
+  [NLS] Found at index 14754: "You can use [Copilot]({0}) to generate code across multiple files, fix errors, ask questions about your code, and much more using natural language."
+  [NLS] Found at index 14791: "You're all set to start coding. You can open a local project or a remote repository to get your files into {2}.
+{0}
+{1}"
+  [NLS] Found at index 14794: "Quickly navigate between your files"
+  [NLS] Found at index 14795: "Navigate between files in an instant with one keystroke. Tip: Open multiple files by pressing the right arrow key.
+{0}"
+  [NLS] Found at index 14921: "You are trying to open untrusted files in a workspace which is trusted."
+  [NLS] Found at index 14922: "You are trying to open untrusted files in a window which is trusted."
+  [NLS] Found at index 14923: "If you don't want to open untrusted files, we recommend to open them in Restricted Mode in a new window as the files may be malicious. See [our docs](https://aka.ms/vscode-workspace-trust) to learn more."
+  [NLS] Found at index 14924: "Do you want to allow untrusted files in this workspace?"
+  [NLS] Found at index 14925: "Do you want to allow untrusted files in this window?"
+  [NLS] Found at index 14929: "Do you trust the authors of the files in this workspace?"
+  [NLS] Found at index 14930: "Do you trust the authors of the files in this folder?"
+  [NLS] Found at index 14931: "A feature you are trying to use may be a security risk if you do not trust the source of the files or folders you currently have open."
+  [NLS] Found at index 14936: "An AI agent may take unsafe actions based on the files' content that can result in data exfiltration or data loss. If you don't trust the authors of these files, we recommend to continue in restricted mode as the files may be malicious. See [our docs](https://aka.ms/vscode-workspace-trust) to learn more."
+  [NLS] Found at index 14938: "Do you trust the authors of the files in this folder?"
+  [NLS] Found at index 14939: "You are adding files that are not currently trusted to a trusted workspace. Do you trust the authors of these new files?"
+  [NLS] Found at index 14941: "Do you trust the authors of the files in this workspace?"
+  [NLS] Found at index 14942: "Do you trust the authors of the files in this folder?"
+  [NLS] Found at index 14943: "Trust the authors of all files in the parent folder '{0}'"
+  [NLS] Found at index 14950: "{0} provides features that may automatically execute files in this workspace."
+  [NLS] Found at index 14951: "{0} provides features that may automatically execute files in this folder."
+  [NLS] Found at index 14952: "{0} may cause an AI agent to take unsafe actions based on the files' content that can result in data exfiltration or data loss. If you don't trust the authors of these files, we recommend to continue in restricted mode as the files may be malicious. See [our docs](https://aka.ms/vscode-workspace-trust) to learn more."
+  [NLS] Found at index 14979: "Controls how to handle opening untrusted files in a trusted workspace. This setting also applies to opening files in an empty window which is trusted via `#{0}#`."
+  [NLS] Found at index 14980: "Ask how to handle untrusted files for each workspace. Once untrusted files are introduced to a trusted workspace, you will not be prompted again."
+  [NLS] Found at index 14981: "Always allow untrusted files to be introduced to a trusted workspace without prompting."
+  [NLS] Found at index 14982: "Always open untrusted files in a separate window in restricted mode without prompting."
+  [NLS] Found at index 15002: "You trust the following folders, their subfolders, and workspace files."
+  [NLS] Found at index 15003: "You haven't trusted any folders or workspace files yet."
+  [NLS] Found at index 15020: "You trust the authors of the files in the current window. All features are enabled:"
+  [NLS] Found at index 15021: "You do not trust the authors of the files in the current window. The following features are disabled:"
+  [NLS] Found at index 15024: "You trust the authors of the files in the current folder. All features are enabled:"
+  [NLS] Found at index 15025: "You do not trust the authors of the files in the current folder. The following features are disabled:"
+  [NLS] Found at index 15028: "You trust the authors of the files in the current workspace. All features are enabled:"
+  [NLS] Found at index 15029: "You do not trust the authors of the files in the current workspace. The following features are disabled:"
+  [NLS] Found at index 15052: "Trust the authors of all files in the current folder or its parent '{0}'."
+  [NLS] Found at index 15060: "This folder contains a workspace file '{0}'. Do you want to open it? [Learn more]({1}) about workspace files."
+  [NLS] Found at index 15062: "This folder contains multiple workspace files. Do you want to open one? [Learn more]({0}) about workspace files."
+  [NLS] Found at index 15112: "Always reopen all windows. If a folder or workspace is opened (e.g. from the command line) it opens as a new window unless it was opened before. If files are opened they will open in one of the restored windows together with editors that were previously opened."
+  [NLS] Found at index 15217: "Files you store within the installation folder ('{0}') may be OVERWRITTEN or DELETED IRREVERSIBLY without warning at update time."
+  [NLS] Found at index 15287: "The menu for configuring testing profiles."
+  [NLS] Found at index 15423: "Configure settings to be applied for all profiles."
+  [NLS] Found at index 15514: "Do you want to save the changes to the following {0} files?"
+  [NLS] Found at index 15525: "All Files"
+  [NLS] Found at index 15532: "Open &&Files..."
+  [NLS] Found at index 15534: "Your browser doesn't support opening local folders.
+You can either open single files or open a remote repository."
+  [NLS] Found at index 15542: "Hide dot files"
+  [NLS] Found at index 15543: "Show dot files"
+  [NLS] Found at index 15783: "The relative path to a folder containing localization (bundle.l10n.*.json) files. Must be specified if you are using the vscode.l10n API."
+  [NLS] Found at index 16046: "Saving text files"
+  [NLS] Found at index 16127: "The default file icon, shown for all files that don't match any extension, filename or language id."
+  [NLS] Found at index 16152: "Description of all icons that can be used when associating files to icons."
+  [NLS] Found at index 16271: "All Profiles"
+  [NLS] Found at index 16331: "Profiles"
+  [NLS] Found at index 16371: "Profiles"
+  [extension.js] Found at index 31891: ... 0,A.U)(r);continue}await(0,A.U)(r);const c=this.urisToFileDiffSession,E=c.get(t);await o.AntigravityFiles.forceResolveFromFile(t),E?(n&&E.addStepIndices(n),void 0!==i&&""!==i&&E.updateTraceId(i)):await thi ...
+  [extension.js] Found at index 32525: ... n.delete(e),await t.dispose()}));for(const i of t){const t=o.Uri.parse(i.uri);if(await o.AntigravityFiles.forceResolveFromFile(t),(0,a.B)(t))return;await this.createAndAddFileDiffSession(e,i,[n],this.urisT ...
+  [extension.js] Found at index 36760: ... t,n)=>{e.exports=n(99)},2485:(e,t,n)=>{Object.defineProperty(t,"__esModule",{value:!0}),t.WillDeleteFilesFeature=t.WillRenameFilesFeature=t.WillCreateFilesFeature=t.DidDeleteFilesFeature=t.DidRenameFilesFe ...
+  [extension.js] Found at index 36785: ... 485:(e,t,n)=>{Object.defineProperty(t,"__esModule",{value:!0}),t.WillDeleteFilesFeature=t.WillRenameFilesFeature=t.WillCreateFilesFeature=t.DidDeleteFilesFeature=t.DidRenameFilesFeature=t.DidCreateFilesFea ...
+  [extension.js] Found at index 36810: ... neProperty(t,"__esModule",{value:!0}),t.WillDeleteFilesFeature=t.WillRenameFilesFeature=t.WillCreateFilesFeature=t.DidDeleteFilesFeature=t.DidRenameFilesFeature=t.DidCreateFilesFeature=void 0;const o=n(689 ...
+  [extension.js] Found at index 36834: ... ",{value:!0}),t.WillDeleteFilesFeature=t.WillRenameFilesFeature=t.WillCreateFilesFeature=t.DidDeleteFilesFeature=t.DidRenameFilesFeature=t.DidCreateFilesFeature=void 0;const o=n(68956),i=n(86045),l=n(67354 ...
+  [extension.js] Found at index 36858: ... teFilesFeature=t.WillRenameFilesFeature=t.WillCreateFilesFeature=t.DidDeleteFilesFeature=t.DidRenameFilesFeature=t.DidCreateFilesFeature=void 0;const o=n(68956),i=n(86045),l=n(67354),r=n(69032);function s( ...
+  [extension.js] Found at index 36882: ... ameFilesFeature=t.WillCreateFilesFeature=t.DidDeleteFilesFeature=t.DidRenameFilesFeature=t.DidCreateFilesFeature=void 0;const o=n(68956),i=n(86045),l=n(67354),r=n(69032);function s(e,t){return void 0===e[t ...
+  [extension.js] Found at index 40273: ... .dispose(),this._willListener&&(this._willListener.dispose(),this._willListener=void 0)}}t.DidCreateFilesFeature=class extends E{constructor(e){super(e,o.workspace.onDidCreateFiles,l.DidCreateFilesNotifica ...
+  [extension.js] Found at index 40348: ... ener=void 0)}}t.DidCreateFilesFeature=class extends E{constructor(e){super(e,o.workspace.onDidCreateFiles,l.DidCreateFilesNotification.type,"didCreate","didCreate",e=>e,e.code2ProtocolConverter.asDidCreate ...
+  [extension.js] Found at index 40365: ... idCreateFilesFeature=class extends E{constructor(e){super(e,o.workspace.onDidCreateFiles,l.DidCreateFilesNotification.type,"didCreate","didCreate",e=>e,e.code2ProtocolConverter.asDidCreateFilesParams)}doSe ...
+  [extension.js] Found at index 40453: ... ,l.DidCreateFilesNotification.type,"didCreate","didCreate",e=>e,e.code2ProtocolConverter.asDidCreateFilesParams)}doSend(e,t){const n=this._client.middleware.workspace;return n?.didCreateFiles?n.didCreateFi ...
+  [extension.js] Found at index 40539: ... er.asDidCreateFilesParams)}doSend(e,t){const n=this._client.middleware.workspace;return n?.didCreateFiles?n.didCreateFiles(e,t):t(e)}},t.DidRenameFilesFeature=class extends d{constructor(e){super(e,o.works ...
+  [extension.js] Found at index 40556: ... esParams)}doSend(e,t){const n=this._client.middleware.workspace;return n?.didCreateFiles?n.didCreateFiles(e,t):t(e)}},t.DidRenameFilesFeature=class extends d{constructor(e){super(e,o.workspace.onDidRenameF ...
+  [extension.js] Found at index 40585: ... =this._client.middleware.workspace;return n?.didCreateFiles?n.didCreateFiles(e,t):t(e)}},t.DidRenameFilesFeature=class extends d{constructor(e){super(e,o.workspace.onDidRenameFiles,l.DidRenameFilesNotifica ...
+  [extension.js] Found at index 40660: ... s(e,t):t(e)}},t.DidRenameFilesFeature=class extends d{constructor(e){super(e,o.workspace.onDidRenameFiles,l.DidRenameFilesNotification.type,"didRename","didRename",e=>e.oldUri,e.code2ProtocolConverter.asDi ...
+  [extension.js] Found at index 40677: ... idRenameFilesFeature=class extends d{constructor(e){super(e,o.workspace.onDidRenameFiles,l.DidRenameFilesNotification.type,"didRename","didRename",e=>e.oldUri,e.code2ProtocolConverter.asDidRenameFilesParam ...
+  [extension.js] Found at index 40772: ... enameFilesNotification.type,"didRename","didRename",e=>e.oldUri,e.code2ProtocolConverter.asDidRenameFilesParams)}register(e){this._willListener||(this._willListener=o.workspace.onWillRenameFiles(this.willR ...
+  [extension.js] Found at index 40861: ... asDidRenameFilesParams)}register(e){this._willListener||(this._willListener=o.workspace.onWillRenameFiles(this.willRename,this)),super.register(e)}willRename(e){e.waitUntil(this.cacheFileTypes(e,e=>e.oldUr ...
+  [extension.js] Found at index 41069: ... }doSend(e,t){this.clearFileTypeCache();const n=this._client.middleware.workspace;return n?.didRenameFiles?n.didRenameFiles(e,t):t(e)}},t.DidDeleteFilesFeature=class extends d{constructor(e){super(e,o.works ...
+  [extension.js] Too many matches, skipping remaining...

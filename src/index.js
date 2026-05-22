@@ -8,6 +8,7 @@ import { rollback } from './rollback.js';
 import { check } from './check.js';
 import { scan } from './scan.js';
 import { autoRollbackOnFailure } from './safe_guard.js';
+import { prune } from './prune.js';
 
 // 初始化绝对目录解析 (ESM 下的 __dirname)
 const __filename = fileURLToPath(import.meta.url);
@@ -77,14 +78,20 @@ switch (action) {
     scan(config, translationsPath);
     break;
 
+  case 'prune':
+    console.log(`[ACTION] 正在执行无用翻译条目清理 (剪裁)...`);
+    prune(config, translationsPath);
+    break;
+
   default:
     console.log('使用说明:');
     console.log('  npm run translate  - 安全检测、自动备份并一键汉化特定页面');
     console.log('  npm run rollback   - 一键完美还原至原始英文官方版本');
     console.log('  npm run check      - 对当前主运行库文件执行语法和破损诊断');
     console.log('  npm run scan       - 一键静态审计检测翻译词库并自动美化格式化');
+    console.log('  npm run prune      - 清理并过滤 translations.json 中已过期的翻译条目');
     console.log('\n参数说明:');
-    console.log('  node src/index.js <translate | rollback | check | scan>');
+    console.log('  node src/index.js <translate | rollback | check | scan | prune>');
     break;
 }
 

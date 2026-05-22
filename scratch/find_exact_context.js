@@ -1,35 +1,85 @@
 import fs from 'fs';
+import path from 'path';
 
-const targetPath = 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out\\jetskiAgent\\main.js';
-const backupPath = targetPath + '.bak';
-const content = fs.readFileSync(backupPath, 'utf8');
+const outDir = 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out';
+const mainPath = path.join(outDir, 'jetskiAgent', 'main.js.bak');
+const wbPath = path.join(outDir, 'vs', 'workbench', 'workbench.desktop.main.js.bak');
 
-const outputLines = [];
-function log(msg) {
-  console.log(msg);
-  outputLines.push(msg);
+const mainContent = fs.readFileSync(mainPath, 'utf8');
+const wbContent = fs.readFileSync(wbPath, 'utf8');
+
+const searchTerms = [
+  "Fast",
+  "Analyzed",
+  "Edited",
+  "Ran",
+  "Working",
+  "Changes Overview",
+  "File With Changes",
+  "Files With Changes",
+  "Terminal",
+  "Background Process",
+  "Background Processes",
+  "Artifacts",
+  "Files for Conversation",
+  "Reject all",
+  "Reject All",
+  "Browser",
+  "Ask anything",
+  "Your plan's baseline quota",
+  "Google AI Ultra plan",
+  "Enable Overages",
+  "See plans.",
+  "See Plans",
+  "ago",
+  "minutes ago",
+  "View conversation",
+  "Copy to clipboard",
+  "Export artifact",
+  "Submit comment",
+  "Add a message",
+  "Select text in the artifact",
+  "Proceed",
+  "Proceed with implementation plan",
+  "Implementation Plan",
+  "Individual quota reached",
+  "task",
+  "Send Queued Message",
+  "cancel",
+  "Timed 60 seconds",
+  "Walkthrough",
+  "Customization"
+];
+
+const results = [];
+
+function search(content, name, terms) {
+  results.push(`\n\n==================== SEARCHING IN ${name} ====================`);
+  terms.forEach(term => {
+    let index = 0;
+    let occurrences = [];
+    while (true) {
+      const idx = content.indexOf(term, index);
+      if (idx === -1) break;
+      occurrences.push(idx);
+      index = idx + 1;
+    }
+    
+    results.push(`\n--- Term: "${term}" (Total Found: ${occurrences.length}) ---`);
+    occurrences.slice(0, 15).forEach((idx, count) => {
+      const start = Math.max(0, idx - 150);
+      const end = Math.min(content.length, idx + term.length + 150);
+      results.push(`[${term}] Occur #${count + 1} at Index ${idx}:`);
+      results.push(`   ... ${content.substring(start, end).replace(/\r?\n/g, ' ')} ...`);
+    });
+    if (occurrences.length > 15) {
+      results.push(`   ... and ${occurrences.length - 15} more matches`);
+    }
+  });
 }
 
-log('=== 深入抓取 qne 组件内部实现 ===');
+search(mainContent, 'main.js.bak', searchTerms);
+search(wbContent, 'workbench.desktop.main.js.bak', searchTerms);
 
-// 1. 抓取 qne 声明处的完整代码段
-const qneIdx = content.indexOf('var qne=');
-if (qneIdx !== -1) {
-  log(`\n[FOUND] "var qne=" 在索引 ${qneIdx}:`);
-  log(content.substring(qneIdx, qneIdx + 2000));
-} else {
-  log('\n[NOT FOUND] "var qne="');
-}
-
-// 2. 抓取处 #2 (索引 9855661) 附近的完整上下文
-const idx2 = 9855661;
-log(`\n[FETCH] 处 #2 (索引 ${idx2}) 前后代码:`);
-log(content.substring(idx2 - 300, idx2 + 1000));
-
-// 3. 抓取处 #3 (索引 9857712) 附近的完整上下文
-const idx3 = 9857712;
-log(`\n[FETCH] 处 #3 (索引 ${idx3}) 前后代码:`);
-log(content.substring(idx3 - 300, idx3 + 1000));
-
-fs.writeFileSync('scratch/search_results.txt', outputLines.join('\n'), 'utf8');
-log('\n[DONE] 抓取完成，结果写入 scratch/search_results.txt');
+fs.writeFileSync('scratch/search_results.txt', results.join('\n'), 'utf8');
+console.log('Search completed. Results written to scratch/search_results.txt');
