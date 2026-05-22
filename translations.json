@@ -17,7 +17,7 @@
   },
   {
     "old": "t){case vh.DISABLED:return\"Disabled\";case vh.ALWAYS_ASK:return\"Request Review\";case vh.TURBO:return\"Always Proceed\";default:return\"Request Review\"}},resolveOptionToDescription:t=>{switch(t){case vh.DISABLED:return\"Block all browser JavaScript execution.\";case vh.ALWAYS_ASK:return\"Prompt for approval before running browser scripts.\";case vh.TURBO:return\"Allow full browser script execution without prompting.\";default:return\"Prompt for approval before running browser scripts.\"}}",
-    "new": "t){case vh.DISABLED:return\"已禁用\";case vh.ALWAYS_ASK:return\"需要审核\";case vh.TURBO:return\"始终执行\";default:return\"需要审核\"}},resolveOptionToDescription:t=>{switch(t){case vh.DISABLED:return\"阻止所有浏览器 JavaScript 执行。\";case vh.ALWAYS_ASK:return\"在运行浏览器脚本前提示审核。\";case vh.TURBO:return\"允许完全执行浏览器脚本而无需提示。\";default:return\"在运行浏览器脚本前提示审核。\"}}"
+    "new": "t){case vh.DISABLED:case \"disabled\":case \"Disabled\":case \"已禁用\":return\"已禁用\";case vh.TURBO:case \"turbo\":case \"Always Proceed\":case \"始终执行\":case \"始终运行\":return\"始终运行\";default:return\"先询问\"}},resolveOptionToDescription:t=>{switch(t){case vh.DISABLED:return\"阻止所有浏览器 JavaScript 执行。\";case vh.ALWAYS_ASK:return\"在运行浏览器脚本前提示审核。\";case vh.TURBO:return\"允许完全执行浏览器脚本而无需提示。\";default:return\"在运行浏览器脚本前提示审核。\"}}"
   },
   {
     "old": "p(Xl,{title:\"General\",children:p(yo,{",
@@ -481,7 +481,7 @@
   },
   {
     "old": "label:\"Review Policy\",description:\"Specifies Agent's behavior when asking for review on artifacts, which are documents it creates to enable a richer conversation experience.\",options:$1t.map(t=>t.value),resolveOptionToString:t=>$1t.find(r=>r.value===t)?.label||\"Request Review\",resolveOptionToDescription:t=>{switch(t){case e0.TURBO:return\"Agent never asks for review. This maximizes the autonomy of the Agent, but also has the highest risk of the Agent operating over unsafe or injected Artifact content.\";case e0.ALWAYS:return\"Agent always asks for review.\";default:return\"\"}}",
-    "new": "label:\"产物审核策略\",description:\"指定智能体在请求审核产物时的行为，产物是它创建的用于提供更丰富对话体验的文档。\",options:$1t.map(t=>t.value),resolveOptionToString:t=>{if(t===e0.TURBO||t===\"turbo\"||t===\"Always Proceed\"||t===\"始终执行\")return\"始终执行\";if(t===e0.ALWAYS||t===\"always\"||t===\"Always Ask\"||t===\"每次询问\")return\"每次询问\";return\"需要审核\"},resolveOptionToDescription:t=>{switch(t){case e0.TURBO:return\"智能体从不请求审核。这最大化了智能体的自主性，但也有智能体在不安全或被注入的产物内容上运行的最高风险。\";case e0.ALWAYS:return\"智能体总是请求审核。\";default:return\"\"}}"
+    "new": "label:\"产物审核策略\",description:\"指定智能体在请求审核产物时的行为，产物是它创建的用于提供更丰富对话体验的文档。\",options:$1t.map(t=>t.value),resolveOptionToString:t=>{if(t===e0.TURBO||t===\"turbo\"||t===\"Always Proceed\"||t===\"始终执行\")return\"始终执行\";return\"每次询问\"},resolveOptionToDescription:t=>{switch(t){case e0.TURBO:return\"智能体从不请求审核。这最大化了智能体的自主性，但也有智能体在不安全或被注入的产物内容上运行的最高风险。\";case e0.ALWAYS:return\"智能体总是请求审核。\";default:return\"\"}}"
   },
   {
     "old": "isProviderSetting:!0,screen:\"Permissions\",label:\"Auto-Open Edited Files\",description:\"Open files in the background if Agent creates or edits them\"",
@@ -629,7 +629,7 @@
   },
   {
     "old": "label:\"Browser Javascript Execution Policy\",description:\"Controls whether the agent can run custom JavaScript to automate complex browser actions.\",options:[vh.DISABLED,vh.ALWAYS_ASK,vh.TURBO],resolveOptionToString:t=>{switch(t){case vh.DISABLED:return\"Disabled\";case vh.ALWAYS_ASK:return\"Request Review\";case vh.TURBO:return\"Always Proceed\";default:return\"Request Review\"}},resolveOptionToDescription:t=>{switch(t){case vh.DISABLED:return\"Block all browser JavaScript execution.\";case vh.ALWAYS_ASK:return\"Prompt for approval before running browser scripts.\";case vh.TURBO:return\"Allow full browser script execution without prompting.\";default:return\"Prompt for approval before running browser scripts.\"}}",
-    "new": "label:\"浏览器 JavaScript 执行策略\",description:\"控制智能体是否可以运行自定义 JavaScript 以自动化复杂的浏览器操作。\",options:[vh.DISABLED,vh.ALWAYS_ASK,vh.TURBO],resolveOptionToString:t=>{if(t===vh.DISABLED||t===\"disabled\"||t===\"Disabled\"||t===\"已禁用\")return\"已禁用\";if(t===vh.TURBO||t===\"turbo\"||t===\"Always Proceed\"||t===\"始终执行\")return\"始终执行\";return\"需要审核\"},resolveOptionToDescription:t=>{switch(t){case vh.DISABLED:return\"阻止所有浏览器 JavaScript 执行。\";case vh.ALWAYS_ASK:return\"在运行浏览器脚本之前提示批准。\";case vh.TURBO:return\"允许完整的浏览器脚本执行而无需提示。\";default:return\"在运行浏览器脚本之前提示批准。\"}}"
+    "new": "label:\"浏览器 JavaScript 执行策略\",description:\"控制智能体是否可以运行自定义 JavaScript 以自动化复杂的浏览器操作。\",options:[vh.DISABLED,vh.ALWAYS_ASK,vh.TURBO],resolveOptionToString:t=>{if(t===vh.DISABLED||t===\"disabled\"||t===\"Disabled\"||t===\"已禁用\")return\"已禁用\";if(t===vh.TURBO||t===\"turbo\"||t===\"Always Proceed\"||t===\"始终执行\"||t===\"始终运行\")return\"始终运行\";return\"先询问\"},resolveOptionToDescription:t=>{switch(t){case vh.DISABLED:return\"阻止所有浏览器 JavaScript 执行。\";case vh.ALWAYS_ASK:return\"在运行浏览器脚本之前提示批准。\";case vh.TURBO:return\"允许完整的浏览器脚本执行而无需提示。\";default:return\"在运行浏览器脚本之前提示批准。\"}}"
   },
   {
     "old": "[Mr.TAB_ENABLED,{isProviderSetting:!0,screen:\"Tab\",label:\"Suggestions in Editor\",description:\"Show suggestions when typing in the editor\",settingType:\"switch\"}]",
@@ -637,7 +637,7 @@
   },
   {
     "old": "label:\"Tab Speed\",description:\"Set the speed of tab suggestions\",settingType:\"dropdown\",options:[sW.FAST,sW.SLOW],resolveOptionToString:t=>{switch(t){case sW.FAST:return\"Fast\";case sW.SLOW:return\"Slow\";default:return\"Fast\"}}",
-    "new": "label:\"建议速度\",description:\"设置 Tab 补全建议的显示速度\",settingType:\"dropdown\",options:[sW.FAST,sW.SLOW],resolveOptionToString:t=>{if(t===sW.SLOW||t===\"slow\"||t===\"Slow\"||t===\"慢速\")return\"慢速\";return\"快速\"}"
+    "new": "label:\"建议速度\",description:\"设置 Tab 补全建议的显示速度\",settingType:\"dropdown\",options:[sW.FAST,sW.SLOW],resolveOptionToString:t=>{if(t===sW.SLOW||t===\"slow\"||t===\"Slow\"||t===\"慢速\"||t===\"慢\")return\"慢\";return\"快\"}"
   },
   {
     "old": "[Mr.DISABLE_HIGHLIGHT_AFTER_ACCEPT,{isProviderSetting:!0,screen:\"Tab\",label:\"Highlight After Accept\",description:\"Highlight newly inserted text after accepting a Tab completion.\",settingType:\"switch\"}]",
@@ -3041,7 +3041,7 @@
   },
   {
     "old": "[Mr.ARTIFACT_REVIEW_MODE,{isProviderSetting:!0,screen:\"Permissions\",label:\"Review Policy\",description:\"Specifies Agent's behavior when asking for review on artifacts, which are documents it creates to enable a richer conversation experience.\",options:$1t.map(t=>t.value),resolveOptionToString:t=>$1t.find(r=>r.value===t)?.label||\"Request Review\",resolveOptionToDescription:t=>{switch(t){case e0.TURBO:return\"Agent never asks for review. This maximizes the autonomy of the Agent, but also has the highest risk of the Agent operating over unsafe or injected Artifact content.\";case e0.ALWAYS:return\"Agent always asks for review.\";default:return\"\"}},settingType:\"dropdown\"}]",
-    "new": "[Mr.ARTIFACT_REVIEW_MODE,{isProviderSetting:!0,screen:\"Permissions\",label:\"产物审核策略\",description:\"指定智能体在请求审核产物时的行为，产物是它创建的用于提供更丰富对话体验的文档。\",options:$1t.map(t=>t.value),resolveOptionToString:t=>$1t.find(r=>r.value===t)?.label||\"每次询问\",resolveOptionToDescription:t=>{switch(t){case e0.TURBO:return\"智能体从不请求审核。这最大化了智能体的自主性，但也有智能体在不安全或被注入的产物内容上运行的最高风险。\";case e0.ALWAYS:return\"智能体总是请求审核。\";default:return\"\"}},settingType:\"dropdown\"}]"
+    "new": "[Mr.ARTIFACT_REVIEW_MODE,{isProviderSetting:!0,screen:\"Permissions\",label:\"产物审核策略\",description:\"指定智能体在请求审核产物时的行为，产物是它创建的用于提供更丰富对话体验的文档。\",options:$1t.map(t=>t.value),resolveOptionToString:t=>{if(t===e0.TURBO||t===\"turbo\"||t===\"Always Proceed\"||t===\"始终执行\")return\"始终执行\";return\"每次询问\"},resolveOptionToDescription:t=>{switch(t){case e0.TURBO:return\"智能体从不请求审核。这最大化了智能体的自主性，但也有智能体在不安全或被注入的产物内容上运行的最高风险。\";case e0.ALWAYS:return\"智能体总是请求审核。\";default:return\"\"}},settingType:\"dropdown\"}]"
   },
   {
     "old": "[Mr.ENABLE_SOUNDS_FOR_SPECIAL_EVENTS,{isProviderSetting:!0,screen:\"Permissions\",label:\"Enable Sounds for Agent\",description:\"When enabled, Antigravity will play a sound when Agent finishes generating a response.\",settingType:\"switch\"}]",
@@ -3077,7 +3077,7 @@
   },
   {
     "old": "[Mr.BROWSER_JS_EXECUTION_POLICY,{isProviderSetting:!0,screen:\"Browser\",label:\"Browser Javascript Execution Policy\",description:\"Controls whether the agent can run custom JavaScript to automate complex browser actions.\",options:[vh.DISABLED,vh.ALWAYS_ASK,vh.TURBO],resolveOptionToString:t=>{switch(t){case vh.DISABLED:return\"Disabled\";case vh.ALWAYS_ASK:return\"Request Review\";case vh.TURBO:return\"Always Proceed\";default:return\"Request Review\"}},resolveOptionToDescription:t=>{switch(t){case vh.DISABLED:return\"Block all browser JavaScript execution.\";case vh.ALWAYS_ASK:return\"Prompt for approval before running browser scripts.\";case vh.TURBO:return\"Allow full browser script execution without prompting.\";default:return\"Prompt for approval before running browser scripts.\"}},settingType:\"dropdown\"}]",
-    "new": "[Mr.BROWSER_JS_EXECUTION_POLICY,{isProviderSetting:!0,screen:\"Browser\",label:\"浏览器 Javascript 执行策略\",description:\"控制智能体是否可以运行自定义 JavaScript 来自动执行复杂的浏览器操作。\",options:[vh.DISABLED,vh.ALWAYS_ASK,vh.TURBO],resolveOptionToString:t=>{switch(t){case vh.DISABLED:return\"已禁用\";case vh.ALWAYS_ASK:return\"需要审核\";case vh.TURBO:return\"始终执行\";default:return\"需要审核\"}},resolveOptionToDescription:t=>{switch(t){case vh.DISABLED:return\"阻止所有浏览器 JavaScript 执行。\";case vh.ALWAYS_ASK:return\"在运行浏览器脚本前提示审核。\";case vh.TURBO:return\"允许完全执行浏览器脚本而无需提示。\";default:return\"在运行浏览器脚本前提示审核。\"}},settingType:\"dropdown\"}]"
+    "new": "[Mr.BROWSER_JS_EXECUTION_POLICY,{isProviderSetting:!0,screen:\"Browser\",label:\"浏览器 Javascript 执行策略\",description:\"控制智能体是否可以运行自定义 JavaScript 来自动执行复杂的浏览器操作。\",options:[vh.DISABLED,vh.ALWAYS_ASK,vh.TURBO],resolveOptionToString:t=>{switch(t){case vh.DISABLED:case \"disabled\":case \"Disabled\":case \"已禁用\":return\"已禁用\";case vh.TURBO:case \"turbo\":case \"Always Proceed\":case \"始终执行\":case \"始终运行\":return\"始终运行\";default:return\"先询问\"}},resolveOptionToDescription:t=>{switch(t){case vh.DISABLED:return\"阻止所有浏览器 JavaScript 执行。\";case vh.ALWAYS_ASK:return\"在运行浏览器脚本前提示审核。\";case vh.TURBO:return\"允许完全执行浏览器脚本而无需提示。\";default:return\"在运行浏览器脚本前提示审核。\"}},settingType:\"dropdown\"}]"
   },
   {
     "old": "[Mr.BROWSER_CHROME_PATH,{isProviderSetting:!0,screen:\"Browser\",label:\"Chrome Binary Path\",description:\"Path to the Chrome/Chromium executable. Leave empty for auto-detection.\",settingType:\"text\",placeholder:\"Absolute path to the Chrome/Chromium executable\",type:\"string\"}]",
