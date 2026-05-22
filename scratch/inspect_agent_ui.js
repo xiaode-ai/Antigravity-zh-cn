@@ -1,29 +1,39 @@
 import fs from 'fs';
 
-const mainBakPath = 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out\\jetskiAgent\\main.js.bak';
-if (!fs.existsSync(mainBakPath)) {
-  console.log('jetskiAgent/main.js.bak not found!');
-  process.exit(1);
-}
+const data = fs.readFileSync('scratch/locate_user_request_results.txt', 'utf8');
+const lines = data.split('\n');
 
-const content = fs.readFileSync(mainBakPath, 'utf8');
+let capturing = false;
+let currentTerm = '';
 
-// Center of search is the getRenderInfo we found at index 10366721
-const center = 10366721;
-const start = Math.max(0, center - 20000);
-const end = Math.min(content.length, center + 20000);
-
-const region = content.substring(start, end);
-console.log(`Analyzing region around getRenderInfo (length: ${region.length})`);
-
-// We want to find occurrences of "Agent" in this region
-let regex = /"Agent"/g;
-let match;
-while ((match = regex.exec(region)) !== null) {
-  const localIdx = match.index;
-  const globalIdx = start + localIdx;
-  const s = Math.max(0, localIdx - 100);
-  const e = Math.min(region.length, localIdx + 100);
-  console.log(`Found "Agent" in region at local ${localIdx} (global ${globalIdx}):`);
-  console.log(`  ... ${region.substring(s, e).replace(/\r?\n/g, ' ')} ...`);
-}
+lines.forEach(line => {
+  if (line.includes('==================== SEARCHING IN workbench.desktop.main.js')) {
+    capturing = true;
+    return;
+  }
+  if (line.includes('==================== SEARCHING IN extension.js')) {
+    capturing = false;
+    return;
+  }
+  
+  if (!capturing) return;
+  
+  const termHeader = line.match(/^--- Term: "(.+)"/);
+  if (termHeader) {
+    const term = termHeader[1];
+    if (term === 'Snooze' || term === 'Start' || term === 'Manage') {
+      currentTerm = term;
+      console.log(`\n\x1b[35m=== ${line} ===\x1b[0m`);
+    } else {
+      currentTerm = '';
+    }
+    return;
+  }
+  
+  if (currentTerm && (line.startsWith('[') || line.startsWith('   ...'))) {
+    // 过滤出像是 UI 结构的行
+    if (line.includes('children') || line.includes('label') || line.includes('title') || line.includes('textContent') || line.includes('button')) {
+      console.log(line);
+    }
+  }
+});

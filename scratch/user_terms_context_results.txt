@@ -1,0 +1,409 @@
+
+================ SEARCH IN main.js.bak ================
+- "Back to Agent": found 0 times
+- "Customize Agent to get a better, more personalized experience.": found 0 times
+- "Rules help guide the behavior of Agent.": found 0 times
+- "Workflows are saved prompts that Agent can follow. To trigger a workflow, type "/" in Agent.": found 0 times
+- "Workflows": found 15 times
+  [Match 1 at 8045728]:
+    on;enableAgentStateDebugBuffer;enableRpcDebugBuffer;tipCards;hideRemoteWorkspaceOption;agentScriptsFeature;ciderDeepLinkConfig;customAuxPanes;supportsWorkflows;supportsImageDragDrop;worktreeEnabled;battleModeFeature;enableBuildWithGooglePlugins;progressIndicator;sidePanelConnectionStatusFeature;supportsWorks
+  [Match 2 at 8316396]:
+    (a)).handleScreenRecording(...i),getUserMemories:async(a,...i)=>n?.getUserMemories?n.getUserMemories(a,...i):(await e(a)).getUserMemories(...i),getAllWorkflows:async(a,...i)=>n?.getAllWorkflows?n.getAllWorkflows(a,...i):(await e(a)).getAllWorkflows(...i),getSlashCommands:async(a,...i)=>n?.getSlashCommands?n.
+  [Match 3 at 8316430]:
+    etUserMemories:async(a,...i)=>n?.getUserMemories?n.getUserMemories(a,...i):(await e(a)).getUserMemories(...i),getAllWorkflows:async(a,...i)=>n?.getAllWorkflows?n.getAllWorkflows(a,...i):(await e(a)).getAllWorkflows(...i),getSlashCommands:async(a,...i)=>n?.getSlashCommands?n.getSlashCommands(a,...i):(await e(
+  [Match 4 at 8316448]:
+    nc(a,...i)=>n?.getUserMemories?n.getUserMemories(a,...i):(await e(a)).getUserMemories(...i),getAllWorkflows:async(a,...i)=>n?.getAllWorkflows?n.getAllWorkflows(a,...i):(await e(a)).getAllWorkflows(...i),getSlashCommands:async(a,...i)=>n?.getSlashCommands?n.getSlashCommands(a,...i):(await e(a)).getSlashComman
+  [Match 5 at 8316485]:
+    serMemories(a,...i):(await e(a)).getUserMemories(...i),getAllWorkflows:async(a,...i)=>n?.getAllWorkflows?n.getAllWorkflows(a,...i):(await e(a)).getAllWorkflows(...i),getSlashCommands:async(a,...i)=>n?.getSlashCommands?n.getSlashCommands(a,...i):(await e(a)).getSlashCommands(...i),getAllRules:async(a,...i)=>n
+  [Match 6 at 8329171]:
+    eenRecording:async w=>a(k=>k.handleScreenRecording(w)),getUserMemories:async()=>a(async w=>(await w.getUserMemories(At(esi,{})))?.memories??[]),getAllWorkflows:async w=>a(async k=>(await k.getAllWorkflows(At(osi,{workspaceUris:w}),{timeoutMs:Iin}))?.workflows??[]),getSlashCommands:async w=>a(async k=>(await 
+  [Match 7 at 8329216]:
+    rding(w)),getUserMemories:async()=>a(async w=>(await w.getUserMemories(At(esi,{})))?.memories??[]),getAllWorkflows:async w=>a(async k=>(await k.getAllWorkflows(At(osi,{workspaceUris:w}),{timeoutMs:Iin}))?.workflows??[]),getSlashCommands:async w=>a(async k=>(await k.getSlashCommands(At(_ii,w)))?.commands||[])
+  [Match 8 at 8336410]:
+    nction b4(){return iKa().editor.workbenchServiceProvider}var u1i={state:{userMemories:[],workflows:[],userRules:[]},events:{setUserMemories:()=>{},setWorkflows:()=>{},setUserRules:()=>{},refreshUserMemories:()=>Promise.resolve(),refreshWorkflows:()=>Promise.resolve(),copyBuiltinWorkflowToWorkspace:()=>Promis
+  [Match 9 at 8336496]:
+    [],workflows:[],userRules:[]},events:{setUserMemories:()=>{},setWorkflows:()=>{},setUserRules:()=>{},refreshUserMemories:()=>Promise.resolve(),refreshWorkflows:()=>Promise.resolve(),copyBuiltinWorkflowToWorkspace:()=>Promise.resolve(void 0),refreshUserRules:()=>Promise.resolve()}},bgs=ga(u1i),Tin=ga("Jetski"
+  [Match 10 at 9611516]:
+    space:ae,hasMcpErrors:ie,onMcpErrorClick:ge,topToolbarContent:fe,disableAutoFocus:Se,battleMode:Ye,isSignedIn:Je,floatingBanner:we},De)=>{let{supportsWorkflows:Be,supportsImageDragDrop:Ue}=pn(),{logEvent:et}=jo(),ze=ee,[Et,Oe]=_e([]),Wt=i||"Ask anything, @ to mention"+(Be?", / for actions":""),[We,cr]=_e(nul
+  [Match 11 at 9620047]:
+    copeItem:{case:"terminal",value:At(vQr,{processId:e.processId.toString(),name:e.name,lastCommand:e.lastCommand})}})))}},n2n=(e,t,r,n,a,i)=>{let{getAllWorkflows:s,getAllRules:o,listMcpResources:u,listMcpPrompts:d,getMcpPrompt:f,getSlashCommands:g}=as(),{sideQuestionFeature:b,searchExternalConversations:y}=pn(
+  [Match 12 at 12054005]:
+    ,globalMemoriesPathSegments:["GEMINI.md"],localRulesFilePathSegments:[".agents","rules"],alternateLocalRulesFilePathSegments:[".agent","rules"],globalWorkflowsPathSegments:["global_workflows"],localWorkflowsPathSegments:[".agents","workflows"],alternateLocalWorkflowsPathSegments:[".agent","workflows"],artifa
+  [Match 13 at 12054053]:
+    ulesFilePathSegments:[".agents","rules"],alternateLocalRulesFilePathSegments:[".agent","rules"],globalWorkflowsPathSegments:["global_workflows"],localWorkflowsPathSegments:[".agents","workflows"],alternateLocalWorkflowsPathSegments:[".agent","workflows"],artifactsDirPathSegments:vqi,agentModeInputUriScheme:"
+  [Match 14 at 12054113]:
+    FilePathSegments:[".agent","rules"],globalWorkflowsPathSegments:["global_workflows"],localWorkflowsPathSegments:[".agents","workflows"],alternateLocalWorkflowsPathSegments:[".agent","workflows"],artifactsDirPathSegments:vqi,agentModeInputUriScheme:"jetskiAgentInput",knowledgeItemsPathSegments:Fqi,pluginsPath
+  [Match 15 at 12371963]:
+    us(F,e.windowId)],ea.permissionRequestFeature=x.feature,ea.showHomeTokenUsage=t,ea.enableAgentStateDebugBuffer=t,ea.enableRpcDebugBuffer=t,ea.supportsWorkflows=!0,ea.supportsImageDragDrop=!0,ea.supportsWorkspacePermissions=!1,ea.enableBuildWithGooglePlugins=!0;const Aa=lKi(dt);Q.add(Aa),ea.customizationScope
+- "Advanced Settings": found 1 times
+  [Match 1 at 9858680]:
+    ",size:14})})]})]})}),o.map((I,x)=>p(P7i,{item:I,index:x,onUpdate:f,onRemove:d,borderless:s,placeholder:i},I.value))]})]})},M7i=({children:e,label:t="Advanced Settings"})=>{let[r,n]=_e(!1),a=de(()=>{n(!r)},[r,n]);return p("div",{className:Mt("w-full flex flex-col",r?"pb-3":""),children:[p("button",{onClick:a,classNa
+- "Open Command": found 1 times
+  [Match 1 at 8433546]:
+    ,dre={id:"openCommandPalette",label:"File Picker",icon:"search",keybindings:{binding:{mod:!0,key:"p"}}},hre={id:"openCommandPaletteWithPrefix",label:"Open Command Palette",icon:"manage_search",keybindings:{binding:{mod:!0,shift:!0,key:"p"}}},fre={id:"openConvoPicker",label:"Open Conversation Picker",icon:"chat"
+- "Open Agent": found 4 times
+  [Match 1 at 9196397]:
+    ackground if Agent creates or edits them",settingType:"switch"}],[Mr.DISABLE_OPEN_CASCADE_ON_RELOAD,{isProviderSetting:!0,screen:"Permissions",label:"Open Agent on Reload",description:"Open Agent panel on window reload",settingType:"switch"}],[Mr.VERBOSE_AGENT_CHAT,{isProviderSetting:!0,screen:"Appearance",la
+  [Match 2 at 9196432]:
+     them",settingType:"switch"}],[Mr.DISABLE_OPEN_CASCADE_ON_RELOAD,{isProviderSetting:!0,screen:"Permissions",label:"Open Agent on Reload",description:"Open Agent panel on window reload",settingType:"switch"}],[Mr.VERBOSE_AGENT_CHAT,{isProviderSetting:!0,screen:"Appearance",label:"Verbose agent chat",descriptio
+  [Match 3 at 9883790]:
+    nt conversation instead of starting a new one."})}),p("div",{className:"px-3 py-2",children:p(RE,{settingKey:Mr.DISABLE_OPEN_CASCADE_ON_RELOAD,label:"Open Agent on Reload",description:"Open Agent panel on window reload"})}),p("div",{className:"px-3 py-2",children:p(RE,{settingKey:Mr.ENABLE_SOUNDS_FOR_SPECIAL_
+  [Match 4 at 9883825]:
+     a new one."})}),p("div",{className:"px-3 py-2",children:p(RE,{settingKey:Mr.DISABLE_OPEN_CASCADE_ON_RELOAD,label:"Open Agent on Reload",description:"Open Agent panel on window reload"})}),p("div",{className:"px-3 py-2",children:p(RE,{settingKey:Mr.ENABLE_SOUNDS_FOR_SPECIAL_EVENTS,label:"Enable Sounds for Age
+- "View all Antigravity IDE shortcuts": found 0 times
+- "View all": found 0 times
+- "Reset to default shortcuts": found 0 times
+- "Background Process": found 1 times
+  [Match 1 at 9643210]:
+    },children:p(HBr,{size:16})}),p(_n,{id:`${a2n}-${r}`,children:p("span",{children:"Cancel task"})})]})]},r))}),qDi=()=>{let e=zDi(),t=e.length,r=`${t} Background Process${t===1?"":"es"} Running`;return{id:"terminal",icon:n=>p(GO,{icon:p(DTa,{className:"h-4 w-4 stroke-1 opacity-60"}),showNotification:n==="home"&&t>0}),
+- "Background Processes": found 0 times
+- "Last Updated": found 2 times
+  [Match 1 at 9631420]:
+    dren:[p("span",{children:"Artifact Name"}),p(Nan,{"data-tooltip-id":t,className:"h-3 w-3"})]}),p("p",{className:"grow-0 text-xs opacity-60",children:"Last Updated"})]}),r.map((a,i)=>p(Nh,{fileUri:a.artifactAbsoluteUri},`${a.artifactAbsoluteUri}-${i}`))]}):p("div",{children:p("p",{className:"px-2 py-1 text-xs op
+  [Match 2 at 10043109]:
+    ("div",{className:"px-2 pb-1 text-xs text-muted-foreground font-medium",children:"Sort Conversations"}),W({value:"last_updated",currentValue:N,label:"Last Updated",onClick:C}),W({value:"alphabetical",currentValue:N,label:"Alphabetical (A-Z)",onClick:C}),W({value:"date_added",currentValue:N,label:"Date Added",on
+- "help perform longer running": found 1 times
+  [Match 1 at 9631894]:
+    _n,{id:t,place:"top",children:p("div",{className:"max-w-[400px] p-1 text-sm",children:"Artifacts are files the agent creates during a conversation to help perform longer running tasks and allow the user to provide high-level feedback. Click to open in editor."})})}},YDi=()=>{let{activePages:{pages:e,isLoading:t,error:r,refetc
+- "0 pages": found 0 times
+- "Launch": found 56 times
+  [Match 1 at 5626047]:
+    ionObserver","IntersectionObserverEntry","Keyboard","KeyboardEvent","KeyboardLayoutMap","KeyframeEffect","LanguageDetector","LargestContentfulPaint","LaunchParams","LaunchQueue","LayoutShift","LayoutShiftAttribution","LinearAccelerationSensor","Location","Lock","LockManager","MathMLElement","MediaCapabili
+  [Match 2 at 5626062]:
+    ntersectionObserverEntry","Keyboard","KeyboardEvent","KeyboardLayoutMap","KeyframeEffect","LanguageDetector","LargestContentfulPaint","LaunchParams","LaunchQueue","LayoutShift","LayoutShiftAttribution","LinearAccelerationSensor","Location","Lock","LockManager","MathMLElement","MediaCapabilities","MediaCap
+  [Match 3 at 7676243]:
+    On.RUNNING:On.DONE}var PRe={selector:wzr,equalityFn:sh};function yni(e){return e?.costSummary}var aA=(e=>(e.Manager="Manager",e.Settings="Settings",e.Launchpad="Launchpad",e.StateSyncDebugView="StateSyncDebugView",e.TrajectoryDebugView="TrajectoryDebugView",e.LsOutputDebugView="LsOutputDebugView",e))(aA||
+  [Match 4 at 7676254]:
+    On.DONE}var PRe={selector:wzr,equalityFn:sh};function yni(e){return e?.costSummary}var aA=(e=>(e.Manager="Manager",e.Settings="Settings",e.Launchpad="Launchpad",e.StateSyncDebugView="StateSyncDebugView",e.TrajectoryDebugView="TrajectoryDebugView",e.LsOutputDebugView="LsOutputDebugView",e))(aA||{}),Uzr=(e=
+  [Match 5 at 7720842]:
+    alCwd="initialCwd",e.FixedDimensions="fixedDimensions",e.Title="title",e.ShellType="shellType",e.HasChildProcesses="hasChildProcesses",e.ResolvedShellLaunchConfig="resolvedShellLaunchConfig",e.OverrideDimensions="overrideDimensions",e.FailedShellIntegrationActivation="failedShellIntegrationActivation",e.U
+  [Match 6 at 7720869]:
+    imensions="fixedDimensions",e.Title="title",e.ShellType="shellType",e.HasChildProcesses="hasChildProcesses",e.ResolvedShellLaunchConfig="resolvedShellLaunchConfig",e.OverrideDimensions="overrideDimensions",e.FailedShellIntegrationActivation="failedShellIntegrationActivation",e.UsedShellIntegrationInjectio
+  [Match 7 at 8432016]:
+    ,key:"j"}},{binding:{mod:!0,key:"`"}}]},hAe={id:"toggleEditor",label:"Toggle Editor",icon:"code",keybindings:{binding:{mod:!0,key:"e"}}},Pgi={id:"openLaunchpad",label:"Open Launchpad",icon:"select_window"},Mgi={id:"toggleProjectSelector",label:"Toggle Project Selector",icon:"folder",keybindings:{binding:{
+  [Match 8 at 8432039]:
+    d:!0,key:"`"}}]},hAe={id:"toggleEditor",label:"Toggle Editor",icon:"code",keybindings:{binding:{mod:!0,key:"e"}}},Pgi={id:"openLaunchpad",label:"Open Launchpad",icon:"select_window"},Mgi={id:"toggleProjectSelector",label:"Toggle Project Selector",icon:"folder",keybindings:{binding:{mod:!0,key:";"}}},zsn={
+  [Match 9 at 8885654]:
+    sName:"text-xs",children:"Preview"})]}),p("span",{className:"flex flex-row items-center justify-center gap-x-1 text-sm",children:r?a?p("p",{children:"Launching the browser..."}):p("p",{children:"The agent will wait for you to install the browser extension."}):p("p",{children:"Antigravity would like to use
+  [Match 10 at 9007621]:
+    _STOP","",""],[1,174,"Eject",0,"",0,"","",""],[1,175,"MediaPlayPause",127,"MediaPlayPause",179,"VK_MEDIA_PLAY_PAUSE","",""],[1,176,"MediaSelect",128,"LaunchMediaPlayer",181,"VK_MEDIA_LAUNCH_MEDIA_SELECT","",""],[1,177,"LaunchMail",129,"LaunchMail",180,"VK_MEDIA_LAUNCH_MAIL","",""],[1,178,"LaunchApp2",130,
+  ... and 46 more matches omitted
+- "Browser": found 349 times
+  [Match 1 at 4570893]:
+    "","","","","","","","","","","","","","","","","","","","","","","","","","","","nD","oD","pD","VC","J","qD","yC","rD","sD","I","","",""],E:"Android Browser",F:{nD:1256515200,oD:1274313600,pD:1291593600,VC:1298332800,J:1318896e3,qD:1341792e3,yC:1374624e3,rD:1386547200,sD:1401667200,I:1768348800}},J:{A:{D:
+  [Match 2 at 4571541]:
+    ,"","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","D","A","","",""],E:"Blackberry Browser",F:{D:1325376e3,A:1359504e3}},K:{A:{A:0,B:0,C:0,H:.830048,PC:0,xC:0,QC:0},B:"o",C:["","","","","","","","","","","","","","","","","","","","","","",
+  [Match 3 at 4574300]:
+    "","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","RC","","",""],E:"UC Browser for Android",F:{RC:1710115200},D:{RC:"webkit"}},P:{A:{9:0,J:0,AB:.0107912,BB:.0107912,CB:.0215823,DB:.0215823,EB:.0215823,FB:.0431646,GB:.0431646,HB:
+  [Match 4 at 4575964]:
+    "","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","4D","","",""],E:"QQ Browser",F:{"4D":1710288e3}},R:{A:{"5D":0},B:"webkit",C:["","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","
+  [Match 5 at 4576486]:
+    "","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","5D","","",""],E:"Baidu Browser",F:{"5D":1710201600}},S:{A:{"6D":.016416,"7D":0},B:"moz",C:["","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+  [Match 6 at 4577021]:
+    ,"","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","6D","7D","","",""],E:"KaiOS Browser",F:{"6D":1527811200,"7D":1631664e3}}},Nda=z3t.browsers,gVe=$3t.browserVersions,q3t=Sda;function eCt(l){return Object.keys(l).reduce(function(h,m){ret
+  [Match 7 at 4582563]:
+    1:kda,v12:Uda,v13:Gda,v14:Zda,v15:Lda,v16:Xda,v17:Wda,v18:Oda,v19:Yda,v20:Pda,v21:Mda,v22:Jda,v23:Qda,v24:jda},Kda=UT(gca);function pVe(l){this.name="BrowserslistError",this.message=l,this.browserslist=!0,Error.captureStackTrace&&Error.captureStackTrace(this,pVe)}pVe.prototype=Error.prototype;var tCt=pVe,Q
+  [Match 8 at 4582848]:
+    rototype;var tCt=pVe,Qle=tCt;function AU(){}var zda={loadQueries:function(){throw new Qle("Sharable configs are not supported in client-side build of Browserslist")},getStat:function(l){return l.stats},loadConfig:function(l){if(l.config)throw new Qle("Browserslist config are not supported in client-side bu
+  [Match 9 at 4582950]:
+    nfigs are not supported in client-side build of Browserslist")},getStat:function(l){return l.stats},loadConfig:function(l){if(l.config)throw new Qle("Browserslist config are not supported in client-side build")},loadCountry:function(){throw new Qle("Country statistics are not supported in client-side build
+  [Match 10 at 4583111]:
+    t config are not supported in client-side build")},loadCountry:function(){throw new Qle("Country statistics are not supported in client-side build of Browserslist")},loadFeature:function(){throw new Qle("Supports queries are not available in client-side build of Browserslist")},currentNode:function(l,h){re
+  ... and 339 more matches omitted
+- "Snooze": found 11 times
+  [Match 1 at 7977298]:
+    SCADE_ALLOWED_COMMANDS:"cascadeAllowedCommands",CASCADE_DENIED_COMMANDS:"cascadeDeniedCommands",SECURE_MODE_ENABLED:"secureModeEnabled",IS_SNOOZED:"isSnoozed",AUTOCOMPLETE_SPEED:"autocompleteSpeed",ENABLE_TAB_SOUNDS:"enableTabSounds",ALLOW_TAB_ACCESS_GITIGNORE_FILES:"allowTabAccessGitignoreFiles",TAB_ENAB
+  [Match 2 at 9302186]:
+    ve("copilot-success",60494),chatSparkle:ve("chat-sparkle",60495),searchSparkle:ve("search-sparkle",60496),editSparkle:ve("edit-sparkle",60497),copilotSnooze:ve("copilot-snooze",60498),sendToRemoteAgent:ve("send-to-remote-agent",60499),commentDiscussionSparkle:ve("comment-discussion-sparkle",60500),chatSpa
+  [Match 3 at 11827990]:
+    SCADE_ALLOWED_COMMANDS:"cascadeAllowedCommands",CASCADE_DENIED_COMMANDS:"cascadeDeniedCommands",SECURE_MODE_ENABLED:"secureModeEnabled",IS_SNOOZED:"isSnoozed",AUTOCOMPLETE_SPEED:"autocompleteSpeed",ENABLE_TAB_SOUNDS:"enableTabSounds",ALLOW_TAB_ACCESS_GITIGNORE_FILES:"allowTabAccessGitignoreFiles",TAB_ENAB
+  [Match 4 at 11842263]:
+    ,{key:e,deleted:!0})})}var mx={allowTabAccessGitignoreFiles:!1,tabEnabled:sY.ON,tabToJump:t7.ENABLED,enableTabSounds:!1,enableTerminalCompletion:!1,isSnoozed:!1,disableTabToImport:!1,disableHighlightAfterAccept:!1,useClipboardForCompletions:!1,autocompleteSpeed:Vae.FAST},yS="uss-tabPreferences";function V
+  [Match 5 at 11842973]:
+    ion w2t(e){const t=Pae(e,pa.AUTOCOMPLETE_SPEED,mx.autocompleteSpeed);return t===Vae.DEFAULT?Vae.FAST:t}function _6n(e){return RR(e,pa.IS_SNOOZED,mx.isSnoozed)}function w6n(e){return RR(e,pa.ENABLE_TAB_SOUNDS,mx.enableTabSounds)}function B6n(e){return Q2(yS,pa.ALLOW_TAB_ACCESS_GITIGNORE_FILES,e)}function k
+  [Match 6 at 11913226]:
+    Import={value:T2t(t)},r.disableHighlightAfterAccept={value:D2t(t)},r.useClipboardForCompletions={value:_2t(t)},r.autocompleteSpeed={value:w2t(t)},r.isSnoozed={value:_6n(t)},r.enableTabSounds={value:w6n(t)};break}case"uss-agentManagerWindow":{r.width={value:tes(t),description:"Window width"},r.height={valu
+  [Match 7 at 12039677]:
+    rn{allowTabAccessGitignoreFiles:V2t(e),autocompleteSpeed:w2t(e),disableHighlightAfterAccept:D2t(e),disableTabToImport:T2t(e),enableTabSounds:w6n(e),isSnoozed:_6n(e),tabEnabled:I2t(e),tabToJump:x2t(e),useClipboardForCompletions:_2t(e)}}function iis(e){const t=ku(e,"uss-tabPreferences"),r=_u(t,ais),n=a=>{sw
+  [Match 8 at 12040256]:
+    se"setDisableTabToImport":e.pushUpdate(G6n(a.disableTabToImport));break;case"setEnableTabSounds":e.pushUpdate(Bqi(a.enableTabSounds));break;case"setIsSnoozed":e.pushUpdate(kqi(a.isSnoozed));break;case"setTabEnabled":e.pushUpdate(k6n(a.tabEnabled));break;case"setTabToJump":e.pushUpdate(U6n(a.tabToJump));br
+  [Match 9 at 12040286]:
+    shUpdate(G6n(a.disableTabToImport));break;case"setEnableTabSounds":e.pushUpdate(Bqi(a.enableTabSounds));break;case"setIsSnoozed":e.pushUpdate(kqi(a.isSnoozed));break;case"setTabEnabled":e.pushUpdate(k6n(a.tabEnabled));break;case"setTabToJump":e.pushUpdate(U6n(a.tabToJump));break;case"setUseClipboardForCom
+  [Match 10 at 12046516]:
+    T:{id:"antigravity.terminalCommand.reject"},SNOOZE_COMPLETIONS:{id:"antigravity.snoozeAutocomplete"},CANCEL_SNOOZE_COMPLETIONS:{id:"antigravity.cancelSnoozeAutocomplete"},DISABLE_AUTOCOMPLETE:{id:"antigravity.disableAutocomplete"},ENABLE_AUTOCOMPLETE:{id:"antigravity.enableAutocomplete"},DEV_UPDATE_DOC_AN
+  [Match 11 at 12264405]:
+    Fe("copilot-success",60494),chatSparkle:Fe("chat-sparkle",60495),searchSparkle:Fe("search-sparkle",60496),editSparkle:Fe("edit-sparkle",60497),copilotSnooze:Fe("copilot-snooze",60498),sendToRemoteAgent:Fe("send-to-remote-agent",60499),commentDiscussionSparkle:Fe("comment-discussion-sparkle",60500),chatSpa
+- "Start": found 935 times
+  [Match 1 at 62452]:
+    t===void 0?BOt:ph(t);function o(u){var d,f=(u=bUe(u)).length,g,b=!1,y;for(n==null&&(i=a(y=s())),d=0;d<=f;++d)!(d<f&&r(g=u[d],d,u))===b&&((b=!b)?i.lineStart():i.lineEnd()),b&&i.point(+e(g,d,u),+t(g,d,u));if(y)return i=null,y+""||null}return A(o,"line"),o.x=function(u){return arguments.length?(e=typeof u==
+  [Match 2 at 83804]:
+    his.$D,Se="set"+(this.$u?"UTC":"");switch(q){case y:return ee?re(1,0):re(31,11);case g:return ee?re(1,ge):re(0,ge+1);case f:var Ye=this.$locale().weekStart||0,Je=(ie<Ye?ie+7:ie)-Ye;return re(ee?fe-Je:fe+(6-Je),ge);case d:case F:return ae(Se+"Hours",0);case u:return ae(Se+"Minutes",1);case o:return ae(Se+
+  [Match 3 at 110246]:
+    r}Z`}toString(){return this._}},A(NOt,"path"),NOt.prototype=xde.prototype,A(mUe,"withPath"),A(VOt,"arcInnerRadius"),A(IOt,"arcOuterRadius"),A(xOt,"arcStartAngle"),A(TOt,"arcEndAngle"),A(DOt,"arcPadAngle"),A(_Ot,"intersect"),A(UQ,"cornerTangents"),A(ND,"default"),A(EUe,"Linear"),EUe.prototype={areaStart:A
+  [Match 4 at 110394]:
+    rcStartAngle"),A(TOt,"arcEndAngle"),A(DOt,"arcPadAngle"),A(_Ot,"intersect"),A(UQ,"cornerTangents"),A(ND,"default"),A(EUe,"Linear"),EUe.prototype={areaStart:A(function(){this._line=0},"areaStart"),areaEnd:A(function(){this._line=NaN},"areaEnd"),lineStart:A(function(){this._point=0},"lineStart"),lineEnd:A(
+  [Match 5 at 110432]:
+    DOt,"arcPadAngle"),A(_Ot,"intersect"),A(UQ,"cornerTangents"),A(ND,"default"),A(EUe,"Linear"),EUe.prototype={areaStart:A(function(){this._line=0},"areaStart"),areaEnd:A(function(){this._line=NaN},"areaEnd"),lineStart:A(function(){this._point=0},"lineStart"),lineEnd:A(function(){(this._line||this._line!==0
+  [Match 6 at 110492]:
+    ,A(ND,"default"),A(EUe,"Linear"),EUe.prototype={areaStart:A(function(){this._line=0},"areaStart"),areaEnd:A(function(){this._line=NaN},"areaEnd"),lineStart:A(function(){this._point=0},"lineStart"),lineEnd:A(function(){(this._line||this._line!==0&&this._point===1)&&this._context.closePath(),this._line=1-t
+  [Match 7 at 110531]:
+    ototype={areaStart:A(function(){this._line=0},"areaStart"),areaEnd:A(function(){this._line=NaN},"areaEnd"),lineStart:A(function(){this._point=0},"lineStart"),lineEnd:A(function(){(this._line||this._line!==0&&this._point===1)&&this._context.closePath(),this._line=1-this._line},"lineEnd"),point:A(function(
+  [Match 8 at 111111]:
+    y"),A(zU,"default"),A(kOt,"default"),A(UOt,"default"),A(GOt,"default"),CGe=class{static{A(this,"Bump")}constructor(e,t){this._context=e,this._x=t}areaStart(){this._line=0}areaEnd(){this._line=NaN}lineStart(){this._point=0}lineEnd(){(this._line||this._line!==0&&this._point===1)&&this._context.closePath(),
+  [Match 9 at 111161]:
+    t"),A(GOt,"default"),CGe=class{static{A(this,"Bump")}constructor(e,t){this._context=e,this._x=t}areaStart(){this._line=0}areaEnd(){this._line=NaN}lineStart(){this._point=0}lineEnd(){(this._line||this._line!==0&&this._point===1)&&this._context.closePath(),this._line=1-this._line}point(e,t){switch(e=+e,t=+
+  [Match 10 at 111721]:
+    x0,this._y0=(this._y0+t)/2,e,this._y0,e,t);break}}this._x0=e,this._y0=t}},A(RUe,"bumpX"),A(yUe,"bumpY"),A(ZQ,"point"),A(LQ,"Basis"),LQ.prototype={areaStart:A(function(){this._line=0},"areaStart"),areaEnd:A(function(){this._line=NaN},"areaEnd"),lineStart:A(function(){this._x0=this._x1=this._y0=this._y1=Na
+  ... and 925 more matches omitted
+
+================ SEARCH IN workbench.desktop.main.js.bak ================
+- "Back to Agent": found 1 times
+  [Match 1 at 14966615]:
+    ",onClick:()=>{v(jre("conversation"))},children:[R(URo,{className:"relative h-3 w-3 flex-none transition-[transform] group-hover:-translate-x-0.5"}),"Back to Agent"]}):R(tn,{children:[r==="Cider"&&l&&R("button",{onClick:()=>{s(l)},"data-tooltip-id":g,className:"group flex cursor-pointer items-center gap-1 text-x
+- "Customize Agent to get a better, more personalized experience.": found 1 times
+  [Match 1 at 14379007]:
+     gap-y-3 px-4",children:[R("div",{className:"mb-0.5 mt-2 text-lg font-medium",children:"Customizations"}),R("span",{className:"opacity-60",children:["Customize Agent to get a better, more personalized experience.",s.customLinks?.docsRules&&R(tn,{children:[" ",R("a",{className:"opacity-60 hover:opacity-100 !underline",href:s.customLinks.docsRules,target:"_blank
+- "Rules help guide the behavior of Agent.": found 1 times
+  [Match 1 at 14374561]:
+    ity-90",children:[R(wat,{className:"h-3 w-3"}),R("span",{children:"Workspace"})]})]})]}),R("div",{className:"text-sm text-muted-foreground",children:"Rules help guide the behavior of Agent."}),R("div",{className:"flex flex-col",children:u.length>0&&R("div",{className:"mb-2 flex flex-col",children:u.map((v,b)=>R(yEu,{memory:v,workspaceInf
+- "Workflows are saved prompts that Agent can follow. To trigger a workflow, type "/" in Agent.": found 1 times
+  [Match 1 at 14378084]:
+    pacity-90",children:[R(Phn,{className:"h-3 w-3"}),R("span",{children:"Workspace"})]})]}),R("div",{className:"text-sm text-muted-foreground",children:'Workflows are saved prompts that Agent can follow. To trigger a workflow, type "/" in Agent.'}),R("div",{className:"flex flex-col",children:e.length>0&&R("div",{className:"mb-2 flex flex-col",children:e.map(l=>R(_Eu,{workflow:l,workspaceInfo:
+- "Workflows": found 23 times
+  [Match 1 at 5520545]:
+    ,globalMemoriesPathSegments:["GEMINI.md"],localRulesFilePathSegments:[".agents","rules"],alternateLocalRulesFilePathSegments:[".agent","rules"],globalWorkflowsPathSegments:["global_workflows"],localWorkflowsPathSegments:[".agents","workflows"],alternateLocalWorkflowsPathSegments:[".agent","workflows"],artifa
+  [Match 2 at 5520593]:
+    ulesFilePathSegments:[".agents","rules"],alternateLocalRulesFilePathSegments:[".agent","rules"],globalWorkflowsPathSegments:["global_workflows"],localWorkflowsPathSegments:[".agents","workflows"],alternateLocalWorkflowsPathSegments:[".agent","workflows"],artifactsDirPathSegments:kks,agentModeInputUriScheme:"
+  [Match 3 at 5520653]:
+    FilePathSegments:[".agent","rules"],globalWorkflowsPathSegments:["global_workflows"],localWorkflowsPathSegments:[".agents","workflows"],alternateLocalWorkflowsPathSegments:[".agent","workflows"],artifactsDirPathSegments:kks,agentModeInputUriScheme:"jetskiAgentInput",knowledgeItemsPathSegments:Nks,pluginsPath
+  [Match 4 at 12815870]:
+    on;enableAgentStateDebugBuffer;enableRpcDebugBuffer;tipCards;hideRemoteWorkspaceOption;agentScriptsFeature;ciderDeepLinkConfig;customAuxPanes;supportsWorkflows;supportsImageDragDrop;worktreeEnabled;battleModeFeature;enableBuildWithGooglePlugins;progressIndicator;sidePanelConnectionStatusFeature;supportsWorks
+  [Match 5 at 13084682]:
+    eenRecording:async k=>r(V=>V.handleScreenRecording(k)),getUserMemories:async()=>r(async k=>(await k.getUserMemories(Wt(zZc,{})))?.memories??[]),getAllWorkflows:async k=>r(async V=>(await V.getAllWorkflows(Wt(nXc,{workspaceUris:k}),{timeoutMs:YAo}))?.workflows??[]),getSlashCommands:async k=>r(async V=>(await 
+  [Match 6 at 13084727]:
+    rding(k)),getUserMemories:async()=>r(async k=>(await k.getUserMemories(Wt(zZc,{})))?.memories??[]),getAllWorkflows:async k=>r(async V=>(await V.getAllWorkflows(Wt(nXc,{workspaceUris:k}),{timeoutMs:YAo}))?.workflows??[]),getSlashCommands:async k=>r(async V=>(await V.getSlashCommands(Wt(xZc,k)))?.commands||[])
+  [Match 7 at 13091677]:
+    nction xf(){return vcn().editor.workbenchServiceProvider}var JQc={state:{userMemories:[],workflows:[],userRules:[]},events:{setUserMemories:()=>{},setWorkflows:()=>{},setUserRules:()=>{},refreshUserMemories:()=>Promise.resolve(),refreshWorkflows:()=>Promise.resolve(),copyBuiltinWorkflowToWorkspace:()=>Promis
+  [Match 8 at 13091763]:
+    [],workflows:[],userRules:[]},events:{setUserMemories:()=>{},setWorkflows:()=>{},setUserRules:()=>{},refreshUserMemories:()=>Promise.resolve(),refreshWorkflows:()=>Promise.resolve(),copyBuiltinWorkflowToWorkspace:()=>Promise.resolve(void 0),refreshUserRules:()=>Promise.resolve()}},HAo=da(JQc),KQc=({children:
+  [Match 9 at 13092000]:
+     0),refreshUserRules:()=>Promise.resolve()}},HAo=da(JQc),KQc=({children:t,rulesChangedEvent:e,workflowsChangedEvent:i})=>{let{getUserMemories:n,getAllWorkflows:r,getAllRules:s,copyBuiltinWorkflowToWorkspace:o}=Id(),{workspaceInfoProvider:a}=xf(),l=Wa(a),u=mt(()=>l.workspaceUris.map(T=>F1(T)),[l.workspaceUris
+  [Match 10 at 13092747]:
+    ,i]),Yt(()=>{S()},[S]),Yt(()=>{x()},[x]),Yt(()=>{E()},[E]);let F=mt(()=>({state:{userMemories:d,workflows:f,userRules:v},events:{setUserMemories:h,setWorkflows:g,setUserRules:b,refreshUserMemories:E,refreshWorkflows:S,copyBuiltinWorkflowToWorkspace:A,refreshUserRules:x}}),[d,f,v,h,g,b,E,S,A,x]);return R(HAo.
+  ... and 13 more matches omitted
+- "Advanced Settings": found 1 times
+  [Match 1 at 25902775]:
+    eateSettingsPageEntryPoint(e){const i=At("div.setting-row",[At("div.setting-label.advanced-settings",[At("span@label")])]),{label:n}=i;n.textContent="Advanced Settings",this._register(Ne(n,"click",()=>{this._commandService.executeCommand(N$t),this._antigravityStatusBarSettingsService.hidePanel()})),e.appendChild(i.r
+- "Open Command": found 4 times
+  [Match 1 at 13189064]:
+    ,Xeu={id:"openCommandPalette",label:"File Picker",icon:"search",keybindings:{binding:{mod:!0,key:"p"}}},_Io={id:"openCommandPaletteWithPrefix",label:"Open Command Palette",icon:"manage_search",keybindings:{binding:{mod:!0,shift:!0,key:"p"}}},Yeu={id:"openConvoPicker",label:"Open Conversation Picker",icon:"chat"
+  [Match 2 at 26919883]:
+    isGcpTos===null||this._isGcpTos===!0}getKeybindingSettings(){const e=[];return this._shouldHideCommand()||e.push({commandId:If.COMMAND_OPEN.id,label:"Open Command",description:["Open Command"],category:U3.SHORTCUTS}),e.push({commandId:Qz.TOGGLE_CHAT_FOCUS,label:"Open Agent",description:["Open Agent"],category:U
+  [Match 3 at 26919911]:
+    Tos===!0}getKeybindingSettings(){const e=[];return this._shouldHideCommand()||e.push({commandId:If.COMMAND_OPEN.id,label:"Open Command",description:["Open Command"],category:U3.SHORTCUTS}),e.push({commandId:Qz.TOGGLE_CHAT_FOCUS,label:"Open Agent",description:["Open Agent"],category:U3.SHORTCUTS}),e}_getSettings
+  [Match 4 at 27213259]:
+    ltPrefix",uPa="window.commandCenterSeedWithSelection",yoh=class extends xe{constructor(){super({id:"workbench.action.openCommandCenterDefault",title:"Open Command Center Default",menu:{id:$.CommandCenterCenter,order:100},keybinding:{primary:3108,weight:400},precondition:H.and(xIe,H.not(lxn.key))})}getSelectedTe
+- "Open Agent": found 7 times
+  [Match 1 at 13941377]:
+    ackground if Agent creates or edits them",settingType:"switch"}],[Mo.DISABLE_OPEN_CASCADE_ON_RELOAD,{isProviderSetting:!0,screen:"Permissions",label:"Open Agent on Reload",description:"Open Agent panel on window reload",settingType:"switch"}],[Mo.VERBOSE_AGENT_CHAT,{isProviderSetting:!0,screen:"Appearance",la
+  [Match 2 at 13941412]:
+     them",settingType:"switch"}],[Mo.DISABLE_OPEN_CASCADE_ON_RELOAD,{isProviderSetting:!0,screen:"Permissions",label:"Open Agent on Reload",description:"Open Agent panel on window reload",settingType:"switch"}],[Mo.VERBOSE_AGENT_CHAT,{isProviderSetting:!0,screen:"Appearance",label:"Verbose agent chat",descriptio
+  [Match 3 at 20597423]:
+    put.openModelPicker())}},H0d=class XWa extends xe{static{this.ID="workbench.action.chat.openModePicker"}constructor(){super({id:XWa.ID,title:te(5366,"Open Agent Picker"),tooltip:p(5359,null),category:Hg,f1:!1,precondition:Yi.enabled,keybinding:{when:H.and(Yi.inChatInput,Yi.location.isEqualTo(Hs.Chat)),primary
+  [Match 4 at 26919996]:
+    {commandId:If.COMMAND_OPEN.id,label:"Open Command",description:["Open Command"],category:U3.SHORTCUTS}),e.push({commandId:Qz.TOGGLE_CHAT_FOCUS,label:"Open Agent",description:["Open Agent"],category:U3.SHORTCUTS}),e}_getSettingsItems(){const e=[{isUssSetting:!0,label:"Tab Speed",type:E1e.Enum,description:["Set
+  [Match 5 at 26920022]:
+    .id,label:"Open Command",description:["Open Command"],category:U3.SHORTCUTS}),e.push({commandId:Qz.TOGGLE_CHAT_FOCUS,label:"Open Agent",description:["Open Agent"],category:U3.SHORTCUTS}),e}_getSettingsItems(){const e=[{isUssSetting:!0,label:"Tab Speed",type:E1e.Enum,description:["Set the speed of tab suggesti
+  [Match 6 at 26920793]:
+    0},{label:E2.ON,value:!1}],category:U3.CASCADE_CONFIGURATION,resolveTopicToValue:i=>!j3a(i),generateSettingUpdate:i=>J3a(!i)},{isUssSetting:!0,label:"Open Agent on Reload",type:E1e.Boolean,description:["Open Agent panel on window reload"],topic:"uss-agentPreferences",options:[{label:E2.OFF,value:!0},{label:E2
+  [Match 7 at 26920846]:
+    URATION,resolveTopicToValue:i=>!j3a(i),generateSettingUpdate:i=>J3a(!i)},{isUssSetting:!0,label:"Open Agent on Reload",type:E1e.Boolean,description:["Open Agent panel on window reload"],topic:"uss-agentPreferences",options:[{label:E2.OFF,value:!0},{label:E2.ON,value:!1}],category:U3.CASCADE_CONFIGURATION,reso
+- "View all Antigravity IDE shortcuts": found 0 times
+- "View all": found 1 times
+  [Match 1 at 25906195]:
+    ",[At("div.setting-label@resetAll")])]),i=At("div.keybinding-rows@keybindingRows"),{resetAll:n,viewAll:r}=e;n.textContent=p(5021,null),r.textContent=`View all ${this.productService.nameShort} shortcuts`,this._register(Ne(n,"click",()=>this.resetKeybindings())),this._register(Ne(r,"click",()=>this.viewAllSho
+- "Reset to default shortcuts": found 0 times
+- "Background Process": found 3 times
+  [Match 1 at 14404033]:
+    },children:R(zio,{size:16})}),R(cs,{id:`${iMo}-${i}`,children:R("span",{children:"Cancel task"})})]})]},i))}),QEu=()=>{let t=KEu(),e=t.length,i=`${e} Background Process${e===1?"":"es"} Running`;return{id:"terminal",icon:n=>R(q4e,{icon:R(UEc,{className:"h-4 w-4 stroke-1 opacity-60"}),showNotification:n==="home"&&e>0})
+  [Match 2 at 24492025]:
+    ode.js, and other executables","- Install modules via Install-Module, Install-Package","- Use Get-Command to verify cmdlet/function availability","","Background Processes:","- For long-running tasks (e.g., servers), set isBackground=true","- Returns a terminal ID for checking status and runtime later","- Use Start-Jo
+  [Match 3 at 24493550]:
+    n, Node.js, and other executables - Install packages via package managers (brew, apt, etc.) - Use which or command -v to verify command availability  Background Processes: - For long-running tasks (e.g., servers), set isBackground=true - Returns a terminal ID for checking status and runtime later  Output Management: 
+- "Background Processes": found 2 times
+  [Match 1 at 24492025]:
+    ode.js, and other executables","- Install modules via Install-Module, Install-Package","- Use Get-Command to verify cmdlet/function availability","","Background Processes:","- For long-running tasks (e.g., servers), set isBackground=true","- Returns a terminal ID for checking status and runtime later","- Use Start-Job 
+  [Match 2 at 24493550]:
+    n, Node.js, and other executables - Install packages via package managers (brew, apt, etc.) - Use which or command -v to verify command availability  Background Processes: - For long-running tasks (e.g., servers), set isBackground=true - Returns a terminal ID for checking status and runtime later  Output Management: - 
+- "Last Updated": found 2 times
+  [Match 1 at 14392231]:
+    dren:[R("span",{children:"Artifact Name"}),R(WRo,{"data-tooltip-id":e,className:"h-3 w-3"})]}),R("p",{className:"grow-0 text-xs opacity-60",children:"Last Updated"})]}),i.map((r,s)=>R(VC,{fileUri:r.artifactAbsoluteUri},`${r.artifactAbsoluteUri}-${s}`))]}):R("div",{children:R("p",{className:"px-2 py-1 text-xs op
+  [Match 2 at 14644509]:
+    ("div",{className:"px-2 pb-1 text-xs text-muted-foreground font-medium",children:"Sort Conversations"}),Z({value:"last_updated",currentValue:E,label:"Last Updated",onClick:b}),Z({value:"alphabetical",currentValue:E,label:"Alphabetical (A-Z)",onClick:b}),Z({value:"date_added",currentValue:E,label:"Date Added",on
+- "help perform longer running": found 1 times
+  [Match 1 at 14392705]:
+    cs,{id:e,place:"top",children:R("div",{className:"max-w-[400px] p-1 text-sm",children:"Artifacts are files the agent creates during a conversation to help perform longer running tasks and allow the user to provide high-level feedback. Click to open in editor."})})}},WEu=()=>{let{activePages:{pages:t,isLoading:e,error:i,refetc
+- "0 pages": found 0 times
+- "Launch": found 323 times
+  [Match 1 at 3011460]:
+    sep:Nb.sep,$ah=k6?hA.delimiter:Nb.delimiter,qah=new Set([tit.CANCELED,tit.ERROR,tit.INTERRUPTED]),mZ=(t=>(t.Manager="Manager",t.Settings="Settings",t.Launchpad="Launchpad",t.StateSyncDebugView="StateSyncDebugView",t.TrajectoryDebugView="TrajectoryDebugView",t.LsOutputDebugView="LsOutputDebugView",t))(mZ||
+  [Match 2 at 3011471]:
+    $ah=k6?hA.delimiter:Nb.delimiter,qah=new Set([tit.CANCELED,tit.ERROR,tit.INTERRUPTED]),mZ=(t=>(t.Manager="Manager",t.Settings="Settings",t.Launchpad="Launchpad",t.StateSyncDebugView="StateSyncDebugView",t.TrajectoryDebugView="TrajectoryDebugView",t.LsOutputDebugView="LsOutputDebugView",t))(mZ||{}),Vb=(t=>
+  [Match 3 at 3099743]:
+    xt=124]="MediaTrackNext",t[t.MediaTrackPrevious=125]="MediaTrackPrevious",t[t.MediaStop=126]="MediaStop",t[t.MediaPlayPause=127]="MediaPlayPause",t[t.LaunchMediaPlayer=128]="LaunchMediaPlayer",t[t.LaunchMail=129]="LaunchMail",t[t.LaunchApp2=130]="LaunchApp2",t[t.Clear=131]="Clear",t[t.MAX_VALUE=132]="MAX_
+  [Match 4 at 3099767]:
+    ,t[t.MediaTrackPrevious=125]="MediaTrackPrevious",t[t.MediaStop=126]="MediaStop",t[t.MediaPlayPause=127]="MediaPlayPause",t[t.LaunchMediaPlayer=128]="LaunchMediaPlayer",t[t.LaunchMail=129]="LaunchMail",t[t.LaunchApp2=130]="LaunchApp2",t[t.Clear=131]="Clear",t[t.MAX_VALUE=132]="MAX_VALUE"})(NNs||(NNs={}));
+  [Match 5 at 3099790]:
+    =125]="MediaTrackPrevious",t[t.MediaStop=126]="MediaStop",t[t.MediaPlayPause=127]="MediaPlayPause",t[t.LaunchMediaPlayer=128]="LaunchMediaPlayer",t[t.LaunchMail=129]="LaunchMail",t[t.LaunchApp2=130]="LaunchApp2",t[t.Clear=131]="Clear",t[t.MAX_VALUE=132]="MAX_VALUE"})(NNs||(NNs={}));var VNs;(function(t){t[
+  [Match 6 at 3099807]:
+    Previous",t[t.MediaStop=126]="MediaStop",t[t.MediaPlayPause=127]="MediaPlayPause",t[t.LaunchMediaPlayer=128]="LaunchMediaPlayer",t[t.LaunchMail=129]="LaunchMail",t[t.LaunchApp2=130]="LaunchApp2",t[t.Clear=131]="Clear",t[t.MAX_VALUE=132]="MAX_VALUE"})(NNs||(NNs={}));var VNs;(function(t){t[t.DependsOnKbLayo
+  [Match 7 at 3099823]:
+    diaStop=126]="MediaStop",t[t.MediaPlayPause=127]="MediaPlayPause",t[t.LaunchMediaPlayer=128]="LaunchMediaPlayer",t[t.LaunchMail=129]="LaunchMail",t[t.LaunchApp2=130]="LaunchApp2",t[t.Clear=131]="Clear",t[t.MAX_VALUE=132]="MAX_VALUE"})(NNs||(NNs={}));var VNs;(function(t){t[t.DependsOnKbLayout=-1]="DependsO
+  [Match 8 at 3099840]:
+    iaStop",t[t.MediaPlayPause=127]="MediaPlayPause",t[t.LaunchMediaPlayer=128]="LaunchMediaPlayer",t[t.LaunchMail=129]="LaunchMail",t[t.LaunchApp2=130]="LaunchApp2",t[t.Clear=131]="Clear",t[t.MAX_VALUE=132]="MAX_VALUE"})(NNs||(NNs={}));var VNs;(function(t){t[t.DependsOnKbLayout=-1]="DependsOnKbLayout",t[t.No
+  [Match 9 at 3104647]:
+    aTrackPrevious",t[t.MediaStop=173]="MediaStop",t[t.Eject=174]="Eject",t[t.MediaPlayPause=175]="MediaPlayPause",t[t.MediaSelect=176]="MediaSelect",t[t.LaunchMail=177]="LaunchMail",t[t.LaunchApp2=178]="LaunchApp2",t[t.LaunchApp1=179]="LaunchApp1",t[t.SelectTask=180]="SelectTask",t[t.LaunchScreenSaver=181]="
+  [Match 10 at 3104664]:
+    [t.MediaStop=173]="MediaStop",t[t.Eject=174]="Eject",t[t.MediaPlayPause=175]="MediaPlayPause",t[t.MediaSelect=176]="MediaSelect",t[t.LaunchMail=177]="LaunchMail",t[t.LaunchApp2=178]="LaunchApp2",t[t.LaunchApp1=179]="LaunchApp1",t[t.SelectTask=180]="SelectTask",t[t.LaunchScreenSaver=181]="LaunchScreenSaver
+  ... and 313 more matches omitted
+- "Browser": found 497 times
+  [Match 1 at 2976024]:
+    y:s})}},LLl=new VLl;function PLl(t){return`${t.quality??"oss"}-${t.commit??"dev"}`}var MLl="vscode-app",OLl=class cvi{static FALLBACK_AUTHORITY=MLl;asBrowserUri(e){const i=this.toUri(e);return this.uriToBrowserUri(i)}uriToBrowserUri(e){return e.scheme===ux.vscodeRemote?LLl.rewrite(e):e.scheme===ux.file&&(H
+  [Match 2 at 2976077]:
+    y??"oss"}-${t.commit??"dev"}`}var MLl="vscode-app",OLl=class cvi{static FALLBACK_AUTHORITY=MLl;asBrowserUri(e){const i=this.toUri(e);return this.uriToBrowserUri(i)}uriToBrowserUri(e){return e.scheme===ux.vscodeRemote?LLl.rewrite(e):e.scheme===ux.file&&(HVl||KVl===`${ux.vscodeFileResource}://${cvi.FALLBACK_
+  [Match 3 at 2976096]:
+    t??"dev"}`}var MLl="vscode-app",OLl=class cvi{static FALLBACK_AUTHORITY=MLl;asBrowserUri(e){const i=this.toUri(e);return this.uriToBrowserUri(i)}uriToBrowserUri(e){return e.scheme===ux.vscodeRemote?LLl.rewrite(e):e.scheme===ux.file&&(HVl||KVl===`${ux.vscodeFileResource}://${cvi.FALLBACK_AUTHORITY}`)?e.with
+  [Match 4 at 3013672]:
+    ,a5.assign)({errorMessage:({event:t})=>t.type==="SET_ERROR"?t.message:""}),setGcpTos:(0,a5.assign)({isGcpTos:({event:t})=>t.type==="GCP_SIGN_IN"}),setBrowserOpenFailed:(0,a5.assign)({browserOpenFailed:!0})},guards:{hasProject:({event:t})=>t.type==="SUBMIT_PROJECT"?t.project.trim().length>0:!1,hasToken:({ev
+  [Match 5 at 3014167]:
+    "},SET_INELIGIBLE:{target:".loginError",actions:"setIneligible"},SET_ERROR:{target:".loginError",actions:"setError"},BROWSER_OPEN_FAILED:{actions:"setBrowserOpenFailed"}},states:{uninitialized:{on:{INITIALIZE:[{target:"validatingLogin",guard:"hasToken",actions:(0,a5.assign)({isGcpTos:({event:t})=>t.type===
+  [Match 6 at 3026593]:
+    Files",ALLOW_AGENT_ACCESS_NON_WORKSPACE_FILES:"allowAgentAccessNonWorkspaceFiles",ARTIFACT_REVIEW_MODE:"artifactReviewMode",AGENT_BROWSER_TOOLS:"agentBrowserTools",BROWSER_JS_EXECUTION_POLICY:"browserJsExecutionPolicy",BROWSER_CHROME_PATH:"browserChromePath",BROWSER_USER_PROFILE_PATH:"browserUserProfilePat
+  [Match 7 at 3099431]:
+    NT_C2=116]="ABNT_C2",t[t.AudioVolumeMute=117]="AudioVolumeMute",t[t.AudioVolumeUp=118]="AudioVolumeUp",t[t.AudioVolumeDown=119]="AudioVolumeDown",t[t.BrowserSearch=120]="BrowserSearch",t[t.BrowserHome=121]="BrowserHome",t[t.BrowserBack=122]="BrowserBack",t[t.BrowserForward=123]="BrowserForward",t[t.MediaTr
+  [Match 8 at 3099451]:
+    ,t[t.AudioVolumeMute=117]="AudioVolumeMute",t[t.AudioVolumeUp=118]="AudioVolumeUp",t[t.AudioVolumeDown=119]="AudioVolumeDown",t[t.BrowserSearch=120]="BrowserSearch",t[t.BrowserHome=121]="BrowserHome",t[t.BrowserBack=122]="BrowserBack",t[t.BrowserForward=123]="BrowserForward",t[t.MediaTrackNext=124]="MediaT
+  [Match 9 at 3099470]:
+    e=117]="AudioVolumeMute",t[t.AudioVolumeUp=118]="AudioVolumeUp",t[t.AudioVolumeDown=119]="AudioVolumeDown",t[t.BrowserSearch=120]="BrowserSearch",t[t.BrowserHome=121]="BrowserHome",t[t.BrowserBack=122]="BrowserBack",t[t.BrowserForward=123]="BrowserForward",t[t.MediaTrackNext=124]="MediaTrackNext",t[t.Media
+  [Match 10 at 3099488]:
+    eMute",t[t.AudioVolumeUp=118]="AudioVolumeUp",t[t.AudioVolumeDown=119]="AudioVolumeDown",t[t.BrowserSearch=120]="BrowserSearch",t[t.BrowserHome=121]="BrowserHome",t[t.BrowserBack=122]="BrowserBack",t[t.BrowserForward=123]="BrowserForward",t[t.MediaTrackNext=124]="MediaTrackNext",t[t.MediaTrackPrevious=125]
+  ... and 487 more matches omitted
+- "Snooze": found 44 times
+  [Match 1 at 3026976]:
+    SCADE_ALLOWED_COMMANDS:"cascadeAllowedCommands",CASCADE_DENIED_COMMANDS:"cascadeDeniedCommands",SECURE_MODE_ENABLED:"secureModeEnabled",IS_SNOOZED:"isSnoozed",AUTOCOMPLETE_SPEED:"autocompleteSpeed",ENABLE_TAB_SOUNDS:"enableTabSounds",ALLOW_TAB_ACCESS_GITIGNORE_FILES:"allowTabAccessGitignoreFiles",TAB_ENAB
+  [Match 2 at 3353637]:
+    je("copilot-success",60494),chatSparkle:je("chat-sparkle",60495),searchSparkle:je("search-sparkle",60496),editSparkle:je("edit-sparkle",60497),copilotSnooze:je("copilot-snooze",60498),sendToRemoteAgent:je("send-to-remote-agent",60499),commentDiscussionSparkle:je("comment-discussion-sparkle",60500),chatSpa
+  [Match 3 at 5513056]:
+    T:{id:"antigravity.terminalCommand.reject"},SNOOZE_COMPLETIONS:{id:"antigravity.snoozeAutocomplete"},CANCEL_SNOOZE_COMPLETIONS:{id:"antigravity.cancelSnoozeAutocomplete"},DISABLE_AUTOCOMPLETE:{id:"antigravity.disableAutocomplete"},ENABLE_AUTOCOMPLETE:{id:"antigravity.enableAutocomplete"},DEV_UPDATE_DOC_AN
+  [Match 4 at 7082129]:
+     n=w$s.bindTo(this._contextKeyService);this._register(this.onDidChangeIsSnoozing(()=>n.set(this.isSnoozing())))}snooze(e=Pin.SNOOZE_DURATION){this.setSnoozeDuration(e+this.snoozeTimeLeft)}setSnoozeDuration(e){if(e<0)throw new eo(`Invalid snooze duration: ${e}. Duration must be non-negative.`);if(e===0){th
+  [Match 5 at 7082170]:
+    is._register(this.onDidChangeIsSnoozing(()=>n.set(this.isSnoozing())))}snooze(e=Pin.SNOOZE_DURATION){this.setSnoozeDuration(e+this.snoozeTimeLeft)}setSnoozeDuration(e){if(e<0)throw new eo(`Invalid snooze duration: ${e}. Duration must be non-negative.`);if(e===0){this.cancelSnooze();return}const i=this.isS
+  [Match 6 at 7082294]:
+    e+this.snoozeTimeLeft)}setSnoozeDuration(e){if(e<0)throw new eo(`Invalid snooze duration: ${e}. Duration must be non-negative.`);if(e===0){this.cancelSnooze();return}const i=this.isSnoozing(),n=this.snoozeTimeLeft;this._snoozeTimeEnd=Date.now()+e,i||this._onDidChangeIsSnoozing.fire(!0),this._timer.cancelA
+  [Match 7 at 7082539]:
+    e,i||this._onDidChangeIsSnoozing.fire(!0),this._timer.cancelAndSet(()=>{if(!this.isSnoozing())this._onDidChangeIsSnoozing.fire(!1);else throw new eo("Snooze timer did not fire as expected")},this.snoozeTimeLeft+1),this._reportSnooze(e-n,e)}isSnoozing(){return this.snoozeTimeLeft>0}cancelSnooze(){this.isSn
+  [Match 8 at 7082615]:
+    this.isSnoozing())this._onDidChangeIsSnoozing.fire(!1);else throw new eo("Snooze timer did not fire as expected")},this.snoozeTimeLeft+1),this._reportSnooze(e-n,e)}isSnoozing(){return this.snoozeTimeLeft>0}cancelSnooze(){this.isSnoozing()&&(this._reportSnooze(-this.snoozeTimeLeft,0),this._snoozeTimeEnd=vo
+  [Match 9 at 7082677]:
+    row new eo("Snooze timer did not fire as expected")},this.snoozeTimeLeft+1),this._reportSnooze(e-n,e)}isSnoozing(){return this.snoozeTimeLeft>0}cancelSnooze(){this.isSnoozing()&&(this._reportSnooze(-this.snoozeTimeLeft,0),this._snoozeTimeEnd=void 0,this._timer.cancel(),this._onDidChangeIsSnoozing.fire(!1)
+  [Match 10 at 7082718]:
+    expected")},this.snoozeTimeLeft+1),this._reportSnooze(e-n,e)}isSnoozing(){return this.snoozeTimeLeft>0}cancelSnooze(){this.isSnoozing()&&(this._reportSnooze(-this.snoozeTimeLeft,0),this._snoozeTimeEnd=void 0,this._timer.cancel(),this._onDidChangeIsSnoozing.fire(!1))}reportNewCompletion(e){this._lastComple
+  ... and 34 more matches omitted
+- "Start": found 3252 times
+  [Match 1 at 62680]:
+    e===void 0?i6r:lC(e);function a(l){var u,d=(l=fki(l)).length,h,f=!1,g;for(n==null&&(s=r(g=o())),u=0;u<=d;++u)!(u<d&&i(h=l[u],u,l))===f&&((f=!f)?s.lineStart():s.lineEnd()),f&&s.point(+t(h,u,l),+e(h,u,l));if(g)return s=null,g+""||null}return I(a,"line"),a.x=function(l){return arguments.length?(t=typeof l==
+  [Match 2 at 84185]:
+    is.$D,We="set"+(this.$u?"UTC":"");switch(se){case g:return ne?ce(1,0):ce(31,11);case h:return ne?ce(1,Ee):ce(0,Ee+1);case d:var rt=this.$locale().weekStart||0,ft=(pe<rt?pe+7:pe)-rt;return ce(ne?Ce-ft:Ce+(6-ft),Ee);case u:case v:return he(We+"Hours",0);case l:return he(We+"Minutes",1);case a:return he(We+
+  [Match 3 at 110816]:
+    i}Z`}toString(){return this._}},I(JLr,"path"),JLr.prototype=ixt.prototype,I(dki,"withPath"),I(KLr,"arcInnerRadius"),I(zLr,"arcOuterRadius"),I(QLr,"arcStartAngle"),I($Lr,"arcEndAngle"),I(qLr,"arcPadAngle"),I(e6r,"intersect"),I(Ize,"cornerTangents"),I(iEe,"default"),I(hki,"Linear"),hki.prototype={areaStart
+  [Match 4 at 110966]:
+    StartAngle"),I($Lr,"arcEndAngle"),I(qLr,"arcPadAngle"),I(e6r,"intersect"),I(Ize,"cornerTangents"),I(iEe,"default"),I(hki,"Linear"),hki.prototype={areaStart:I(function(){this._line=0},"areaStart"),areaEnd:I(function(){this._line=NaN},"areaEnd"),lineStart:I(function(){this._point=0},"lineStart"),lineEnd:I(
+  [Match 5 at 111004]:
+    r,"arcPadAngle"),I(e6r,"intersect"),I(Ize,"cornerTangents"),I(iEe,"default"),I(hki,"Linear"),hki.prototype={areaStart:I(function(){this._line=0},"areaStart"),areaEnd:I(function(){this._line=NaN},"areaEnd"),lineStart:I(function(){this._point=0},"lineStart"),lineEnd:I(function(){(this._line||this._line!==0
+  [Match 6 at 111064]:
+    I(iEe,"default"),I(hki,"Linear"),hki.prototype={areaStart:I(function(){this._line=0},"areaStart"),areaEnd:I(function(){this._line=NaN},"areaEnd"),lineStart:I(function(){this._point=0},"lineStart"),lineEnd:I(function(){(this._line||this._line!==0&&this._point===1)&&this._context.closePath(),this._line=1-t
+  [Match 7 at 111103]:
+    ototype={areaStart:I(function(){this._line=0},"areaStart"),areaEnd:I(function(){this._line=NaN},"areaEnd"),lineStart:I(function(){this._point=0},"lineStart"),lineEnd:I(function(){(this._line||this._line!==0&&this._point===1)&&this._context.closePath(),this._line=1-this._line},"lineEnd"),point:I(function(
+  [Match 8 at 111685]:
+    "),I(I9e,"default"),I(n6r,"default"),I(r6r,"default"),I(s6r,"default"),yNi=class{static{I(this,"Bump")}constructor(t,e){this._context=t,this._x=e}areaStart(){this._line=0}areaEnd(){this._line=NaN}lineStart(){this._point=0}lineEnd(){(this._line||this._line!==0&&this._point===1)&&this._context.closePath(),
+  [Match 9 at 111735]:
+    t"),I(s6r,"default"),yNi=class{static{I(this,"Bump")}constructor(t,e){this._context=t,this._x=e}areaStart(){this._line=0}areaEnd(){this._line=NaN}lineStart(){this._point=0}lineEnd(){(this._line||this._line!==0&&this._point===1)&&this._context.closePath(),this._line=1-this._line}point(t,e){switch(t=+t,e=+
+  [Match 10 at 112298]:
+    this._y0=(this._y0+e)/2,t,this._y0,t,e);break}}this._x0=t,this._y0=e}},I(gki,"bumpX"),I(pki,"bumpY"),I(Dze,"point"),I(Fze,"Basis"),Fze.prototype={areaStart:I(function(){this._line=0},"areaStart"),areaEnd:I(function(){this._line=NaN},"areaEnd"),lineStart:I(function(){this._x0=this._x1=this._y0=this._y1=Na
+  ... and 3242 more matches omitted
+
+================ SEARCH IN extension.js.bak ================
+- "Back to Agent": found 0 times
+- "Customize Agent to get a better, more personalized experience.": found 0 times
+- "Rules help guide the behavior of Agent.": found 0 times
+- "Workflows are saved prompts that Agent can follow. To trigger a workflow, type "/" in Agent.": found 0 times
+- "Workflows": found 0 times
+- "Advanced Settings": found 0 times
+- "Open Command": found 0 times
+- "Open Agent": found 0 times
+- "View all Antigravity IDE shortcuts": found 0 times
+- "View all": found 0 times
+- "Reset to default shortcuts": found 0 times
+- "Background Process": found 0 times
+- "Background Processes": found 0 times
+- "Last Updated": found 0 times
+- "help perform longer running": found 0 times
+- "0 pages": found 0 times
+- "Launch": found 7 times
+  [Match 1 at 24920]:
+    (t),writer:new u.IPCMessageWriter(t)})):Promise.resolve({reader:new u.StreamMessageReader(t.stdout),writer:new u.StreamMessageWriter(t.stdin)})):X(t,`Launching server using runtime ${E} failed.`)}if(r===A.pipe)return(0,u.createClientPipeTransport)(d).then(t=>{const n=l.spawn(E,i,c);return n&&n.pid?(this._
+  [Match 2 at 25307]:
+    oString(e))),n.stdout.on("data",t=>this.outputChannel.append(a.string(t)?t:t.toString(e))),t.onConnected().then(e=>({reader:e[0],writer:e[1]}))):X(n,`Launching server using runtime ${E} failed.`)});if(m.isSocket(r))return(0,u.createClientSocketTransport)(r.port).then(t=>{const n=l.spawn(E,i,c);return n&&n
+  [Match 3 at 25706]:
+    oString(e))),n.stdout.on("data",t=>this.outputChannel.append(a.string(t)?t:t.toString(e))),t.onConnected().then(e=>({reader:e[0],writer:e[1]}))):X(n,`Launching server using runtime ${E} failed.`)})}}else if(b.is(s)&&s.command){const t=s,o=void 0!==s.args?s.args.slice(0):[];let i;const r=s.transport;if(r==
+  [Match 4 at 26475]:
+    Process=n,this._isDetached=!!c.detached,Promise.resolve({reader:new u.StreamMessageReader(n.stdout),writer:new u.StreamMessageWriter(n.stdin)})):X(n,`Launching server using command ${t.command} failed.`)}if(r===A.pipe)return(0,u.createClientPipeTransport)(i).then(n=>{const i=l.spawn(t.command,o,c);return 
+  [Match 5 at 26908]:
+    oString(e))),i.stdout.on("data",t=>this.outputChannel.append(a.string(t)?t:t.toString(e))),n.onConnected().then(e=>({reader:e[0],writer:e[1]}))):X(i,`Launching server using command ${t.command} failed.`)});if(m.isSocket(r))return(0,u.createClientSocketTransport)(r.port).then(n=>{const i=l.spawn(t.command,
+  [Match 6 at 27353]:
+    oString(e))),i.stdout.on("data",t=>this.outputChannel.append(a.string(t)?t:t.toString(e))),n.onConnected().then(e=>({reader:e[0],writer:e[1]}))):X(i,`Launching server using command ${t.command} failed.`)})}return Promise.reject(new Error("Unsupported server configuration "+JSON.stringify(r,null,4)))})}_ge
+  [Match 7 at 1772296]:
+    {throw new Error("Not implemented yet...")}async launchBrowser(e){console.log("[Antigravity] Starting browser");try{const t=await o.antigravityBrowserLauncher.launch(e.launchInForeground);return(0,i.v)(E.Mw,{cdpAddress:t??""})}catch(e){const t=e instanceof Error?e.message:String(e);throw new l.T("Failed t
+- "Browser": found 5 times
+  [Match 1 at 258093]:
+    ersion:"3.14.2"}},6380:(e,t,n)=>{n.d(t,{g:()=>i});var o=n(68956);const i=async()=>`http://localhost:${await o.commands.executeCommand("antigravity.getBrowserOnboardingPort")}`},6405:(e,t,n)=>{n.d(t,{e:()=>s});var o,i=n(68956),l=n(83720),r=n(17022);!function(e){e.AutocompleteSnoozed="autocomplete_snoozed",e
+  [Match 2 at 850575]:
+    ands.registerCommand(n.OPEN_BROWSER,async(e,t)=>{const n=(0,s.v)(u.a6$,{url:e??await(0,O.g)()}),o=Date.now();await W.r_.getInstance().client.smartOpenBrowser(n);const i=Date.now();z.I.getInstance().logEvent(E.wn5.BROWSER_OPEN,BigInt(i-o),!1,(0,te.b)({source:t?.source??"command"},"not PII"))})),e.subscripti
+  [Match 3 at 1770455]:
+    fication=X;updateCascadeTrajectorySummaries=X;restartUserStatusUpdater=X;getSecretValue=X;storeSecretValue=X;isAgentManagerEnabled=X;recordError=X;getBrowserOnboardingPort=X;focusIDEWindow=X;showConversationPicker=X;writeCascadeEdit=X;runExtensionCode=X;updateDetailedViewWithCascadeInput=X;openTerminal=X;b
+  [Match 4 at 1772201]:
+    parse(e.absolutePathUri)}),t}readNotebook(e){return(new h.R).readNotebook(e)}executeNotebook(e){throw new Error("Not implemented yet...")}async launchBrowser(e){console.log("[Antigravity] Starting browser");try{const t=await o.antigravityBrowserLauncher.launch(e.launchInForeground);return(0,i.v)(E.Mw,{cdpA
+  [Match 5 at 1772289]:
+    book(e){throw new Error("Not implemented yet...")}async launchBrowser(e){console.log("[Antigravity] Starting browser");try{const t=await o.antigravityBrowserLauncher.launch(e.launchInForeground);return(0,i.v)(E.Mw,{cdpAddress:t??""})}catch(e){const t=e instanceof Error?e.message:String(e);throw new l.T("Fa
+- "Snooze": found 4 times
+  [Match 1 at 258218]:
+    eCommand("antigravity.getBrowserOnboardingPort")}`},6405:(e,t,n)=>{n.d(t,{e:()=>s});var o,i=n(68956),l=n(83720),r=n(17022);!function(e){e.AutocompleteSnoozed="autocomplete_snoozed",e.AutocompleteSnoozeCancelled="autocomplete_snooze_cancelled"}(o||(o={}));class s{static instance;item;isLoggedIn;isRegistere
+  [Match 2 at 258263]:
+    t")}`},6405:(e,t,n)=>{n.d(t,{e:()=>s});var o,i=n(68956),l=n(83720),r=n(17022);!function(e){e.AutocompleteSnoozed="autocomplete_snoozed",e.AutocompleteSnoozeCancelled="autocomplete_snooze_cancelled"}(o||(o={}));class s{static instance;item;isLoggedIn;isRegisteredSettings=!1;stateManager=new r.Sm;constructo
+  [Match 3 at 418299]:
+    File is ignored (${d})`);if(this._autocompleteStatusBarStateProvider.setState(l.CVe.INACTIVE),await o.antigravityUnifiedStateSync.TabPreferences.getIsSnoozed())return void((0,c.Lo)()&&(console.log(`[CompletionProvider] ${o.env.appNameShort} is snoozed, not providing completions`),this.resetAllAndProvideFe
+  [Match 4 at 1956303]:
+    method)},99967:(e,t,n)=>{n.d(t,{Q:()=>r});var o=n(68956),i=n(83720),l=n(80857);class r{id="antigravity.snooze";snoozedState={text:`${o.env.appName} - Snoozed`,tooltip:`Reenable ${o.env.appName}`,command:i.$.getInstance().EXTENSION_COMMAND_IDS.CANCEL_SNOOZE_COMPLETIONS,backgroundColor:new o.ThemeColor("sta
+- "Start": found 79 times
+  [Match 1 at 28807]:
+    s._setting,n=e>=0?this._setting.substr(e+1):void 0,o=n?c.workspace.getConfiguration(t).get(n,!1):c.workspace.getConfiguration(t);o&&this._client.needsStart()?this._client.start().catch(e=>this._client.error("Start failed after configuration change",e,"force")):!o&&this._client.needsStop()&&this._client.s
+  [Match 2 at 28865]:
+    orkspace.getConfiguration(t).get(n,!1):c.workspace.getConfiguration(t);o&&this._client.needsStart()?this._client.start().catch(e=>this._client.error("Start failed after configuration change",e,"force")):!o&&this._client.needsStop()&&this._client.stop().catch(e=>this._client.error("Stop failed after confi
+  [Match 3 at 103107]:
+    return e;var i=(t-o)/2;return ki(Rt(i),n)+e+ki(ut(i),n)},Ln.padEnd=function(e,t,n){e=ms(e);var o=(t=Rs(t))?En(e):0;return t&&o<t?e+ki(t-o,n):e},Ln.padStart=function(e,t,n){e=ms(e);var o=(t=Rs(t))?En(e):0;return t&&o<t?ki(t-o,n)+e:e},Ln.parseInt=function(e,t,n){return n||null==t?t=0:t&&(t=+t),gn(ms(e).rep
+  [Match 4 at 106992]:
+    nction(e,t,n){if((e=ms(e))&&(n||t===i))return e.slice(0,un(e)+1);if(!e||!(t=si(t)))return e;var o=dn(e);return gi(o,0,$t(o,dn(t))+1).join("")},Ln.trimStart=function(e,t,n){if((e=ms(e))&&(n||t===i))return e.replace(oe,"");if(!e||!(t=si(t)))return e;var o=dn(e);return gi(o,qt(o,dn(t))).join("")},Ln.truncat
+  [Match 5 at 399048]:
+    client.handleStreamingCommand(D,{signal:k.signal});let M,O=this.lastCacheModification,x=!1,K="";try{for await(const e of w){const n=Number(e.selectionStartLine);if(!C&&!x){const i=o.window.activeTextEditor?.document;if(!i){console.warn("No active document for supercomplete feedback");continue}const l=Dat
+  [Match 6 at 401989]:
+    ument:i,editor:l,activeLine:s,documentText:c,triggerId:E,predictive:u,gotMidStreamAutocomplete:R}=e;await Promise.resolve();const V=Number(t.selectionStartLine),h=Number(t.selectionEndLine),m=V===h?new o.Range(V,0,h,Number.MAX_SAFE_INTEGER):new o.Range(V,0,h-1,Number.MAX_SAFE_INTEGER);(0,d.Lo)()&&(u||(o.
+  [Match 7 at 434836]:
+    _traceId});t.spanRecorder=this.spanRecorder,t.spanRecorder&&t.spanRecorder.add(t);const n=(0,E.z)(this);if(t.transaction=n,s.T&&n){const o=`[Tracing] Starting '${e&&e.op||"< unknown op >"}' span on transaction '${(0,d.et)(t).description||"< unknown name >"}' (${n.spanContext().spanId}).`;l.vF.log(o),this
+  [Match 8 at 435646]:
+    nd(e){if(this._endTime)return;const t=(0,E.z)(this);if(s.T&&t&&t.spanContext().spanId!==this._spanId){const e=this._logMessage;e&&l.vF.log(e.replace("Starting","Finishing"))}this._endTime=(0,d.cI)(e)}toTraceparent(){return(0,d.Qh)(this)}toContext(){return(0,r.Ce)({data:this._getData(),description:this._n
+  [Match 9 at 537347]:
+    uthenticationRefreshEvent)})),t.onDidChangeSessions(async()=>{await(0,a.B)(E.n.AuthenticationEvent)})}async function u(){if(await(0,a.B)(E.n.ExtensionStartup),null!=await o.antigravityUnifiedStateSync.OAuthPreferences.getOAuthTokenInfo())try{await s.r_.getInstance().client.registerGdmUser((0,i.v)(l.tQe,{
+  [Match 10 at 831927]:
+    l.L.SFIXED32:case l.L.FLOAT:return i.O0.Bit32;default:return i.O0.Varint}}(o)),t,n,o,s)}function u(e,t,n,o){n.delimitedEncoding?a(e.tag(n.number,i.O0.StartGroup),t,o).tag(n.number,i.O0.EndGroup):a(e.tag(n.number,i.O0.LengthDelimited).fork(),t,o).join()}function R(e,t,n,o,r){var s;switch(e.tag(n.number,i.
+  ... and 69 more matches omitted

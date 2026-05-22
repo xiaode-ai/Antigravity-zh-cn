@@ -1,63 +1,58 @@
 import fs from 'fs';
-import path from 'path';
 
-const analysisPath = path.join(process.cwd(), 'scratch', 'exact_12_terms_analysis.txt');
-if (!fs.existsSync(analysisPath)) {
-  console.error('File not found:', analysisPath);
-  process.exit(1);
-}
+const data = fs.readFileSync('scratch/locate_user_request_results.txt', 'utf8');
+const lines = data.split('\n');
 
-const content = fs.readFileSync(analysisPath, 'utf8');
-const lines = content.split(/\r?\n/);
+let capturing = false;
+let currentTerm = '';
+const termsToPrint = [
+  "Back to Agent",
+  "Customize Agent to get a better, more personalized experience.",
+  "Rules help guide the behavior of Agent.",
+  "Workflows are saved prompts that Agent can follow. To trigger a workflow, type \"/\" in Agent.",
+  "Advanced Settings",
+  "help perform",
+  "Last Updated",
+  "Open Command",
+  "Open Agent",
+  "View all Antigravity IDE shortcuts",
+  "Reset to default shortcuts",
+  "Background Processes Running",
+  "helpperform"
+];
 
-let currentFile = 'unknown';
-const summary = {};
+let termLogged = false;
 
-for (let i = 0; i < lines.length; i++) {
-  const line = lines[i];
-  if (line.includes('=== FILE:')) {
-    currentFile = line.replace(/={2,}/g, '').trim();
-    summary[currentFile] = {};
-    continue;
+lines.forEach(line => {
+  if (line.includes('==================== SEARCHING IN workbench.desktop.main.js')) {
+    capturing = true;
+    console.log('\n======================================================');
+    console.log('=== MATCHES IN workbench.desktop.main.js ===');
+    console.log('======================================================');
+    return;
+  }
+  if (line.includes('==================== SEARCHING IN extension.js')) {
+    capturing = false;
+    return;
   }
   
-  if (line.includes('▶ Term:')) {
-    const match = line.match(/Term:\s*"([^"]+)"/);
-    if (match) {
-      const term = match[1];
-      if (!summary[currentFile][term]) {
-        summary[currentFile][term] = { count: 0, samples: [] };
-      }
-      summary[currentFile][term].count++;
-      
-      // Look at the next line for context
-      const nextLine = lines[i + 1];
-      if (nextLine && nextLine.includes('Context:')) {
-        const contextStr = nextLine.replace('Context: ...', '').trim();
-        if (summary[currentFile][term].samples.length < 2) {
-          summary[currentFile][term].samples.push(contextStr.substring(0, 100));
-        }
-      } else if (nextLine && nextLine.includes('Index:')) {
-        // For NLS files
-        const indexVal = nextLine.trim();
-        const valueLine = lines[i + 2];
-        const valueStr = valueLine ? valueLine.trim() : '';
-        if (summary[currentFile][term].samples.length < 5) {
-          summary[currentFile][term].samples.push(`${indexVal} -> ${valueStr}`);
-        }
-      }
+  if (!capturing) return;
+  
+  const termHeader = line.match(/^--- Term: "(.+)"/);
+  if (termHeader) {
+    const term = termHeader[1];
+    if (termsToPrint.includes(term)) {
+      currentTerm = term;
+      termLogged = true;
+      console.log(`\n\x1b[36m${line}\x1b[0m`);
+    } else {
+      currentTerm = '';
+      termLogged = false;
     }
+    return;
   }
-}
-
-// Print the summarized report
-console.log('=== SEARCH SUMMARY OF THE 12 TARGET TERMS ===');
-for (const [file, terms] of Object.entries(summary)) {
-  console.log(`\nFile: ${file}`);
-  for (const [term, data] of Object.entries(terms)) {
-    console.log(`  - Term: "${term}" (Matched: ${data.count} times)`);
-    data.samples.forEach(sample => {
-      console.log(`      Sample: ${sample}`);
-    });
+  
+  if (termLogged && (line.startsWith('[') || line.startsWith('   ...'))) {
+    console.log(line);
   }
-}
+});

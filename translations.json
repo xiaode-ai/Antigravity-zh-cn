@@ -3146,5 +3146,149 @@
   {
     "old": "if(!e||e<=new Date)return\"Quota Available\";",
     "new": "if(!e||e<=new Date)return\"额度可用\";"
+  },
+  {
+    "old": "\",onClick:()=>{v(jre(\"conversation\"))},children:[R(URo,{className:\"relative h-3 w-3 flex-none transition-[transform] group-hover:-translate-x-0.5\"}),\"Back to Agent\"]}",
+    "new": "\",onClick:()=>{v(jre(\"conversation\"))},children:[R(URo,{className:\"relative h-3 w-3 flex-none transition-[transform] group-hover:-translate-x-0.5\"}),\"返回智能体\"]}"
+  },
+  {
+    "old": "R(\"div\",{className:\"mb-0.5 mt-2 text-lg font-medium\",children:\"Customizations\"}),R(\"span\",{className:\"opacity-60\",children:[\"Customize Agent to get a better, more personalized experience.\",",
+    "new": "R(\"div\",{className:\"mb-0.5 mt-2 text-lg font-medium\",children:\"自定义\"}),R(\"span\",{className:\"opacity-60\",children:[\"自定义智能体以获得更好、更个性化的体验。\","
+  },
+  {
+    "old": "children:\"Rules help guide the behavior of Agent.\"",
+    "new": "children:\"规则有助于指导智能体的行为。\""
+  },
+  {
+    "old": "R(wat,{className:\"h-3 w-3\"}),R(\"span\",{children:\"Workspace\"})",
+    "new": "R(wat,{className:\"h-3 w-3\"}),R(\"span\",{children:\"工作区\"})"
+  },
+  {
+    "old": "R(Phn,{className:\"h-3 w-3\"}),R(\"span\",{children:\"Workspace\"})",
+    "new": "R(Phn,{className:\"h-3 w-3\"}),R(\"span\",{children:\"工作区\"})"
+  },
+  {
+    "old": "children:'Workflows are saved prompts that Agent can follow. To trigger a workflow, type \"/\" in Agent.'",
+    "new": "children:'工作流是智能体可以遵循的已保存提示词。要触发工作流，请在智能体中键入 “/”。'"
+  },
+  {
+    "old": ",children:[R(\"div\",{className:\"mr-1 font-medium\",children:\"Workflows\"}),",
+    "new": ",children:[R(\"div\",{className:\"mr-1 font-medium\",children:\"工作流\"}),"
+  },
+  {
+    "old": "o=[{id:\"rules\",label:\"Rules\",enabled:!0},{id:\"workflows\",label:\"Workflows\",enabled:!0}]",
+    "new": "o=[{id:\"rules\",label:\"规则\",enabled:!0},{id:\"workflows\",label:\"工作流\",enabled:!0}]"
+  },
+  {
+    "old": "getRenderInfo(){return{label:\"Rules\",icon:p(xrt,{size:14})}}",
+    "new": "getRenderInfo(){return{label:\"规则\",icon:p(xrt,{size:14})}}"
+  },
+  {
+    "old": "getRenderInfo(){return{label:\"Rules\",icon:R(psn,{size:14})}}",
+    "new": "getRenderInfo(){return{label:\"规则\",icon:R(psn,{size:14})}}"
+  },
+  {
+    "old": "label:t=\"Advanced Settings\"",
+    "new": "label:t=\"高级设置\""
+  },
+  {
+    "old": "n.textContent=\"Advanced Settings\"",
+    "new": "n.textContent=\"高级设置\""
+  },
+  {
+    "old": "label:\"Open Command\"",
+    "new": "label:\"打开命令\""
+  },
+  {
+    "old": "label:\"Open Agent\"",
+    "new": "label:\"打开智能体\""
+  },
+  {
+    "old": "description:[\"Open Command\"]",
+    "new": "description:[\"打开命令\"]"
+  },
+  {
+    "old": "description:[\"Open Agent\"]",
+    "new": "description:[\"打开智能体\"]"
+  },
+  {
+    "old": "label:\"Open Agent on Reload\"",
+    "new": "label:\"在重新载入时打开智能体\""
+  },
+  {
+    "old": "description:\"Open Agent panel on window reload\"",
+    "new": "description:\"在窗口重新载入时打开智能体面板\""
+  },
+  {
+    "old": "r.textContent=`View all ${this.productService.nameShort} shortcuts`",
+    "new": "r.textContent=`查看所有 ${this.productService.nameShort} 快捷键`"
+  },
+  {
+    "old": "n.textContent=\"Snooze\";const s=()=>{const o=this._antigravityStatusBarSettingsService.isSnoozed();r.textContent=o?\"Cancel\":\"Start\"",
+    "new": "n.textContent=\"暂停\";const s=()=>{const o=this._antigravityStatusBarSettingsService.isSnoozed();r.textContent=o?\"取消\":\"开始\""
+  },
+  {
+    "old": "let o=`Snooze ${this._productService.nameLong} Tab for 10 minutes`;if(this._antigravityStatusBarSettingsService.isSnoozed()){const a=this._antigravityStatusBarSettingsService.getSnoozeEndTime();if(a){const l=new Date,u=a.getTime()-l.getTime(),d=Math.ceil(u/(60*1e3));o=`Snoozed for ${d} more minute${d!==1?\"s\":\"\"}`}",
+    "new": "let o=`暂停 ${this._productService.nameLong} Tab 10 分钟`;if(this._antigravityStatusBarSettingsService.isSnoozed()){const a=this._antigravityStatusBarSettingsService.getSnoozeEndTime();if(a){const l=new Date,u=a.getTime()-l.getTime(),d=Math.ceil(u/(60*1e3));o=`已暂停，还剩 ${d} 分钟`}"
+  },
+  {
+    "old": "t=e.length,r=`${t} Background Process${t===1?\"\":\"es\"} Running`",
+    "new": "t=e.length,r=`${t} 个后台进程正在运行`"
+  },
+  {
+    "old": "e=t.length,i=`${e} Background Process${e===1?\"\":\"es\"} Running`",
+    "new": "e=t.length,i=`${e} 个后台进程正在运行`"
+  },
+  {
+    "old": "children:\"Cancel task\"",
+    "new": "children:\"取消任务\""
+  },
+  {
+    "old": "children:\"Last Updated\"",
+    "new": "children:\"最近更新\""
+  },
+  {
+    "old": "label:\"Last Updated\"",
+    "new": "label:\"最近更新\""
+  },
+  {
+    "old": "children:\"Artifacts are files the agent creates during a conversation to help perform longer running tasks and allow the user to provide high-level feedback. Click to open in editor.\"",
+    "new": "children:\"产物是智能体在对话期间创建的文件，用于帮助执行运行时间较长的任务，并允许用户提供高层级的反馈。点击在编辑器中打开。\""
+  },
+  {
+    "old": ",children:\"Launch\"",
+    "new": ",children:\"启动\""
+  },
+  {
+    "old": "titleContent:()=>p(ZO,{text:\"Browser\"}),tooltip:()=>e?.title||\"Active Browser pages\"",
+    "new": "titleContent:()=>p(ZO,{text:\"浏览器\"}),tooltip:()=>e?.title||\"活动浏览器页面\""
+  },
+  {
+    "old": "titleContent:()=>R(eUe,{text:\"Browser\"}),tooltip:()=>t?.title||\"Active Browser pages\"",
+    "new": "titleContent:()=>R(eUe,{text:\"浏览器\"}),tooltip:()=>t?.title||\"活动浏览器页面\""
+  },
+  {
+    "old": "children:[e?.length||0,\" page\",e?.length===1?\"\":\"s\"]",
+    "new": "children:[e?.length||0,\" 个页面\"]"
+  },
+  {
+    "old": "children:[t?.length||0,\" page\",t?.length===1?\"\":\"s\"]",
+    "new": "children:[t?.length||0,\" 个页面\"]"
+  },
+  {
+    "old": "children:\"Global\"",
+    "new": "children:\"全局\""
+  },
+  {
+    "old": "children:\"Workspace\"",
+    "new": "children:\"工作区\""
+  },
+  {
+    "old": "Ebn={files:[\"file\",\"files\"],folders:[\"folder\",\"folders\"],edits:[\"file\",\"files\"],searches:[\"search\",\"searches\"],terminal:[\"command\",\"commands\"],tasks:[\"task\",\"tasks\"],web:[\"page\",\"pages\"],browser:[\"browser\",\"browsers\"],images:[\"image\",\"images\"],actions:[\"action\",\"actions\"],artifacts:[\"artifact\",\"artifacts\"]}",
+    "new": "Ebn={files:[\"个文件\",\"个文件\"],folders:[\"个文件夹\",\"个文件夹\"],edits:[\"个编辑\",\"个编辑\"],searches:[\"次搜索\",\"次搜索\"],terminal:[\"个命令\",\"个命令\"],tasks:[\"个任务\",\"个任务\"],web:[\"个页面\",\"个页面\"],browser:[\"个浏览器\",\"个浏览器\"],images:[\"张图片\",\"张图片\"],actions:[\"次操作\",\"次操作\"],artifacts:[\"个产物\",\"个产物\"]}"
+  },
+  {
+    "old": "dOo={files:[\"file\",\"files\"],folders:[\"folder\",\"folders\"],edits:[\"file\",\"files\"],searches:[\"search\",\"searches\"],terminal:[\"command\",\"commands\"],tasks:[\"task\",\"tasks\"],web:[\"page\",\"pages\"],browser:[\"browser\",\"browsers\"],images:[\"image\",\"images\"],actions:[\"action\",\"actions\"],artifacts:[\"artifact\",\"artifacts\"]}",
+    "new": "dOo={files:[\"个文件\",\"个文件\"],folders:[\"个文件夹\",\"个文件夹\"],edits:[\"个编辑\",\"个编辑\"],searches:[\"次搜索\",\"次搜索\"],terminal:[\"个命令\",\"个命令\"],tasks:[\"个任务\",\"个任务\"],web:[\"个页面\",\"个页面\"],browser:[\"个浏览器\",\"个浏览器\"],images:[\"张图片\",\"张图片\"],actions:[\"次操作\",\"次操作\"],artifacts:[\"个产物\",\"个产物\"]}"
   }
 ]

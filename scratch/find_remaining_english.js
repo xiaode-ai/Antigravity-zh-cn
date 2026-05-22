@@ -1,39 +1,46 @@
 import fs from 'fs';
+import path from 'path';
 
-const targetPath = 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out\\jetskiAgent\\main.js';
-const content = fs.readFileSync(targetPath, 'utf8');
+const outDir = 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out';
+const mainPath = path.join(outDir, 'jetskiAgent', 'main.js.bak');
+const wbPath = path.join(outDir, 'vs', 'workbench', 'workbench.desktop.main.js.bak');
 
-// 搜索残留的英文关键词及其上下文
-const searchTerms = [
-  'Proceed in Sandbox',
-  'Require Review',
-  'Always Proceed',
-  'Always Ask',
-  'Request Review',
-  'Manually customize',
-  'Enable Sandbox',
-  'Configures how the agent',
-  'Controls whether terminal',
-  'Restricts agent tools',
-  'Outside of folders',
-  'Security Preset',
-  'Terminal Command Auto',
-  'browser JavaScript execution',
-  'approval before running browser',
-  'browser script execution without',
+const mainContent = fs.existsSync(mainPath) ? fs.readFileSync(mainPath, 'utf8') : '';
+const wbContent = fs.existsSync(wbPath) ? fs.readFileSync(wbPath, 'utf8') : '';
+
+const searchPatterns = [
+  { name: 'shortcuts', regex: /shortcuts/gi },
+  { name: 'Reset to default', regex: /Reset to default/gi },
+  { name: 'Processes Running', regex: /Processes\s*Running/gi },
+  { name: 'Process Running', regex: /Process\s*Running/gi },
+  { name: 'Terminal (', regex: /Terminal\s*\(/gi },
+  { name: 'pages template', regex: /[\w"'{`\s]+pages[\w"'}`,`\s]+/gi }
 ];
 
-for (const term of searchTerms) {
-  let idx = 0;
-  let count = 0;
-  while ((idx = content.indexOf(term, idx)) !== -1) {
-    count++;
-    console.log(`\n[${term}] Occurrence #${count} at index ${idx}:`);
-    console.log(content.substring(Math.max(0, idx - 80), idx + term.length + 120));
-    console.log('---');
-    idx += term.length;
-  }
-  if (count === 0) {
-    console.log(`[${term}] ✅ 已全部清除`);
-  }
+console.log('=== SEARCHING FOR DYNAMIC TEMPLATES ===');
+
+function doSearch(content, filename) {
+  if (!content) return;
+  console.log(`\nFile: ${filename}`);
+  
+  searchPatterns.forEach(pattern => {
+    let match;
+    const matches = [];
+    pattern.regex.lastIndex = 0; // reset
+    while ((match = pattern.regex.exec(content)) !== null) {
+      matches.push(match.index);
+      if (matches.length > 50) break; // limit
+    }
+    
+    console.log(`  Pattern "${pattern.name}" (${pattern.regex.toString()}): found ${matches.length} occurrences.`);
+    matches.slice(0, 15).forEach((idx, i) => {
+      const start = Math.max(0, idx - 100);
+      const end = Math.min(content.length, idx + 100);
+      const snippet = content.substring(start, end).replace(/\r?\n/g, ' ');
+      console.log(`    [#${i+1}] At ${idx}: ... ${snippet} ...`);
+    });
+  });
 }
+
+doSearch(mainContent, 'main.js.bak');
+doSearch(wbContent, 'workbench.desktop.main.js.bak');

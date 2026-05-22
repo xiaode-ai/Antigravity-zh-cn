@@ -266,7 +266,8 @@ export function translate(config, translations, translationsPath) {
         { index: 4980, oldVal: "Changelog", newVal: "更新日志" },
         { index: 6128, oldVal: "Limited", newVal: "受限" },
         { index: 6307, oldVal: "Limited", newVal: "受限" },
-        { index: 6309, oldVal: "Limited", newVal: "受限" }
+        { index: 6309, oldVal: "Limited", newVal: "受限" },
+        { index: 5021, oldVal: "Reset to default shortcuts", newVal: "重置为默认快捷键" }
       ];
 
       let nlsModifiedCount = 0;
@@ -379,7 +380,8 @@ export function translate(config, translations, translationsPath) {
           { index: 4980, oldVal: "Changelog", newVal: "更新日志" },
           { index: 6128, oldVal: "Limited", newVal: "受限" },
           { index: 6307, oldVal: "Limited", newVal: "受限" },
-          { index: 6309, oldVal: "Limited", newVal: "受限" }
+          { index: 6309, oldVal: "Limited", newVal: "受限" },
+          { index: 5021, oldVal: "Reset to default shortcuts", newVal: "重置为默认快捷键" }
         ];
 
         let clpModifiedCount = 0;

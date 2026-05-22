@@ -1,30 +1,31 @@
 import fs from 'fs';
-import path from 'path';
 
-const resultsPath = path.join(process.cwd(), 'scratch', 'search_all_out_results.txt');
-if (!fs.existsSync(resultsPath)) {
-  console.log('Results file not found.');
-  process.exit(1);
-}
+const data = fs.readFileSync('scratch/locate_user_request_results.txt', 'utf8');
 
-const content = fs.readFileSync(resultsPath, 'utf8');
-const blocks = content.split('\n\n');
+const lines = data.split('\n');
+let currentFile = '';
+const fileResults = {};
 
-console.log(`Total blocks: ${blocks.length}`);
-
-const targets = [
-  'Limited time',
-  'Limited-time',
-  'limited time',
-  'Open Antigravity IDE User Settings',
-  'Antigravity - Settings'
-];
-
-blocks.forEach(block => {
-  targets.forEach(t => {
-    if (block.includes(`Term: "${t}"`)) {
-      console.log('------------------------------------');
-      console.log(block);
+lines.forEach(line => {
+  if (line.includes('==================== SEARCHING IN')) {
+    currentFile = line.split('SEARCHING IN ')[1].replace(/ =+/, '').trim();
+    fileResults[currentFile] = [];
+  }
+  
+  const termMatch = line.match(/^--- Term: "(.+)" \(Total Found: (\d+)\) ---/);
+  if (termMatch && currentFile) {
+    const term = termMatch[1];
+    const count = parseInt(termMatch[2], 10);
+    if (count > 0) {
+      fileResults[currentFile].push({ term, count });
     }
-  });
+  }
 });
+
+console.log('--- FOUND TERMS SUMMARY ---');
+for (const file in fileResults) {
+  console.log(`\nFile: ${file}`);
+  fileResults[file].sort((a, b) => a.count - b.count).forEach(item => {
+    console.log(`  - "${item.term}": found ${item.count} times`);
+  });
+}
