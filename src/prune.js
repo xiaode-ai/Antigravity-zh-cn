@@ -20,6 +20,12 @@ export function prune(config, translationsPath) {
   const workbenchPath = path.join(path.dirname(targetFilePath), '..', 'vs', 'workbench', 'workbench.desktop.main.js');
   const workbenchBackupPath = workbenchPath + backupSuffix;
 
+  const extensionPath = path.join(path.dirname(targetFilePath), '..', '..', 'extensions', 'antigravity', 'dist', 'extension.js');
+  const extensionBackupPath = extensionPath + backupSuffix;
+
+  const mainProcessPath = path.join(path.dirname(targetFilePath), '..', 'main.js');
+  const mainProcessBackupPath = mainProcessPath + backupSuffix;
+
   console.log(`[INFO] 正在启动翻译剪裁引擎...`);
 
   // 1. 验证 main.js 备份文件是否存在
@@ -59,6 +65,30 @@ export function prune(config, translationsPath) {
     }
   }
 
+  let extContent = '';
+  let hasExtensionBackup = false;
+  if (fs.existsSync(extensionPath)) {
+    const backupToRead = fs.existsSync(extensionBackupPath) ? extensionBackupPath : extensionPath;
+    try {
+      extContent = fs.readFileSync(backupToRead, 'utf8');
+      hasExtensionBackup = true;
+    } catch (err) {
+      console.warn(`[WARN] 读取 extension 备份文件失败:`, err.message);
+    }
+  }
+
+  let mainProcContent = '';
+  let hasMainProcBackup = false;
+  if (fs.existsSync(mainProcessPath)) {
+    const backupToRead = fs.existsSync(mainProcessBackupPath) ? mainProcessBackupPath : mainProcessPath;
+    try {
+      mainProcContent = fs.readFileSync(backupToRead, 'utf8');
+      hasMainProcBackup = true;
+    } catch (err) {
+      console.warn(`[WARN] 读取 out/main.js 备份文件失败:`, err.message);
+    }
+  }
+
   // 4. 读取并解析 translations.json
   if (!fs.existsSync(translationsPath)) {
     console.error(`[ERROR] 找不到词库文件: "${translationsPath}"`);
@@ -87,8 +117,10 @@ export function prune(config, translationsPath) {
     const pair = translations[i];
     const isMainActive = mainContent.includes(pair.old);
     const isWbActive = hasWorkbenchBackup && wbContent.includes(pair.old);
+    const isExtActive = hasExtensionBackup && extContent.includes(pair.old);
+    const isMainProcActive = hasMainProcBackup && mainProcContent.includes(pair.old);
 
-    if (isMainActive || isWbActive) {
+    if (isMainActive || isWbActive || isExtActive || isMainProcActive) {
       activeTranslations.push(pair);
     } else {
       prunedTranslations.push({ ...pair, index: i });

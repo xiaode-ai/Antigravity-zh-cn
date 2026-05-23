@@ -1,0 +1,61 @@
+--- "Screenshot" (27 matches):
+  [1] Pos 8315540: age:async(a,...i)=>n?.focusUserPage?n.focusUserPage(a,...i):(await e(a)).focusUserPage(...i),captureScreenshot:async(a,...i)=>n?.captureScreenshot?n.captureScreenshot(a,...i):(await e(a)).captureScreenshot(...i
+  [2] Pos 8315576: n.focusUserPage(a,...i):(await e(a)).focusUserPage(...i),captureScreenshot:async(a,...i)=>n?.captureScreenshot?n.captureScreenshot(a,...i):(await e(a)).captureScreenshot(...i),captureConsoleLogs:async(a,...i)=>
+  [3] Pos 8315596: .i):(await e(a)).focusUserPage(...i),captureScreenshot:async(a,...i)=>n?.captureScreenshot?n.captureScreenshot(a,...i):(await e(a)).captureScreenshot(...i),captureConsoleLogs:async(a,...i)=>n?.captureConsoleLog
+  [4] Pos 8315635: ptureScreenshot:async(a,...i)=>n?.captureScreenshot?n.captureScreenshot(a,...i):(await e(a)).captureScreenshot(...i),captureConsoleLogs:async(a,...i)=>n?.captureConsoleLogs?n.captureConsoleLogs(a,...i):(await e
+  [5] Pos 8328537: ,{}))).pages),focusUserPage:async w=>a(async k=>{await k.focusUserPage(At(Isi,{pageId:w}))}),captureScreenshot:async w=>a(async k=>(await k.captureScreenshot(At(Tsi,{pageId:w}))).mediaScreenshot),captureConsole
+  [6] Pos 8328584: >{await k.focusUserPage(At(Isi,{pageId:w}))}),captureScreenshot:async w=>a(async k=>(await k.captureScreenshot(At(Tsi,{pageId:w}))).mediaScreenshot),captureConsoleLogs:async w=>a(async k=>(await k.captureConsol
+  [7] Pos 8328621: d:w}))}),captureScreenshot:async w=>a(async k=>(await k.captureScreenshot(At(Tsi,{pageId:w}))).mediaScreenshot),captureConsoleLogs:async w=>a(async k=>(await k.captureConsoleLogs(At(xsi,{pageId:w}))).consoleLog
+  [8] Pos 8540251: e",Icon:N=>p(qe,{name:"link_2",...N}),value:"mention-page"}),p(jdt,{page:e,onAction:t?.handleCaptureScreenshot,onMenuClose:()=>d(!1),title:"Capture screenshot",Icon:N=>p(qe,{name:"photo_camera",...N}),value:"ca
+  [9] Pos 8895273: f(e)try{return JSON.parse(e)[t]}catch{return}}var Xvi=({step:e})=>{let{stepHandler:t}=jn(),r=e.mediaScreenshot;return p(jt,{children:p("div",{className:"flex items-center gap-2",children:r?.uri&&p(r0,{onClick:(
+  [10] Pos 8896540: toolCall?.argumentsJson,"explanation"),i=za(r),s=a?i?a.replace(/^Captured/,"Capturing"):a:i?"Taking Screenshot":"Took Screenshot";return p(u1,{loading:i,title:p(Es,{content:s}),supplementaryView:n?null:p(Ovi,{s
+  [11] Pos 8896558: sJson,"explanation"),i=za(r),s=a?i?a.replace(/^Captured/,"Capturing"):a:i?"Taking Screenshot":"Took Screenshot";return p(u1,{loading:i,title:p(Es,{content:s}),supplementaryView:n?null:p(Ovi,{step:e,status:r}),c
+  [12] Pos 8987878: !0,renderer:Rbi},browserResizeWindow:{isRendered:fi(),icon:oA,isTool:!0,renderer:pbi},captureBrowserScreenshot:{isRendered:fi(),icon:e=>p(qe,{name:"photo_camera",...e}),isTool:!0,renderer:Yvi},clickBrowserPixel
+  [13] Pos 9492990: {g("idle")}}},U=async k=>{if(k.stopPropagation(),b==="idle"){y("loading");try{await t?.handleCaptureScreenshot(e),y("success"),setTimeout(()=>y("idle"),Oft)}catch{y("idle")}}},w=async k=>{if(k.stopPropagation()
+  [14] Pos 9494101: el:"Mention",tooltipId:N}),p(Yft,{onClick:U,state:b,Icon:k=>p(qe,{name:"photo_camera",...k}),label:"Screenshot",tooltipId:V}),p(Yft,{onClick:w,state:F,Icon:k=>p(qe,{name:"terminal_2",...k}),label:"Console logs"
+  [15] Pos 9610994: start",allowVideo:V,onTypingLatency:I,resolveWorkspaceUrlPreview:x,captureScreenRecording:D,capturedScreenshotEvent:U,getSlashCommandItems:w,getMcpPrompt:k,contextMenuPopupFn:G,agentScripts:X,cascadeId:Y,inExis
+  [16] Pos 9769652: r:async()=>{},handleClickActiveBrowserPage:()=>{},handleCaptureConsoleLogs:async()=>{},handleCaptureScreenshot:async()=>{},openModal:()=>{},updateModalProps:()=>{},openSetting:async()=>{},getRevertPreviews:asyn
+  [17] Pos 9770216: inalSandboxEnabled:!1,terminalSandboxSupported:!1,recordConversationInteraction:async()=>{},capturedScreenshotEvent:new fc().event,resolveArtifactUrl:()=>{},useAICredits:YO.useAICredits,availableCredits:YO.avai
+  [18] Pos 9776088: ",browserScrollDown:"browser",browserScrollUp:"browser",browserSelectOption:"browser",captureBrowserScreenshot:"browser",clickBrowserPixel:"browser",browserMoveMouse:"browser",browserPressKey:"browser",browserR
+  [19] Pos 9829460: olveArtifactUrl:u}=as(),d=de(ht=>u(ht).getState(),[u]),{logEvent:f}=jo(),{listBrowserPages:g,captureScreenshot:b,captureConsoleLogs:y}=as(),F=Hve(F7i),C=Qmn(),N=Hve(C7i),V=$Ii(),I=ni(),x=Dft(),D=OB(),U=jst(),w=
+  [20] Pos 9830770: CREENSHOT");try{let Ot=await b(ht.pageId);if(!Ot){console.error("No screenshot returned from captureScreenshot RPC");return}i.current?.setMediaAttachments(it=>[...it,Ot])}catch(Ot){console.error("Failed to capt
+  [21] Pos 9833310: atchNuxTrigger:Z,listBrowserPages:g,openIssueReporter:J,handleClickActiveBrowserPage:Q,handleCaptureScreenshot:j,openModal:ee,updateModalProps:q,handleCaptureConsoleLogs:H,openSetting:Ye,getRevertPreviews:ae,re
+  [22] Pos 9833785: licy:V,secureModeEnabled:x,enableSoundsForSpecialEvents:ze,recordConversationInteraction:Cr,capturedScreenshotEvent:hr,terminalSandboxEnabled:Wt,terminalSandboxSupported:Oe,resolveArtifactUrl:d,onViewSubagent:$
+  [23] Pos 9973202: e:"close",className:"w-4 h-4"})})]}),I.fileSize>tae&&p(_n,{id:n,place:"bottom",noArrow:!0,children:"Screenshot must be under 10 MB"})]}):p("button",{type:"button",onClick:()=>D.current?.click(),className:"flex 
+  [24] Pos 10208537: turn At(Yg,{...n,interaction:{case:"openBrowserUrl",value:At(sei,{confirm:t})}});case"captureBrowserScreenshot":return At(Yg,{...n,interaction:{case:"captureBrowserScreenshot",value:At(lei,{confirm:t})}});case"
+  [25] Pos 10208601: ,{confirm:t})}});case"captureBrowserScreenshot":return At(Yg,{...n,interaction:{case:"captureBrowserScreenshot",value:At(lei,{confirm:t})}});case"executeBrowserJavascript":return At(Yg,{...n,interaction:{case:"
+  [26] Pos 10372906: {artifactsDir:a,hasDevExtension:i,isGoogleInternal:s},inputBoxRef:o,stepHandler:{openFile:u,capturedScreenshotEvent:d}={}}=jn(),f=f4(),[g,b]=_e(!1),[y,F]=_e(!1),C=Ft(new Map);AEn(f,C,o);let{chatActionEvent:N,ar
+  [27] Pos 10377440: ModelConfig:We,allowVideo:i,dropdownPlacement:st,onTypingLatency:en,ref:o,mentionsConfig:je,capturedScreenshotEvent:d,getSlashCommandItems:Kt,getMcpPrompt:br,captureScreenRecording:i?un:void 0,contextMenuPopupF
+--- "Console logs" (1 matches):
+  [1] Pos 9494198: l:"Screenshot",tooltipId:V}),p(Yft,{onClick:w,state:F,Icon:k=>p(qe,{name:"terminal_2",...k}),label:"Console logs",tooltipId:I,tooltipPlace:"top-end"})]})]})},pxi=({pages:e})=>e.length?p("div",{className:"flex w-f
+--- "Pages currently open in Antigravity's Browser instance are shown below." (1 matches):
+  [1] Pos 9541968: pacity-100",children:"Recent actions"})]})}):null});bTi.displayName="ImplicitStepsSection";var RTi="Pages currently open in Antigravity's Browser instance are shown below.",yTi=({step:e,onCopy:t})=>{let[r,n]=_e(!1),{workspaceInfo:{homeDir:a,workspaceUris:i}}=jn(),s=mi(),
+--- "Recent actions" (1 matches):
+  [1] Pos 9541890: acity-70"}),p("span",{className:"opacity-70 transition-[opacity] group-hover:opacity-100",children:"Recent actions"})]})}):null});bTi.displayName="ImplicitStepsSection";var RTi="Pages currently open in Antigravity'
+--- "Working directory: " (1 matches):
+  [1] Pos 9542958: owrap font-mono text-sm text-muted-foreground",children:f}),p(_n,{id:s,place:"top-start",children:["Working directory: ",d]})]}),p("span",{className:"text-muted-foreground",children:[" ",u," "]}),g]}),p("div",{className
+--- "all changes to the below files" (1 matches):
+  [1] Pos 9540290: ementScope===fW.ALL){let i=p("div",{children:p("span",{children:[n.isAccept?"Accepted":"Rejected"," all changes to the below files"]})});return p(SB,{title:i,children:n.codeAcknowledgementInfos.map(s=>p("div",{className:"border bo
+--- "hunks of" (1 matches):
+  [1] Pos 9540715: ledgementScope===fW.HUNK||n.acknowledgementScope===fW.FILE){let i=n.acknowledgementScope===fW.HUNK?"hunks of":"all changes to",s=n.codeAcknowledgementInfos.at(0);if(s)return p("div",{className:"flex flex-row 
+--- "all changes to" (2 matches):
+  [1] Pos 9540290: ementScope===fW.ALL){let i=p("div",{children:p("span",{children:[n.isAccept?"Accepted":"Rejected"," all changes to the below files"]})});return p(SB,{title:i,children:n.codeAcknowledgementInfos.map(s=>p("div",{clas
+  [2] Pos 9540726: ope===fW.HUNK||n.acknowledgementScope===fW.FILE){let i=n.acknowledgementScope===fW.HUNK?"hunks of":"all changes to",s=n.codeAcknowledgementInfos.at(0);if(s)return p("div",{className:"flex flex-row items-center",chi
+--- "Active Browser pages" (1 matches):
+  [1] Pos 9634121: tion:r==="home"&&!!(t&&t.length>0)}),titleContent:()=>p(ZO,{text:"Browser"}),tooltip:()=>e?.title||"Active Browser pages",actionsContent:()=>p(jt,{}),onExpanded:e?.onExpanded,expandedContent:()=>p("div",{className:"flex 
+--- "Mention Page" (1 matches):
+  [1] Pos 8540140: en:[p(jdt,{page:e,onAction:async()=>t?.handleClickActiveBrowserPage(e),onMenuClose:()=>d(!1),title:"Mention Page",Icon:N=>p(qe,{name:"link_2",...N}),value:"mention-page"}),p(jdt,{page:e,onAction:t?.handleCaptureS
+--- "Capture screenshot" (1 matches):
+  [1] Pos 8540291: lue:"mention-page"}),p(jdt,{page:e,onAction:t?.handleCaptureScreenshot,onMenuClose:()=>d(!1),title:"Capture screenshot",Icon:N=>p(qe,{name:"photo_camera",...N}),value:"capture-screenshot"}),p(jdt,{page:e,onAction:t?.ha
+--- "Capture console logs" (1 matches):
+  [1] Pos 8540461: pture-screenshot"}),p(jdt,{page:e,onAction:t?.handleCaptureConsoleLogs,onMenuClose:()=>d(!1),title:"Capture console logs",Icon:N=>p(qe,{name:"terminal_2",...N}),value:"capture-console-logs"})]})})]})})]})},j2i=({step:e})
+--- "Taking Screenshot" (1 matches):
+  [1] Pos 8896533: U1n(t?.toolCall?.argumentsJson,"explanation"),i=za(r),s=a?i?a.replace(/^Captured/,"Capturing"):a:i?"Taking Screenshot":"Took Screenshot";return p(u1,{loading:i,title:p(Es,{content:s}),supplementaryView:n?null:p(Ovi,{s
+--- "Took Screenshot" (1 matches):
+  [1] Pos 8896553: umentsJson,"explanation"),i=za(r),s=a?i?a.replace(/^Captured/,"Capturing"):a:i?"Taking Screenshot":"Took Screenshot";return p(u1,{loading:i,title:p(Es,{content:s}),supplementaryView:n?null:p(Ovi,{step:e,status:r}),c
+--- "Capturing" (1 matches):
+  [1] Pos 8896516: rror:n})=>{let a=U1n(t?.toolCall?.argumentsJson,"explanation"),i=za(r),s=a?i?a.replace(/^Captured/,"Capturing"):a:i?"Taking Screenshot":"Took Screenshot";return p(u1,{loading:i,title:p(Es,{content:s}),suppleme
+--- "Screenshot must be under 10 MB" (1 matches):
+  [1] Pos 9973202: e:"close",className:"w-4 h-4"})})]}),I.fileSize>tae&&p(_n,{id:n,place:"bottom",noArrow:!0,children:"Screenshot must be under 10 MB"})]}):p("button",{type:"button",onClick:()=>D.current?.click(),className:"flex items-center gap-2 t
+--- "text:"Browser"" (1 matches):
+  [1] Pos 9634081:  w-4 stroke-1 opacity-60"}),showNotification:r==="home"&&!!(t&&t.length>0)}),titleContent:()=>p(ZO,{text:"Browser"}),tooltip:()=>e?.title||"Active Browser pages",actionsContent:()=>p(jt,{}),onExpanded:e?.onExpanded

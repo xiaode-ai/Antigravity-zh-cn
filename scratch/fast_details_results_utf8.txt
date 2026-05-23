@@ -1,0 +1,30 @@
+﻿
+========================================
+FILE: main.js
+========================================
+
+========================================
+FILE: main.js
+========================================
+  [Match 1] Term: "Searched" at Pos 11029678
+  Snippet:  items-center gap-1 overflow-hidden text-sm group",children:[v("span",{className:"text-secondary-foreground shrink-0",children:n||(ui(e)?"Searching":"Searched")}),v("span",{className:"overflow-hidden text-ellipsis whitespace-nowrap",children:r}),a>0&&v("span",{className:"shrink-0 rounded-full bg-muted px-1.
+
+  [Match 2] Term: "Searched" at Pos 11043602
+  Snippet: encodeURIComponent(r)}`,p=()=>{a(f)},E=ui(t),R=e.results,F=R.length,S=15,V=v("div",{"data-tooltip-id":n,children:v(Ts,{prefix:E?"Searching Moma for":"Searched Moma for",content:v("span",{children:['"',r,'"']})})}),N=E?v(pr,{}):v(fp,{onClick:p,className:"flex items-center gap-1 pl-1 text-sm",children:[`${F}`
+
+  [Match 3] Term: "Searched" at Pos 11099550
+  Snippet: tle&&D.uri),F=R.length,S=15,V=!E&&F>0,N=v("div",{"data-tooltip-id":a,className:"flex-1 overflow-hidden",children:v(Ts,{prefix:E?"Searching Moma for":"Searched Moma for",content:`"${n}"`})}),x=E?v(pr,{}):V?v(fp,{onClick:p,className:"flex items-center gap-1 pl-1 text-sm",children:[`${F}`," result",F===1?"":"s
+
+
+========================================
+FILE: workbench.desktop.main.js
+========================================
+  [Match 1] Term: "Searched" at Pos 3487040
+  Snippet: tOutdent=2]="IndentOutdent",t[t.Outdent=3]="Outdent"})(H0||(H0={}));var mji=class{constructor(t){if(this._neutralCharacter=null,this._neutralCharacterSearched=!1,this.open=t.open,this.close=t.close,this._inString=!0,this._inComment=!0,this._inRegEx=!0,Array.isArray(t.notIn))for(let e=0,i=t.notIn.length;e<i;
+
+  [Match 2] Term: "Searched" at Pos 3487807
+  Snippet:  n=String.fromCharCode(i);if(!this.open.includes(n)&&!this.close.includes(n))return n}return null}findNeutralCharacter(){return this._neutralCharacterSearched||(this._neutralCharacterSearched=!0,this._neutralCharacter||(this._neutralCharacter=this._findNeutralCharacterInRange(48,57)),this._neutralCharacter|
+
+  [Match 3] Term: "Searched" at Pos 3487840
+  Snippet: s.open.includes(n)&&!this.close.includes(n))return n}return null}findNeutralCharacter(){return this._neutralCharacterSearched||(this._neutralCharacterSearched=!0,this._neutralCharacter||(this._neutralCharacter=this._findNeutralCharacterInRange(48,57)),this._neutralCharacter||(this._neutralCharacter=this._fi
+

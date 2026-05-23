@@ -21,6 +21,7 @@ export function check(config) {
 
   const workbenchPath = path.join(path.dirname(targetFilePath), '..', 'vs', 'workbench', 'workbench.desktop.main.js');
   const nlsPath = path.join(path.dirname(targetFilePath), '..', 'nls.messages.json');
+  const mainProcessPath = path.join(path.dirname(targetFilePath), '..', 'main.js');
 
   try {
     // 2. 调用当前 Node 进程原生 --check 工具对文件进行极速抽象语法分析
@@ -30,6 +31,11 @@ export function check(config) {
     if (fs.existsSync(workbenchPath)) {
       execSync(`node --check "${workbenchPath}"`, { stdio: 'pipe' });
       console.log(`[OK] workbench.desktop.main.js 语法校验通过！`);
+    }
+
+    if (fs.existsSync(mainProcessPath)) {
+      execSync(`node --check "${mainProcessPath}"`, { stdio: 'pipe' });
+      console.log(`[OK] out/main.js 语法校验通过！`);
     }
 
     if (fs.existsSync(nlsPath)) {

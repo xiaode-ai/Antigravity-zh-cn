@@ -1,20 +1,53 @@
 import fs from 'fs';
 import path from 'path';
 
-const extJsPath = 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\extensions\\antigravity\\dist\\extension.js';
+const searchRoot = 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app';
 
-if (!fs.existsSync(extJsPath)) {
-  console.log('antigravity/dist/extension.js not found.');
-  process.exit(1);
+function walk(dir) {
+  let results = [];
+  const list = fs.readdirSync(dir);
+  list.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    if (stat && stat.isDirectory()) {
+      if (file !== 'node_modules' && file !== '.git') {
+        results = results.concat(walk(filePath));
+      }
+    } else {
+      results.push(filePath);
+    }
+  });
+  return results;
 }
 
-const content = fs.readFileSync(extJsPath, 'utf8');
+const allFiles = walk(searchRoot);
+console.log(`Found ${allFiles.length} files. Searching for "recording"...`);
 
-// 匹配包含 limit/Limit 的所有字符串字面量（被单引号、双引号、或模板字面量包裹）
-const regex = /(["'`])([^"'`]*?limit[^"'`]*?)\1/gi;
-let match;
-let count = 0;
-while ((match = regex.exec(content)) !== null) {
-  count++;
-  console.log(`[${count}] Index ${match.index}: QuoteChar: ${match[1]}, String: "${match[2]}"`);
-}
+allFiles.forEach(file => {
+  const ext = path.extname(file);
+  if (['.js', '.json', '.html'].includes(ext)) {
+    try {
+      const content = fs.readFileSync(file, 'utf8');
+      let idx = 0;
+      let occurrences = [];
+      const query = 'recording';
+      while (true) {
+        idx = content.toLowerCase().indexOf(query, idx);
+        if (idx === -1) break;
+        occurrences.push(idx);
+        idx += query.length;
+      }
+      if (occurrences.length > 0) {
+        console.log(`[FOUND] "${query}" in ${file} (${occurrences.length} occurrences)`);
+        occurrences.forEach((pos, i) => {
+          const start = Math.max(0, pos - 100);
+          const end = Math.min(content.length, pos + query.length + 100);
+          console.log(`  Occurrence #${i + 1} at pos ${pos}:`);
+          console.log(`  ... ${content.substring(start, end).replace(/\r?\n/g, ' ')} ...\n`);
+        });
+      }
+    } catch (e) {
+      // ignore
+    }
+  }
+});

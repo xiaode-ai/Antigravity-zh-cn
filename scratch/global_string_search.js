@@ -2,14 +2,16 @@ import fs from 'fs';
 import path from 'path';
 
 const searchDirectories = [
-  'C:\\Users\\i-cgh\\.gemini',
-  'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE'
+  'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app'
 ];
 
-const searchTerm = 'Using the Antigravity Python SDK to build';
+const searchTerms = [
+  'Already recording',
+  'No active recording',
+  'Recording...'
+];
 
 function searchInDir(dir) {
-  let results = [];
   try {
     const files = fs.readdirSync(dir);
     for (const file of files) {
@@ -28,11 +30,11 @@ function searchInDir(dir) {
       }
       
       if (stat.isDirectory()) {
-        results = results.concat(searchInDir(fullPath));
+        searchInDir(fullPath);
       } else if (stat.isFile()) {
         // 忽略二进制文件
         const ext = path.extname(fullPath).toLowerCase();
-        if (['.exe', '.dll', '.png', '.jpg', '.gif', '.zip', '.tar', '.gz', '.db', '.dat'].includes(ext)) {
+        if (['.exe', '.dll', '.png', '.jpg', '.gif', '.zip', '.tar', '.gz', '.db', '.dat', '.map'].includes(ext)) {
           continue;
         }
         
@@ -43,10 +45,20 @@ function searchInDir(dir) {
         
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes(searchTerm)) {
-            console.log(`[MATCH] 找到匹配文件: ${fullPath}`);
-            results.push(fullPath);
-          }
+          searchTerms.forEach(term => {
+            if (content.includes(term)) {
+              console.log(`[MATCH] 找到 "${term}" 在文件: ${fullPath}`);
+              let idx = 0;
+              while (true) {
+                idx = content.indexOf(term, idx);
+                if (idx === -1) break;
+                const start = Math.max(0, idx - 100);
+                const end = Math.min(content.length, idx + term.length + 100);
+                console.log(`  Context at pos ${idx}: ${content.substring(start, end).replace(/\r?\n/g, ' ')}`);
+                idx += term.length;
+              }
+            }
+          });
         } catch (e) {
           // 读取失败忽略
         }
@@ -55,17 +67,10 @@ function searchInDir(dir) {
   } catch (e) {
     // 目录读取失败忽略
   }
-  return results;
 }
 
-console.log(`正在启动全局深度搜索，关键词: "${searchTerm}" ...`);
-const matchedFiles = [];
+console.log(`正在启动全局深度搜索，关键词: ${JSON.stringify(searchTerms)} ...`);
 searchDirectories.forEach(dir => {
-  console.log(`正在搜索目录: ${dir}`);
-  const res = searchInDir(dir);
-  matchedFiles.push(...res);
+  searchInDir(dir);
 });
-
-console.log('\n================ 搜索完成 ================');
-console.log(`共找到 ${matchedFiles.length} 个匹配文件：`);
-matchedFiles.forEach(f => console.log(`- ${f}`));
+console.log('搜索完成。');

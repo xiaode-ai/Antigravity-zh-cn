@@ -1,35 +1,63 @@
 import fs from 'fs';
+import path from 'path';
 
-const mainBakPath = 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out\\jetskiAgent\\main.js.bak';
-if (!fs.existsSync(mainBakPath)) {
-  console.log('jetskiAgent/main.js.bak not found!');
-  process.exit(1);
-}
+const files = [
+  "C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out\\jetskiAgent\\main.js",
+  "C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out\\main.js"
+];
 
-const content = fs.readFileSync(mainBakPath, 'utf8');
-console.log(`main.js.bak length: ${content.length}`);
+const terms = [
+  "Accept Changes",
+  "Edited files",
+  "edited file",
+  "Error",
+  "Searched"
+];
 
-// We will search case-insensitively for "limited" and print its context
-let regex = /limited/gi;
-let match;
-while ((match = regex.exec(content)) !== null) {
-  const idx = match.index;
-  const start = Math.max(0, idx - 100);
-  const end = Math.min(content.length, idx + match[0].length + 100);
-  console.log(`Found "limited" at index ${idx}:`);
-  console.log(`  ... ${content.substring(start, end).replace(/\r?\n/g, ' ')} ...`);
-}
-
-// We will search case-insensitively for "time" and print context if it's near "limited"
-// Let's search for any occurrence of "limited" and "time" within 50 chars of each other
-let nearRegex = /limited.{0,50}time|time.{0,50}limited/gi;
-let nearMatch;
-let nearCount = 0;
-while ((nearMatch = nearRegex.exec(content)) !== null) {
-  nearCount++;
-  const idx = nearMatch.index;
-  const start = Math.max(0, idx - 100);
-  const end = Math.min(content.length, idx + nearMatch[0].length + 100);
-  console.log(`[NEAR MATCH #${nearCount}] at index ${idx}:`);
-  console.log(`  ... ${content.substring(start, end).replace(/\r?\n/g, ' ')} ...`);
+for (const filePath of files) {
+  if (!fs.existsSync(filePath)) {
+    console.log(`File not found: ${filePath}`);
+    continue;
+  }
+  const content = fs.readFileSync(filePath, 'utf8');
+  console.log(`=== File: ${path.basename(filePath)} ===`);
+  
+  for (const term of terms) {
+    let index = 0;
+    let count = 0;
+    while (true) {
+      index = content.indexOf(term, index);
+      if (index === -1) break;
+      
+      let isUiString = false;
+      const start = Math.max(0, index - 80);
+      const end = Math.min(content.length, index + term.length + 80);
+      const snippet = content.substring(start, end).replace(/\n/g, ' ');
+      
+      if (term === "Error") {
+        const lowerSnippet = snippet.toLowerCase();
+        if (
+          lowerSnippet.includes("children") ||
+          lowerSnippet.includes("label") ||
+          lowerSnippet.includes("title") ||
+          lowerSnippet.includes("text") ||
+          lowerSnippet.includes("status") ||
+          lowerSnippet.includes("render")
+        ) {
+          isUiString = true;
+        }
+      } else {
+        isUiString = true;
+      }
+      
+      if (isUiString) {
+        count++;
+        console.log(`  [MATCH] "${term}" at Pos ${index}`);
+        console.log(`  Snippet: ... ${snippet} ...\n`);
+      }
+      
+      index += term.length;
+    }
+    console.log(`  --> Total UI/suspicious matches for "${term}": ${count}\n`);
+  }
 }

@@ -1,0 +1,102 @@
+
+=================== SEARCHING FOR "Compacting" ===================
+[FOUND in jetskiAgent/main.js.bak] match #1 at index 9478806:
+   CODE: text-secondary-foreground transition-opacity duration-100 ease-out min-h-8",y?"opacity-100":"opacity-0",n),children:[f?"Compacting":q4i,p(mAe,{})]}):null},rxi=(e=>(e[e.EMPTY=0]="EMPTY",e[e.GENERIC_WORKING=1]="GENERIC_WORKING",e[e.THINKING=2]="THINKIN
+=> Found 1 matches in jetskiAgent/main.js.bak
+[FOUND in vs/workbench/workbench.desktop.main.js.bak] match #1 at index 14216175:
+   CODE: text-secondary-foreground transition-opacity duration-100 ease-out min-h-8",g?"opacity-100":"opacity-0",n),children:[d?"Compacting":C1u,R(Y8t,{})]}):null},A1u=(t=>(t[t.EMPTY=0]="EMPTY",t[t.GENERIC_WORKING=1]="GENERIC_WORKING",t[t.THINKING=2]="THINKIN
+=> Found 1 matches in vs/workbench/workbench.desktop.main.js.bak
+[FOUND in main.js.bak] match #1 at index 11500688:
+   CODE: text-secondary-foreground transition-opacity duration-100 ease-out min-h-8",R?"opacity-100":"opacity-0",n),children:[f?"Compacting":fxa,v(n1e,{})]}):null},gxa=(e=>(e[e.EMPTY=0]="EMPTY",e[e.GENERIC_WORKING=1]="GENERIC_WORKING",e[e.THINKING=2]="THINKIN
+=> Found 1 matches in main.js.bak
+
+=================== SEARCHING FOR "Search for files edited by Agent" ===================
+[FOUND in vs/workbench/workbench.desktop.main.js.bak] match #1 at index 18754292:
+   CODE: elService.getUriLabel(n,{relative:!0}),iconClasses:qp(this.modelService,this.languageService,n),uri:n})),i.placeholder="Search for files edited by Agent",i.onDidAccept(()=>{const n=i.selectedItems[0];n!==void 0&&(i.hide(),this._commandService.executeCommand(bI,n.uri),i.di
+=> Found 1 matches in vs/workbench/workbench.desktop.main.js.bak
+
+=================== SEARCHING FOR "Comment (Ctrl+Alt+M)" ===================
+
+=================== SEARCHING FOR "Comment (Ctrl + Alt + M)" ===================
+
+=================== SEARCHING FOR "Submit (Enter)" ===================
+[FOUND in jetskiAgent/main.js.bak] match #1 at index 8455059:
+   CODE: me:"ml-1 text-xs opacity-50 font-normal tracking-tight",children:"\u21B5"})]}),p(_n,{id:P,place:"top",children:a===i-1?"Submit (Enter)":"Continue (Enter)"}),p(_n,{id:W,place:"top",children:`Skip (esc), Skip All (${Fte?"\u2318esc":"Ctrl+esc"})`})]})]}):nu
+=> Found 1 matches in jetskiAgent/main.js.bak
+[FOUND in vs/workbench/workbench.desktop.main.js.bak] match #1 at index 13212451:
+   CODE: me:"ml-1 text-xs opacity-50 font-normal tracking-tight",children:"\u21B5"})]}),R(cs,{id:X,place:"top",children:r===s-1?"Submit (Enter)":"Continue (Enter)"}),R(cs,{id:Z,place:"top",children:`Skip (esc), Skip All (${Ect?"\u2318esc":"Ctrl+esc"})`})]})]}):nu
+=> Found 1 matches in vs/workbench/workbench.desktop.main.js.bak
+[FOUND in main.js.bak] match #1 at index 10690085:
+   CODE: me:"ml-1 text-xs opacity-50 font-normal tracking-tight",children:"\u21B5"})]}),v(Xn,{id:M,place:"top",children:a===i-1?"Submit (Enter)":"Continue (Enter)"}),v(Xn,{id:O,place:"top",children:`Skip (esc), Skip All (${BK?"\u2318esc":"Ctrl+esc"})`})]})]}):nul
+=> Found 1 matches in main.js.bak
+
+=================== SEARCHING FOR "Skip (esc)" ===================
+[FOUND in jetskiAgent/main.js.bak] match #1 at index 8455129:
+   CODE: B5"})]}),p(_n,{id:P,place:"top",children:a===i-1?"Submit (Enter)":"Continue (Enter)"}),p(_n,{id:W,place:"top",children:`Skip (esc), Skip All (${Fte?"\u2318esc":"Ctrl+esc"})`})]})]}):null},dpi=e=>{let{step:t,status:r,metadata:n}=e,a=t.questions,{isSub
+=> Found 1 matches in jetskiAgent/main.js.bak
+[FOUND in vs/workbench/workbench.desktop.main.js.bak] match #1 at index 13212521:
+   CODE: B5"})]}),R(cs,{id:X,place:"top",children:r===s-1?"Submit (Enter)":"Continue (Enter)"}),R(cs,{id:Z,place:"top",children:`Skip (esc), Skip All (${Ect?"\u2318esc":"Ctrl+esc"})`})]})]}):null},mtu=t=>{let{step:e,status:i,metadata:n}=t,r=e.questions,{isSub
+=> Found 1 matches in vs/workbench/workbench.desktop.main.js.bak
+[FOUND in main.js.bak] match #1 at index 10690155:
+   CODE: B5"})]}),v(Xn,{id:M,place:"top",children:a===i-1?"Submit (Enter)":"Continue (Enter)"}),v(Xn,{id:O,place:"top",children:`Skip (esc), Skip All (${BK?"\u2318esc":"Ctrl+esc"})`})]})]}):null},gva=e=>{let{step:t,status:r,metadata:n}=e,a=t.questions,{isSuba
+=> Found 1 matches in main.js.bak
+
+=================== SEARCHING FOR "Skip All (Ctrl+esc)" ===================
+
+=================== SEARCHING FOR "Skip All (Ctrl + esc)" ===================
+
+=================== SEARCHING FOR "Allow read access to this path?" ===================
+
+=================== SEARCHING FOR "Yes, allow this time" ===================
+[FOUND in jetskiAgent/main.js.bak] match #1 at index 10116841:
+   CODE: ),idToScopeMap:ie};let ge=1,fe=(Se,Ye)=>{ae.push(At(fei,{id:String(ge),text:Se})),ie.set(String(ge),Ye),ge++};if(y||fe("Yes, allow this time",s1.ONCE),!x){if(d?.projectSettingsProvider&&b){let Se=b===NC,Ye=y?D&&I?`Yes, save rule for '${I}' ${Se?"when not in a 
+=> Found 1 matches in jetskiAgent/main.js.bak
+[FOUND in vs/workbench/workbench.desktop.main.js.bak] match #1 at index 14690613:
+   CODE: ),idToScopeMap:pe};let Ee=1,Ce=(We,rt)=>{he.push(Wt(yUc,{id:String(Ee),text:We})),pe.set(String(Ee),rt),Ee++};if(g||Ce("Yes, allow this time",nI.ONCE),!x){if(u?.projectSettingsProvider&&f){let We=f===jBe,rt=g?F&&A?`Yes, save rule for '${A}' ${We?"when not in a
+=> Found 1 matches in vs/workbench/workbench.desktop.main.js.bak
+[FOUND in main.js.bak] match #1 at index 11849651:
+   CODE: ),idToScopeMap:le};let Re=1,me=(xe,Ye)=>{ie.push(Rr(V0a,{id:String(Re),text:xe})),le.set(String(Re),Ye),Re++};if(R||me("Yes, allow this time",lp.ONCE),!w){if(d?.projectSettingsProvider&&E){let xe=E===XG,Ye=R?D&&x?`Yes, save rule for '${x}' ${xe?"when not in a 
+=> Found 1 matches in main.js.bak
+
+=================== SEARCHING FOR "Yes, and always allow" ===================
+[FOUND in jetskiAgent/main.js.bak] match #1 at index 10117081:
+   CODE: ${Se?"when not in a project":"in this project"}`:`Yes, save rule ${Se?"when not in a project":"in this project"}`:D&&I?`Yes, and always allow '${I}' ${Se?"when not in a project":"in this project"}`:`Yes, and always allow ${Se?"when not in a project":"in this pr
+[FOUND in jetskiAgent/main.js.bak] match #2 at index 10117160:
+   CODE:  in a project":"in this project"}`:D&&I?`Yes, and always allow '${I}' ${Se?"when not in a project":"in this project"}`:`Yes, and always allow ${Se?"when not in a project":"in this project"}`;fe(Ye,s1.PROJECT)}if(u){let Se=y?D&&I?`Yes, save rule for '${I}' in th
+[FOUND in jetskiAgent/main.js.bak] match #3 at index 10117356:
+   CODE: ,s1.PROJECT)}if(u){let Se=y?D&&I?`Yes, save rule for '${I}' in this workspace`:"Yes, save rule in this workspace":D&&I?`Yes, and always allow '${I}' in this workspace`:"Yes, and always allow in this workspace";fe(Se,s1.WORKSPACE)}if(g!=="Cider"){let Se=y?D&&I?`
+[FOUND in jetskiAgent/main.js.bak] match #4 at index 10117405:
+   CODE: for '${I}' in this workspace`:"Yes, save rule in this workspace":D&&I?`Yes, and always allow '${I}' in this workspace`:"Yes, and always allow in this workspace";fe(Se,s1.WORKSPACE)}if(g!=="Cider"){let Se=y?D&&I?`Yes, save rule for '${I}' globally`:"Yes, save ru
+[FOUND in jetskiAgent/main.js.bak] match #5 at index 10117565:
+   CODE: ;fe(Se,s1.WORKSPACE)}if(g!=="Cider"){let Se=y?D&&I?`Yes, save rule for '${I}' globally`:"Yes, save rule globally":D&&I?`Yes, and always allow '${I}'`:"Yes, and always allow";fe(Se,s1.GLOBAL)}}return{entry:At(wHr,{question:U,options:ae,isMultiSelect:!1}),idToSco
+[FOUND in jetskiAgent/main.js.bak] match #6 at index 10117596:
+   CODE: der"){let Se=y?D&&I?`Yes, save rule for '${I}' globally`:"Yes, save rule globally":D&&I?`Yes, and always allow '${I}'`:"Yes, and always allow";fe(Se,s1.GLOBAL)}}return{entry:At(wHr,{question:U,options:ae,isMultiSelect:!1}),idToScopeMap:ie}},[U,i,u,d,b,y,x,D,I,g
+=> Found 6 matches in jetskiAgent/main.js.bak
+[FOUND in vs/workbench/workbench.desktop.main.js.bak] match #1 at index 14690854:
+   CODE: ${We?"when not in a project":"in this project"}`:`Yes, save rule ${We?"when not in a project":"in this project"}`:F&&A?`Yes, and always allow '${A}' ${We?"when not in a project":"in this project"}`:`Yes, and always allow ${We?"when not in a project":"in this pr
+[FOUND in vs/workbench/workbench.desktop.main.js.bak] match #2 at index 14690933:
+   CODE:  in a project":"in this project"}`:F&&A?`Yes, and always allow '${A}' ${We?"when not in a project":"in this project"}`:`Yes, and always allow ${We?"when not in a project":"in this project"}`;Ce(rt,nI.PROJECT)}if(l){let We=g?F&&A?`Yes, save rule for '${A}' in th
+[FOUND in vs/workbench/workbench.desktop.main.js.bak] match #3 at index 14691129:
+   CODE: ,nI.PROJECT)}if(l){let We=g?F&&A?`Yes, save rule for '${A}' in this workspace`:"Yes, save rule in this workspace":F&&A?`Yes, and always allow '${A}' in this workspace`:"Yes, and always allow in this workspace";Ce(We,nI.WORKSPACE)}if(h!=="Cider"){let We=g?F&&A?`
+[FOUND in vs/workbench/workbench.desktop.main.js.bak] match #4 at index 14691178:
+   CODE: for '${A}' in this workspace`:"Yes, save rule in this workspace":F&&A?`Yes, and always allow '${A}' in this workspace`:"Yes, and always allow in this workspace";Ce(We,nI.WORKSPACE)}if(h!=="Cider"){let We=g?F&&A?`Yes, save rule for '${A}' globally`:"Yes, save ru
+[FOUND in vs/workbench/workbench.desktop.main.js.bak] match #5 at index 14691338:
+   CODE: ;Ce(We,nI.WORKSPACE)}if(h!=="Cider"){let We=g?F&&A?`Yes, save rule for '${A}' globally`:"Yes, save rule globally":F&&A?`Yes, and always allow '${A}'`:"Yes, and always allow";Ce(We,nI.GLOBAL)}}return{entry:Wt(r1o,{question:T,options:he,isMultiSelect:!1}),idToSco
+[FOUND in vs/workbench/workbench.desktop.main.js.bak] match #6 at index 14691369:
+   CODE: der"){let We=g?F&&A?`Yes, save rule for '${A}' globally`:"Yes, save rule globally":F&&A?`Yes, and always allow '${A}'`:"Yes, and always allow";Ce(We,nI.GLOBAL)}}return{entry:Wt(r1o,{question:T,options:he,isMultiSelect:!1}),idToScopeMap:pe}},[T,s,l,u,f,g,x,F,A,h
+=> Found 6 matches in vs/workbench/workbench.desktop.main.js.bak
+[FOUND in main.js.bak] match #1 at index 11849891:
+   CODE: ${xe?"when not in a project":"in this project"}`:`Yes, save rule ${xe?"when not in a project":"in this project"}`:D&&x?`Yes, and always allow '${x}' ${xe?"when not in a project":"in this project"}`:`Yes, and always allow ${xe?"when not in a project":"in this pr
+[FOUND in main.js.bak] match #2 at index 11849970:
+   CODE:  in a project":"in this project"}`:D&&x?`Yes, and always allow '${x}' ${xe?"when not in a project":"in this project"}`:`Yes, and always allow ${xe?"when not in a project":"in this project"}`;me(Ye,lp.PROJECT)}if(u){let xe=R?D&&x?`Yes, save rule for '${x}' in th
+[FOUND in main.js.bak] match #3 at index 11850166:
+   CODE: ,lp.PROJECT)}if(u){let xe=R?D&&x?`Yes, save rule for '${x}' in this workspace`:"Yes, save rule in this workspace":D&&x?`Yes, and always allow '${x}' in this workspace`:"Yes, and always allow in this workspace";me(xe,lp.WORKSPACE)}if(p!=="Cider"){let xe=R?D&&x?`
+[FOUND in main.js.bak] match #4 at index 11850215:
+   CODE: for '${x}' in this workspace`:"Yes, save rule in this workspace":D&&x?`Yes, and always allow '${x}' in this workspace`:"Yes, and always allow in this workspace";me(xe,lp.WORKSPACE)}if(p!=="Cider"){let xe=R?D&&x?`Yes, save rule for '${x}' globally`:"Yes, save ru
+[FOUND in main.js.bak] match #5 at index 11850375:
+   CODE: ;me(xe,lp.WORKSPACE)}if(p!=="Cider"){let xe=R?D&&x?`Yes, save rule for '${x}' globally`:"Yes, save rule globally":D&&x?`Yes, and always allow '${x}'`:"Yes, and always allow";me(xe,lp.GLOBAL)}}return{entry:Rr(EBt,{question:B,options:ie,isMultiSelect:!1}),idToSco
+[FOUND in main.js.bak] match #6 at index 11850406:
+   CODE: der"){let xe=R?D&&x?`Yes, save rule for '${x}' globally`:"Yes, save rule globally":D&&x?`Yes, and always allow '${x}'`:"Yes, and always allow";me(xe,lp.GLOBAL)}}return{entry:Rr(EBt,{question:B,options:ie,isMultiSelect:!1}),idToScopeMap:le}},[B,i,u,d,E,R,w,D,x,p
+=> Found 6 matches in main.js.bak
+
+=================== SEARCHING FOR "No (tell the agent what to do instead)" ===================

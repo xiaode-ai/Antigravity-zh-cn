@@ -1,73 +1,80 @@
 import fs from 'fs';
 import path from 'path';
 
-const targetDir = 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out';
-const mainBakPath = path.join(targetDir, 'jetskiAgent', 'main.js.bak');
-const wbBakPath = path.join(targetDir, 'vs', 'workbench', 'workbench.desktop.main.js.bak');
-const extBakPath = 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\extensions\\antigravity\\dist\\extension.js.bak';
+const files = [
+  {
+    name: 'main.js',
+    path: 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out\\jetskiAgent\\main.js.bak'
+  },
+  {
+    name: 'workbench.js',
+    path: 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out\\vs\\workbench\\workbench.desktop.main.js.bak'
+  },
+  {
+    name: 'extension.js',
+    path: 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\extensions\\antigravity\\dist\\extension.js.bak'
+  }
+];
 
-const mainContent = fs.existsSync(mainBakPath) ? fs.readFileSync(mainBakPath, 'utf8') : '';
-const wbContent = fs.existsSync(wbBakPath) ? fs.readFileSync(wbBakPath, 'utf8') : '';
-const extContent = fs.existsSync(extBakPath) ? fs.readFileSync(extBakPath, 'utf8') : '';
-
-const searchTerms = [
-  "Back to Agent",
-  "Customize Agent to get a better, more personalized experience.",
-  "Rules help guide the behavior of Agent.",
-  "Workflows are saved prompts that Agent can follow. To trigger a workflow, type \"/\" in Agent.",
-  "Workflows",
-  "Advanced Settings",
-  "Open Command",
-  "Open Agent",
-  "View all Antigravity IDE shortcuts",
-  "View all",
-  "Reset to default shortcuts",
-  "Background Process",
-  "Background Processes",
-  "Last Updated",
-  "help perform longer running",
-  "0 pages",
-  "Launch",
-  "Browser",
-  "Snooze",
-  "Start"
+const targets = [
+  'Recording...',
+  'background processes',
+  'Browser',
+  'Search all convos',
+  'Current',
+  'Show 2 more',
+  'to navigate',
+  'to select',
+  'Ran'
 ];
 
 let output = '';
 
-function findContext(content, name, terms) {
-  if (!content) {
-    output += `[INFO] File ${name} is empty or doesn't exist.\n`;
-    return;
-  }
-  output += `\n================ SEARCH IN ${name} ================\n`;
-  terms.forEach(term => {
+files.forEach(fileInfo => {
+  if (!fs.existsSync(fileInfo.path)) return;
+  const content = fs.readFileSync(fileInfo.path, 'utf8');
+  output += `\n*** FILE: ${fileInfo.name} ***\n`;
+  
+  targets.forEach(term => {
+    output += `\n-- Term: "${term}" --\n`;
     let idx = 0;
-    let occurrences = [];
     while (true) {
       idx = content.indexOf(term, idx);
       if (idx === -1) break;
-      occurrences.push(idx);
+      
+      // Grab 150 chars around
+      const start = Math.max(0, idx - 100);
+      const end = Math.min(content.length, idx + term.length + 100);
+      const snippet = content.substring(start, end).replace(/\r?\n/g, ' ');
+      
+      // Let's filter to UI contexts: e.g. containing labels, quotes, children, etc.
+      // Especially: check if it matches common UI patterns
+      const lowerSnippet = snippet.toLowerCase();
+      const isUI = lowerSnippet.includes('label:') ||
+                   lowerSnippet.includes('title:') ||
+                   lowerSnippet.includes('placeholder:') ||
+                   lowerSnippet.includes('children:') ||
+                   lowerSnippet.includes('tooltip:') ||
+                   lowerSnippet.includes('description:') ||
+                   lowerSnippet.includes('"') ||
+                   lowerSnippet.includes("'") ||
+                   lowerSnippet.includes('`') ||
+                   lowerSnippet.includes('span') ||
+                   lowerSnippet.includes('div') ||
+                   snippet.includes(term + '"') ||
+                   snippet.includes(term + "'") ||
+                   snippet.includes(term + '`');
+                   
+      if (isUI) {
+        // Let's see if we can extract the exact literal or property
+        // e.g. children:"Recording..." or p("span", {children: "to navigate"})
+        output += `  [Pos ${idx}]: ... ${snippet} ...\n`;
+      }
+      
       idx += term.length;
     }
-    output += `- "${term}": found ${occurrences.length} times\n`;
-    occurrences.forEach((pos, i) => {
-      // limit printed occurrences for very common words like "Start"
-      if (occurrences.length > 20 && i >= 10) return;
-      const start = Math.max(0, pos - 150);
-      const end = Math.min(content.length, pos + term.length + 150);
-      output += `  [Match ${i+1} at ${pos}]:\n`;
-      output += `    ${content.substring(start, end).replace(/\r?\n/g, ' ')}\n`;
-    });
-    if (occurrences.length > 20) {
-      output += `  ... and ${occurrences.length - 10} more matches omitted\n`;
-    }
   });
-}
-
-findContext(mainContent, 'main.js.bak', searchTerms);
-findContext(wbContent, 'workbench.desktop.main.js.bak', searchTerms);
-findContext(extContent, 'extension.js.bak', searchTerms);
+});
 
 fs.writeFileSync('scratch/user_terms_context_results.txt', output, 'utf8');
-console.log('Done searching contexts! Output written to scratch/user_terms_context_results.txt');
+console.log('Done filtering user terms context!');

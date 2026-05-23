@@ -1,60 +1,111 @@
 import fs from 'fs';
+import path from 'path';
 
-const translationsPath = 'translations.json';
-let translations = JSON.parse(fs.readFileSync(translationsPath, 'utf8'));
+const translationsPath = './translations.json';
 
-console.log(`Original translations count: ${translations.length}`);
-
-// 1. Remove the old mismatched Account children entry
-const filterBefore = translations.length;
-translations = translations.filter(t => !t.old.includes('title:"Account",children:p(yo,{children:[s==="signedIn"&&'));
-console.log(`Removed mismatched entries: ${filterBefore - translations.length}`);
-
-// 2. Remove the old Your Plan entry so we can place the corrected one at the top
-const filterBefore2 = translations.length;
-translations = translations.filter(t => !t.old.includes('Your Plan: ') || !t.old.includes('description:x'));
-console.log(`Removed old plan entries: ${filterBefore2 - translations.length}`);
-
-// 3. Find and update the Terminal Command Auto Execution entry
-let updatedCount = 0;
-for (let i = 0; i < translations.length; i++) {
-  if (translations[i].old.includes('Terminal Command Auto Execution') && translations[i].old.includes('Cider')) {
-    translations[i].old = "screen:\"Permissions\",label:\"Terminal Command Auto Execution\",description:e===\"Cider\"?`Google-wide Allowlist: If you are eligible, commands in the this list run without your approval, in addition to the below options. This policy applies to any host, regardless of internet connectivity. Check on eligibility on go/can-i-autorun-agents.\n\nNote: please reload for these changes to take effect.`:`Controls whether terminal commands require your approval before running.\n\nNote: A change to this setting will only apply to new messages sent to Agent. In-progress responses will use the previous setting value.`,options:[rl.EAGER,rl.PROCEED_IN_SANDBOX,rl.OFF],resolveOptionToString:t=>{switch(t){case rl.EAGER:return\"Always Proceed\";case rl.OFF:return\"Request Review\";default:return\"Proceed in Sandbox\"}}";
-    
-    translations[i].new = "screen:\"Permissions\",label:\"终端命令自动执行\",description:e===\"Cider\"?`谷歌范围内白名单：如果您符合条件，此列表中的命令无需您的批准即可运行（除以下选项外）。此策略适用于任何主机，无论互联网连接如何。请在 go/can-i-autorun-agents 检查您的资格。\n\n注意：请重新加载以使这些更改生效。`:`控制终端命令在运行前是否需要您的批准。\n\n注意：对此设置的更改将仅适用于发送给智能体的新消息。正在进行中的响应将使用之前的设置值。`,options:[rl.EAGER,rl.PROCEED_IN_SANDBOX,rl.OFF],resolveOptionToString:t=>{switch(t){case rl.EAGER:return\"始终执行\";case rl.OFF:return\"需要审核\";default:return\"在沙箱中执行\"}}";
-    updatedCount++;
-  }
-}
-console.log(`Updated Terminal Command entries: ${updatedCount}`);
-
-// 4. Define our new high-priority rules (to be prepended at the top)
-const newRules = [
-  // A. Window Title Rule
+const newTranslations = [
+  // 1. Files Changed templates
   {
-    "old": "children:[\"Settings - \",e]",
-    "new": "children:[\"设置 - \",e]"
+    "old": "children:`${y} ${y===1?\"file\":\"files\"} changed`",
+    "new": "children:`${y} 个文件已更改`"
   },
-  // B. Card Title: General
   {
-    "old": "p(Xl,{title:\"General\",children:p(yo,{",
-    "new": "p(Xl,{title:\"常规\",children:p(yo,{"
+    "old": "children:`${g} ${g===1?\"file\":\"files\"} changed`",
+    "new": "children:`${g} 个文件已更改`"
   },
-  // C. Card Title: Account
   {
-    "old": "p(Xl,{title:\"Account\",children:p(yo,{",
-    "new": "p(Xl,{title:\"账户\",children:p(yo,{"
+    "old": "children:`${R} ${R===1?\"file\":\"files\"} changed`",
+    "new": "children:`${R} 个文件已更改`"
   },
-  // D. Your Plan & Description Long Rule (Specific rule matched before the short rule)
+  // 2. Listed directory templates
   {
-    "old": "label:p(\"div\",{className:\"text-sm font-medium\",children:[\"Your Plan: \",I]}),description:x,",
-    "new": "label:p(\"div\",{className:\"text-sm font-medium\",children:[\"您的方案: \",I]}),description:((\"You can upgrade to a Google AI Ultra plan to receive the highest rate limits.\"===\"You can upgrade to a Google AI Ultra plan to receive the highest rate limits.\"?\"您可以升级至 Google AI Ultra 方案以获得最高的频次额度限制。\":\"\")||x),"
+    "old": "listDirectory:e=>`Listed directory ${Pft(e.directoryPathUri)}`",
+    "new": "listDirectory:e=>`已列出目录 ${Pft(e.directoryPathUri)}`"
+  },
+  {
+    "old": "listDirectory:t=>`Listed directory ${m0n(t.directoryPathUri)}`",
+    "new": "listDirectory:t=>`已列出目录 ${m0n(t.directoryPathUri)}`"
+  },
+  {
+    "old": "listDirectory:e=>`Listed directory ${K_t(e.directoryPathUri)}`",
+    "new": "listDirectory:e=>`已列出目录 ${K_t(e.directoryPathUri)}`"
+  },
+  // 3. Export / Export Artifact dialogs & tooltips
+  {
+    "old": "dialogTitle:a=\"Export\"",
+    "new": "dialogTitle:a=\"导出\""
+  },
+  {
+    "old": "dialogTitle:r=\"Export\"",
+    "new": "dialogTitle:r=\"导出\""
+  },
+  {
+    "old": "label:\"Export\",onClick:",
+    "new": "label:\"导出\",onClick:"
+  },
+  {
+    "old": "title:\"Export Artifact\",saveLabel:\"Export\"",
+    "new": "title:\"导出产物\",saveLabel:\"导出\""
+  },
+  {
+    "old": "dialogTitle:\"Export Artifact\"",
+    "new": "dialogTitle:\"导出产物\""
+  },
+  {
+    "old": "tooltip:d?\"Saved!\":\"Export Artifact\"",
+    "new": "tooltip:d?\"已保存!\":\"导出产物\""
+  },
+  {
+    "old": "tooltip:u?\"Saved!\":\"Export Artifact\"",
+    "new": "tooltip:u?\"已保存!\":\"导出产物\""
+  },
+  // 4. extension.js QuickPick options
+  {
+    "old": "placeHolder:\"Select where to open the conversation\"",
+    "new": "placeHolder:\"选择打开对话的位置\""
+  },
+  {
+    "old": "label:\"Open in current window\"",
+    "new": "label:\"在当前窗口中打开\""
+  },
+  {
+    "old": "description:\"Continue conversation in the current workspace\"",
+    "new": "description:\"在当前工作区中继续对话\""
+  },
+  {
+    "old": "label:\"Open in workspace: \"",
+    "new": "label:\"在工作区中打开：\""
+  },
+  // 5. Background task run status
+  {
+    "old": "s+=`\\`\\${e}\\` task `;",
+    "new": "s+=`任务 \\`\\${e}\\` `;"
+  },
+  {
+    "old": "s+=n.every(l=>l.state===Sv.Idle)?a?`finished with \\`\\${a}\\` problem\\${a===1?\"\":\"s\"}`:\"finished\":a?`started and will continue to run in the background with \\`\\${a}\\` problem\\${a===1?\"\":\"s\"}`:\"started and will continue to run in the background\"",
+    "new": "s+=n.every(l=>l.state===Sv.Idle)?a?`运行完成，但发现 \\`\\${a}\\` 个问题`:\"已完成\":a?`已启动并将继续在后台运行，目前有 \\`\\${a}\\` 个问题`:\"已启动并将继续在后台运行\""
+  },
+  {
+    "old": "if(r)return o?new Fi(`Got output for \\${s} with \\`\\${o}\\` problem\\${o===1?\"\":\"s\"}`):new Fi(`Got output for \\${s}`);",
+    "new": "if(r)return o?new Fi(`已获取到 \\${s} 的输出，发现 \\`\\${o}\\` 个问题`):new Fi(`已获取到 \\${s} 的输出`);"
   }
 ];
 
-// Prepend the new rules
-translations.unshift(...newRules);
-console.log(`Prepended ${newRules.length} new rules to the top of the translations.`);
-
-// Save back
-fs.writeFileSync(translationsPath, JSON.stringify(translations, null, 2), 'utf8');
-console.log(`Updated translations saved back to translations.json. Total entries: ${translations.length}`);
+if (fs.existsSync(translationsPath)) {
+  const translations = JSON.parse(fs.readFileSync(translationsPath, 'utf8'));
+  console.log(`Original translations count: ${translations.length}`);
+  
+  // Prevent duplicate additions
+  let addedCount = 0;
+  for (const item of newTranslations) {
+    if (!translations.some(t => t.old === item.old)) {
+      translations.push(item);
+      addedCount++;
+    }
+  }
+  
+  fs.writeFileSync(translationsPath, JSON.stringify(translations, null, 2), 'utf8');
+  console.log(`Appended ${addedCount} new translation entries. New total: ${translations.length}`);
+} else {
+  console.error('translations.json not found!');
+}

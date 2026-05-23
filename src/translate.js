@@ -103,6 +103,19 @@ export function translate(config, translations, translationsPath) {
     }
   }
 
+  // 2d. 预载入原始 mainProcess 代码，用于精准识别是否存在于 out/main.js (避免误报失效警告)
+  const checkMainProcessPath = path.join(path.dirname(targetFilePath), '..', 'main.js');
+  const checkMainProcessBackupPath = checkMainProcessPath + backupSuffix;
+  let mainProcessOriginalContent = '';
+  if (fs.existsSync(checkMainProcessPath)) {
+    const sourcePath = fs.existsSync(checkMainProcessBackupPath) ? checkMainProcessBackupPath : checkMainProcessPath;
+    try {
+      mainProcessOriginalContent = fs.readFileSync(sourcePath, 'utf8');
+    } catch (err) {
+      console.warn(`[WARN] 预载入 main.js 备份文件失败:`, err.message);
+    }
+  }
+
   // 3. 执行翻译对照替换
   // 最佳实践：按照原始代码段 (old) 的长度进行由长到短 of 降序排序。
   // 这能强力确保包含子短语的长句（如长反馈文本段落）在子短语（如 "Allow", "Deny", "Actual behavior"）被翻译前，
@@ -115,15 +128,19 @@ export function translate(config, translations, translationsPath) {
   
   for (let i = 0; i < sortedTranslations.length; i++) {
     const pair = sortedTranslations[i];
-    if (content.includes(pair.old)) {
-      content = content.replaceAll(pair.old, pair.new);
+    const nextContent = content.replaceAll(pair.old, pair.new);
+    if (nextContent !== content) {
+      content = nextContent;
       replacedCount++;
     } else {
-      // 检查该词条是否在原始源码、workbench 源码或 extension 源码中都完全不存在
-      if (!originalContent.includes(pair.old) && !workbenchOriginalContent.includes(pair.old) && !extensionOriginalContent.includes(pair.old)) {
+      // 检查该词条是否在原始源码、workbench 源码、extension 源码或 main.js 主进程源码中都完全不存在
+      if (!originalContent.includes(pair.old) && 
+          !workbenchOriginalContent.includes(pair.old) && 
+          !extensionOriginalContent.includes(pair.old) &&
+          !mainProcessOriginalContent.includes(pair.old)) {
         unappliedAbsolute.push(pair);
       } else {
-        // 如果原始代码、workbench 代码或 extension 代码里有，但当前 content 中已经找不到了，
+        // 如果原始代码、workbench 代码、extension 代码或 mainProcess 代码里有，但当前 content 中已经找不到了，
         // 说明它作为子词条已被前序更长的词条合并替换，或者活跃在其他模块中。计入匹配成功数。
         replacedCount++;
       }
@@ -176,8 +193,9 @@ export function translate(config, translations, translationsPath) {
     let workbenchReplacedCount = 0;
     for (let i = 0; i < sortedTranslations.length; i++) {
       const pair = sortedTranslations[i];
-      if (workbenchContent.includes(pair.old)) {
-        workbenchContent = workbenchContent.replaceAll(pair.old, pair.new);
+      const nextContent = workbenchContent.replaceAll(pair.old, pair.new);
+      if (nextContent !== workbenchContent) {
+        workbenchContent = nextContent;
         workbenchReplacedCount++;
         workbenchModified = true;
       }
@@ -257,7 +275,10 @@ export function translate(config, translations, translationsPath) {
         { index: 16330, oldVal: "Profile", newVal: "个人资料" },
         { index: 5927, oldVal: "Review", newVal: "审核" },
         { index: 8471, oldVal: "Review", newVal: "审核" },
+        { index: 6011, oldVal: "1 file changed", newVal: "1 个文件已更改" },
         { index: 6012, oldVal: "{0} files changed", newVal: "{0} 个文件已更改" },
+        { index: 5746, oldVal: "Changed 1 file", newVal: "已更改 1 个文件" },
+        { index: 5747, oldVal: "Changed {0} files", newVal: "已更改 {0} 个文件" },
         { index: 5008, oldVal: "Open {0} User Settings", newVal: "打开 {0} 用户设置" },
         { index: 5015, oldVal: "Quick Settings Panel", newVal: "快速设置面板" },
         { index: 5018, oldVal: "Quick Settings Panel", newVal: "快速设置面板" },
@@ -267,7 +288,24 @@ export function translate(config, translations, translationsPath) {
         { index: 6128, oldVal: "Limited", newVal: "受限" },
         { index: 6307, oldVal: "Limited", newVal: "受限" },
         { index: 6309, oldVal: "Limited", newVal: "受限" },
-        { index: 5021, oldVal: "Reset to default shortcuts", newVal: "重置为默认快捷键" }
+        { index: 5021, oldVal: "Reset to default shortcuts", newVal: "重置为默认快捷键" },
+        { index: 955, oldVal: "Show more ({0})", newVal: "显示更多 ({0})" },
+        { index: 5238, oldVal: "Show more...", newVal: "显示更多..." },
+        { index: 5239, oldVal: "Show more...", newVal: "显示更多..." },
+        { index: 9332, oldVal: "Accept Changes", newVal: "接受更改" },
+        { index: 4, oldVal: "Error", newVal: "错误" },
+        { index: 1185, oldVal: "Error", newVal: "错误" },
+        { index: 1756, oldVal: "Error", newVal: "错误" },
+        { index: 2196, oldVal: "Error", newVal: "错误" },
+        { index: 2198, oldVal: "Error", newVal: "错误" },
+        { index: 8630, oldVal: "Error", newVal: "错误" },
+        { index: 9956, oldVal: "Error", newVal: "错误" },
+        { index: 14084, oldVal: "Errored", newVal: "出错" },
+        { index: 2201, oldVal: "Errors", newVal: "错误" },
+        { index: 9784, oldVal: "1 Error", newVal: "1 个错误" },
+        { index: 9785, oldVal: "{0} Errors", newVal: "{0} 个错误" },
+        { index: 9721, oldVal: "Errors: {0}", newVal: "错误: {0}" },
+        { index: 2099, oldVal: "Unknown Error", newVal: "未知错误" }
       ];
 
       let nlsModifiedCount = 0;
@@ -371,7 +409,10 @@ export function translate(config, translations, translationsPath) {
           { index: 16330, oldVal: "Profile", newVal: "个人资料" },
           { index: 5927, oldVal: "Review", newVal: "审核" },
           { index: 8471, oldVal: "Review", newVal: "审核" },
+          { index: 6011, oldVal: "1 file changed", newVal: "1 个文件已更改" },
           { index: 6012, oldVal: "{0} files changed", newVal: "{0} 个文件已更改" },
+          { index: 5746, oldVal: "Changed 1 file", newVal: "已更改 1 个文件" },
+          { index: 5747, oldVal: "Changed {0} files", newVal: "已更改 {0} 个文件" },
           { index: 5008, oldVal: "Open {0} User Settings", newVal: "打开 {0} 用户设置" },
           { index: 5015, oldVal: "Quick Settings Panel", newVal: "快速设置面板" },
           { index: 5018, oldVal: "Quick Settings Panel", newVal: "快速设置面板" },
@@ -381,16 +422,37 @@ export function translate(config, translations, translationsPath) {
           { index: 6128, oldVal: "Limited", newVal: "受限" },
           { index: 6307, oldVal: "Limited", newVal: "受限" },
           { index: 6309, oldVal: "Limited", newVal: "受限" },
-          { index: 5021, oldVal: "Reset to default shortcuts", newVal: "重置为默认快捷键" }
+          { index: 5021, oldVal: "Reset to default shortcuts", newVal: "重置为默认快捷键" },
+          { index: 955, oldVal: "Show more ({0})", newVal: "显示更多 ({0})" },
+          { index: 5238, oldVal: "Show more...", newVal: "显示更多..." },
+          { index: 5239, oldVal: "Show more...", newVal: "显示更多..." },
+          { index: 9332, oldVal: "Accept Changes", newVal: "接受更改" },
+          { index: 4, oldVal: "Error", newVal: "错误" },
+          { index: 1185, oldVal: "Error", newVal: "错误" },
+          { index: 1756, oldVal: "Error", newVal: "错误" },
+          { index: 2196, oldVal: "Error", newVal: "错误" },
+          { index: 2198, oldVal: "Error", newVal: "错误" },
+          { index: 8630, oldVal: "Error", newVal: "错误" },
+          { index: 9956, oldVal: "Error", newVal: "错误" },
+          { index: 14084, oldVal: "Errored", newVal: "出错" },
+          { index: 2201, oldVal: "Errors", newVal: "错误" },
+          { index: 9784, oldVal: "1 Error", newVal: "1 个错误" },
+          { index: 9785, oldVal: "{0} Errors", newVal: "{0} 个错误" },
+          { index: 9721, oldVal: "Errors: {0}", newVal: "错误: {0}" },
+          { index: 2099, oldVal: "Unknown Error", newVal: "未知错误" }
         ];
 
         let clpModifiedCount = 0;
         // 已知的原生中文语言包翻译，需要覆盖为我们的统一翻译
         const nativeChineseOverrides = {
+          48: { '现在': '刚刚' },
+          955: { '显示更多({0})': '显示更多 ({0})' },
+          9721: { '错误: {0} 个': '错误: {0}' },
           3104: { '配置文件': '个人资料' },
           16330: { '配置文件': '个人资料' },
           5927: { '审阅': '审核' },
           8471: { '审阅': '审核' },
+          6011: { '已更改 1 个文件': '1 个文件已更改' },
           6012: { '已更改 {0} 个文件': '{0} 个文件已更改' },
         };
         clpMappings.forEach(mapping => {
@@ -472,8 +534,9 @@ export function translate(config, translations, translationsPath) {
     console.log(`[INFO] 开始对 extension.js 应用汉化词典...`);
     for (let i = 0; i < sortedTranslations.length; i++) {
       const pair = sortedTranslations[i];
-      if (extensionContent.includes(pair.old)) {
-        extensionContent = extensionContent.replaceAll(pair.old, pair.new);
+      const nextContent = extensionContent.replaceAll(pair.old, pair.new);
+      if (nextContent !== extensionContent) {
+        extensionContent = nextContent;
         extReplacedCount++;
         extensionModified = true;
       }
@@ -494,6 +557,63 @@ export function translate(config, translations, translationsPath) {
     }
   } else {
     console.warn(`[WARN] 未找到 Antigravity 扩展文件: "${extensionPath}"，跳过扩展汉化。`);
+  }
+
+  // 4f. 对 out/main.js 应用汉化
+  const mainProcessPath = path.join(path.dirname(targetFilePath), '..', 'main.js');
+  const mainProcessBackupPath = mainProcessPath + backupSuffix;
+
+  if (fs.existsSync(mainProcessPath)) {
+    console.log(`[INFO] 正在载入 main.js...`);
+    
+    // 自动备份
+    if (!fs.existsSync(mainProcessBackupPath)) {
+      try {
+        fs.copyFileSync(mainProcessPath, mainProcessBackupPath);
+        console.log(`[OK] out/main.js 原始文件已成功备份至 "${mainProcessBackupPath}"。`);
+      } catch (backupErr) {
+        console.error(`[ERROR] 备份 out/main.js 失败:`, backupErr.message);
+        return false;
+      }
+    }
+
+    let mainProcessContent;
+    try {
+      mainProcessContent = fs.readFileSync(mainProcessBackupPath, 'utf8');
+    } catch (err) {
+      console.error(`[ERROR] 读取 out/main.js 备份文件失败:`, err.message);
+      return false;
+    }
+
+    let mainProcessModified = false;
+    let mainProcessReplacedCount = 0;
+
+    console.log(`[INFO] 开始对 out/main.js 应用汉化词典...`);
+    for (let i = 0; i < sortedTranslations.length; i++) {
+      const pair = sortedTranslations[i];
+      const nextContent = mainProcessContent.replaceAll(pair.old, pair.new);
+      if (nextContent !== mainProcessContent) {
+        mainProcessContent = nextContent;
+        mainProcessReplacedCount++;
+        mainProcessModified = true;
+      }
+    }
+
+    if (mainProcessModified) {
+      console.log(`[INFO] out/main.js 汉化替换完毕，成功应用 ${mainProcessReplacedCount} 组映射。`);
+      console.log(`[SAFEGUARD] 正在执行 out/main.js 安全写入...`);
+      const mainWriteResult = safeWriteWithValidation(mainProcessPath, mainProcessContent, mainProcessBackupPath);
+      if (!mainWriteResult.success) {
+        console.error(`\x1b[31m[SAFEGUARD] ❌ out/main.js 安全写入失败：${mainWriteResult.error}\x1b[0m`);
+        autoRollbackOnFailure(config, mainWriteResult.error);
+        return false;
+      }
+      console.log(`[SAFEGUARD] ✅ out/main.js 安全写入成功！已通过全部预检。`);
+    } else {
+      console.log(`[INFO] out/main.js 所有条目已处于汉化状态，无需更新。`);
+    }
+  } else {
+    console.warn(`[WARN] 未找到 main.js 文件: "${mainProcessPath}"，跳过主进程汉化。`);
   }
 
   // 5. 自动更新 product.json 中的完整性哈希校验，防止报"安装已损坏"错误

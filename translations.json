@@ -3274,5 +3274,801 @@
   {
     "old": "dOo={files:[\"file\",\"files\"],folders:[\"folder\",\"folders\"],edits:[\"file\",\"files\"],searches:[\"search\",\"searches\"],terminal:[\"command\",\"commands\"],tasks:[\"task\",\"tasks\"],web:[\"page\",\"pages\"],browser:[\"browser\",\"browsers\"],images:[\"image\",\"images\"],actions:[\"action\",\"actions\"],artifacts:[\"artifact\",\"artifacts\"]}",
     "new": "dOo={files:[\"个文件\",\"个文件\"],folders:[\"个文件夹\",\"个文件夹\"],edits:[\"个编辑\",\"个编辑\"],searches:[\"次搜索\",\"次搜索\"],terminal:[\"个命令\",\"个命令\"],tasks:[\"个任务\",\"个任务\"],web:[\"个页面\",\"个页面\"],browser:[\"个浏览器\",\"个浏览器\"],images:[\"张图片\",\"张图片\"],actions:[\"次操作\",\"次操作\"],artifacts:[\"个产物\",\"个产物\"]}"
+  },
+  {
+    "old": "message:\"Authenticating...\"",
+    "new": "message:\"正在进行身份验证...\""
+  },
+  {
+    "old": "message:\"There was an error with your authentication. To log in, click \",action:{label:\"here\",onClick:t}",
+    "new": "message:\"身份验证时出错。要登录，请点击 \",action:{label:\"此处\",onClick:t}"
+  },
+  {
+    "old": "message:\"To use the agent, please login \",action:{label:\"here\",onClick:t}",
+    "new": "message:\"要使用智能体，请先登录 \",action:{label:\"此处\",onClick:t}"
+  },
+  {
+    "old": "message:\"Log in to use the agent\"",
+    "new": "message:\"登录以使用智能体\""
+  },
+  {
+    "old": "F&&p(Wd,{label:`Available AI Credits: ${C??\"0\"}`",
+    "new": "F&&p(Wd,{label:`可用 AI 点数: ${C??\"0\"}`"
+  },
+  {
+    "old": "children:\"See Activity\"",
+    "new": "children:\"查看活动记录\""
+  },
+  {
+    "old": "children:\"Get More AI Credits\"",
+    "new": "children:\"获取更多 AI 点数\""
+  },
+  {
+    "old": "modelWarning:\"Model quota exhausted\"",
+    "new": "modelWarning:\"模型配额已耗尽\""
+  },
+  {
+    "old": "children:[\"For Antigravity Business consumption options, see\",\" \",p(\"a\",{href:\"https://antigravity.google/docs/enterprise\",className:\"text-primary hover:underline\",target:\"_blank\",rel:\"noopener noreferrer\",children:\"documentation\"}),\".\"]",
+    "new": "children:[\"有关 Antigravity 商业版消费选项，请参阅\",\" \",p(\"a\",{href:\"https://antigravity.google/docs/enterprise\",className:\"text-primary hover:underline\",target:\"_blank\",rel:\"noopener noreferrer\",children:\"文档说明\"}),\"。\"]"
+  },
+  {
+    "old": "title:\"Insufficient AI Credits\"",
+    "new": "title:\"AI 点数不足\""
+  },
+  {
+    "old": "label:\"Purchase Credits\"",
+    "new": "label:\"购买点数\""
+  },
+  {
+    "old": "children:[e?\"Recording\":\"Processing\",\"...\"]",
+    "new": "children:[e?\"正在录音\":\"正在处理\",\"...\"]"
+  },
+  {
+    "old": "message:\"Already recording\"",
+    "new": "message:\"已在录制中\""
+  },
+  {
+    "old": "message:\"No active recording\"",
+    "new": "message:\"没有活动中的录音\""
+  },
+  {
+    "old": "children:\"No chat model metadata available for this generator\"",
+    "new": "children:\"此生成器没有可用的聊天模型元数据\""
+  },
+  {
+    "old": "children:\"No chat model metadata available in latest generator metadata\"",
+    "new": "children:\"最新的生成器元数据中没有可用的聊天模型元数据\""
+  },
+  {
+    "old": "children:[t?\"Recording\":\"Processing\",\"...\"]",
+    "new": "children:[t?\"正在录音\":\"正在处理\",\"...\"]"
+  },
+  {
+    "old": "tooltip:()=>`Terminal (${r})`,expandedContent:",
+    "new": "tooltip:()=>`终端 (${r})`,expandedContent:"
+  },
+  {
+    "old": "tooltip:()=>`Terminal (${i})`,expandedContent:",
+    "new": "tooltip:()=>`终端 (${i})`,expandedContent:"
+  },
+  {
+    "old": "getRenderInfo(){return{label:\"Terminal\",icon:p(jBr,{size:14})}}",
+    "new": "getRenderInfo(){return{label:\"终端\",icon:p(jBr,{size:14})}}"
+  },
+  {
+    "old": "getRenderInfo(){return{label:\"Terminal\",icon:R(Kio,{size:14})}}",
+    "new": "getRenderInfo(){return{label:\"终端\",icon:R(Kio,{size:14})}}"
+  },
+  {
+    "old": "title:\"Terminal\",settings:[To.CASCADE_AUTO_EXECUTION_POLICY",
+    "new": "title:\"终端\",settings:[To.CASCADE_AUTO_EXECUTION_POLICY"
+  },
+  {
+    "old": "Se&&Cr.push({icon:oA,label:\"Browser\",onClick:We})",
+    "new": "Se&&Cr.push({icon:oA,label:\"浏览器\",onClick:We})"
+  },
+  {
+    "old": "We&&xn.push({icon:MX,label:\"Browser\",onClick:ht})",
+    "new": "We&&xn.push({icon:MX,label:\"浏览器\",onClick:ht})"
+  },
+  {
+    "old": "a?{id:\"browser\",icon:p(oA,{className:\"h-4 w-4 opacity-90 hover:opacity-100\"}),title:\"Browser\",onExpanded:",
+    "new": "a?{id:\"browser\",icon:p(oA,{className:\"h-4 w-4 opacity-90 hover:opacity-100\"}),title:\"浏览器\",onExpanded:"
+  },
+  {
+    "old": "r?{id:\"browser\",icon:R(MX,{className:\"h-4 w-4 opacity-90 hover:opacity-100\"}),title:\"Browser\",onExpanded:",
+    "new": "r?{id:\"browser\",icon:R(MX,{className:\"h-4 w-4 opacity-90 hover:opacity-100\"}),title:\"浏览器\",onExpanded:"
+  },
+  {
+    "old": "inputBoxProps:{placeholder:\"Search all convos...\",prefix:rd.Conversations,",
+    "new": "inputBoxProps:{placeholder:\"搜索所有对话...\",prefix:rd.Conversations,"
+  },
+  {
+    "old": "inputBoxProps:{placeholder:\"Search all convos...\",isLoading:!1},",
+    "new": "inputBoxProps:{placeholder:\"搜索所有对话...\",isLoading:!1},"
+  },
+  {
+    "old": "a.length>0&&u.push({label:\"Current\",cascadeIds:a})",
+    "new": "a.length>0&&u.push({label:\"当前\",cascadeIds:a})"
+  },
+  {
+    "old": "r.length>0&&l.push({label:\"Current\",cascadeIds:r})",
+    "new": "r.length>0&&l.push({label:\"当前\",cascadeIds:r})"
+  },
+  {
+    "old": "(function(e){e[e.Current=0]=\"Current\",e[e.Outdated=1]=\"Outdated\"})(cUn||(cUn={}))",
+    "new": "(function(e){e[e.Current=0]=\"当前\",e[e.Outdated=1]=\"已过时\"})(cUn||(cUn={}))"
+  },
+  {
+    "old": "(function(t){t[t.Current=0]=\"Current\",t[t.Outdated=1]=\"Outdated\"})(E8o||(E8o={}))",
+    "new": "(function(t){t[t.Current=0]=\"当前\",t[t.Outdated=1]=\"已过时\"})(E8o||(E8o={}))"
+  },
+  {
+    "old": "var nfn=(e,t)=>za(e)?\"Run\":e===On.DONE?\"Ran\":t?\"Rejected\":e===On.CANCELED?\"Canceled\":e===On.ERROR?\"Errored\":\"Terminal\"",
+    "new": "var nfn=(e,t)=>za(e)?\"运行\":e===On.DONE?\"已运行\":t?\"已拒绝\":e===On.CANCELED?\"已取消\":e===On.ERROR?\"已出错\":\"终端\""
+  },
+  {
+    "old": "var b9o=(t,e)=>ll(t)?\"Run\":t===$s.DONE?\"Ran\":e?\"Rejected\":t===$s.CANCELED?\"Canceled\":t===$s.ERROR?\"Errored\":\"Terminal\"",
+    "new": "var b9o=(t,e)=>ll(t)?\"运行\":t===$s.DONE?\"已运行\":e?\"已拒绝\":t===$s.CANCELED?\"已取消\":t===$s.ERROR?\"已出错\":\"终端\""
+  },
+  {
+    "old": "p(\"span\",{children:\"to navigate\"})",
+    "new": "p(\"span\",{children:\"导航\"})"
+  },
+  {
+    "old": "R(\"span\",{children:\"to navigate\"})",
+    "new": "R(\"span\",{children:\"导航\"})"
+  },
+  {
+    "old": "p(\"span\",{children:\"to select\"})",
+    "new": "p(\"span\",{children:\"选择\"})"
+  },
+  {
+    "old": "R(\"span\",{children:\"to select\"})",
+    "new": "R(\"span\",{children:\"选择\"})"
+  },
+  {
+    "old": "children:[\"Show \",n,\" more...\"]",
+    "new": "children:[\"显示另外 \",n,\" 个...\"]"
+  },
+  {
+    "old": "children:[\"...and \",a-u,\" more\"]",
+    "new": "children:[\"...以及另外 \",a-u,\" 个\"]"
+  },
+  {
+    "old": "children:[\"...and \",F-C,\" more\"]",
+    "new": "children:[\"...以及另外 \",F-C,\" 个\"]"
+  },
+  {
+    "old": "children:[\"...and \",y-F,\" more\"]",
+    "new": "children:[\"...以及另外 \",y-F,\" 个\"]"
+  },
+  {
+    "old": "children:[\"...and \",b-y,\" more\"]",
+    "new": "children:[\"...以及另外 \",b-y,\" 个\"]"
+  },
+  {
+    "old": "children:[\"...and \",r-l,\" more\"]",
+    "new": "children:[\"...以及另外 \",r-l,\" 个\"]"
+  },
+  {
+    "old": "children:[\"...and \",v-b,\" more\"]",
+    "new": "children:[\"...以及另外 \",v-b,\" 个\"]"
+  },
+  {
+    "old": "children:[\"...and \",g-v,\" more\"]",
+    "new": "children:[\"...以及另外 \",g-v,\" 个\"]"
+  },
+  {
+    "old": "children:[\"...and \",f-g,\" more\"]",
+    "new": "children:[\"...以及另外 \",f-g,\" 个\"]"
+  },
+  {
+    "old": "children:[p(qe,{name:\"add\",className:\"shrink-0 h-4 w-4\"}),\"Show \",V-x,\" more\"]",
+    "new": "children:[p(qe,{name:\"add\",className:\"shrink-0 h-4 w-4\"}),\"显示另外 \",V-x,\" 个\"]"
+  },
+  {
+    "old": "children:[R(Ut,{name:\"add\",className:\"shrink-0 h-4 w-4\"}),\"Show \",S-x,\" more\"]",
+    "new": "children:[R(Ut,{name:\"add\",className:\"shrink-0 h-4 w-4\"}),\"显示另外 \",S-x,\" 个\"]"
+  },
+  {
+    "old": "children:[\"+\",e.length-s.top-s.bottom,\" more\",\" \",e.length-s.top-s.bottom===1?\"line\":\"lines\"]",
+    "new": "children:[\"+ 另外 \",e.length-s.top-s.bottom,\" 行\"]"
+  },
+  {
+    "old": "children:[\"+\",t.length-o.top-o.bottom,\" more\",\" \",t.length-o.top-o.bottom===1?\"line\":\"lines\"]",
+    "new": "children:[\"+ 另外 \",t.length-o.top-o.bottom,\" 行\"]"
+  },
+  {
+    "old": "p(\"span\",{children:\"to navigate\"})",
+    "new": "p(\"span\",{children:\"进行导航\"})"
+  },
+  {
+    "old": "R(\"span\",{children:\"to navigate\"})",
+    "new": "R(\"span\",{children:\"进行导航\"})"
+  },
+  {
+    "old": "p(\"span\",{children:\"to select\"})",
+    "new": "p(\"span\",{children:\"进行选择\"})"
+  },
+  {
+    "old": "R(\"span\",{children:\"to select\"})",
+    "new": "R(\"span\",{children:\"进行选择\"})"
+  },
+  {
+    "old": "placeholder:\"Search all convos...\"",
+    "new": "placeholder:\"搜索所有对话...\""
+  },
+  {
+    "old": "children:[e?\"Recording\":\"Processing\",\"...\"]",
+    "new": "children:[e?\"正在录音\":\"处理中\",\"...\"]"
+  },
+  {
+    "old": "children:[t?\"Recording\":\"Processing\",\"...\"]",
+    "new": "children:[t?\"正在录音\":\"处理中\",\"...\"]"
+  },
+  {
+    "old": "ee=x?p(jt,{children:[\"Stop Recording \",p(\"span\",{className:\"opacity-50\",children:j})]}):\"Recording\"",
+    "new": "ee=x?p(jt,{children:[\"停止录音 \",p(\"span\",{className:\"opacity-50\",children:j})]}):\"正在录音\""
+  },
+  {
+    "old": "ne=x?R(tn,{children:[\"Stop Recording \",R(\"span\",{className:\"opacity-50\",children:J})]}):\"Recording\"",
+    "new": "ne=x?R(tn,{children:[\"停止录音 \",R(\"span\",{className:\"opacity-50\",children:J})]}):\"正在录音\""
+  },
+  {
+    "old": "H=x?p(jt,{children:[\"Record Audio \",p(\"span\",{className:\"opacity-50\",children:j})]}):\"Record Audio\"",
+    "new": "H=x?p(jt,{children:[\"录制音频 \",p(\"span\",{className:\"opacity-50\",children:j})]}):\"录制音频\""
+  },
+  {
+    "old": "z=x?R(tn,{children:[\"Record Audio \",R(\"span\",{className:\"opacity-50\",children:J})]}):\"Record Audio\"",
+    "new": "z=x?R(tn,{children:[\"录制音频 \",R(\"span\",{className:\"opacity-50\",children:J})]}):\"录制音频\""
+  },
+  {
+    "old": "r=`${t} Background Process${t===1?\"\":\"es\"} Running`",
+    "new": "r=`${t}个后台进程正在运行`"
+  },
+  {
+    "old": "i=`${e} Background Process${e===1?\"\":\"es\"} Running`",
+    "new": "i=`${e}个后台进程正在运行`"
+  },
+  {
+    "old": "label:\"Browser\",onClick:We",
+    "new": "label:\"浏览器\",onClick:We"
+  },
+  {
+    "old": "label:\"Browser\",onClick:ht",
+    "new": "label:\"浏览器\",onClick:ht"
+  },
+  {
+    "old": "title:\"Browser\",onExpanded:d=>",
+    "new": "title:\"浏览器\",onExpanded:d=>"
+  },
+  {
+    "old": "title:\"Browser\",onExpanded:u=>",
+    "new": "title:\"浏览器\",onExpanded:u=>"
+  },
+  {
+    "old": "primaryButton:\"Open in New Window\",cancelButton:\"Open in Current Window\"",
+    "new": "primaryButton:\"在新窗口中打开\",cancelButton:\"在当前窗口中打开\""
+  },
+  {
+    "old": "detail:\"Do you want to open the workspace in the current window or in a new window?\"",
+    "new": "detail:\"您要在当前窗口还是新窗口中打开工作区？\""
+  },
+  {
+    "old": "onClick:u=>{u.stopPropagation(),s(i9e(u),{type:\"showMore\",groupId:a})},children:[\"Show \",n,\" more...\"]}",
+    "new": "onClick:u=>{u.stopPropagation(),s(i9e(u),{type:\"showMore\",groupId:a})},children:[\"显示另外 \",n,\" 个...\"]}"
+  },
+  {
+    "old": "onClick:l=>{l.stopPropagation(),o(kGt(l),{type:\"showMore\",groupId:r})},children:[\"Show \",n,\" more...\"]}",
+    "new": "onClick:l=>{l.stopPropagation(),o(kGt(l),{type:\"showMore\",groupId:r})},children:[\"显示另外 \",n,\" 个...\"]}"
+  },
+  {
+    "old": "p(\"span\",{className:\"translate-y-1.5 text-base\",children:\"Show more\"})",
+    "new": "p(\"span\",{className:\"translate-y-1.5 text-base\",children:\"显示更多\"})"
+  },
+  {
+    "old": "R(\"span\",{className:\"translate-y-1.5 text-base\",children:\"Show more\"})",
+    "new": "R(\"span\",{className:\"translate-y-1.5 text-base\",children:\"显示更多\"})"
+  },
+  {
+    "old": "za(e)?\"Run\":e===On.DONE?\"Ran\":t?\"Rejected\":e===On.CANCELED?\"Canceled\":e===On.ERROR?\"Errored\":\"Terminal\"",
+    "new": "za(e)?\"运行\":e===On.DONE?\"已运行\":t?\"已拒绝\":e===On.CANCELED?\"已取消\":e===On.ERROR?\"出错\":\"终端\""
+  },
+  {
+    "old": "ll(t)?\"Run\":t===$s.DONE?\"Ran\":e?\"Rejected\":t===$s.CANCELED?\"Canceled\":t===$s.ERROR?\"Errored\":\"Terminal\"",
+    "new": "ll(t)?\"运行\":t===$s.DONE?\"已运行\":e?\"已拒绝\":t===$s.CANCELED?\"已取消\":t===$s.ERROR?\"出错\":\"终端\""
+  },
+  {
+    "old": "u=a?n?\"Editing\":\"Edited\":i?n?\"Running\":\"Ran\":n?\"Exploring\":\"Explored\"",
+    "new": "u=a?n?\"正在编辑\":\"已编辑\":i?n?\"正在运行\":\"已运行\":n?\"正在探索\":\"已探索\""
+  },
+  {
+    "old": "l=r?n?\"Editing\":\"Edited\":s?n?\"Running\":\"Ran\":n?\"Exploring\":\"Explored\"",
+    "new": "l=r?n?\"正在编辑\":\"已编辑\":s?n?\"正在运行\":\"已运行\":n?\"正在探索\":\"已探索\""
+  },
+  {
+    "old": "label:\"Screenshot\"",
+    "new": "label:\"截图\""
+  },
+  {
+    "old": "label:\"Console logs\"",
+    "new": "label:\"控制台日志\""
+  },
+  {
+    "old": "var RTi=\"Pages currently open in Antigravity's Browser instance are shown below.\"",
+    "new": "var RTi=\"以下显示了当前在 Antigravity 浏览器实例中打开的页面。\""
+  },
+  {
+    "old": "var iyu=\"Pages currently open in Antigravity's Browser instance are shown below.\"",
+    "new": "var iyu=\"以下显示了当前在 Antigravity 浏览器实例中打开的页面。\""
+  },
+  {
+    "old": "children:\"Recent actions\"",
+    "new": "children:\"最近操作\""
+  },
+  {
+    "old": "\"Working directory: \"",
+    "new": "\"工作目录：\""
+  },
+  {
+    "old": "n.isAccept?\"Accepted\":\"Rejected\"",
+    "new": "n.isAccept?\"已接受\":\"已拒绝\""
+  },
+  {
+    "old": "\" all changes to the below files\"",
+    "new": "\"对以下文件的所有更改\""
+  },
+  {
+    "old": "\"hunks of\"",
+    "new": "\"部分修改：\""
+  },
+  {
+    "old": "\"all changes to\"",
+    "new": "\"全部修改：\""
+  },
+  {
+    "old": "\"Active Browser pages\"",
+    "new": "\"活动浏览器页面\""
+  },
+  {
+    "old": "title:\"Mention Page\"",
+    "new": "title:\"提及页面\""
+  },
+  {
+    "old": "title:\"Capture screenshot\"",
+    "new": "title:\"捕获截图\""
+  },
+  {
+    "old": "title:\"Capture console logs\"",
+    "new": "title:\"捕获控制台日志\""
+  },
+  {
+    "old": "\"Taking Screenshot\"",
+    "new": "\"正在截取屏幕\""
+  },
+  {
+    "old": "\"Took Screenshot\"",
+    "new": "\"已截取屏幕\""
+  },
+  {
+    "old": "\"Capturing\"",
+    "new": "\"正在捕获\""
+  },
+  {
+    "old": "children:\"Screenshot must be under 10 MB\"",
+    "new": "children:\"截图大小必须小于 10 MB\""
+  },
+  {
+    "old": "t.BROWSER=\"Browser\"",
+    "new": "t.BROWSER=\"浏览器\""
+  },
+  {
+    "old": "text:\"Browser\"",
+    "new": "text:\"浏览器\""
+  },
+  {
+    "old": "ee(\"span\",void 0,\"Accept Changes\")",
+    "new": "ee(\"span\",void 0,\"接受更改\")"
+  },
+  {
+    "old": "this._fileNavDisplayText.replaceChildren(`Edited files ${e.index+1}/${i}`);",
+    "new": "this._fileNavDisplayText.replaceChildren(`已编辑文件 ${e.index+1}/${i}`);"
+  },
+  {
+    "old": "this._centerButton.text.textContent=`View ${e} edited file${e===1?\"\":\"s\"}`;",
+    "new": "this._centerButton.text.textContent=`查看 ${e} 个已编辑的文件`;"
+  },
+  {
+    "old": "children:[R(\"h5\",{className:\"mb-2 text-sm font-medium text-foreground\",children:\"Error\"}),",
+    "new": "children:[R(\"h5\",{className:\"mb-2 text-sm font-medium text-foreground\",children:\"错误\"}),"
+  },
+  {
+    "old": "children:[p(\"h5\",{className:\"mb-2 text-sm font-medium text-foreground\",children:\"Error\"}),",
+    "new": "children:[p(\"h5\",{className:\"mb-2 text-sm font-medium text-foreground\",children:\"错误\"}),"
+  },
+  {
+    "old": "if(l.status===cge.ERRORED)return{label:\"Error\",textColor:\"text-red-500\",iconColor:\"text-red-500\",badgeClass:\"bg-red-500/10 border-red-500/20\"};",
+    "new": "if(l.status===cge.ERRORED)return{label:\"错误\",textColor:\"text-red-500\",iconColor:\"text-red-500\",badgeClass:\"bg-red-500/10 border-red-500/20\"};"
+  },
+  {
+    "old": "if(u.status===KI.ERRORED)return{label:\"Error\",textColor:\"text-red-500\",iconColor:\"text-red-500\",badgeClass:\"bg-red-500/10 border-red-500/20\"};",
+    "new": "if(u.status===KI.ERRORED)return{label:\"错误\",textColor:\"text-red-500\",iconColor:\"text-red-500\",badgeClass:\"bg-red-500/10 border-red-500/20\"};"
+  },
+  {
+    "old": "children:n||(ll(t)?\"Searching\":\"Searched\")",
+    "new": "children:n||(ll(t)?\"正在搜索\":\"已搜索\")"
+  },
+  {
+    "old": "children:n||(za(e)?\"Searching\":\"Searched\")",
+    "new": "children:n||(za(e)?\"正在搜索\":\"已搜索\")"
+  },
+  {
+    "old": "prefix:f?\"Searching Moma for\":\"Searched Moma for\"",
+    "new": "prefix:f?\"正在 Moma 中搜索\":\"已在 Moma 中搜索\""
+  },
+  {
+    "old": "prefix:b?\"Searching Moma for\":\"Searched Moma for\"",
+    "new": "prefix:b?\"正在 Moma 中搜索\":\"已在 Moma 中搜索\""
+  },
+  {
+    "old": "grepSearch:e=>e.query?`Searched for \"${e.query}\"`:\"Searched files\"",
+    "new": "grepSearch:e=>e.query?`已搜索 \"${e.query}\"`:\"已搜索文件\""
+  },
+  {
+    "old": "grepSearch:t=>t.query?`Searched for \"${t.query}\"`:\"Searched files\"",
+    "new": "grepSearch:t=>t.query?`已搜索 \"${t.query}\"`:\"已搜索文件\""
+  },
+  {
+    "old": "find:e=>e.pattern?`Searched for files: ${e.pattern}`:\"Searched for files\"",
+    "new": "find:e=>e.pattern?`已检索文件：${e.pattern}`:\"已检索文件\""
+  },
+  {
+    "old": "find:t=>t.pattern?`Searched for files: ${t.pattern}`:\"Searched for files\"",
+    "new": "find:t=>t.pattern?`已检索文件：${t.pattern}`:\"已检索文件\""
+  },
+  {
+    "old": "searchWeb:e=>e.query?`Searched web: \"${e.query}\"`:\"Searched web\"",
+    "new": "searchWeb:e=>e.query?`已搜索网页：\"${e.query}\"`:\"已搜索网页\""
+  },
+  {
+    "old": "searchWeb:t=>t.query?`Searched web: \"${t.query}\"`:\"Searched web\"",
+    "new": "searchWeb:t=>t.query?`已搜索网页：\"${t.query}\"`:\"已搜索网页\""
+  },
+  {
+    "old": "title:te(9332,\"Accept Changes\")",
+    "new": "title:te(9332,\"接受更改\")"
+  },
+  {
+    "old": "prefix:ll(t)?\"Searching\":\"Searched\"",
+    "new": "prefix:ll(t)?\"正在搜索\":\"已搜索\""
+  },
+  {
+    "old": "prefix:za(e)?\"Searching\":\"Searched\"",
+    "new": "prefix:za(e)?\"正在搜索\":\"已搜索\""
+  },
+  {
+    "old": "prefix:ui(e)?\"Searching\":\"Searched\"",
+    "new": "prefix:ui(e)?\"正在搜索\":\"已搜索\""
+  },
+  {
+    "old": "if(u.status===w_.ERRORED)return{label:\"Error\",textColor:\"text-red-500\",iconColor:\"text-red-500\",badgeClass:\"bg-red-500/10 border-red-500/20\"};",
+    "new": "if(u.status===w_.ERRORED)return{label:\"错误\",textColor:\"text-red-500\",iconColor:\"text-red-500\",badgeClass:\"bg-red-500/10 border-red-500/20\"};"
+  },
+  {
+    "old": "children:n||(ui(e)?\"Searching\":\"Searched\")",
+    "new": "children:n||(ui(e)?\"正在搜索\":\"已搜索\")"
+  },
+  {
+    "old": "prefix:E?\"Searching Moma for\":\"Searched Moma for\"",
+    "new": "prefix:E?\"正在 Moma 中搜索\":\"已在 Moma 中搜索\""
+  },
+  {
+    "old": "var nfn=(e,t)=>za(e)?\"Run\":e===On.DONE?\"Ran\":t?\"Rejected\":e===On.CANCELED?\"Canceled\":e===On.ERROR?\"Errored\":\"Terminal\"",
+    "new": "var nfn=(e,t)=>za(e)?\"运行\":e===On.DONE?\"已运行\":t?\"已拒绝\":e===On.CANCELED?\"已取消\":e===On.ERROR?\"已出错\":\"终端\""
+  },
+  {
+    "old": "var b9o=(t,e)=>ll(t)?\"Run\":t===$s.DONE?\"Ran\":e?\"Rejected\":t===$s.CANCELED?\"Canceled\":t===$s.ERROR?\"Errored\":\"Terminal\"",
+    "new": "var b9o=(t,e)=>ll(t)?\"运行\":t===$s.DONE?\"已运行\":e?\"已拒绝\":t===$s.CANCELED?\"已取消\":t===$s.ERROR?\"已出错\":\"终端\""
+  },
+  {
+    "old": "p(\"span\",{children:\"to navigate\"})",
+    "new": "p(\"span\",{children:\"导航\"})"
+  },
+  {
+    "old": "R(\"span\",{children:\"to navigate\"})",
+    "new": "R(\"span\",{children:\"导航\"})"
+  },
+  {
+    "old": "p(\"span\",{children:\"to select\"})",
+    "new": "p(\"span\",{children:\"选择\"})"
+  },
+  {
+    "old": "R(\"span\",{children:\"to select\"})",
+    "new": "R(\"span\",{children:\"选择\"})"
+  },
+  {
+    "old": "children:[\"Show \",n,\" more...\"]",
+    "new": "children:[\"显示另外 \",n,\" 个...\"]"
+  },
+  {
+    "old": "All Edited Files Reviewed",
+    "new": "所有已修改文件已审核"
+  },
+  {
+    "old": "label:\"Auto-Open Edited Files\"",
+    "new": "label:\"自动打开已修改文件\""
+  },
+  {
+    "old": "description:\"Open files in the background if Agent creates or edits them\"",
+    "new": "description:\"智能体创建或修改文件时，在后台自动打开它们\""
+  },
+  {
+    "old": "description:[\"Open files in the background if the agent creates or edits them\"]",
+    "new": "description:[\"智能体创建或修改文件时，在后台自动打开它们\"]"
+  },
+  {
+    "old": "prefixOverride:za(t)?\"Semantic searching\":\"Semantic searched\"",
+    "new": "prefixOverride:za(t)?\"正在进行语义搜索\":\"语义已搜索\""
+  },
+  {
+    "old": "prefixOverride:ui(t)?\"Semantic searching\":\"Semantic searched\"",
+    "new": "prefixOverride:ui(t)?\"正在进行语义搜索\":\"语义已搜索\""
+  },
+  {
+    "old": "prefixOverride:ll(e)?\"Semantic searching\":\"Semantic searched\"",
+    "new": "prefixOverride:ll(e)?\"正在进行语义搜索\":\"语义已搜索\""
+  },
+  {
+    "old": "case\"mcpTool\":return\"Error while running MCP tool\";case\"errorMessage\":return\"Error\";default:return\"Error during tool execution\"",
+    "new": "case\"mcpTool\":return\"运行 MCP 工具时出错\";case\"errorMessage\":return\"错误\";default:return\"执行工具时出错\""
+  },
+  {
+    "old": "String(e):\"Error\"",
+    "new": "String(e):\"错误\""
+  },
+  {
+    "old": "String(t):\"Error\"",
+    "new": "String(t):\"错误\""
+  },
+  {
+    "old": "J=Ve(()=>n.length===0?\"Proceed with implementation plan\":`Proceed with implementation plan and ${n.length} comment${n.length===1?\"\":\"s\"}`,[n.length])",
+    "new": "J=Ve(()=>n.length===0?\"执行实施计划\":`执行实施计划并附带 ${n.length} 条评论`,[n.length])"
+  },
+  {
+    "old": "Y=mt(()=>n.length===0?\"Proceed with implementation plan\":`Proceed with implementation plan and ${n.length} comment${n.length===1?\"\":\"s\"}`,[n.length])",
+    "new": "Y=mt(()=>n.length===0?\"执行实施计划\":`执行实施计划并附带 ${n.length} 条评论`,[n.length])"
+  },
+  {
+    "old": "Y=rt(()=>n.length===0?\"Proceed with implementation plan\":`Proceed with implementation plan and ${n.length} comment${n.length===1?\"\":\"s\"}`,[n.length])",
+    "new": "Y=rt(()=>n.length===0?\"执行实施计划\":`执行实施计划并附带 ${n.length} 条评论`,[n.length])"
+  },
+  {
+    "old": "\"Proceed with implementation plan\"",
+    "new": "\"执行实施计划\""
+  },
+  {
+    "old": "proceed-button\",children:p(\"div\",{className:\"flex items-center\",children:[\"Proceed\",C&&p(\"span\",{className:\"ml-1.5 opacity-50\",children:C})]})",
+    "new": "proceed-button\",children:p(\"div\",{className:\"flex items-center\",children:[\"继续\",C&&p(\"span\",{className:\"ml-1.5 opacity-50\",children:C})]})"
+  },
+  {
+    "old": "proceed-button\",children:R(\"div\",{className:\"flex items-center\",children:[\"Proceed\",b&&R(\"span\",{className:\"ml-1.5 opacity-50\",children:b})]})",
+    "new": "proceed-button\",children:R(\"div\",{className:\"flex items-center\",children:[\"继续\",b&&R(\"span\",{className:\"ml-1.5 opacity-50\",children:b})]})"
+  },
+  {
+    "old": "proceed-button\",children:v(\"div\",{className:\"flex items-center\",children:[\"Proceed\",S&&v(\"span\",{className:\"ml-1.5 opacity-50\",children:S})]})",
+    "new": "proceed-button\",children:v(\"div\",{className:\"flex items-center\",children:[\"继续\",S&&v(\"span\",{className:\"ml-1.5 opacity-50\",children:S})]})"
+  },
+  {
+    "old": "className:\"flex items-center gap-1 whitespace-nowrap\",children:[\"Proceed\",n.length>0&&p(jt,{children:[\" \",\"\\u2022 \",n.length,p(qe,{name:\"chat_bubble\",size:12",
+    "new": "className:\"flex items-center gap-1 whitespace-nowrap\",children:[\"继续\",n.length>0&&p(jt,{children:[\" \",\"\\u2022 \",n.length,p(qe,{name:\"chat_bubble\",size:12"
+  },
+  {
+    "old": "text-sm font-medium text-primary-foreground\",style:{animation:`button-press ${QAe*.6}ms ease-in-out`,animationDelay:`${T0n-QAe*.6-200}ms`},children:\"Proceed\"",
+    "new": "text-sm font-medium text-primary-foreground\",style:{animation:`button-press ${QAe*.6}ms ease-in-out`,animationDelay:`${T0n-QAe*.6-200}ms`},children:\"继续\""
+  },
+  {
+    "old": "className:\"text-sm\",children:i?\"Auto-proceeded with\":\"Proceeded with\"",
+    "new": "className:\"text-sm\",children:i?\"已自动继续\":\"已继续\""
+  },
+  {
+    "old": "className:\"text-sm\",children:s?\"Auto-proceeded with\":\"Proceeded with\"",
+    "new": "className:\"text-sm\",children:s?\"已自动继续\":\"已继续\""
+  },
+  {
+    "old": "value:a===rl.EAGER?\"Always Proceed\":a===rl.PROCEED_IN_SANDBOX?\"Proceed in Sandbox\":\"Require Review\"",
+    "new": "value:a===rl.EAGER?\"始终执行\":a===rl.PROCEED_IN_SANDBOX?\"在沙盒中执行\":\"请求审核\""
+  },
+  {
+    "old": "AUTO_EXECUTION_POLICY:return u===rl.EAGER?\"Always Proceed\":u===rl.OFF?\"Require Review\":\"Proceed in Sandbox\"",
+    "new": "AUTO_EXECUTION_POLICY:return u===rl.EAGER?\"始终执行\":u===rl.OFF?\"请求审核\":\"在沙盒中执行\""
+  },
+  {
+    "old": "value:e===\"turbo\"?\"Always Proceed\":\"Always Ask\"",
+    "new": "value:e===\"turbo\"?\"始终执行\":\"始终询问\""
+  },
+  {
+    "old": "children:'\\u26A0\\uFE0F Warning: \"Always Proceed\" is enabled without sandbox protection. This is very dangerous and we do not recommend doing this.'",
+    "new": "children:'\\u26A0\\uFE0F 警告：“始终执行”已启用且未进行沙盒保护。这非常危险，我们不建议这样做。'"
+  },
+  {
+    "old": "className:\"flex items-center gap-1 whitespace-nowrap\",children:[\"Proceed\",",
+    "new": "className:\"flex items-center gap-1 whitespace-nowrap\",children:[\"继续\","
+  },
+  {
+    "old": "Always proceed is only supported on cloudtops.",
+    "new": "始终执行仅在 Cloudtop 上受支持。"
+  },
+  {
+    "old": "Terminal command automatically proceeds if the command runs inside the sandbox. Otherwise, it requests review.",
+    "new": "若命令在沙箱中运行，终端命令将自动执行。否则，将请求审核。"
+  },
+  {
+    "old": "Always Proceed - Agent never asks for confirmation before executing terminal commands (except those in the Deny List)",
+    "new": "始终执行 - 智能体在执行终端命令前从不请求确认（加入拒绝列表的命令除外）"
+  },
+  {
+    "old": "Always Proceed - Trust the agent to do tasks end-to-end",
+    "new": "始终执行 - 信任智能体端到端地完成任务"
+  },
+  {
+    "old": "Agent Decides - Assist the agent to complete tasks",
+    "new": "智能体决定 - 协助智能体完成任务"
+  },
+  {
+    "old": "Request Review - Collaborate with the agent to complete tasks",
+    "new": "请求审核 - 与智能体协作完成任务"
+  },
+  {
+    "old": "children:`${y} ${y===1?\"file\":\"files\"} changed`",
+    "new": "children:`${y} 个文件已更改`"
+  },
+  {
+    "old": "children:`${g} ${g===1?\"file\":\"files\"} changed`",
+    "new": "children:`${g} 个文件已更改`"
+  },
+  {
+    "old": "children:`${R} ${R===1?\"file\":\"files\"} changed`",
+    "new": "children:`${R} 个文件已更改`"
+  },
+  {
+    "old": "listDirectory:e=>`Listed directory ${Pft(e.directoryPathUri)}`",
+    "new": "listDirectory:e=>`已列出目录 ${Pft(e.directoryPathUri)}`"
+  },
+  {
+    "old": "listDirectory:t=>`Listed directory ${m0n(t.directoryPathUri)}`",
+    "new": "listDirectory:t=>`已列出目录 ${m0n(t.directoryPathUri)}`"
+  },
+  {
+    "old": "listDirectory:e=>`Listed directory ${K_t(e.directoryPathUri)}`",
+    "new": "listDirectory:e=>`已列出目录 ${K_t(e.directoryPathUri)}`"
+  },
+  {
+    "old": "dialogTitle:a=\"Export\"",
+    "new": "dialogTitle:a=\"导出\""
+  },
+  {
+    "old": "dialogTitle:r=\"Export\"",
+    "new": "dialogTitle:r=\"导出\""
+  },
+  {
+    "old": "label:\"Export\",onClick:",
+    "new": "label:\"导出\",onClick:"
+  },
+  {
+    "old": "title:\"Export Artifact\",saveLabel:\"Export\"",
+    "new": "title:\"导出产物\",saveLabel:\"导出\""
+  },
+  {
+    "old": "dialogTitle:\"Export Artifact\"",
+    "new": "dialogTitle:\"导出产物\""
+  },
+  {
+    "old": "tooltip:d?\"Saved!\":\"Export Artifact\"",
+    "new": "tooltip:d?\"已保存!\":\"导出产物\""
+  },
+  {
+    "old": "tooltip:u?\"Saved!\":\"Export Artifact\"",
+    "new": "tooltip:u?\"已保存!\":\"导出产物\""
+  },
+  {
+    "old": "placeHolder:\"Select where to open the conversation\"",
+    "new": "placeHolder:\"选择打开对话的位置\""
+  },
+  {
+    "old": "label:\"Open in current window\"",
+    "new": "label:\"在当前窗口中打开\""
+  },
+  {
+    "old": "description:\"Continue conversation in the current workspace\"",
+    "new": "description:\"在当前工作区中继续对话\""
+  },
+  {
+    "old": "label:\"Open in workspace: \"",
+    "new": "label:\"在工作区中打开：\""
+  },
+  {
+    "old": "\"Open in current window\"===i.label",
+    "new": "\"在当前窗口中打开\"===i.label"
+  },
+  {
+    "old": "s+=`\\`${e}\\` task `;",
+    "new": "s+=`任务 \\`${e}\\` `;"
+  },
+  {
+    "old": "s+=n.every(l=>l.state===Sv.Idle)?a?`finished with \\`${a}\\` problem${a===1?\"\":\"s\"}`:\"finished\":a?`started and will continue to run in the background with \\`${a}\\` problem${a===1?\"\":\"s\"}`:\"started and will continue to run in the background\"",
+    "new": "s+=n.every(l=>l.state===Sv.Idle)?a?`运行完成，但发现 \\`${a}\\` 个问题`:\"已完成\":a?`已启动并将继续在后台运行，目前有 \\`${a}\\` 个问题`:\"已启动并将继续在后台运行\""
+  },
+  {
+    "old": "if(r)return o?new Fi(`Got output for ${s} with \\`${o}\\` problem${o===1?\"\":\"s\"}`):new Fi(`Got output for ${s}`);",
+    "new": "if(r)return o?new Fi(`已获取到 ${s} 的输出，发现 \\`${o}\\` 个问题`):new Fi(`已获取到 ${s} 的输出`);"
+  },
+  {
+    "old": "`Failed to export artifact: ${eu(n)}`",
+    "new": "`导出产物失败: ${eu(n)}`"
+  },
+  {
+    "old": "\"Compacting\"",
+    "new": "\"正在压缩\""
+  },
+  {
+    "old": "\"Search for files edited by Agent\"",
+    "new": "\"搜索智能体修改过的文件\""
+  },
+  {
+    "old": "let d=don(0),f=d?`Comment (${d})`:\"Comment\";",
+    "new": "let d=don(0),f=d?`评论 (${d})`:\"评论\";"
+  },
+  {
+    "old": "let u=xIo(0),d=u?`Comment (${u})`:\"Comment\";",
+    "new": "let u=xIo(0),d=u?`评论 (${u})`:\"评论\";"
+  },
+  {
+    "old": "children:a===i-1?\"Submit (Enter)\":\"Continue (Enter)\"",
+    "new": "children:a===i-1?\"提交 (Enter)\":\"继续 (Enter)\""
+  },
+  {
+    "old": "children:r===s-1?\"Submit (Enter)\":\"Continue (Enter)\"",
+    "new": "children:r===s-1?\"提交 (Enter)\":\"继续 (Enter)\""
+  },
+  {
+    "old": "children:`Skip (esc), Skip All (${Fte?\"\\u2318esc\":\"Ctrl+esc\"})`",
+    "new": "children:`跳过 (esc)，全部跳过 (${Fte?\"\\u2318esc\":\"Ctrl+esc\"})`"
+  },
+  {
+    "old": "children:`Skip (esc), Skip All (${Ect?\"\\u2318esc\":\"Ctrl+esc\"})`",
+    "new": "children:`跳过 (esc)，全部跳过 (${Ect?\"\\u2318esc\":\"Ctrl+esc\"})`"
+  },
+  {
+    "old": "children:`Skip (esc), Skip All (${BK?\"\\u2318esc\":\"Ctrl+esc\"})`",
+    "new": "children:`跳过 (esc)，全部跳过 (${BK?\"\\u2318esc\":\"Ctrl+esc\"})`"
+  },
+  {
+    "old": "fZi={read_file:\"read access to this path\",write_file:\"write access to this path\",read_url:\"reading this URL\",execute_url:\"executing actions on this URL\",command:\"running this command\",unsandboxed:\"running this command outside the sandbox\",mcp:\"using this MCP tool\"},gZi=(e,t)=>{let r=fZi[e]??\"access to this resource\";return t?`Save rule to always allow ${r}?`:`Allow ${r}?`};",
+    "new": "fZi={read_file:\"读取此路径\",write_file:\"写入此路径\",read_url:\"读取此 URL\",execute_url:\"在此 URL 上执行操作\",command:\"运行此命令\",unsandboxed:\"在沙盒外运行此命令\",mcp:\"使用此 MCP 工具\"},gZi=(e,t)=>{let r=fZi[e]??\"访问此资源\";return t?`是否保存规则以始终允许${r}？`:`是否允许${r}？`};"
+  },
+  {
+    "old": "if(y||fe(\"Yes, allow this time\",s1.ONCE),!x){if(d?.projectSettingsProvider&&b){let Se=b===NC,Ye=y?D&&I?`Yes, save rule for '${I}' ${Se?\"when not in a project\":\"in this project\"}`:`Yes, save rule ${Se?\"when not in a project\":\"in this project\"}`:D&&I?`Yes, and always allow '${I}' ${Se?\"when not in a project\":\"in this project\"}`:`Yes, and always allow ${Se?\"when not in a project\":\"in this project\"}`;fe(Ye,s1.PROJECT)}if(u){let Se=y?D&&I?`Yes, save rule for '${I}' in this workspace`:\"Yes, save rule in this workspace\":D&&I?`Yes, and always allow '${I}' in this workspace`:\"Yes, and always allow in this workspace\";fe(Se,s1.WORKSPACE)}if(g!==\"Cider\"){let Se=y?D&&I?`Yes, save rule for '${I}' globally`:\"Yes, save rule globally\":D&&I?`Yes, and always allow '${I}'`:\"Yes, and always allow\";fe(Se,s1.GLOBAL)}}",
+    "new": "if(y||fe(\"是，允许本次\",s1.ONCE),!x){if(d?.projectSettingsProvider&&b){let Se=b===NC,Ye=y?D&&I?`是，${Se?\"非项目中\":\"在此项目中\"}保存 '${I}' 的规则`:`是，${Se?\"非项目中\":\"在此项目中\"}保存规则`:D&&I?`是，${Se?\"非项目中\":\"在此项目中\"}始终允许 '${I}'`:`是，${Se?\"非项目中\":\"在此项目中\"}始终允许`;fe(Ye,s1.PROJECT)}if(u){let Se=y?D&&I?`是，在此工作区中保存 '${I}' 的规则`:\"是，在此工作区中保存规则\":D&&I?`是，在此工作区中始终允许 '${I}'`:\"是，在此工作区中始终允许\";fe(Se,s1.WORKSPACE)}if(g!==\"Cider\"){let Se=y?D&&I?`是，全局保存 '${I}' 的规则`:\"是，全局保存规则\":D&&I?`是，始终允许 '${I}'`:\"是，始终允许\";fe(Se,s1.GLOBAL)}}"
+  },
+  {
+    "old": "if(g||Ce(\"Yes, allow this time\",nI.ONCE),!x){if(u?.projectSettingsProvider&&f){let We=f===jBe,rt=g?F&&A?`Yes, save rule for '${A}' ${We?\"when not in a project\":\"in this project\"}`:`Yes, save rule ${We?\"when not in a project\":\"in this project\"}`:F&&A?`Yes, and always allow '${A}' ${We?\"when not in a project\":\"in this project\"}`:`Yes, and always allow ${We?\"when not in a project\":\"in this project\"}`;Ce(rt,nI.PROJECT)}if(l){let We=g?F&&A?`Yes, save rule for '${A}' in this workspace`:\"Yes, save rule in this workspace\":F&&A?`Yes, and always allow '${A}' in this workspace`:\"Yes, and always allow in this workspace\";Ce(We,nI.WORKSPACE)}if(h!==\"Cider\"){let We=g?F&&A?`Yes, save rule for '${A}' globally`:\"Yes, save rule globally\":F&&A?`Yes, and always allow '${A}'`:\"Yes, and always allow\";Ce(We,nI.GLOBAL)}}",
+    "new": "if(g||Ce(\"是，允许本次\",nI.ONCE),!x){if(u?.projectSettingsProvider&&f){let We=f===jBe,rt=g?F&&A?`是，${We?\"非项目中\":\"在此项目中\"}保存 '${A}' 的规则`:`是，${We?\"非项目中\":\"在此项目中\"}保存规则`:F&&A?`是，${We?\"非项目中\":\"在此项目中\"}始终允许 '${A}'`:`是，${We?\"非项目中\":\"在此项目中\"}始终允许`;Ce(rt,nI.PROJECT)}if(l){let We=g?F&&A?`是，在此工作区中保存 '${A}' 的规则`:\"是，在此工作区中保存规则\":F&&A?`是，在此工作区中始终允许 '${A}'`:\"是，在此工作区中始终允许\";Ce(We,nI.WORKSPACE)}if(h!==\"Cider\"){let We=g?F&&A?`是，全局保存 '${A}' 的规则`:\"是，全局保存规则\":F&&A?`是，始终允许 '${A}'`:\"是，始终允许\";Ce(We,nI.GLOBAL)}}"
+  },
+  {
+    "old": "if(R||me(\"Yes, allow this time\",lp.ONCE),!w){if(d?.projectSettingsProvider&&E){let xe=E===XG,Ye=R?D&&x?`Yes, save rule for '${x}' ${xe?\"when not in a project\":\"in this project\"}`:`Yes, save rule ${xe?\"when not in a project\":\"in this project\"}`:D&&x?`Yes, and always allow '${x}' ${xe?\"when not in a project\":\"in this project\"}`:`Yes, and always allow ${xe?\"when not in a project\":\"in this project\"}`;me(Ye,lp.PROJECT)}if(u){let xe=R?D&&x?`Yes, save rule for '${x}' in this workspace`:\"Yes, save rule in this workspace\":D&&x?`Yes, and always allow '${x}' in this workspace`:\"Yes, and always allow in this workspace\";me(xe,lp.WORKSPACE)}if(p!==\"Cider\"){let xe=R?D&&x?`Yes, save rule for '${x}' globally`:\"Yes, save rule globally\":D&&x?`Yes, and always allow '${x}'`:\"Yes, and always allow\";me(xe,lp.GLOBAL)}}",
+    "new": "if(R||me(\"是，允许本次\",lp.ONCE),!w){if(d?.projectSettingsProvider&&E){let xe=E===XG,Ye=R?D&&x?`是，${xe?\"非项目中\":\"在此项目中\"}保存 '${x}' 的规则`:`是，${xe?\"非项目中\":\"在此项目中\"}保存规则`:D&&x?`是，${xe?\"非项目中\":\"在此项目中\"}始终允许 '${x}'`:`是，${xe?\"非项目中\":\"在此项目中\"}始终允许`;me(Ye,lp.PROJECT)}if(u){let xe=R?D&&x?`是，在此工作区中保存 '${x}' 的规则`:\"是，在此工作区中保存规则\":D&&x?`是，在此工作区中始终允许 '${x}'`:\"是，在此工作区中始终允许\";me(xe,lp.WORKSPACE)}if(p!==\"Cider\"){let xe=R?D&&x?`是，全局保存 '${x}' 的规则`:\"是，全局保存规则\":D&&x?`是，始终允许 '${x}'`:\"是，始终允许\";me(xe,lp.GLOBAL)}}"
+  },
+  {
+    "old": "writeInLabel:\"No\",writeInPlaceholder:\"(tell the agent what to do instead)\"",
+    "new": "writeInLabel:\"否\",writeInPlaceholder:\"(告诉智能体应该怎么做)\""
+  },
+  {
+    "old": "TAu={read_file:\"read access to this path\",write_file:\"write access to this path\",read_url:\"reading this URL\",execute_url:\"executing actions on this URL\",command:\"running this command\",unsandboxed:\"running this command outside the sandbox\",mcp:\"using this MCP tool\"},kAu=(t,e)=>{let i=TAu[t]??\"access to this resource\";return e?`Save rule to always allow ${i}?`:`Allow ${i}?`};",
+    "new": "TAu={read_file:\"读取此路径\",write_file:\"写入此路径\",read_url:\"读取此 URL\",execute_url:\"在此 URL 上执行操作\",command:\"运行此命令\",unsandboxed:\"在沙盒外运行此命令\",mcp:\"使用此 MCP 工具\"},kAu=(t,e)=>{let i=TAu[t]??\"访问此资源\";return e?`是否保存规则以始终允许${i}？`:`是否允许${i}？`};"
+  },
+  {
+    "old": "r7a={read_file:\"read access to this path\",write_file:\"write access to this path\",read_url:\"reading this URL\",execute_url:\"executing actions on this URL\",command:\"running this command\",unsandboxed:\"running this command outside the sandbox\",mcp:\"using this MCP tool\"},n7a=(e,t)=>{let r=r7a[e]??\"access to this resource\";return t?`Save rule to always allow ${r}?`:`Allow ${r}?`},",
+    "new": "r7a={read_file:\"读取此路径\",write_file:\"写入此路径\",read_url:\"读取此 URL\",execute_url:\"在此 URL 上执行操作\",command:\"运行此命令\",unsandboxed:\"在沙盒外运行此命令\",mcp:\"使用此 MCP 工具\"},n7a=(e,t)=>{let r=r7a[e]??\"访问此资源\";return t?`是否保存规则以始终允许${r}？`:`是否允许${r}？`},"
   }
 ]

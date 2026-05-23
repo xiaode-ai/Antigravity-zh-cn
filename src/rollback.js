@@ -20,8 +20,11 @@ export function rollback(config) {
   const extensionPath = path.join(path.dirname(targetFilePath), '..', '..', 'extensions', 'antigravity', 'dist', 'extension.js');
   const extensionBackupPath = extensionPath + backupSuffix;
 
+  const mainProcessPath = path.join(path.dirname(targetFilePath), '..', 'main.js');
+  const mainProcessBackupPath = mainProcessPath + backupSuffix;
+
   // 1. 检查是否存在任何备份文件
-  if (!fs.existsSync(backupPath) && !fs.existsSync(workbenchBackupPath) && !fs.existsSync(nlsBackupPath) && !fs.existsSync(extensionBackupPath)) {
+  if (!fs.existsSync(backupPath) && !fs.existsSync(workbenchBackupPath) && !fs.existsSync(nlsBackupPath) && !fs.existsSync(extensionBackupPath) && !fs.existsSync(mainProcessBackupPath)) {
     console.warn(`[WARN] 找不到任何备份文件。可能还从未汉化过，无需回滚。`);
     return false;
   }
@@ -73,6 +76,13 @@ export function rollback(config) {
       fs.copyFileSync(extensionBackupPath, extensionPath);
       fs.unlinkSync(extensionBackupPath);
       console.log(`[OK] 原始 extension.js 文件已覆盖还原并清理了备份文件。`);
+    }
+
+    // 4c. 执行 rollback main.js (主进程)
+    if (fs.existsSync(mainProcessBackupPath)) {
+      fs.copyFileSync(mainProcessBackupPath, mainProcessPath);
+      fs.unlinkSync(mainProcessBackupPath);
+      console.log(`[OK] 原始 out/main.js 文件已覆盖还原并清理了备份文件。`);
     }
 
     // 5. 执行 CLP cached NLS files rollback

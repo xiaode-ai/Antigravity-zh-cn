@@ -1,64 +1,80 @@
 import fs from 'fs';
 import path from 'path';
 
-const targetDir = 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out';
-const mainBakPath = path.join(targetDir, 'jetskiAgent', 'main.js.bak');
-const mainContent = fs.readFileSync(mainBakPath, 'utf8');
-
-const targets = [
-  'Changes Overview',
-  'Files With Changes',
-  'Terminal',
-  'Background Processes Running',
-  'Artifacts',
-  'Files for Conversation',
-  'Reject all',
-  'Browser',
-  'Ask anything',
-  'Your plan\'s baseline quota',
-  'Enable Overages',
-  'See plans.',
-  'minutes ago',
-  'View conversation',
-  'Copy to clipboard',
-  'Export artifact',
-  'Submit comment',
-  'Add a message...',
-  'Select text in the artifact to add a comment',
-  'Proceed',
-  'Proceed with implementation plan',
-  'Implementation Plan',
-  'Individual quota reached',
-  'Send Queued Message',
-  'cancel',
-  'Timed 60 seconds',
-  'Walkthrough',
-  'Customization',
-  'Fast',
-  'Analyzed',
-  'Edited',
-  'Ran',
-  'Working'
+const files = [
+  {
+    name: 'main.js',
+    path: 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out\\jetskiAgent\\main.js.bak'
+  },
+  {
+    name: 'workbench.js',
+    path: 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out\\vs\\workbench\\workbench.desktop.main.js.bak'
+  }
 ];
 
-targets.forEach(term => {
-  let idx = 0;
-  let count = 0;
-  console.log(`\n=== Matches for "${term}" ===`);
-  while (true) {
-    idx = mainContent.indexOf(term, idx);
-    if (idx === -1) break;
-    count++;
-    
-    // Check if it's a string literal or react children structure
-    const start = Math.max(0, idx - 100);
-    const end = Math.min(mainContent.length, idx + term.length + 100);
-    const context = mainContent.substring(start, end).replace(/\r?\n/g, ' ');
-    console.log(`  Match ${count} at ${idx}: ... ${context} ...`);
-    
-    idx += term.length;
+const targets = [
+  'Recording...',
+  'Recording',
+  'background processes',
+  'Browser',
+  'Search all convos',
+  'Current',
+  'Show 2 more',
+  'more...',
+  'to navigate',
+  'to select',
+  'Ran'
+];
+
+let output = '';
+
+files.forEach(fileInfo => {
+  if (!fs.existsSync(fileInfo.path)) {
+    output += `[WARN] File not found: ${fileInfo.path}\n`;
+    return;
   }
-  if (count === 0) {
-    console.log('  No matches found.');
-  }
+  
+  output += `\n================== Scanning ${fileInfo.name} ==================\n`;
+  const content = fs.readFileSync(fileInfo.path, 'utf8');
+  
+  targets.forEach(target => {
+    let idx = 0;
+    const matches = [];
+    while (true) {
+      idx = content.indexOf(target, idx);
+      if (idx === -1) break;
+      
+      const start = Math.max(0, idx - 120);
+      const end = Math.min(content.length, idx + target.length + 120);
+      matches.push({
+        pos: idx,
+        context: content.substring(start, end).replace(/\r?\n/g, ' ')
+      });
+      idx += target.length;
+    }
+    
+    // Filter matches that look like UI strings
+    const uiMatches = matches.filter(m => {
+      const lower = m.context.toLowerCase();
+      return lower.includes('label:') ||
+             lower.includes('title:') ||
+             lower.includes('placeholder:') ||
+             lower.includes('children:') ||
+             lower.includes('tooltip:') ||
+             lower.includes('description:') ||
+             lower.includes('"') ||
+             lower.includes("'") ||
+             lower.includes('`');
+    });
+    
+    if (uiMatches.length > 0) {
+      output += `\nTarget: "${target}" - Found ${uiMatches.length} potential UI occurrences:\n`;
+      uiMatches.forEach((m, i) => {
+        output += `  [Match ${i+1} at ${m.pos}]: ... ${m.context} ...\n`;
+      });
+    }
+  });
 });
+
+fs.writeFileSync('scratch/find_specific_ui.txt', output, 'utf8');
+console.log('Done! Output written to scratch/find_specific_ui.txt');
