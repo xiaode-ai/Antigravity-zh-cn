@@ -1,0 +1,8 @@
+Found match in: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\extensions\antigravity\dist\extension.js
+  "autocomplete speed" Match at index 1502248:
+  leteSpeed()){case i.K_D.FAST:e="Fast";break;case i.K_D.SLOW:e="Slow";break;default:e="Fast"}return`Autocomplete Speed: ${e}`}setState(e,t){this.throttleUpdate(e,t)}async doSetState(e,t){const n=void 0
+Found match in: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\jetskiAgent\main.js
+Found match in: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\main.js
+Found match in: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\api\node\extensionHostProcess.js
+Found match in: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\api\worker\extensionHostWorkerMain.js
+Found match in: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js

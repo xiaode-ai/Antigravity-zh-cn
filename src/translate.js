@@ -305,7 +305,13 @@ export function translate(config, translations, translationsPath) {
         { index: 9784, oldVal: "1 Error", newVal: "1 个错误" },
         { index: 9785, oldVal: "{0} Errors", newVal: "{0} 个错误" },
         { index: 9721, oldVal: "Errors: {0}", newVal: "错误: {0}" },
-        { index: 2099, oldVal: "Unknown Error", newVal: "未知错误" }
+        { index: 2099, oldVal: "Unknown Error", newVal: "未知错误" },
+        { index: 12385, oldVal: "Task \"{0}\" finished in {1}.", newVal: "任务“{0}”在 {1} 内完成。" },
+        { index: 12386, oldVal: "Task finished in {0}.", newVal: "任务在 {0} 内完成。" },
+        { index: 5526, oldVal: "Finished in {0}.", newVal: "在 {0} 内完成。" },
+        { index: 5528, oldVal: "Finished", newVal: "已完成" },
+        { index: 5524, oldVal: "Working...", newVal: "运行中..." },
+        { index: 5510, oldVal: "Failed", newVal: "已失败" }
       ];
 
       let nlsModifiedCount = 0;
@@ -439,7 +445,13 @@ export function translate(config, translations, translationsPath) {
           { index: 9784, oldVal: "1 Error", newVal: "1 个错误" },
           { index: 9785, oldVal: "{0} Errors", newVal: "{0} 个错误" },
           { index: 9721, oldVal: "Errors: {0}", newVal: "错误: {0}" },
-          { index: 2099, oldVal: "Unknown Error", newVal: "未知错误" }
+          { index: 2099, oldVal: "Unknown Error", newVal: "未知错误" },
+          { index: 12385, oldVal: "Task \"{0}\" finished in {1}.", newVal: "任务“{0}”在 {1} 内完成。" },
+          { index: 12386, oldVal: "Task finished in {0}.", newVal: "任务在 {0} 内完成。" },
+          { index: 5526, oldVal: "Finished in {0}.", newVal: "在 {0} 内完成。" },
+          { index: 5528, oldVal: "Finished", newVal: "已完成" },
+          { index: 5524, oldVal: "Working...", newVal: "运行中..." },
+          { index: 5510, oldVal: "Failed", newVal: "已失败" }
         ];
 
         let clpModifiedCount = 0;
@@ -454,6 +466,10 @@ export function translate(config, translations, translationsPath) {
           8471: { '审阅': '审核' },
           6011: { '已更改 1 个文件': '1 个文件已更改' },
           6012: { '已更改 {0} 个文件': '{0} 个文件已更改' },
+          12385: { '任务 "{0}" 已在 {1} 中完成。': '任务“{0}”在 {1} 内完成。' },
+          12386: { '任务已在 {0} 中完成。': '任务在 {0} 内完成。' },
+          5526: { '在 {0} 后完成。': '在 {0} 内完成。' },
+          5524: { '正在运行...': '运行中...' }
         };
         clpMappings.forEach(mapping => {
           const currentVal = clpNlsData[mapping.index];

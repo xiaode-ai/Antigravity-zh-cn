@@ -1,0 +1,107 @@
+Found match in: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\jetskiAgent\main.js
+  "autocompletespeed" Match at index 7977203:
+  eDeniedCommands",SECURE_MODE_ENABLED:"secureModeEnabled",IS_SNOOZED:"isSnoozed",AUTOCOMPLETE_SPEED:"autocompleteSpeed",ENABLE_TAB_SOUNDS:"enableTabSounds",ALLOW_TAB_ACCESS_GITIGNORE_FILES:"allowTabAcc
+  "autocompletespeed" Match at index 11810632:
+  eDeniedCommands",SECURE_MODE_ENABLED:"secureModeEnabled",IS_SNOOZED:"isSnoozed",AUTOCOMPLETE_SPEED:"autocompleteSpeed",ENABLE_TAB_SOUNDS:"enableTabSounds",ALLOW_TAB_ACCESS_GITIGNORE_FILES:"allowTabAcc
+  "autocompletespeed" Match at index 11824970:
+  :!1,isSnoozed:!1,disableTabToImport:!1,disableHighlightAfterAccept:!1,useClipboardForCompletions:!1,autocompleteSpeed:Vae.FAST},yS="uss-tabPreferences";function V2t(e){return RR(e,pa.ALLOW_TAB_ACCESS_
+  "autocompletespeed" Match at index 11825486:
+  ghlightAfterAccept)}function _2t(e){return!1}function w2t(e){const t=Pae(e,pa.AUTOCOMPLETE_SPEED,mx.autocompleteSpeed);return t===Vae.DEFAULT?Vae.FAST:t}function _6n(e){return RR(e,pa.IS_SNOOZED,mx.is
+  "autocompletespeed" Match at index 11830780:
+  DISABLE_TAB_TO_IMPORT:return this.getDisableTabToImport();case pa.AUTOCOMPLETE_SPEED:return this.getAutocompleteSpeed();case pa.USE_CLIPBOARD_FOR_COMPLETIONS:return this.getUseClipboardForCompletions(
+  "autocompletespeed" Match at index 11834054:
+  ISABLE_TAB_TO_IMPORT:return this.setDisableTabToImport(t);case pa.AUTOCOMPLETE_SPEED:return this.setAutocompleteSpeed(t);case pa.USE_CLIPBOARD_FOR_COMPLETIONS:return this.setUseClipboardForCompletions
+  "autocompletespeed" Match at index 11839351:
+  his.tabPreferencesTopic)}async setDisableTabToImport(e){this.settingsUpdater.pushUpdate(G6n(!e))}getAutocompleteSpeed(){return w2t(this.tabPreferencesTopic)}async setAutocompleteSpeed(e){this.settings
+  "autocompletespeed" Match at index 11839417:
+  ngsUpdater.pushUpdate(G6n(!e))}getAutocompleteSpeed(){return w2t(this.tabPreferencesTopic)}async setAutocompleteSpeed(e){this.settingsUpdater.pushUpdate(X6n(e))}getUseClipboardForCompletions(){return 
+  "autocompletespeed" Match at index 11895802:
+  :T2t(t)},r.disableHighlightAfterAccept={value:D2t(t)},r.useClipboardForCompletions={value:_2t(t)},r.autocompleteSpeed={value:w2t(t)},r.isSnoozed={value:_6n(t)},r.enableTabSounds={value:w6n(t)};break}c
+  "autocompletespeed" Match at index 12022107:
+  .onDidChange,pushUpdate:n},disposable:r}}function ais(e){return{allowTabAccessGitignoreFiles:V2t(e),autocompleteSpeed:w2t(e),disableHighlightAfterAccept:D2t(e),disableTabToImport:T2t(e),enableTabSound
+  "autocompletespeed" Match at index 12022489:
+  se"setAllowTabAccessGitignoreFiles":e.pushUpdate(B6n(a.allowTabAccessGitignoreFiles));break;case"setAutocompleteSpeed":e.pushUpdate(X6n(a.autocompleteSpeed));break;case"setDisableHighlightAfterAccept"
+  "autocompletespeed" Match at index 12022527:
+  pushUpdate(B6n(a.allowTabAccessGitignoreFiles));break;case"setAutocompleteSpeed":e.pushUpdate(X6n(a.autocompleteSpeed));break;case"setDisableHighlightAfterAccept":e.pushUpdate(Z6n(a.disableHighlightAf
+Found match in: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\main.js
+  "autocompletespeed" Match at index 308880:
+  eDeniedCommands",SECURE_MODE_ENABLED:"secureModeEnabled",IS_SNOOZED:"isSnoozed",AUTOCOMPLETE_SPEED:"autocompleteSpeed",ENABLE_TAB_SOUNDS:"enableTabSounds",ALLOW_TAB_ACCESS_GITIGNORE_FILES:"allowTabAcc
+  "autocompletespeed" Match at index 10325171:
+  eDeniedCommands",SECURE_MODE_ENABLED:"secureModeEnabled",IS_SNOOZED:"isSnoozed",AUTOCOMPLETE_SPEED:"autocompleteSpeed",ENABLE_TAB_SOUNDS:"enableTabSounds",ALLOW_TAB_ACCESS_GITIGNORE_FILES:"allowTabAcc
+  "autocompletespeed" Match at index 12358339:
+  :!1,isSnoozed:!1,disableTabToImport:!1,disableHighlightAfterAccept:!1,useClipboardForCompletions:!1,autocompleteSpeed:xae.FAST}}});function HMs(e){return D5(e,Va.ALLOW_TAB_ACCESS_GITIGNORE_FILES,ZL.al
+  "autocompletespeed" Match at index 12358834:
+  ghlightAfterAccept)}function eJs(e){return!1}function tJs(e){const t=JZe(e,Va.AUTOCOMPLETE_SPEED,ZL.autocompleteSpeed);return t===xae.DEFAULT?xae.FAST:t}function rJs(e){return B5(RD,Va.ALLOW_TAB_ACCES
+  "autocompletespeed" Match at index 12371024:
+  DISABLE_TAB_TO_IMPORT:return this.getDisableTabToImport();case Va.AUTOCOMPLETE_SPEED:return this.getAutocompleteSpeed();case Va.USE_CLIPBOARD_FOR_COMPLETIONS:return this.getUseClipboardForCompletions(
+  "autocompletespeed" Match at index 12374298:
+  ISABLE_TAB_TO_IMPORT:return this.setDisableTabToImport(t);case Va.AUTOCOMPLETE_SPEED:return this.setAutocompleteSpeed(t);case Va.USE_CLIPBOARD_FOR_COMPLETIONS:return this.setUseClipboardForCompletions
+  "autocompletespeed" Match at index 12379598:
+  his.tabPreferencesTopic)}async setDisableTabToImport(e){this.settingsUpdater.pushUpdate(iJs(!e))}getAutocompleteSpeed(){return tJs(this.tabPreferencesTopic)}async setAutocompleteSpeed(e){this.settings
+  "autocompletespeed" Match at index 12379664:
+  ngsUpdater.pushUpdate(iJs(!e))}getAutocompleteSpeed(){return tJs(this.tabPreferencesTopic)}async setAutocompleteSpeed(e){this.settingsUpdater.pushUpdate(lJs(e))}getUseClipboardForCompletions(){return 
+Found match in: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\api\node\extensionHostProcess.js
+  "autocompletespeed" Match at index 465437:
+  eDeniedCommands",SECURE_MODE_ENABLED:"secureModeEnabled",IS_SNOOZED:"isSnoozed",AUTOCOMPLETE_SPEED:"autocompleteSpeed",ENABLE_TAB_SOUNDS:"enableTabSounds",ALLOW_TAB_ACCESS_GITIGNORE_FILES:"allowTabAcc
+  "autocompletespeed" Match at index 2310903:
+  :!1,isSnoozed:!1,disableTabToImport:!1,disableHighlightAfterAccept:!1,useClipboardForCompletions:!1,autocompleteSpeed:fA.FAST};function u_e(e){return Yl(e,Ho.ALLOW_TAB_ACCESS_GITIGNORE_FILES,Pl.allowT
+  "autocompletespeed" Match at index 2311391:
+  ighlightAfterAccept)}function A_e(e){return!1}function R_e(e){const t=KA(e,Ho.AUTOCOMPLETE_SPEED,Pl.autocompleteSpeed);return t===fA.DEFAULT?fA.FAST:t}function g_e(e){return Yl(e,Ho.IS_SNOOZED,Pl.isSn
+  "autocompletespeed" Match at index 2852706:
+  mpletions(){const t=await this._client.subscribe("uss-tabPreferences");return A_e(t.get())}async getAutocompleteSpeed(){const t=await this._client.subscribe("uss-tabPreferences");return R_e(t.get())}a
+  "autocompletespeed" Match at index 3076086:
+  ghlightAfterAccept()},getUseClipboardForCompletions(){return it.getUseClipboardForCompletions()},getAutocompleteSpeed(){return it.getAutocompleteSpeed()},getIsSnoozed(){return it.getIsSnoozed()},getEn
+  "autocompletespeed" Match at index 3076119:
+  oardForCompletions(){return it.getUseClipboardForCompletions()},getAutocompleteSpeed(){return it.getAutocompleteSpeed()},getIsSnoozed(){return it.getIsSnoozed()},getEnableTabSounds(){return it.getEnab
+Found match in: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\api\worker\extensionHostWorkerMain.js
+  "autocompletespeed" Match at index 177840:
+  AUTO=1]="AUTO",e[e.LIGHT=2]="LIGHT",e[e.DARK=3]="DARK"})(ThemePreference||(ThemePreference={}));var AutocompleteSpeed;(function(e){e[e.UNSPECIFIED=0]="UNSPECIFIED",e[e.SLOW=1]="SLOW",e[e.DEFAULT=2]="D
+  "autocompletespeed" Match at index 177969:
+  ){e[e.UNSPECIFIED=0]="UNSPECIFIED",e[e.SLOW=1]="SLOW",e[e.DEFAULT=2]="DEFAULT",e[e.FAST=3]="FAST"})(AutocompleteSpeed||(AutocompleteSpeed={}));var TabEnabled;(function(e){e[e.UNSPECIFIED=0]="UNSPECIFI
+  "autocompletespeed" Match at index 177989:
+  ="UNSPECIFIED",e[e.SLOW=1]="SLOW",e[e.DEFAULT=2]="DEFAULT",e[e.FAST=3]="FAST"})(AutocompleteSpeed||(AutocompleteSpeed={}));var TabEnabled;(function(e){e[e.UNSPECIFIED=0]="UNSPECIFIED",e[e.OFF=1]="OFF"
+  "autocompletespeed" Match at index 380266:
+  eDeniedCommands",SECURE_MODE_ENABLED:"secureModeEnabled",IS_SNOOZED:"isSnoozed",AUTOCOMPLETE_SPEED:"autocompleteSpeed",ENABLE_TAB_SOUNDS:"enableTabSounds",ALLOW_TAB_ACCESS_GITIGNORE_FILES:"allowTabAcc
+  "autocompletespeed" Match at index 1540531:
+  TO=1]="AUTO",e[e.LIGHT=2]="LIGHT",e[e.DARK=3]="DARK"})(ThemePreference2||(ThemePreference2={}));var AutocompleteSpeed2;(function(e){e[e.UNSPECIFIED=0]="UNSPECIFIED",e[e.SLOW=1]="SLOW",e[e.DEFAULT=2]="
+  "autocompletespeed" Match at index 1540661:
+  ){e[e.UNSPECIFIED=0]="UNSPECIFIED",e[e.SLOW=1]="SLOW",e[e.DEFAULT=2]="DEFAULT",e[e.FAST=3]="FAST"})(AutocompleteSpeed2||(AutocompleteSpeed2={}));var TabEnabled2;(function(e){e[e.UNSPECIFIED=0]="UNSPEC
+  "autocompletespeed" Match at index 1540682:
+  "UNSPECIFIED",e[e.SLOW=1]="SLOW",e[e.DEFAULT=2]="DEFAULT",e[e.FAST=3]="FAST"})(AutocompleteSpeed2||(AutocompleteSpeed2={}));var TabEnabled2;(function(e){e[e.UNSPECIFIED=0]="UNSPECIFIED",e[e.OFF=1]="OF
+  "autocompletespeed" Match at index 2445956:
+  :!1,isSnoozed:!1,disableTabToImport:!1,disableHighlightAfterAccept:!1,useClipboardForCompletions:!1,autocompleteSpeed:AutocompleteSpeed2.FAST};function getAllowTabAccessGitignoreFiles(e){return getBoo
+  "autocompletespeed" Match at index 2445974:
+  isableTabToImport:!1,disableHighlightAfterAccept:!1,useClipboardForCompletions:!1,autocompleteSpeed:AutocompleteSpeed2.FAST};function getAllowTabAccessGitignoreFiles(e){return getBooleanValue(e,Antigr
+  "autocompletespeed" Match at index 2446810:
+  efaults.disableHighlightAfterAccept)}function getUseClipboardForCompletions(e){return!1}function getAutocompleteSpeed(e){const t=getEnumValue(e,AntigravityUssSettingsKey.AUTOCOMPLETE_SPEED,TabPreferen
+  "autocompletespeed" Match at index 2446922:
+  Speed(e){const t=getEnumValue(e,AntigravityUssSettingsKey.AUTOCOMPLETE_SPEED,TabPreferencesDefaults.autocompleteSpeed);return t===AutocompleteSpeed2.DEFAULT?AutocompleteSpeed2.FAST:t}function getIsSno
+  "autocompletespeed" Match at index 2446952:
+  e,AntigravityUssSettingsKey.AUTOCOMPLETE_SPEED,TabPreferencesDefaults.autocompleteSpeed);return t===AutocompleteSpeed2.DEFAULT?AutocompleteSpeed2.FAST:t}function getIsSnoozed(e){return getBooleanValue
+  "autocompletespeed" Match at index 2446979:
+  .AUTOCOMPLETE_SPEED,TabPreferencesDefaults.autocompleteSpeed);return t===AutocompleteSpeed2.DEFAULT?AutocompleteSpeed2.FAST:t}function getIsSnoozed(e){return getBooleanValue(e,AntigravityUssSettingsKe
+  "autocompletespeed" Match at index 3005922:
+  this._client.subscribe("uss-tabPreferences");return getUseClipboardForCompletions(t.get())}async getAutocompleteSpeed(){const t=await this._client.subscribe("uss-tabPreferences");return getAutocomplet
+  "autocompletespeed" Match at index 3006011:
+  )}async getAutocompleteSpeed(){const t=await this._client.subscribe("uss-tabPreferences");return getAutocompleteSpeed(t.get())}async getIsSnoozed(){const t=await this._client.subscribe("uss-tabPrefere
+  "autocompletespeed" Match at index 3251642:
+  ghlightAfterAccept()},getUseClipboardForCompletions(){return Ve.getUseClipboardForCompletions()},getAutocompleteSpeed(){return Ve.getAutocompleteSpeed()},getIsSnoozed(){return Ve.getIsSnoozed()},getEn
+  "autocompletespeed" Match at index 3251675:
+  oardForCompletions(){return Ve.getUseClipboardForCompletions()},getAutocompleteSpeed(){return Ve.getAutocompleteSpeed()},getIsSnoozed(){return Ve.getIsSnoozed()},getEnableTabSounds(){return Ve.getEnab
+Found match in: C:\Users\i-cgh\AppData\Local\Programs\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js
+  "autocompletespeed" Match at index 3026964:
+  eDeniedCommands",SECURE_MODE_ENABLED:"secureModeEnabled",IS_SNOOZED:"isSnoozed",AUTOCOMPLETE_SPEED:"autocompleteSpeed",ENABLE_TAB_SOUNDS:"enableTabSounds",ALLOW_TAB_ACCESS_GITIGNORE_FILES:"allowTabAcc
+  "autocompletespeed" Match at index 12792969:
+  eDeniedCommands",SECURE_MODE_ENABLED:"secureModeEnabled",IS_SNOOZED:"isSnoozed",AUTOCOMPLETE_SPEED:"autocompleteSpeed",ENABLE_TAB_SOUNDS:"enableTabSounds",ALLOW_TAB_ACCESS_GITIGNORE_FILES:"allowTabAcc
+  "autocompletespeed" Match at index 15049237:
+  :!1,isSnoozed:!1,disableTabToImport:!1,disableHighlightAfterAccept:!1,useClipboardForCompletions:!1,autocompleteSpeed:Fwe.FAST},use="uss-tabPreferences";function YZt(t){return rQ(t,To.ALLOW_TAB_ACCESS
+  "autocompletespeed" Match at index 15049760:
+  hlightAfterAccept)}function Xku(t){return!1}function YBo(t){const e=Udt(t,To.AUTOCOMPLETE_SPEED,e2e.autocompleteSpeed);return e===Fwe.DEFAULT?Fwe.FAST:e}function Yku(t){return rQ(t,To.ENABLE_TAB_SOUND
+  "autocompletespeed" Match at index 25843629:
+  DISABLE_TAB_TO_IMPORT:return this.getDisableTabToImport();case To.AUTOCOMPLETE_SPEED:return this.getAutocompleteSpeed();case To.USE_CLIPBOARD_FOR_COMPLETIONS:return this.getUseClipboardForCompletions(
+  "autocompletespeed" Match at index 25846903:
+  ISABLE_TAB_TO_IMPORT:return this.setDisableTabToImport(e);case To.AUTOCOMPLETE_SPEED:return this.setAutocompleteSpeed(e);case To.USE_CLIPBOARD_FOR_COMPLETIONS:return this.setUseClipboardForCompletions
+  "autocompletespeed" Match at index 25852210:
+  his.tabPreferencesTopic)}async setDisableTabToImport(t){this.settingsUpdater.pushUpdate(KBo(!t))}getAutocompleteSpeed(){return YBo(this.tabPreferencesTopic)}async setAutocompleteSpeed(t){this.settings
+  "autocompletespeed" Match at index 25852276:
+  ngsUpdater.pushUpdate(KBo(!t))}getAutocompleteSpeed(){return YBo(this.tabPreferencesTopic)}async setAutocompleteSpeed(t){this.settingsUpdater.pushUpdate(QBo(t))}getUseClipboardForCompletions(){return 

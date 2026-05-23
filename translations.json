@@ -1,7 +1,7 @@
 [
   {
     "old": "children:[\"Settings - \",e]",
-    "new": "children:[\"设置 - \",({\"General\":\"常规\",\"Account\":\"账户\",\"Permissions\":\"权限\",\"Appearance\":\"外观\",\"Notifications\":\"通知\",\"Models\":\"模型\",\"Customizations\":\"自定义\",\"Browser\":\"浏览器\",\"Tab\":\"标签页\",\"Editor\":\"编辑器\",\"App\":\"应用\",\"Best of N\":\"Best of N\",\"Shortcuts\":\"快捷键\",\"Provide Feedback\":\"提供反馈\",\"Workspaces\":\"工作区\",\"Projects\":\"项目\",\"Not in Project\":\"非项目中\",\"Conversations\":\"普通对话\",\"Show all\":\"显示全部\"}[e]||e)]"
+    "new": "children:[\"设置 - \",({\"General\":\"常规\",\"Account\":\"账户\",\"Permissions\":\"权限\",\"Appearance\":\"外观\",\"Notifications\":\"通知\",\"Models\":\"模型\",\"Customizations\":\"自定义\",\"Browser\":\"浏览器\",\"Tab\":\"标签页\",\"Editor\":\"编辑器\",\"App\":\"应用\",\"Best of N\":\"Best of N\",\"Shortcuts\":\"快捷键\",\"Provide Feedback\":\"提供反馈\",\"Workspaces\":\"工作区\",\"Projects\":\"项目\",\"Not in Project\":\"非项目中\",\"Conversations\":\"普通对话\",\"Show all\":\"显示全部\",\"Agent\":\"智能体\",\"Manage\":\"管理\"}[e]||e)]"
   },
   {
     "old": "p(\"span\",{className:\"text-xs font-medium text-muted-foreground select-none\",children:\"General\"})",
@@ -33,7 +33,7 @@
   },
   {
     "old": "children:p(\"span\",{className:Mt(\"text-sm transition-colors select-none truncate flex-1\",r?\"text-foreground\":\"text-secondary-foreground group-hover:text-foreground\"),children:e})})",
-    "new": "children:p(\"span\",{className:Mt(\"text-sm transition-colors select-none truncate flex-1\",r?\"text-foreground\":\"text-secondary-foreground group-hover:text-foreground\"),children:(({\"General\":\"常规\",\"Account\":\"账户\",\"Permissions\":\"权限\",\"Appearance\":\"外观\",\"Notifications\":\"通知\",\"Models\":\"模型\",\"Customizations\":\"自定义\",\"Browser\":\"浏览器\",\"Tab\":\"标签页\",\"Editor\":\"编辑器\",\"App\":\"应用\",\"Best of N\":\"Best of N\",\"Shortcuts\":\"快捷键\",\"Provide Feedback\":\"提供反馈\",\"Workspaces\":\"工作区\",\"Projects\":\"项目\",\"Not in Project\":\"非项目中\",\"Conversations\":\"普通对话\",\"Show all\":\"显示全部\"})[e]||e)})})"
+    "new": "children:p(\"span\",{className:Mt(\"text-sm transition-colors select-none truncate flex-1\",r?\"text-foreground\":\"text-secondary-foreground group-hover:text-foreground\"),children:(({\"General\":\"常规\",\"Account\":\"账户\",\"Permissions\":\"权限\",\"Appearance\":\"外观\",\"Notifications\":\"通知\",\"Models\":\"模型\",\"Customizations\":\"自定义\",\"Browser\":\"浏览器\",\"Tab\":\"标签页\",\"Editor\":\"编辑器\",\"App\":\"应用\",\"Best of N\":\"Best of N\",\"Shortcuts\":\"快捷键\",\"Provide Feedback\":\"提供反馈\",\"Workspaces\":\"工作区\",\"Projects\":\"项目\",\"Not in Project\":\"非项目中\",\"Conversations\":\"普通对话\",\"Show all\":\"显示全部\",\"Agent\":\"智能体\",\"Manage\":\"管理\"})[e]||e)})})"
   },
   {
     "old": "children:\"Show all\"",
@@ -4069,6 +4069,218 @@
   },
   {
     "old": "r7a={read_file:\"read access to this path\",write_file:\"write access to this path\",read_url:\"reading this URL\",execute_url:\"executing actions on this URL\",command:\"running this command\",unsandboxed:\"running this command outside the sandbox\",mcp:\"using this MCP tool\"},n7a=(e,t)=>{let r=r7a[e]??\"access to this resource\";return t?`Save rule to always allow ${r}?`:`Allow ${r}?`},",
-    "new": "r7a={read_file:\"读取此路径\",write_file:\"写入此路径\",read_url:\"读取此 URL\",execute_url:\"在此 URL 上执行操作\",command:\"运行此命令\",unsandboxed:\"在沙盒外运行此命令\",mcp:\"使用此 MCP 工具\"},n7a=(e,t)=>{let r=r7a[e]??\"访问此资源\";return t?`是否保存规则以始终允许${r}？`:`是否允许${r}？`},"
+    "new": "r7a={read_file:\"读取此路径\",write_file:\"写入此路径\",read_url:\"读取此 URL\",execute_url:\"在此 URL 上执行操作\",command:\"运行此命令\",unsandboxed:\"在沙盒外运行此命令\",mcp:\"使用此 MCP 工具\"},n7a=(e,t)=>{let r=r7a[e]??\"访问此资源\";return t?`是否保存规则以始终允许${r}？`:`是否允许${i}？`},"
+  },
+  {
+    "old": "let r=zp()?\"Cancel (\\u2303C)\":\"Cancel (Ctrl+D)\"",
+    "new": "let r=zp()?\"取消 (\\u2303C)\":\"取消 (Ctrl+D)\""
+  },
+  {
+    "old": "let i=VN()?\"Cancel (\\u2303C)\":\"Cancel (Ctrl+D)\"",
+    "new": "let i=VN()?\"取消 (\\u2303C)\":\"取消 (Ctrl+D)\""
+  },
+  {
+    "old": "label:\"Tab to Import\",description:[\"Quickly add and update imports with a tab keypress.\"]",
+    "new": "label:\"Tab 导入\",description:[\"通过按下 Tab 键快速添加和更新代码导入 (Imports)。\"]"
+  },
+  {
+    "old": "[Mo.DISABLE_TAB_TO_IMPORT,{isProviderSetting:!0,screen:\"Tab\",label:\"Tab to Import\",description:\"Quickly add and update imports with a tab keypress.\",settingType:\"switch\"}]",
+    "new": "[Mo.DISABLE_TAB_TO_IMPORT,{isProviderSetting:!0,screen:\"Tab\",label:\"Tab 导入\",description:\"通过按下 Tab 键快速添加和更新代码导入 (Imports)。\",settingType:\"switch\"}]"
+  },
+  {
+    "old": "label:\"Tab to Jump\",type:E1e.Enum,description:[\"Predict the location of your next edit and navigates you there with a tab keypress\"]",
+    "new": "label:\"Tab 跳转\",type:E1e.Enum,description:[\"预测您下一次编辑的位置，并通过按下 Tab 键导航到那里。\"]"
+  },
+  {
+    "old": "description:\"Enable navigation suggestions that predict your next edit\"",
+    "new": "description:\"启用预测您下一次编辑位置的导航建议\""
+  },
+  {
+    "old": "[Mo.TAB_TO_JUMP,{isProviderSetting:!0,screen:\"Tab\",label:\"Tab to Jump\",description:\"Predict the location of your next edit and navigates you there with a tab keypress.\",settingType:\"switch\"}]",
+    "new": "[Mo.TAB_TO_JUMP,{isProviderSetting:!0,screen:\"Tab\",label:\"Tab 跳转\",description:\"预测您下一次编辑的位置，并通过按下 Tab 键导航到那里。\",settingType:\"switch\"}]"
+  },
+  {
+    "old": "A=\"Tab to jump\"",
+    "new": "A=\"Tab 跳转\""
+  },
+  {
+    "old": "n.textContent=\"Tab to jump\"",
+    "new": "n.textContent=\"Tab 跳转\""
+  },
+  {
+    "old": "\"Tab to Jump\"",
+    "new": "\"Tab 跳转\""
+  },
+  {
+    "old": "label:\"Suggestions in Editor\",description:[\"Show AI autocomplete suggestions in the editor\"]",
+    "new": "label:\"在编辑器中显示建议\",description:[\"在编辑器中显示 AI 自动补全建议。\"]"
+  },
+  {
+    "old": "[Mo.TAB_ENABLED,{isProviderSetting:!0,screen:\"Tab\",label:\"Suggestions in Editor\",description:\"Show suggestions when typing in the editor\",settingType:\"switch\"}]",
+    "new": "[Mo.TAB_ENABLED,{isProviderSetting:!0,screen:\"Tab\",label:\"在编辑器中显示建议\",description:\"在编辑器中键入时显示补全建议。\",settingType:\"switch\"}]"
+  },
+  {
+    "old": "label:\"Tab Gitignore Access\",description:[\"Allow Tab to view and edit the files in .gitignore. Use with caution if your .gitignore lists files containing credentials, secrets, or other sensitive information.\"]",
+    "new": "label:\"Tab 访问 .gitignore\",description:[\"允许 Tab 补全查看和编辑 .gitignore 中的文件。如果您的 .gitignore 列出了包含凭据、机密或其他敏感信息的文件，请谨慎使用。\"]"
+  },
+  {
+    "old": "[Mo.ALLOW_TAB_ACCESS_GITIGNORE_FILES,{isProviderSetting:!0,screen:\"Tab\",label:\"Tab Gitignore Access\",description:\"Allow Tab to view and edit the files in .gitignore. Use with caution if your .gitignore lists files containing credentials, secrets, or other sensitive information.\",settingType:\"switch\"}]",
+    "new": "[Mo.ALLOW_TAB_ACCESS_GITIGNORE_FILES,{isProviderSetting:!0,screen:\"Tab\",label:\"Tab 访问 .gitignore\",description:\"允许 Tab 补全查看和编辑 .gitignore 中的文件。如果您的 .gitignore 列出了包含凭据、机密或其他敏感信息的文件，请谨慎使用。\",settingType:\"switch\"}]"
+  },
+  {
+    "old": "label:\"Agent Auto-Fix Lints\",description:[\"When enabled, Agent is given awareness of lint errors created by its edits and may fix them without explicit user prompting. Note that this may increase Agent's tool usage.\"]",
+    "new": "label:\"智能体自动修复 Lint\",description:[\"启用时，智能体会感知由其修改产生的 lint 错误，并可能在没有显式用户提示的情况下进行自动修复。注意，这可能会增加智能体的工具使用次数。\"]"
+  },
+  {
+    "old": "[Mo.DISABLE_CASCADE_AUTO_FIX_LINTS,{isProviderSetting:!0,screen:\"Permissions\",label:\"Agent Auto-Fix Lints\",description:\"When enabled, Agent is given awareness of lint errors created by its edits and may fix them without explicit user prompting.\",settingType:\"switch\"}]",
+    "new": "[Mo.DISABLE_CASCADE_AUTO_FIX_LINTS,{isProviderSetting:!0,screen:\"Permissions\",label:\"智能体自动修复 Lint\",description:\"启用时，智能体会感知由其修改产生的 lint 错误，并可能在没有显式用户提示的情况下进行自动修复。\",settingType:\"switch\"}]"
+  },
+  {
+    "old": "label:\"Auto Execution\",type:E1e.Enum,description:[\"Always Proceed - Agent never asks for confirmation before executing terminal commands (except those in the Deny List)\",\"Request Review - Agent always asks for confirmation before executing terminal commands (except those in the Allow List)\"]",
+    "new": "label:\"自动执行\",type:E1e.Enum,description:[\"始终执行 - 智能体在执行终端命令前从不请求确认（黑名单中的命令除外）\",\"需要审核 - 智能体在执行终端命令前总是请求确认（白名单中的命令除外）\"]"
+  },
+  {
+    "old": "{label:\"Always Proceed\",value:$U.EAGER,description:\"Always auto-execute commands unless they are in your deny list. This also allows Agent to auto-execute Browser controls.\"},{label:\"Request Review\",value:$U.OFF,description:\"Never auto-execute commands unless they are in your allow list.\",isDefaultWhenAvailable:!0}",
+    "new": "{label:\"始终执行\",value:$U.EAGER,description:\"始终自动执行命令，除非它们在您的黑名单中。这也允许智能体自动执行浏览器控件。\"},{label:\"需要审核\",value:$U.OFF,description:\"从不自动执行命令，除非它们在您的白名单中。\",isDefaultWhenAvailable:!0}"
+  },
+  {
+    "old": "label:\"Review Policy\",type:E1e.Enum,description:[\"Always Proceed - Trust the agent to do tasks end-to-end\",\"Agent Decides - Assist the agent to complete tasks\",\"Request Review - Collaborate with the agent to complete tasks\"]",
+    "new": "label:\"审核策略\",type:E1e.Enum,description:[\"始终执行 - 信任智能体并端到端完成任务\",\"智能体决策 - 辅助智能体完成任务\",\"需要审核 - 与智能体协作完成任务\"]"
+  },
+  {
+    "old": "{label:\"Always Proceed\",value:$9.TURBO,description:\"Trust the agent to do tasks end-to-end\",isDefaultWhenAvailable:!0},{label:\"Agent Decides\",value:$9.AUTO,description:\"Assist the agent to complete tasks\"},{label:\"Request Review\",value:$9.ALWAYS,description:\"Collaborate with the agent to complete tasks\"}",
+    "new": "{label:\"始终执行\",value:$9.TURBO,description:\"信任智能体并端到端完成任务\",isDefaultWhenAvailable:!0},{label:\"智能体决策\",value:$9.AUTO,description:\"辅助智能体完成任务\"},{label:\"需要审核\",value:$9.ALWAYS,description:\"与智能体协作完成任务\"}"
+  },
+  {
+    "old": "(function(t){t.EDITOR=\"Editor\",t.CASCADE=\"Agent\",t.GENERAL=\"General\",t.ACCOUNT=\"Account\",t.ADVANCED=\"Advanced\",t.SHORTCUTS=\"Shortcuts\",t.ANTIGRAVITY_TAB=\"Antigravity IDE Tab\",t.CASCADE_CONFIGURATION=\"Agent Configuration\",t.CUSTOMIZATIONS=\"Customizations\",t.PLUGINS=\"Plugins / Model Context Protocols (MCPs)\",t.BROWSER=\"Browser\"})(W3||(W3={}))",
+    "new": "(function(t){t.EDITOR=\"编辑器\",t.CASCADE=\"智能体\",t.GENERAL=\"常规\",t.ACCOUNT=\"账户\",t.ADVANCED=\"高级\",t.SHORTCUTS=\"快捷键\",t.ANTIGRAVITY_TAB=\"标签页\",t.CASCADE_CONFIGURATION=\"智能体设置\",t.CUSTOMIZATIONS=\"自定义\",t.PLUGINS=\"插件与 MCP\",t.BROWSER=\"浏览器\"})(W3||(W3={}))"
+  },
+  {
+    "old": "resolveOptionToString:e=>{switch(e){case LE.EAGER:return\"Always Proceed\";case LE.OFF:return\"Request Review\";default:return\"Proceed in Sandbox\"}}",
+    "new": "resolveOptionToString:e=>{if(e===LE.EAGER||e===\"Always Proceed\"||e===\"始终执行\")return\"始终执行\";if(e===LE.OFF||e===\"Request Review\"||e===\"Require Review\"||e===\"需要审核\")return\"需要审核\";return\"在沙箱中执行\"}"
+  },
+  {
+    "old": "(function(t){t.ON=\"On\",t.OFF=\"Off\"})(E2||(E2={}))",
+    "new": "(function(t){t.ON=\"开启\",t.OFF=\"关闭\"})(E2||(E2={}))"
+  },
+  {
+    "old": "const i=o.env.isGoogleInternal?\"Jetski - Settings\":\"Antigravity - Settings\"",
+    "new": "const i=o.env.isGoogleInternal?\"Jetski - 设置\":\"Antigravity - 设置\""
+  },
+  {
+    "old": "i=`You need ${a?\"at least \"+a:\"more\"} AI Credits to send messages. To continue using ${e||\"this model\"} now, purchase more AI Credits.`",
+    "new": "i=`您需要 ${a?\"至少 \"+a:\"更多\"}个 AI 点数才能发送消息。如需现在继续使用 ${e||\"此模型\"}，请购买更多 AI 点数。`"
+  },
+  {
+    "old": "s=`You need ${r?\"at least \"+r:\"more\"} AI Credits to send messages. To continue using ${t||\"this model\"} now, purchase more AI Credits.`",
+    "new": "s=`您需要 ${r?\"至少 \"+r:\"更多\"}个 AI 点数才能发送消息。如需现在继续使用 ${t||\"此模型\"}，请购买更多 AI 点数。`"
+  },
+  {
+    "old": "`${s.terminatedEarly?\"Stopped after\":\"Worked for\"} ${vgn(s.completedAtMs-s.createdAtMs)}`",
+    "new": "`${s.terminatedEarly?\"已停止，耗时 \":\"已运行 \"}${vgn(s.completedAtMs-s.createdAtMs)}`"
+  },
+  {
+    "old": "S=`Worked for ${vgn(E)}`",
+    "new": "S=`已运行 ${vgn(E)}`"
+  },
+  {
+    "old": "`${S.terminatedEarly?\"Stopped after\":\"Worked for\"} ${vgn(S.completedAtMs-S.createdAtMs)}`",
+    "new": "`${S.terminatedEarly?\"已停止，耗时 \":\"已运行 \"}${vgn(S.completedAtMs-S.createdAtMs)}`"
+  },
+  {
+    "old": "`${i.terminatedEarly?\"Stopped after\":\"Worked for\"} ${Qdt(i.completedAtMs-i.createdAtMs)}`",
+    "new": "`${i.terminatedEarly?\"已停止，耗时 \":\"已运行 \"}${Qdt(i.completedAtMs-i.createdAtMs)}`"
+  },
+  {
+    "old": "V=`Worked for ${Qdt(N)}`",
+    "new": "V=`已运行 ${Qdt(N)}`"
+  },
+  {
+    "old": "`${V.terminatedEarly?\"Stopped after\":\"Worked for\"} ${Qdt(V.completedAtMs-V.createdAtMs)}`",
+    "new": "`${V.terminatedEarly?\"已停止，耗时 \":\"已运行 \"}${Qdt(V.completedAtMs-V.createdAtMs)}`"
+  },
+  {
+    "old": "var Exi={plannerResponse:e=>e.modifiedResponse||null,notifyUser:e=>e.notificationContent||null,grepSearch:e=>e.query?`Searched for \"${e.query}\"`:\"Searched files\",find:e=>e.pattern?`Searched for files: ${e.pattern}`:\"Searched for files\",codeSearch:e=>e.query?`Code search: \"${e.query}\"`:\"Code search\",internalSearch:e=>e.query?`Internal search: \"${e.query}\"`:\"Internal search\",listDirectory:e=>`Listed directory ${Pft(e.directoryPathUri)}`,browserSubagent:e=>e.taskName?`Browser task: \"${e.taskName}\"`:\"Browser task\",openBrowserUrl:e=>e.url?`Opened browser: ${e.url}`:\"Opened browser\",readUrlContent:e=>e.url?`Read URL: ${e.url}`:\"Read URL\",searchWeb:e=>e.query?`Searched web: \"${e.query}\"`:\"Searched web\",generateImage:e=>e.prompt?`Generated image: \"${e.prompt}\"`:\"Generated image\",invokeSubagent:e=>e.subagentName?`Invoked subagent: ${e.subagentName}`:\"Invoked subagent\",gitCommit:()=>\"Git commit\"}",
+    "new": "var Exi={plannerResponse:e=>e.modifiedResponse||null,notifyUser:e=>e.notificationContent||null,grepSearch:e=>e.query?`已搜索 \"${e.query}\"`:\"已搜索文件\",find:e=>e.pattern?`已搜索文件: ${e.pattern}`:\"已搜索文件\",codeSearch:e=>e.query?`代码搜索: \"${e.query}\"`:\"代码搜索\",internalSearch:e=>e.query?`内部搜索: \"${e.query}\"`:\"内部搜索\",listDirectory:e=>`已列出目录 ${Pft(e.directoryPathUri)}`,browserSubagent:e=>e.taskName?`浏览器任务: \"${e.taskName}\"`:\"浏览器任务\",openBrowserUrl:e=>e.url?`已打开浏览器: ${e.url}`:\"已打开浏览器\",readUrlContent:e=>e.url?`已读取 URL: ${e.url}`:\"已读取 URL\",searchWeb:e=>e.query?`已网页搜索: \"${e.query}\"`:\"已网页搜索\",generateImage:e=>e.prompt?`已生成图片: \"${e.prompt}\"`:\"已生成图片\",invokeSubagent:e=>e.subagentName?`已调用子智能体: ${e.subagentName}`:\"已调用子智能体\",gitCommit:()=>\"Git 提交\"}"
+  },
+  {
+    "old": "var ebu={plannerResponse:t=>t.modifiedResponse||null,notifyUser:t=>t.notificationContent||null,grepSearch:t=>t.query?`Searched for \"${t.query}\"`:\"Searched files\",find:t=>t.pattern?`Searched for files: ${t.pattern}`:\"Searched for files\",codeSearch:t=>t.query?`Code search: \"${t.query}\"`:\"Code search\",internalSearch:t=>t.query?`Internal search: \"${t.query}\"`:\"Internal search\",listDirectory:t=>`Listed directory ${m0n(t.directoryPathUri)}`,browserSubagent:t=>t.taskName?`Browser task: \"${t.taskName}\"`:\"Browser task\",openBrowserUrl:t=>t.url?`Opened browser: ${t.url}`:\"Opened browser\",readUrlContent:t=>t.url?`Read URL: ${t.url}`:\"Read URL\",searchWeb:t=>t.query?`Searched web: \"${t.query}\"`:\"Searched web\",generateImage:t=>t.prompt?`Generated image: \"${t.prompt}\"`:\"Generated image\",invokeSubagent:t=>t.subagentName?`Invoked subagent: ${t.subagentName}`:\"Invoked subagent\",gitCommit:()=>\"Git commit\"}",
+    "new": "var ebu={plannerResponse:t=>t.modifiedResponse||null,notifyUser:t=>t.notificationContent||null,grepSearch:t=>t.query?`已搜索 \"${t.query}\"`:\"已搜索文件\",find:t=>t.pattern?`已搜索文件: ${t.pattern}`:\"已搜索文件\",codeSearch:t=>t.query?`代码搜索: \"${t.query}\"`:\"代码搜索\",internalSearch:t=>t.query?`内部搜索: \"${t.query}\"`:\"内部搜索\",listDirectory:t=>`已列出目录 ${m0n(t.directoryPathUri)}`,browserSubagent:t=>t.taskName?`浏览器任务: \"${t.taskName}\"`:\"浏览器任务\",openBrowserUrl:t=>t.url?`已打开浏览器: ${t.url}`:\"已打开浏览器\",readUrlContent:t=>t.url?`已读取 URL: ${t.url}`:\"已读取 URL\",searchWeb:t=>t.query?`已网页搜索: \"${t.query}\"`:\"已网页搜索\",generateImage:t=>t.prompt?`已生成图片: \"${t.prompt}\"`:\"已生成图片\",invokeSubagent:t=>t.subagentName?`已调用子智能体: ${t.subagentName}`:\"已调用子智能体\",gitCommit:()=>\"Git 提交\"}"
+  },
+  {
+    "old": "switch(t.actionSpec?.spec.case){case\"command\":case\"sed\":return`Edited ${n}`;case\"createFile\":return t.actionSpec?.spec.value?.overwrite?`Edited ${n}`:`Created ${n}`;case\"deleteFile\":return`Deleted ${n}`;default:return r?`Edited ${n}`:null}",
+    "new": "switch(t.actionSpec?.spec.case){case\"command\":case\"sed\":return`已编辑 ${n}`;case\"createFile\":return t.actionSpec?.spec.value?.overwrite?`已编辑 ${n}`:`已创建 ${n}`;case\"deleteFile\":return`已删除 ${n}`;default:return r?`已编辑 ${n}`:null}"
+  },
+  {
+    "old": "switch(e.actionSpec?.spec.case){case\"command\":case\"sed\":return`Edited ${n}`;case\"createFile\":return e.actionSpec?.spec.value?.overwrite?`Edited ${n}`:`Created ${n}`;case\"deleteFile\":return`Deleted ${n}`;default:return i?`Edited ${n}`:null}",
+    "new": "switch(e.actionSpec?.spec.case){case\"command\":case\"sed\":return`已编辑 ${n}`;case\"createFile\":return e.actionSpec?.spec.value?.overwrite?`已编辑 ${n}`:`已创建 ${n}`;case\"deleteFile\":return`已删除 ${n}`;default:return i?`已编辑 ${n}`:null}"
+  },
+  {
+    "old": "t.startLine!=null&&t.endLine!=null&&(t.startLine||t.endLine)?`Viewed ${r}:${t.startLine+1}-${t.endLine+1}`:`Viewed ${r}`",
+    "new": "t.startLine!=null&&t.endLine!=null&&(t.startLine||t.endLine)?`已查看 ${r}:${t.startLine+1}-${t.endLine+1}`:`已查看 ${r}`"
+  },
+  {
+    "old": "e.startLine!=null&&e.endLine!=null&&(e.startLine||e.endLine)?`Viewed ${i}:${e.startLine+1}-${e.endLine+1}`:`Viewed ${i}`",
+    "new": "e.startLine!=null&&e.endLine!=null&&(e.startLine||e.endLine)?`已查看 ${i}:${e.startLine+1}-${e.endLine+1}`:`已查看 ${i}`"
+  },
+  {
+    "old": "let t=e.step.value,r=t.commandLine,n=Array.isArray(r)?r.join(\" \"):r||\"\";return!n&&t.command&&(n=t.command),n?`Ran command: \\`${n}\\``:\"Ran command\"",
+    "new": "let t=e.step.value,r=t.commandLine,n=Array.isArray(r)?r.join(\" \"):r||\"\";return!n&&t.command&&(n=t.command),n?`已运行命令: \\`${n}\\``:\"已运行命令\""
+  },
+  {
+    "old": "let e=t.step.value,i=e.commandLine,n=Array.isArray(i)?i.join(\" \"):i||\"\";return!n&&e.command&&(n=e.command),n?`Ran command: \\`${n}\\``:\"Ran command\"",
+    "new": "let e=t.step.value,i=e.commandLine,n=Array.isArray(i)?i.join(\" \"):i||\"\";return!n&&e.command&&(n=e.command),n?`已运行命令: \\`${n}\\``:\"已运行命令\""
+  },
+  {
+    "old": "let{serverName:t,toolCall:r}=e.step.value,n=r?.name;return t&&n?`Used MCP tool: ${t}/${n}`:t?`Used MCP tool: ${t}`:\"Used MCP tool\"",
+    "new": "let{serverName:t,toolCall:r}=e.step.value,n=r?.name;return t&&n?`已使用 MCP 工具: ${t}/${n}`:t?`已使用 MCP 工具: ${t}`:\"已使用 MCP 工具\""
+  },
+  {
+    "old": "let{serverName:e,toolCall:i}=t.step.value,n=i?.name;return e&&n?`Used MCP tool: ${e}/${n}`:e?`Used MCP tool: ${e}`:\"Used MCP tool\"",
+    "new": "let{serverName:e,toolCall:i}=t.step.value,n=i?.name;return e&&n?`已使用 MCP 工具: ${e}/${n}`:e?`已使用 MCP 工具: ${e}`:\"已使用 MCP 工具\""
+  },
+  {
+    "old": "let t=e.metadata?.toolCall?.name;return t?`Used tool: ${t}`:\"Used tool\"",
+    "new": "let t=e.metadata?.toolCall?.name;return t?`已使用工具: ${t}`:\"已使用工具\""
+  },
+  {
+    "old": "let e=t.metadata?.toolCall?.name;return e?`Used tool: ${e}`:\"Used tool\"",
+    "new": "let e=t.metadata?.toolCall?.name;return e?`已使用工具: ${e}`:\"已使用工具\""
+  },
+  {
+    "old": "label:\"Highlight After Accept\",description:[\"Highlight newly inserted text after accepting a Tab completion.\"]",
+    "new": "label:\"接受后高亮\",description:[\"在接受 Tab 补全后高亮显示新插入的文本。\"]"
+  },
+  {
+    "old": "label:\"Open Agent on Reload\",type:E1e.Boolean,description:[\"Open Agent panel on window reload\"]",
+    "new": "label:\"重载时打开智能体\",type:E1e.Boolean,description:[\"窗口重载时自动打开智能体面板。\"]"
+  },
+  {
+    "old": "label:\"Tab Speed\",description:\"Set the speed of tab suggestions\",settingType:\"dropdown\",options:[sW.FAST,sW.SLOW],resolveOptionToString:t=>{switch(t){case sW.FAST:return\"Fast\";case sW.SLOW:return\"Slow\";default:return\"Fast\"}}",
+    "new": "label:\"补全速度\",description:\"设置 Tab 补全建议的显示速度\",settingType:\"dropdown\",options:[sW.FAST,sW.SLOW],resolveOptionToString:t=>{if(t===sW.SLOW||t===\"slow\"||t===\"Slow\"||t===\"慢速\"||t===\"慢\")return\"慢\";return\"快\"}"
+  },
+  {
+    "old": "label:\"Tab Speed\",description:\"Set the speed of tab suggestions\",settingType:\"dropdown\",options:[SBe.FAST,SBe.SLOW],resolveOptionToString:e=>{switch(e){case SBe.FAST:return\"Fast\";case SBe.SLOW:return\"Slow\";default:return\"Fast\"}}",
+    "new": "label:\"补全速度\",description:\"设置 Tab 补全建议的显示速度\",settingType:\"dropdown\",options:[SBe.FAST,SBe.SLOW],resolveOptionToString:e=>{if(e===SBe.SLOW||e===\"slow\"||e===\"Slow\"||e===\"慢速\"||e===\"慢\")return\"慢\";return\"快\"}"
+  },
+  {
+    "old": "[Mr.DISABLE_HIGHLIGHT_AFTER_ACCEPT,{isProviderSetting:!0,screen:\"Tab\",label:\"Highlight After Accept\",description:\"Highlight newly inserted text after accepting a Tab completion.\",settingType:\"switch\"}]",
+    "new": "[Mr.DISABLE_HIGHLIGHT_AFTER_ACCEPT,{isProviderSetting:!0,screen:\"Tab\",label:\"接受后高亮\",description:\"在接受 Tab 补全后高亮显示新插入的文本。\",settingType:\"switch\"}]"
+  },
+  {
+    "old": "[Mo.DISABLE_HIGHLIGHT_AFTER_ACCEPT,{isProviderSetting:!0,screen:\"Tab\",label:\"Highlight After Accept\",description:\"Highlight newly inserted text after accepting a Tab completion.\",settingType:\"switch\"}]",
+    "new": "[Mo.DISABLE_HIGHLIGHT_AFTER_ACCEPT,{isProviderSetting:!0,screen:\"Tab\",label:\"接受后高亮\",description:\"在接受 Tab 补全后高亮显示新插入的文本。\",settingType:\"switch\"}]"
+  },
+  {
+    "old": "content:\"View and manage Agent memories, workflows, and rules\"",
+    "new": "content:\"查看并管理智能体记忆、工作流和规则\""
+  },
+  {
+    "old": "r.textContent=\"Manage\",this._register(Ne(i.openCascadeMemoriesButton",
+    "new": "r.textContent=\"管理\",this._register(Ne(i.openCascadeMemoriesButton"
+  },
+  {
+    "old": "async getAutocompleteSpeedTooltip(){let e=\"\";switch(await o.antigravityUnifiedStateSync.TabPreferences.getAutocompleteSpeed()){case i.K_D.FAST:e=\"Fast\";break;case i.K_D.SLOW:e=\"Slow\";break;default:e=\"Fast\"}return`Autocomplete Speed: ${e}`}",
+    "new": "async getAutocompleteSpeedTooltip(){let e=\"\";switch(await o.antigravityUnifiedStateSync.TabPreferences.getAutocompleteSpeed()){case i.K_D.FAST:e=\"快\";break;case i.K_D.SLOW:e=\"慢\";break;default:e=\"快\"}return`补全速度: ${e}`}"
   }
 ]
