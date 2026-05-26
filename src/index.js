@@ -15,12 +15,44 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootPath = path.join(__dirname, '..');
 
-// 1. 读取配置文件与翻译词库路径
-const configPath = path.join(rootPath, 'config.json');
-const translationsPath = path.join(rootPath, 'translations.json');
+// 1. 定位配置文件与翻译词库路径
+const cwdConfigPath = path.join(process.cwd(), 'config.json');
+const rootConfigPath = path.join(rootPath, 'config.json');
+const exampleConfigPath = path.join(rootPath, 'config.json.example');
 
-if (!fs.existsSync(configPath) || !fs.existsSync(translationsPath)) {
-  console.error('[CRITICAL ERROR] 缺少 config.json 或 translations.json 核心文件，初始化项目失败！');
+let configPath = '';
+
+if (fs.existsSync(cwdConfigPath)) {
+  configPath = cwdConfigPath;
+} else if (fs.existsSync(rootConfigPath)) {
+  configPath = rootConfigPath;
+} else {
+  console.log(`[INFO] 未检测到 config.json 配置文件。`);
+  if (fs.existsSync(exampleConfigPath)) {
+    try {
+      fs.copyFileSync(exampleConfigPath, cwdConfigPath);
+      console.log(`\x1b[32m[SUCCESS] 已基于模板自动在当前目录创建了 config.json 文件。\x1b[0m`);
+      console.log(`\x1b[33m[TIP] 请编辑 ${cwdConfigPath}，在 "targetFilePath" 中配置您本地的 Antigravity IDE 路径（即 main.js 绝对路径）后重新运行。\x1b[0m`);
+    } catch (e) {
+      console.error(`[ERROR] 自动创建 config.json 失败: ${e.message}`);
+    }
+  } else {
+    console.error('[CRITICAL ERROR] 缺少 config.json.example 模板文件，初始化项目失败！');
+  }
+  process.exit(1);
+}
+
+// 定位翻译词库：优先使用当前工作目录下的，其次使用工具根目录下的
+const cwdTranslationsPath = path.join(process.cwd(), 'translations.json');
+const rootTranslationsPath = path.join(rootPath, 'translations.json');
+let translationsPath = '';
+
+if (fs.existsSync(cwdTranslationsPath)) {
+  translationsPath = cwdTranslationsPath;
+} else if (fs.existsSync(rootTranslationsPath)) {
+  translationsPath = rootTranslationsPath;
+} else {
+  console.error('[CRITICAL ERROR] 缺少 translations.json 核心翻译文件，初始化项目失败！');
   process.exit(1);
 }
 
