@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Antigravity IDE 设置页面一键中文化与生命周期管理工具",
   "main": "src/index.js",
+  "bin": {
+    "antigravity-zh-cn": "./src/index.js"
+  },
   "type": "module",
   "scripts": {
     "translate": "node src/index.js translate",

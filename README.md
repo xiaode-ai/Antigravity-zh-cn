@@ -19,9 +19,47 @@
 
 ---
 
-## 🚀 快速开始 (运行流程)
+## 🚀 快速开始 (一键运行)
 
-在当前项目目录（建议在 Antigravity 中将本文件夹打开为 **Active Workspace**），您可以直接在终端中运行以下五组 `npm scripts`。
+本项目支持像 `@xiaode-ai/i18nt` 一样，无需手动克隆代码库，直接在终端中快速安装和运行。
+
+### 📦 方式 A：通过 `npx` 免安装直接运行（推荐）
+
+1. 在您的任意工作目录下运行以下命令：
+   ```bash
+   npx @xiaode-ai/antigravity-zh-cn
+   ```
+   *首次运行时，工具如果检测到当前目录没有 `config.json` 配置文件，会自动在当前目录复制生成一个全新的 `config.json` 模板文件。*
+2. 打开该目录下的 `config.json`，修改 `"targetFilePath"` 字段为您本地实际的 Antigravity IDE `main.js` 文件的绝对路径。
+3. 执行一键汉化替换：
+   ```bash
+   npx @xiaode-ai/antigravity-zh-cn translate
+   ```
+4. 如果需要将 IDE 完美回滚到出厂英文版本，只需运行：
+   ```bash
+   npx @xiaode-ai/antigravity-zh-cn rollback
+   ```
+
+### 🌍 方式 B：通过 `npm` 全局安装运行
+
+1. 在全局安装本工具包：
+   ```bash
+   npm install -g @xiaode-ai/antigravity-zh-cn
+   ```
+2. 运行汉化（首次运行会自动在当前目录初始化 `config.json`，请按上方提示配置路径后再次运行）：
+   ```bash
+   antigravity-zh-cn translate
+   ```
+3. 运行还原：
+   ```bash
+   antigravity-zh-cn rollback
+   ```
+
+---
+
+## 💻 开发者本地运行流程
+
+如果您需要对词库进行开发、精简或本地维护，您可以克隆本项目后，在当前项目目录（建议在 Antigravity 中将本文件夹打开为 **Active Workspace**），直接在终端中运行以下五组命令。
 
 为了保证汉化词库的纯净度与 IDE 的运行安全性，建议按照以下**推荐的运行生命周期顺序**来执行流程：
 
