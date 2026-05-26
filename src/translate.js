@@ -310,8 +310,21 @@ export function translate(config, translations, translationsPath) {
         { index: 12386, oldVal: "Task finished in {0}.", newVal: "任务在 {0} 内完成。" },
         { index: 5526, oldVal: "Finished in {0}.", newVal: "在 {0} 内完成。" },
         { index: 5528, oldVal: "Finished", newVal: "已完成" },
-        { index: 5524, oldVal: "Working...", newVal: "运行中..." },
-        { index: 5510, oldVal: "Failed", newVal: "已失败" }
+        { index: 5510, oldVal: "Failed", newVal: "已失败" },
+        { index: 3870, oldVal: "Workspaces", newVal: "工作区" },
+        { index: 3871, oldVal: "Open Folder", newVal: "打开文件夹" },
+        { index: 3872, oldVal: "Clone Repository", newVal: "克隆仓库" },
+        { index: 3873, oldVal: "Open Fig Workspace", newVal: "打开 Fig 工作区" },
+        { index: 3874, oldVal: "Connect to Cloudtop", newVal: "连接至 Cloudtop" },
+        { index: 3875, oldVal: "Generate Project", newVal: "生成项目" },
+        { index: 3876, oldVal: "Open Folder", newVal: "打开文件夹" },
+        { index: 3877, oldVal: "Show All Recent Folders {0}", newVal: "显示所有最近文件夹 {0}" },
+        { index: 3878, oldVal: "Show More...", newVal: "显示更多..." },
+        { index: 3879, oldVal: "Google Extensions", newVal: "Google 扩展" },
+        { index: 3880, oldVal: "Download", newVal: "下载" },
+        { index: 3882, oldVal: "Set up your AI Security Companion to start detecting vulnerabilities.", newVal: "设置您的 AI 安全助手以开始检测漏洞。" },
+        { index: 3883, oldVal: "Get Started", newVal: "开始使用" },
+        { index: 3887, oldVal: "Bring the full power of Google Data Cloud to your intelligent IDE.", newVal: "将 Google Data Cloud 的强大功能带入您的智能 IDE。" }
       ];
 
       let nlsModifiedCount = 0;
@@ -450,8 +463,21 @@ export function translate(config, translations, translationsPath) {
           { index: 12386, oldVal: "Task finished in {0}.", newVal: "任务在 {0} 内完成。" },
           { index: 5526, oldVal: "Finished in {0}.", newVal: "在 {0} 内完成。" },
           { index: 5528, oldVal: "Finished", newVal: "已完成" },
-          { index: 5524, oldVal: "Working...", newVal: "运行中..." },
-          { index: 5510, oldVal: "Failed", newVal: "已失败" }
+          { index: 5510, oldVal: "Failed", newVal: "已失败" },
+          { index: 3870, oldVal: "Workspaces", newVal: "工作区" },
+          { index: 3871, oldVal: "Open Folder", newVal: "打开文件夹" },
+          { index: 3872, oldVal: "Clone Repository", newVal: "克隆仓库" },
+          { index: 3873, oldVal: "Open Fig Workspace", newVal: "打开 Fig 工作区" },
+          { index: 3874, oldVal: "Connect to Cloudtop", newVal: "连接至 Cloudtop" },
+          { index: 3875, oldVal: "Generate Project", newVal: "生成项目" },
+          { index: 3876, oldVal: "Open Folder", newVal: "打开文件夹" },
+          { index: 3877, oldVal: "Show All Recent Folders {0}", newVal: "显示所有最近文件夹 {0}" },
+          { index: 3878, oldVal: "Show More...", newVal: "显示更多..." },
+          { index: 3879, oldVal: "Google Extensions", newVal: "Google 扩展" },
+          { index: 3880, oldVal: "Download", newVal: "下载" },
+          { index: 3882, oldVal: "Set up your AI Security Companion to start detecting vulnerabilities.", newVal: "设置您的 AI 安全助手以开始检测漏洞。" },
+          { index: 3883, oldVal: "Get Started", newVal: "开始使用" },
+          { index: 3887, oldVal: "Bring the full power of Google Data Cloud to your intelligent IDE.", newVal: "将 Google Data Cloud 的强大功能带入您的智能 IDE。" }
         ];
 
         let clpModifiedCount = 0;

@@ -3001,7 +3001,7 @@
   },
   {
     "old": "e===\"Task\"?j5u:e===\"Implementation Plan\"?J5u:e===\"Walkthrough\"?K5u:",
-    "new": "e===\"Task\"||e===\"任务\"?j5u:e===\"Implementation Plan\"||e===\"实施方案\"?J5u:e===\"Walkthrough\"||e===\"演示/演练\"?K5u:"
+    "new": "e===\"Task\"||e===\"任务\"?j5u:e===\"Implementation Plan\"||e===\"实施计划\"?J5u:e===\"Walkthrough\"||e===\"演示/演练\"?K5u:"
   },
   {
     "old": "\"Task\"",
@@ -3009,7 +3009,7 @@
   },
   {
     "old": "\"Implementation Plan\"",
-    "new": "\"实施方案\""
+    "new": "\"实施计划\""
   },
   {
     "old": "\"Walkthrough\"",
@@ -4382,5 +4382,133 @@
   {
     "old": "k.errorMessage||\"Failed to update server in config file\"",
     "new": "k.errorMessage||\"更新配置文件中的服务端失败\""
+  },
+  {
+    "old": "\"Loading token usage...\"",
+    "new": "\"加载 Token 使用情况...\""
+  },
+  {
+    "old": "\"Loading workspace customizations...\"",
+    "new": "\"加载工作区自定义设置...\""
+  },
+  {
+    "old": "\"Loading MCP servers...\"",
+    "new": "\"加载 MCP 服务端...\""
+  },
+  {
+    "old": "\"Loading custom agents...\"",
+    "new": "\"加载自定义智能体...\""
+  },
+  {
+    "old": "\"Loading hooks...\"",
+    "new": "\"加载钩子...\""
+  },
+  {
+    "old": "\"Loading models...\"",
+    "new": "\"加载模型...\""
+  },
+  {
+    "old": "\"Loading plugins...\"",
+    "new": "\"加载插件...\""
+  },
+  {
+    "old": "\"Loading logs...\"",
+    "new": "\"加载日志...\""
+  },
+  {
+    "old": "\"Loading summary...\"",
+    "new": "\"加载摘要...\""
+  },
+  {
+    "old": "\"Loading trajectory...\"",
+    "new": "\"加载轨迹...\""
+  },
+  {
+    "old": "\"Loading events...\"",
+    "new": "\"加载事件...\""
+  },
+  {
+    "old": "\"Loading conversation...\"",
+    "new": "\"加载对话...\""
+  },
+  {
+    "old": "\"Loading skills...\"",
+    "new": "\"加载技能...\""
+  },
+  {
+    "old": "\"Loading metrics...\"",
+    "new": "\"加载度量指标...\""
+  },
+  {
+    "old": "\"Loading Notebook View...\"",
+    "new": "\"加载笔记本视图...\""
+  },
+  {
+    "old": "\"Loading Browser recording...\"",
+    "new": "\"加载浏览器录制...\""
+  },
+  {
+    "old": "\"Connecting to language server...\"",
+    "new": "\"正在连接语言服务器...\""
+  },
+  {
+    "old": "So=({supplementaryView:e,permissionView:t,errorView:r,cta:n,title:a,loading:i=!1,stepDisplayElement:s,isExpanded:o,onToggle:u,hasSupplementaryView:d,status:f,error:g,indentExpandedContent:b=!0})=>{let{isSubagent:y}=jn()",
+    "new": "So=({supplementaryView:e,permissionView:t,errorView:r,cta:n,title:a,loading:i=!1,stepDisplayElement:s,isExpanded:o,onToggle:u,hasSupplementaryView:d,status:f,error:g,indentExpandedContent:b=!0})=>{a=typeof a===\"string\"?(a.startsWith(\"Checked Task:\")?a.replace(\"Checked Task:\",\"已探索任务:\"):a.startsWith(\"Checked Command:\")?a.replace(\"Checked Command:\",\"已完成命令:\"):a.match(/^Timed\\\\s+(\\\\d+)\\\\s+seconds?$/i)?\"已计时 \"+a.match(/^Timed\\\\s+(\\\\d+)\\\\s+seconds?$/i)[1]+\" 秒\":a):a;let{isSubagent:y}=jn()"
+  },
+  {
+    "old": "gf=({supplementaryView:t,permissionView:e,errorView:i,cta:n,title:r,loading:s=!1,stepDisplayElement:o,isExpanded:a,onToggle:l,hasSupplementaryView:u,status:d,error:h,indentExpandedContent:f=!0})=>{let{isSubagent:g}=xs()",
+    "new": "gf=({supplementaryView:t,permissionView:e,errorView:i,cta:n,title:r,loading:s=!1,stepDisplayElement:o,isExpanded:a,onToggle:l,hasSupplementaryView:u,status:d,error:h,indentExpandedContent:f=!0})=>{r=typeof r===\"string\"?(r.startsWith(\"Checked Task:\")?r.replace(\"Checked Task:\",\"已探索任务:\"):r.startsWith(\"Checked Command:\")?r.replace(\"Checked Command:\",\"已完成命令:\"):r.match(/^Timed\\\\s+(\\\\d+)\\\\s+seconds?$/i)?\"已计时 \"+r.match(/^Timed\\\\s+(\\\\d+)\\\\s+seconds?$/i)[1]+\" 秒\":r):r;let{isSubagent:g}=xs()"
+  },
+  {
+    "old": "zo=({supplementaryView:e,permissionView:t,errorView:r,cta:n,title:a,loading:i=!1,stepDisplayElement:s,isExpanded:o,onToggle:u,hasSupplementaryView:d,status:f,error:p,indentExpandedContent:E=!0})=>{let{isSubagent:R}=jn()",
+    "new": "zo=({supplementaryView:e,permissionView:t,errorView:r,cta:n,title:a,loading:i=!1,stepDisplayElement:s,isExpanded:o,onToggle:u,hasSupplementaryView:d,status:f,error:p,indentExpandedContent:E=!0})=>{a=typeof a===\"string\"?(a.startsWith(\"Checked Task:\")?a.replace(\"Checked Task:\",\"已探索任务:\"):a.startsWith(\"Checked Command:\")?a.replace(\"Checked Command:\",\"已完成命令:\"):a.match(/^Timed\\\\s+(\\\\d+)\\\\s+seconds?$/i)?\"已计时 \"+a.match(/^Timed\\\\s+(\\\\d+)\\\\s+seconds?$/i)[1]+\" 秒\":a):a;let{isSubagent:R}=jn()"
+  },
+  {
+    "old": "function Es({prefix:e,content:t,progressMessage:r,customTitle:n}){",
+    "new": "function Es({prefix:e,content:t,progressMessage:r,customTitle:n}){e=globalThis.translateDynamic?globalThis.translateDynamic(e):e;t=globalThis.translateDynamic?globalThis.translateDynamic(t):t;r=globalThis.translateDynamic?globalThis.translateDynamic(r):r;"
+  },
+  {
+    "old": "function Zu({prefix:t,content:e,progressMessage:i,customTitle:n}){",
+    "new": "function Zu({prefix:t,content:e,progressMessage:i,customTitle:n}){t=globalThis.translateDynamic?globalThis.translateDynamic(t):t;e=globalThis.translateDynamic?globalThis.translateDynamic(e):e;i=globalThis.translateDynamic?globalThis.translateDynamic(i):i;"
+  },
+  {
+    "old": "\"Google Data Cloud for your intelligent IDE.\"",
+    "new": "\"为您的智能 IDE 提供 Google Data Cloud 支持。\""
+  },
+  {
+    "old": "label:\"Copy Content\",enabled:!!window.getSelection()?.toString(),click:()=>{document.execCommand(\"copy\")},accelerator:\"CmdOrCtrl+C\"",
+    "new": "label:\"复制内容\",enabled:!!window.getSelection()?.toString(),click:()=>{document.execCommand(\"copy\")},accelerator:\"CmdOrCtrl+C\""
+  },
+  {
+    "old": "let u=xIo(0),d=u?`Comment (${u})`:\"Comment\";",
+    "new": "let u=xIo(0),d=u?`注释 (${u})`:\"注释\";"
+  },
+  {
+    "old": "children:[R(\"span\",{className:\"text-xs\",children:\"Comment\"}),",
+    "new": "children:[R(\"span\",{className:\"text-xs\",children:\"注释\"}),"
+  },
+  {
+    "old": "let d=don(0),f=d?`Comment (${d})`:\"Comment\";",
+    "new": "let d=don(0),f=d?`注释 (${d})`:\"注释\";"
+  },
+  {
+    "old": "children:[p(\"span\",{className:\"text-xs\",children:\"Comment\"}),",
+    "new": "children:[p(\"span\",{className:\"text-xs\",children:\"注释\"}),"
+  },
+  {
+    "old": "if(e.toDateString()===i.toDateString())return`Today ${n}`;let r=new Date(i);return r.setDate(r.getDate()-1),e.toDateString()===r.toDateString()?`Yesterday ${n}`:",
+    "new": "if(e.toDateString()===i.toDateString())return`今天 ${n}`;let r=new Date(i);return r.setDate(r.getDate()-1),e.toDateString()===r.toDateString()?`昨天 ${n}`:"
+  },
+  {
+    "old": "l=o.replace(/[_-]/g,\" \").replace(/([a-z])([A-Z])/g,\"$1 $2\").split(/\\s+/).filter(u=>u.length>0).map(u=>u.charAt(0).toUpperCase()+u.slice(1).toLowerCase()).join(\" \");",
+    "new": "l={\"implementation_plan\":\"实施计划\",\"task\":\"任务\",\"walkthrough\":\"演示\",\"media\":\"媒体\",\"media_\":\"媒体\",\"scratchpad\":\"暂存板\"}[o];if(!l){l=o.replace(/[_-]/g,\" \").replace(/([a-z])([A-Z])/g,\"$$1 $$2\").split(/\\s+/).filter(u=>u.length>0).map(u=>u.charAt(0).toUpperCase()+u.slice(1).toLowerCase()).join(\" \");}"
+  },
+  {
+    "old": "if(t.toDateString()===r.toDateString())return`Today ${n}`;let a=new Date(r);return a.setDate(a.getDate()-1),t.toDateString()===a.toDateString()?`Yesterday ${n}`:",
+    "new": "if(t.toDateString()===r.toDateString())return`今天 ${n}`;let a=new Date(r);return a.setDate(a.getDate()-1),t.toDateString()===a.toDateString()?`昨天 ${n}`:"
+  },
+  {
+    "old": "u=s.replace(/[_-]/g,\" \").replace(/([a-z])([A-Z])/g,\"$1 $2\").split(/\\s+/).filter(d=>d.length>0).map(d=>d.charAt(0).toUpperCase()+d.slice(1).toLowerCase()).join(\" \");",
+    "new": "u={\"implementation_plan\":\"实施计划\",\"task\":\"任务\",\"walkthrough\":\"演示\",\"media\":\"媒体\",\"media_\":\"媒体\",\"scratchpad\":\"暂存板\"}[s];if(!u){u=s.replace(/[_-]/g,\" \").replace(/([a-z])([A-Z])/g,\"$$1 $$2\").split(/\\s+/).filter(d=>d.length>0).map(d=>d.charAt(0).toUpperCase()+d.slice(1).toLowerCase()).join(\" \");}"
   }
 ]

@@ -99,7 +99,7 @@ export function scan(config, translationsPath) {
 
   // 判断是否是代码渲染拦截逻辑段，比如带有 "children:p(" 或 "displayResolver:" 等特征的代码片段
   const isReactCodeStructure = (str) => {
-    return /children:\[?p\(|displayResolver:|upgradeButtonText\|\||action:"|rightElement:p\(/.test(str);
+    return /children:\[?p\(|displayResolver:|upgradeButtonText\|\||action:"|rightElement:p\(|function\s+[a-zA-Z0-9_]+\(|^function\s+|=>/.test(str);
   };
 
   for (let i = 0; i < translations.length; i++) {
