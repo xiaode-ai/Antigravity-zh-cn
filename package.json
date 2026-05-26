@@ -1,6 +1,6 @@
 {
   "name": "@xiaode-ai/antigravity-zh-cn",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Antigravity IDE 设置页面一键中文化与生命周期管理工具",
   "main": "src/index.js",
   "bin": {
