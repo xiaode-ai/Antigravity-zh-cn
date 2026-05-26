@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const filePath = 'c:\\Users\\i-cgh\\Documents\\GitHub\\antigravity-l10n\\translations.json';
+const filePath = path.join(process.cwd(), 'translations.json');
 
 const skillDict = {
   "alphafold-database-fetch-and-analyze": {

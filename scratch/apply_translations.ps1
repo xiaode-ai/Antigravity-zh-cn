@@ -1,4 +1,4 @@
-$jsonPath = "c:\Users\i-cgh\.gemini\antigravity-ide\scratch\antigravity-l10n\translations.json"
+$jsonPath = "c:\Users\i-cgh\.gemini\antigravity-ide\scratch\Antigravity-zh-cn\translations.json"
 $translations = Get-Content -Raw -Path $jsonPath | ConvertFrom-Json
 Write-Host "Original translations: $($translations.Count)"
 

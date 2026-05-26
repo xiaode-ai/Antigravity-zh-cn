@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 const backupPath = 'C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out\\jetskiAgent\\main.js.bak';
-const translationsPath = 'c:\\Users\\i-cgh\\Documents\\GitHub\\antigravity-l10n\\translations.json';
+const translationsPath = path.join(process.cwd(), 'translations.json');
 
 if (!fs.existsSync(backupPath)) {
   console.error('Backup file not found at ' + backupPath);

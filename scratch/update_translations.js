@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const filePath = 'c:\\Users\\i-cgh\\Documents\\GitHub\\antigravity-l10n\\translations.json';
+const filePath = path.join(process.cwd(), 'translations.json');
 
 const mcpDict = {
   "cloud run": { title: "Cloud Run", desc: "允许 Antigravity 部署应用到 Google Cloud Run。" },

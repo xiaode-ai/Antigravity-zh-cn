@@ -1,4 +1,4 @@
-# 🌐 Antigravity IDE 设置页面中文化项目 (antigravity-l10n)
+# 🌐 Antigravity IDE 设置页面中文化项目 (Antigravity-zh-cn)
 
 本工程是一个为 **Antigravity IDE** 设置页面设计的专业级本地化 (L10n) 与生命周期管理项目。
 
@@ -110,5 +110,5 @@ npm run rollback
 ---
 
 ## 🚑 紧急救援指南
-如果在 Windows 环境下由于字符集问题遇到字典乱码或主程序语法破损崩溃（例如打开设置页显示空白），请立即参阅项目根目录下的 **[RESCUE.md](file:///c:/Users/i-cgh/.gemini/antigravity-ide/scratch/antigravity-l10n/RESCUE.md)**，按照其中的官方物理终端四步恢复方案执行一键复活。
+如果在 Windows 环境下由于字符集问题遇到字典乱码或主程序语法破损崩溃（例如打开设置页显示空白），请立即参阅项目根目录下的 **[RESCUE.md](file:///c:/Users/i-cgh/.gemini/antigravity-ide/scratch/Antigravity-zh-cn/RESCUE.md)**，按照其中的官方物理终端四步恢复方案执行一键复活。
 

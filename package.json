@@ -1,5 +1,5 @@
 {
-  "name": "antigravity-l10n",
+  "name": "antigravity-zh-cn",
   "version": "1.0.0",
   "description": "Antigravity IDE 设置页面一键中文化与生命周期管理工具",
   "main": "src/index.js",

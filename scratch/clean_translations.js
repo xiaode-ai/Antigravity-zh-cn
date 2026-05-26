@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const rootPath = 'c:/Users/i-cgh/Documents/GitHub/antigravity-l10n';
+const rootPath = process.cwd();
 const configPath = path.join(rootPath, 'config.json');
 const translationsPath = path.join(rootPath, 'translations.json');
 
