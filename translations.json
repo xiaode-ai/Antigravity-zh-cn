@@ -4501,7 +4501,7 @@
   },
   {
     "old": "l=o.replace(/[_-]/g,\" \").replace(/([a-z])([A-Z])/g,\"$1 $2\").split(/\\s+/).filter(u=>u.length>0).map(u=>u.charAt(0).toUpperCase()+u.slice(1).toLowerCase()).join(\" \");",
-    "new": "l={\"implementation_plan\":\"实施计划\",\"task\":\"任务\",\"walkthrough\":\"演示\",\"media\":\"媒体\",\"media_\":\"媒体\",\"scratchpad\":\"暂存板\"}[o];if(!l){l=o.replace(/[_-]/g,\" \").replace(/([a-z])([A-Z])/g,\"$$1 $$2\").split(/\\s+/).filter(u=>u.length>0).map(u=>u.charAt(0).toUpperCase()+u.slice(1).toLowerCase()).join(\" \");}"
+    "new": "l={\"implementation_plan\":\"实施方案\",\"task\":\"任务\",\"walkthrough\":\"演示\",\"media\":\"媒体\",\"media_\":\"媒体\",\"scratchpad\":\"暂存板\"}[o];if(!l){l=o.replace(/[_-]/g,\" \").replace(/([a-z])([A-Z])/g,\"$$1 $$2\").split(/\\s+/).filter(u=>u.length>0).map(u=>u.charAt(0).toUpperCase()+u.slice(1).toLowerCase()).join(\" \");}"
   },
   {
     "old": "if(t.toDateString()===r.toDateString())return`Today ${n}`;let a=new Date(r);return a.setDate(a.getDate()-1),t.toDateString()===a.toDateString()?`Yesterday ${n}`:",
@@ -4509,6 +4509,14 @@
   },
   {
     "old": "u=s.replace(/[_-]/g,\" \").replace(/([a-z])([A-Z])/g,\"$1 $2\").split(/\\s+/).filter(d=>d.length>0).map(d=>d.charAt(0).toUpperCase()+d.slice(1).toLowerCase()).join(\" \");",
-    "new": "u={\"implementation_plan\":\"实施计划\",\"task\":\"任务\",\"walkthrough\":\"演示\",\"media\":\"媒体\",\"media_\":\"媒体\",\"scratchpad\":\"暂存板\"}[s];if(!u){u=s.replace(/[_-]/g,\" \").replace(/([a-z])([A-Z])/g,\"$$1 $$2\").split(/\\s+/).filter(d=>d.length>0).map(d=>d.charAt(0).toUpperCase()+d.slice(1).toLowerCase()).join(\" \");}"
+    "new": "u={\"implementation_plan\":\"实施方案\",\"task\":\"任务\",\"walkthrough\":\"演示\",\"media\":\"媒体\",\"media_\":\"媒体\",\"scratchpad\":\"暂存板\"}[s];if(!u){u=s.replace(/[_-]/g,\" \").replace(/([a-z])([A-Z])/g,\"$$1 $$2\").split(/\\s+/).filter(d=>d.length>0).map(d=>d.charAt(0).toUpperCase()+d.slice(1).toLowerCase()).join(\" \");}"
+  },
+  {
+    "old": "Ogt=({title:e,message:t,onDismiss:r})=>p(\"div\",{className:\"border border-border rounded p-4\",children:p(\"div\",{className:\"flex items-start justify-between gap-2\",children:[p(\"div\",{className:\"flex flex-col gap-1\",children:[p(\"span\",{className:\"text-sm font-medium text-red-500\",children:e}),p(\"span\",{className:\"text-sm opacity-80\",children:t})]}),r&&p(\"button\",{onClick:r,className:\"p-0.5 hover:bg-secondary rounded transition-colors flex-shrink-0\",\"aria-label\":\"Dismiss error\",children:p(qe,{name:\"close\",className:\"w-3 h-3 opacity-60\"})})]})})",
+    "new": "Ogt=({title:e,message:t,onDismiss:r})=>{let e_zh=typeof e===\"string\"?({\"Plugin Operation Error:\":\"插件操作错误：\",\"Plugin Operation Error\":\"插件操作错误\"}[e]||e):e;let t_zh=typeof t===\"string\"?t.replaceAll(\"[internal] internal:\",\"[内部错误] 内部错误:\").replaceAll(\"failed to write file: open\",\"写入文件失败: 无法打开\").replaceAll(\"The system cannot find the path specified.\",\"系统找不到指定的路径。\").replaceAll(\"failed to write file\",\"写入文件失败\").replaceAll(\"failed to read file\",\"读取文件失败\"):t;return p(\"div\",{className:\"border border-border rounded p-4\",children:p(\"div\",{className:\"flex items-start justify-between gap-2\",children:[p(\"div\",{className:\"flex flex-col gap-1\",children:[p(\"span\",{className:\"text-sm font-medium text-red-500\",children:e_zh}),p(\"span\",{className:\"text-sm opacity-80\",children:t_zh})]}),r&&p(\"button\",{onClick:r,className:\"p-0.5 hover:bg-secondary rounded transition-colors flex-shrink-0\",\"aria-label\":\"关闭错误提示\",children:p(qe,{name:\"close\",className:\"w-3 h-3 opacity-60\"})})]})})}"
+  },
+  {
+    "old": "\"Plugin operations are not supported in this environment.\"",
+    "new": "\"当前环境不支持插件操作。\""
   }
 ]
