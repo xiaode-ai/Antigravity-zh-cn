@@ -6,9 +6,10 @@ import { validateEncoding, detectGarbledText } from './safe_guard.js';
  * 对翻译词库进行一键语法审计、变量对齐性检测和高精度格式化
  * @param {Object} config 配置参数 
  * @param {string} translationsPath 词库 translations.json 绝对路径 
+ * @param {string} targetType 目标类型（如 'ide'）
  * @returns {Object} 检测报告 { success, errorsCount, warningsCount }
  */
-export function scan(config, translationsPath) {
+export function scan(config, translationsPath, targetType = 'ide') {
   console.log(`[INFO] 正在启动 i18nt 国际化扫描器与格式化引擎...`);
 
   if (!fs.existsSync(translationsPath)) {

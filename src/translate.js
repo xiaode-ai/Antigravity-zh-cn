@@ -20,9 +20,10 @@ import {
  * @param {Object} config 配置参数 
  * @param {Array} translations 汉化词典列表 
  * @param {string} translationsPath 词库文件路径（用于编码预检）
+ * @param {string} targetType 目标类型（如 'ide'）
  * @returns {boolean} 是否翻译成功
  */
-export function translate(config, translations, translationsPath) {
+export function translate(config, translations, translationsPath, targetType = 'ide') {
   const { targetFilePath, backupSuffix = '.bak' } = config;
   const backupPath = targetFilePath + backupSuffix;
 

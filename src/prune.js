@@ -11,9 +11,10 @@ import path from 'path';
  * 
  * @param {Object} config 配置参数 
  * @param {string} translationsPath 词库 translations.json 绝对路径 
+ * @param {string} targetType 目标类型（如 'ide'）
  * @returns {boolean} 是否成功执行剪裁
  */
-export function prune(config, translationsPath) {
+export function prune(config, translationsPath, targetType = 'ide') {
   const { targetFilePath, backupSuffix = '.bak' } = config;
   const mainBackupPath = targetFilePath + backupSuffix;
 

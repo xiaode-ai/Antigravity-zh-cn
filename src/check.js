@@ -6,9 +6,10 @@ import crypto from 'crypto';
 /**
  * 校验最终生成的主文件的语法正确性
  * @param {Object} config 配置参数 
+ * @param {string} targetType 目标类型（如 'ide'）
  * @returns {boolean} 是否校验通过
  */
-export function check(config) {
+export function check(config, targetType = 'ide') {
   const { targetFilePath } = config;
 
   console.log(`[INFO] 正在启动语法完整性校验器...`);

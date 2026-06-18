@@ -5,9 +5,10 @@ import crypto from 'crypto';
 /**
  * 一键安全回滚原始出厂文件并恢复完整性校验哈希
  * @param {Object} config 配置参数 
+ * @param {string} targetType 目标类型（如 'ide'）
  * @returns {boolean} 是否回滚成功
  */
-export function rollback(config) {
+export function rollback(config, targetType = 'ide') {
   const { targetFilePath, backupSuffix = '.bak' } = config;
   const backupPath = targetFilePath + backupSuffix;
 
