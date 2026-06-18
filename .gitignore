@@ -1,0 +1,20 @@
+# 依赖
+node_modules/
+
+# 临时/调试脚本
+_debug_*.mjs
+_add_desktop_trans*.mjs
+_fix_translations.mjs
+_verify_unpacked_refs.mjs
+
+# 临时目录
+_test_asar/
+_l10n_check_tmp/
+
+# 输出/临时文件
+asar_output.txt
+dom-untranslated.json
+main.js
+
+# Windows 保留名
+nul

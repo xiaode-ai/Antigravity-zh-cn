@@ -1,4 +1,19 @@
 {
-  "targetFilePath": "C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out\\jetskiAgent\\main.js",
-  "backupSuffix": ".bak"
+  "antigravity": {
+    "asarPath": "C:\\Users\\i-cgh\\AppData\\Local\\Programs\\antigravity\\resources\\app.asar",
+    "backupSuffix": ".bak",
+    "filesToTranslate": [
+      "dist/main.js",
+      "dist/menu.js",
+      "dist/updater.js",
+      "dist/tray.js",
+      "dist/ipcHandlers.js",
+      "dist/loadingOverlay.js",
+      "dist/utils.js"
+    ]
+  },
+  "ide": {
+    "targetFilePath": "C:\\Users\\i-cgh\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out\\jetskiAgent\\main.js",
+    "backupSuffix": ".bak"
+  }
 }

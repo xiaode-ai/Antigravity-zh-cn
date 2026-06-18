@@ -1,40 +1,32 @@
 {
-  "name": "@xiaode-ai/antigravity-zh-cn",
-  "version": "1.0.1",
-  "description": "Antigravity IDE 设置页面一键中文化与生命周期管理工具",
-  "main": "src/index.js",
-  "bin": {
-    "antigravity-zh-cn": "./src/index.js"
-  },
+  "name": "antigravity",
+  "productName": "Antigravity",
+  "version": "2.1.4",
+  "description": "Antigravity - Agentic Desktop Application 汉化工具",
   "type": "module",
+  "main": "dist/main.js",
+  "homepage": "https://antigravity.google",
+  "author": {
+    "name": "Google",
+    "email": "antigravity-support@google.com"
+  },
   "scripts": {
     "translate": "node src/index.js translate",
     "rollback": "node src/index.js rollback",
     "check": "node src/index.js check",
     "scan": "node src/index.js scan",
     "prune": "node src/index.js prune",
-    "find-context": "node scratch/find_exact_context.js"
+    "collect-dom": "node src/index.js collect-dom",
+    "scan-dom": "node src/index.js scan-dom"
   },
-  "keywords": [
-    "antigravity",
-    "l10n",
-    "i18n",
-    "translation"
-  ],
-  "author": "Antigravity Pair",
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
-  "files": [
-    "src",
-    "translations.json",
-    "config.json.example",
-    "README.md",
-    "RESCUE.md"
-  ],
   "dependencies": {
-    "@xiaode-ai/i18nt": "^1.2.0",
-    "typescript": "^6.0.3"
+    "acorn": "^8.17.0",
+    "chrome-devtools-mcp": "^0.23.0",
+    "electron-log": "^5.4.3",
+    "electron-updater": "^6.8.3",
+    "shell-env": "^4.0.3"
+  },
+  "devDependencies": {
+    "asar": "^3.2.0"
   }
 }
