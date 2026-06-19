@@ -70,6 +70,22 @@ export function syncDomInjectionTranslation(translations) {
     dictEndIdx
   );
 
+  // ---------- 校验双引号的转义反斜杠数量 ----------
+  // 在内存中，合法的 key 和 value 双引号前必须有且仅有 1 个转义反斜杠（\"），即非成对反斜杠。
+  // 任何 3 个或更多反斜杠（如 \\\"）都会在浏览器端被解析为额外的物理反斜杠，导致 SyntaxError 语法错误。
+  const escapeRegex = /(\\*)"/g;
+  let escapeMatch;
+  while ((escapeMatch = escapeRegex.exec(dictBody)) !== null) {
+    const backslashes = escapeMatch[1];
+    if (backslashes.length !== 1) {
+      throw new Error(
+        `检测到非法的转义反斜杠数量：在双引号 (") 前发现了 ${backslashes.length} 个反斜杠。` +
+        `正确的转义格式必须是且仅有 1 个反斜杠（例如 \\" 键值包裹）。` +
+        `非法的上下文片段："...${dictBody.substring(Math.max(0, escapeMatch.index - 30), Math.min(dictBody.length, escapeMatch.index + 30))}..."`
+      );
+    }
+  }
+
   // 每个键值对由 4 个转义引号界定：\"key\":\"value\"
   const escapedQuotes = (dictBody.match(/\\"/g) || []).length;
   const entryCount = Math.floor(escapedQuotes / 4);

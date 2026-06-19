@@ -53,6 +53,39 @@ function scanDesktop(config, translationsPath) {
     new: typeof pair.new === 'string' ? pair.new.trim() : pair.new
   }));
 
+  // ---------- DOM 注入字典转义安全校验 ----------
+  const domEntry = translations.find(t => t.old === 'void win.loadURL(url);');
+  if (domEntry) {
+    if (domEntry.new && typeof domEntry.new === 'string') {
+      const dictStartMarker = 'const dictionary = {';
+      const dictStartIdx = domEntry.new.indexOf(dictStartMarker);
+      const dictEndIdx = domEntry.new.indexOf('};', dictStartIdx);
+      if (dictStartIdx !== -1 && dictEndIdx !== -1) {
+        const dictBody = domEntry.new.substring(
+          dictStartIdx + dictStartMarker.length,
+          dictEndIdx
+        );
+        const escapeRegex = /(\\*)"/g;
+        let escapeMatch;
+        while ((escapeMatch = escapeRegex.exec(dictBody)) !== null) {
+          const backslashes = escapeMatch[1];
+          if (backslashes.length !== 1) {
+            console.error(
+              `\x1b[31m[CRITICAL] 检测到非法的转义反斜杠数量：在双引号 (") 前发现了 ${backslashes.length} 个反斜杠。\x1b[0m`
+            );
+            console.error(
+              `正确的转义格式必须是且仅有 1 个反斜杠（例如 \\" 键值包裹）。`
+            );
+            console.error(
+              `非法的上下文片段："...${dictBody.substring(Math.max(0, escapeMatch.index - 30), Math.min(dictBody.length, escapeMatch.index + 30))}..."`
+            );
+            return { success: false, errorsCount: 1, warningsCount: 0 };
+          }
+        }
+      }
+    }
+  }
+
   // 编码一致性校验
   console.log('[SAFEGUARD] 正在执行词库文件编码校验...');
   const encodingResult = validateEncoding(translationsPath);

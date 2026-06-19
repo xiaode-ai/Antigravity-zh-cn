@@ -17,7 +17,8 @@
     "scan": "node src/index.js scan",
     "prune": "node src/index.js prune",
     "collect-dom": "node src/index.js collect-dom",
-    "scan-dom": "node src/index.js scan-dom"
+    "scan-dom": "node src/index.js scan-dom",
+    "test": "node test/validation.test.js"
   },
   "dependencies": {
     "acorn": "^8.17.0",
