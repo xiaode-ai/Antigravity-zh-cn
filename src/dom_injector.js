@@ -86,6 +86,19 @@ export function syncDomInjectionTranslation(translations) {
     }
   }
 
+  // ---------- 校验是否干涉了 DOM 样式 (确保仅翻译文本) ----------
+  const hasStyleChange = /\.style\b/g.test(entry.new) || 
+                         /setAttribute\s*\(\s*['"]style['"]/g.test(entry.new) ||
+                         /classList\b/g.test(entry.new) ||
+                         /className\b/g.test(entry.new);
+  
+  if (hasStyleChange) {
+    throw new Error(
+      `[CRITICAL ERROR] 检测到汉化注入脚本中包含修改 DOM 元素样式的逻辑！\n` +
+      `为保证显示样式与官方原版 100% 一致，汉化必须仅翻译文本，禁止修改 style/classList/className。`
+    );
+  }
+
   // 每个键值对由 4 个转义引号界定：\"key\":\"value\"
   const escapedQuotes = (dictBody.match(/\\"/g) || []).length;
   const entryCount = Math.floor(escapedQuotes / 4);
