@@ -14,6 +14,20 @@ if (entry) {
     
     // Define new translations to add
     const newTranslations = {
+      "Confirm Undo": "确认撤销",
+      "Confirming this undo action will make the following changes:": "确认此撤销操作将带来以下更改：",
+      "Confirm": "确认",
+      "Agent Security Settings": "智能体安全设置",
+      "Set Project Name": "设置项目名称",
+      "Project Name": "项目名称",
+      "Create": "创建",
+      "Create a new project. You canadd folders to it now or later.": "创建新项目。您现在或稍后可以向其中添加文件夹。",
+      "Create a new project. You can add folders to it now or later.": "创建新项目。您现在或稍后可以向其中添加文件夹。",
+      "Select branch": "选择分支",
+      "Select Branch": "选择分支",
+      "Default Branch": "默认分支",
+      "default branch": "默认分支",
+      "Next": "下一步",
       "Create project with existingfolder(s).": "使用现有文件夹创建项目。",
       "Create project with existing folder(s).": "使用现有文件夹创建项目。",
       "Instantly create a new projectand folder to start building.": "立即创建新项目和文件夹以开始构建。",
@@ -296,6 +310,14 @@ if (entry) {
             '      const match = normalized.match(/^Path\\\\s+copied(!)?$/i);\\n' +
             '      const excl = match[1] ? \\\'！\\\' : \\\'\\\';\\n' +
             '      return leadingSpaces + \\\'路径已复制\\\' + excl + trailingSpaces;\\n' +
+            '    }\\n' +
+            '    if (/^Are\\\\s+you\\\\s+sure\\\\s+you\\\\s+want\\\\s+to\\\\s+delete\\\\s+the\\\\s+project\\\\s+(.+?)\\\\s*\\\\??$/i.test(normalized)) {\\n' +
+            '      const match = normalized.match(/^Are\\\\s+you\\\\s+sure\\\\s+you\\\\s+want\\\\s+to\\\\s+delete\\\\s+the\\\\s+project\\\\s+(.+?)\\\\s*\\\\??$/i);\\n' +
+            '      return leadingSpaces + \\\'您确定要删除项目 \\\' + match[1] + \\\' 吗？\\\' + trailingSpaces;\\n' +
+            '    }\\n' +
+            '    if (/^This\\\\s+will\\\\s+permanently\\\\s+delete\\\\s+([\\\\s\\\\S]+?)\\\\s+within\\\\s+it\\\\.\\\\s*This\\\\s+action\\\\s+cannot\\\\s+be\\\\s+undone\\\\.$/i.test(normalized)) {\\n' +
+            '      const match = normalized.match(/^This\\\\s+will\\\\s+permanently\\\\s+delete\\\\s+([\\\\s\\\\S]+?)\\\\s+within\\\\s+it\\\\.\\\\s*This\\\\s+action\\\\s+cannot\\\\s+be\\\\s+undone\\\\.$/i);\\n' +
+            '      return leadingSpaces + \\\'这将永久删除其中的 \\\' + match[1] + \\\'。此操作无法撤销。\\\' + trailingSpaces;\\n' +
             '    }\\n' +
             '    if (/^Plugin\\\\s*:\\\\s*(.+)$/i.test(normalized)) {\\n' +
             '      const match = normalized.match(/^Plugin\\\\s*:\\\\s*(.+)$/i);\\n' +

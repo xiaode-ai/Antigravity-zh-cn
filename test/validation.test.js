@@ -304,7 +304,24 @@ try {
     { input: 'New standalone conversation,outside of projects.', expected: '新建独立对话，不属于任何项目。' },
     { input: 'Create project with existing folder(s).', expected: '使用现有文件夹创建项目。' },
     { input: 'Instantly create a new project and folder to start building.', expected: '立即创建新项目和文件夹以开始构建。' },
-    { input: 'New standalone conversation, outside of projects.', expected: '新建独立对话，不属于任何项目。' }
+    { input: 'New standalone conversation, outside of projects.', expected: '新建独立对话，不属于任何项目。' },
+    { input: 'Select branch', expected: '选择分支' },
+    { input: 'Select Branch', expected: '选择分支' },
+    { input: 'Default Branch', expected: '默认分支' },
+    { input: 'Next', expected: '下一步' },
+    { input: 'Agent Security Settings', expected: '智能体安全设置' },
+    { input: 'Set Project Name', expected: '设置项目名称' },
+    { input: 'Project Name', expected: '项目名称' },
+    { input: 'Create', expected: '创建' },
+    { input: 'Create a new project. You canadd folders to it now or later.', expected: '创建新项目。您现在或稍后可以向其中添加文件夹。' },
+    { input: 'Create a new project. You can add folders to it now or later.', expected: '创建新项目。您现在或稍后可以向其中添加文件夹。' },
+    { input: 'Confirm Undo', expected: '确认撤销' },
+    { input: 'Confirming this undo action will make the following changes:', expected: '确认此撤销操作将带来以下更改：' },
+    { input: 'Confirm', expected: '确认' },
+    { input: 'Are you sure you want to delete the project Antigravity-zh-cn?', expected: '您确定要删除项目 Antigravity-zh-cn 吗？' },
+    { input: 'This will permanently delete Antigravity-zh-cn 和 1 个活跃对话 和 11 个已归档对话 within it. This action cannot be undone.', expected: '这将永久删除其中的 Antigravity-zh-cn 和 1 个活跃对话 和 11 个已归档对话。此操作无法撤销。' }
+
+
 
 
 
