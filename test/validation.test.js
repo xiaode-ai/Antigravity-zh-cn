@@ -298,7 +298,15 @@ try {
     { input: 'Convos', expected: '对\u2060话' },
     { input: 'Conversations', expected: '对\u2060话' },
     { input: 'Projects', expected: '项\u2060目' },
-    { input: 'Project', expected: '项\u2060目' }
+    { input: 'Project', expected: '项\u2060目' },
+    { input: 'Create project with existingfolder(s).', expected: '使用现有文件夹创建项目。' },
+    { input: 'Instantly create a new projectand folder to start building.', expected: '立即创建新项目和文件夹以开始构建。' },
+    { input: 'New standalone conversation,outside of projects.', expected: '新建独立对话，不属于任何项目。' },
+    { input: 'Create project with existing folder(s).', expected: '使用现有文件夹创建项目。' },
+    { input: 'Instantly create a new project and folder to start building.', expected: '立即创建新项目和文件夹以开始构建。' },
+    { input: 'New standalone conversation, outside of projects.', expected: '新建独立对话，不属于任何项目。' }
+
+
 
 
   ];

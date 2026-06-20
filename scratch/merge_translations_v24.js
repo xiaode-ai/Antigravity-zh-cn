@@ -14,6 +14,12 @@ if (entry) {
     
     // Define new translations to add
     const newTranslations = {
+      "Create project with existingfolder(s).": "使用现有文件夹创建项目。",
+      "Create project with existing folder(s).": "使用现有文件夹创建项目。",
+      "Instantly create a new projectand folder to start building.": "立即创建新项目和文件夹以开始构建。",
+      "Instantly create a new project and folder to start building.": "立即创建新项目和文件夹以开始构建。",
+      "New standalone conversation,outside of projects.": "新建独立对话，不属于任何项目。",
+      "New standalone conversation, outside of projects.": "新建独立对话，不属于任何项目。",
       "Commands": "命\u2060令",
       "Command": "命\u2060令",
       "Files": "文\u2060件",
