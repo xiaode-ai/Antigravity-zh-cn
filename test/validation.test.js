@@ -319,7 +319,8 @@ try {
     { input: 'Confirming this undo action will make the following changes:', expected: '确认此撤销操作将带来以下更改：' },
     { input: 'Confirm', expected: '确认' },
     { input: 'Are you sure you want to delete the project Antigravity-zh-cn?', expected: '您确定要删除项目 Antigravity-zh-cn 吗？' },
-    { input: 'This will permanently delete Antigravity-zh-cn 和 1 个活跃对话 和 11 个已归档对话 within it. This action cannot be undone.', expected: '这将永久删除其中的 Antigravity-zh-cn 和 1 个活跃对话 和 11 个已归档对话。此操作无法撤销。' }
+    { input: 'This will permanently delete Antigravity-zh-cn 和 1 个活跃对话 和 11 个已归档对话 within it. This action cannot be undone.', expected: '这将永久删除其中的 Antigravity-zh-cn 和 1 个活跃对话 和 11 个已归档对话。此操作无法撤销。' },
+    { input: 'Cancel step', expected: '取消步骤' }
 
 
 
@@ -332,6 +333,60 @@ try {
     const actual = translateFn(tc.input, { nodeType: 3 });
     assert.strictEqual(actual.trim(), tc.expected.trim(), `Failed for input: "${tc.input}"\nExpected: "${tc.expected}"\nActual:   "${actual}"`);
   }
+
+  // Verify split DOM node translation for project deletion dialogs
+  const splitNode1 = {
+    nodeType: 3,
+    previousSibling: null,
+    textContent: 'Are you sure you want to delete the project '
+  };
+  const splitNode2 = {
+    nodeType: 3,
+    previousSibling: splitNode1,
+    textContent: 'Antigravity-zh-cn'
+  };
+  const splitNode3 = {
+    nodeType: 3,
+    previousSibling: splitNode2,
+    textContent: '?'
+  };
+  splitNode1.nextSibling = splitNode2;
+  splitNode2.nextSibling = splitNode3;
+
+  const actualSplit1 = translateFn('Are you sure you want to delete the project ', splitNode1);
+  const actualSplit2 = translateFn('Antigravity-zh-cn', splitNode2);
+  const actualSplit3 = translateFn('?', splitNode3);
+
+  assert.strictEqual(actualSplit1, '您确定要删除项目 ', 'Should translate split prefix correctly');
+  assert.strictEqual(actualSplit2, 'Antigravity-zh-cn', 'Should keep project name as is');
+  assert.strictEqual(actualSplit3, ' 吗？', 'Should translate split question mark correctly using sibling check');
+
+  // Verify split DOM node warning translation
+  const warnSplitNode1 = {
+    nodeType: 3,
+    previousSibling: null,
+    textContent: 'This will permanently delete '
+  };
+  const warnSplitNode2 = {
+    nodeType: 3,
+    previousSibling: warnSplitNode1,
+    textContent: 'Antigravity-zh-cn'
+  };
+  const warnSplitNode3 = {
+    nodeType: 3,
+    previousSibling: warnSplitNode2,
+    textContent: 'within it. This action cannot be undone.'
+  };
+  warnSplitNode1.nextSibling = warnSplitNode2;
+  warnSplitNode2.nextSibling = warnSplitNode3;
+
+  const actualWarn1 = translateFn('This will permanently delete ', warnSplitNode1);
+  const actualWarn2 = translateFn('Antigravity-zh-cn', warnSplitNode2);
+  const actualWarn3 = translateFn('within it. This action cannot be undone.', warnSplitNode3);
+
+  assert.strictEqual(actualWarn1, '这将永久删除其中的 ', 'Should translate warn split prefix correctly');
+  assert.strictEqual(actualWarn2, 'Antigravity-zh-cn', 'Should keep project name as is');
+  assert.strictEqual(actualWarn3, '。此操作无法撤销。', 'Should translate warn split suffix correctly');
 
   // Verify punctuation stack prevention for separate "." node
   const dotNodeWithChinesePrev = {

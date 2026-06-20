@@ -17,6 +17,7 @@ if (entry) {
       "Confirm Undo": "确认撤销",
       "Confirming this undo action will make the following changes:": "确认此撤销操作将带来以下更改：",
       "Confirm": "确认",
+      "Cancel step": "取消步骤",
       "Agent Security Settings": "智能体安全设置",
       "Set Project Name": "设置项目名称",
       "Project Name": "项目名称",
@@ -181,7 +182,7 @@ if (entry) {
           
           const replacementHeader = 
             'function translateText(value, node) {\\n' +
-            '    if (!value || (!/[A-Za-z]/.test(value) && value.trim() !== \\\'.\\\')) return value;\\n' +
+            '    if (!value || (!/[A-Za-z]/.test(value) && value.trim() !== \\\'.\\\' && value.trim() !== \\\'?\\\' && value.trim() !== \\\'？\\\')) return value;\\n' +
             '    if (node && isInsideInputOrEditable(node)) return value;\\n' +
             '    const trimmed = value.trim();\\n' +
             '    if (!trimmed) return value;\\n' +
@@ -311,13 +312,32 @@ if (entry) {
             '      const excl = match[1] ? \\\'！\\\' : \\\'\\\';\\n' +
             '      return leadingSpaces + \\\'路径已复制\\\' + excl + trailingSpaces;\\n' +
             '    }\\n' +
-            '    if (/^Are\\\\s+you\\\\s+sure\\\\s+you\\\\s+want\\\\s+to\\\\s+delete\\\\s+the\\\\s+project\\\\s+(.+?)\\\\s*\\\\??$/i.test(normalized)) {\\n' +
-            '      const match = normalized.match(/^Are\\\\s+you\\\\s+sure\\\\s+you\\\\s+want\\\\s+to\\\\s+delete\\\\s+the\\\\s+project\\\\s+(.+?)\\\\s*\\\\??$/i);\\n' +
-            '      return leadingSpaces + \\\'您确定要删除项目 \\\' + match[1] + \\\' 吗？\\\' + trailingSpaces;\\n' +
+            '    if (/Are\\\\s+you\\\\s+sure\\\\s+you\\\\s+want\\\\s+to\\\\s+delete\\\\s+the\\\\s+project\\\\s+([^?？]+)/i.test(normalized)) {\\n' +
+            '      const match = normalized.match(/Are\\\\s+you\\\\s+sure\\\\s+you\\\\s+want\\\\s+to\\\\s+delete\\\\s+the\\\\s+project\\\\s+([^?？]+)/i);\\n' +
+            '      return leadingSpaces + \\\'您确定要删除项目 \\\' + match[1].trim() + \\\' 吗？\\\' + trailingSpaces;\\n' +
             '    }\\n' +
-            '    if (/^This\\\\s+will\\\\s+permanently\\\\s+delete\\\\s+([\\\\s\\\\S]+?)\\\\s+within\\\\s+it\\\\.\\\\s*This\\\\s+action\\\\s+cannot\\\\s+be\\\\s+undone\\\\.$/i.test(normalized)) {\\n' +
-            '      const match = normalized.match(/^This\\\\s+will\\\\s+permanently\\\\s+delete\\\\s+([\\\\s\\\\S]+?)\\\\s+within\\\\s+it\\\\.\\\\s*This\\\\s+action\\\\s+cannot\\\\s+be\\\\s+undone\\\\.$/i);\\n' +
-            '      return leadingSpaces + \\\'这将永久删除其中的 \\\' + match[1] + \\\'。此操作无法撤销。\\\' + trailingSpaces;\\n' +
+            '    if (/This\\\\s+will\\\\s+permanently\\\\s+delete\\\\s+(.+?)\\\\s+within\\\\s+it/i.test(normalized)) {\\n' +
+            '      const match = normalized.match(/This\\\\s+will\\\\s+permanently\\\\s+delete\\\\s+(.+?)\\\\s+within\\\\s+it/i);\\n' +
+            '      return leadingSpaces + \\\'这将永久删除其中的 \\\' + match[1].trim() + \\\'。此操作无法撤销。\\\' + trailingSpaces;\\n' +
+            '    }\\n' +
+            '    if (/^Are\\\\s+you\\\\s+sure\\\\s+you\\\\s+want\\\\s+to\\\\s+delete\\\\s+the\\\\s+project$/i.test(normalized)) {\\n' +
+            '      return leadingSpaces + \\\'您确定要删除项目\\\' + trailingSpaces;\\n' +
+            '    }\\n' +
+            '    if (/^This\\\\s+will\\\\s+permanently\\\\s+delete$/i.test(normalized)) {\\n' +
+            '      return leadingSpaces + \\\'这将永久删除其中的\\\' + trailingSpaces;\\n' +
+            '    }\\n' +
+            '    if (/^within\\\\s+it\\\\.\\\\s*This\\\\s+action\\\\s+cannot\\\\s+be\\\\s+undone\\\\.$/i.test(normalized)) {\\n' +
+            '      return leadingSpaces + \\\'。此操作无法撤销。\\\' + trailingSpaces;\\n' +
+            '    }\\n' +
+            '    if (normalized === \\\'?\\\' || normalized === \\\'？\\\') {\\n' +
+            '      let sibling = node && node.previousSibling;\\n' +
+            '      while (sibling) {\\n' +
+            '        const txt = sibling.textContent || \\\'\\\';\\n' +
+            '        if (txt.includes(\\\'delete the project\\\') || txt.includes(\\\'确定要删除项目\\\')) {\\n' +
+            '          return leadingSpaces + \\\' 吗？\\\' + trailingSpaces;\\n' +
+            '        }\\n' +
+            '        sibling = sibling.previousSibling;\\n' +
+            '      }\\n' +
             '    }\\n' +
             '    if (/^Plugin\\\\s*:\\\\s*(.+)$/i.test(normalized)) {\\n' +
             '      const match = normalized.match(/^Plugin\\\\s*:\\\\s*(.+)$/i);\\n' +
