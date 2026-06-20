@@ -117,13 +117,37 @@ try {
     { input: 'Inherits from global settings.', expected: '继承自全局设置。' },
     { input: 'Inherits from global settings. Local permissions have higher priority. Learn more.', expected: '继承自全局设置。本地权限具有更高优先级。了解更多。' },
     { input: ' active conversations ', expected: '个活跃对话' },
-    { input: ' archived conversations.', expected: '个已归档对话.' }
+    { input: ' archived conversations.', expected: '个已归档对话.' },
+    { input: 'Inherits from', expected: '继承自' },
+    { input: 'global settings', expected: '全局设置' },
+    { input: 'Learn more', expected: '了解更多' },
+    { input: 'Learn more.', expected: '了解更多。' },
+    { input: '. Local permissions have higher priority. ', expected: '。本地权限具有更高优先级。' }
   ];
 
   for (const tc of testCases) {
     const actual = translateFn(tc.input, { nodeType: 3 });
     assert.strictEqual(actual.trim(), tc.expected.trim(), `Failed for input: "${tc.input}"\nExpected: "${tc.expected}"\nActual:   "${actual}"`);
   }
+
+  // Verify punctuation stack prevention for separate "." node
+  const dotNodeWithChinesePrev = {
+    nodeType: 3,
+    previousSibling: {
+      textContent: '了解更多。'
+    }
+  };
+  const actualDot1 = translateFn('.', dotNodeWithChinesePrev);
+  assert.strictEqual(actualDot1, '', 'Should omit dot when preceded by Chinese period');
+
+  const dotNodeWithoutChinesePrev = {
+    nodeType: 3,
+    previousSibling: {
+      textContent: '了解更多'
+    }
+  };
+  const actualDot2 = translateFn('.', dotNodeWithoutChinesePrev);
+  assert.strictEqual(actualDot2, '。', 'Should translate to Chinese period when NOT preceded by Chinese punctuation');
 
   // Verify Inherits from global settings variations
   const testSetting1 = translateFn('Inherits from global Settings.', { nodeType: 3 });

@@ -161,8 +161,26 @@ if (entry) {
         '      result = result.replace(/，\\\\s*。/g, \\\'。\\\').replace(/。\\\\s*，/g, \\\'。\\\').replace(/\\\\s+/g, \\\' \\\').trim();\\n' +
         '      return leadingSpaces + result + trailingSpaces;\\n' +
         '    }\\n' +
+        '    if (normalized === \\\'.\\\') {\\n' +
+        '      if (isPrecededByChinesePunctuation(node)) {\\n' +
+        '        return \\\'\\\';\\n' +
+        '      }\\n' +
+        '      return leadingSpaces + \\\'。\\\' + trailingSpaces;\\n' +
+        '    }\\n' +
+        '    if (normalized === \\\'Inherits from\\\') {\\n' +
+        '      return leadingSpaces + \\\'继承自\\\' + trailingSpaces;\\n' +
+        '    }\\n' +
+        '    if (normalized === \\\'global settings\\\') {\\n' +
+        '      return leadingSpaces + \\\'全局设置\\\' + trailingSpaces;\\n' +
+        '    }\\n' +
+        '    if (normalized === \\\'Learn more\\\') {\\n' +
+        '      return leadingSpaces + \\\'了解更多\\\' + trailingSpaces;\\n' +
+        '    }\\n' +
+        '    if (normalized === \\\'Learn more.\\\') {\\n' +
+        '      return leadingSpaces + \\\'了解更多。\\\' + trailingSpaces;\\n' +
+        '    }\\n' +
         '    if (/Inherits\\\\s+from\\\\s+global\\\\s+settings/i.test(normalized)) {\\n' +
-        '      var cleanWord = normalized.replace(/[.\\\\s]/g, \\\'\\\').toLowerCase();\\n' +
+        '      var cleanWord = normalized.replace(/[. ]/g, \\\'\\\').toLowerCase();\\n' +
         '      if (cleanWord === \\\'inheritsfromglobalsettings\\\') {\\n' +
         '        return leadingSpaces + \\\'继承自全局设置。\\\' + trailingSpaces;\\n' +
         '      }\\n' +
@@ -172,11 +190,16 @@ if (entry) {
         '        .replace(/Inherits\\\\s+from\\\\s+global\\\\s+settings\\\\.?/i, \\\'继承自全局设置。\\\')' +
         '        .replace(/Learn\\\\s+more\\\\.?/i, \\\'了解更多。\\\') + trailingSpaces;\\n' +
         '    }\\n' +
-        '    if (/Local\\\\s+permissions\\\\s+have\\\\s+higher\\\\s+priority/i.test(normalized)) {\\n' +
-        '      return leadingSpaces + normalized' +
-        '        .replace(/Local\\\\s+permissions\\\\s+have\\\\s+higher\\\\s+priority\\\\.?\\\\s*Learn\\\\s+more\\\\.?/i, \\\'本地权限具有更高优先级。了解更多。\\\')' +
-        '        .replace(/Local\\\\s+permissions\\\\s+have\\\\s+higher\\\\s+priority\\\\.?/i, \\\'本地权限具有更高优先级。\\\')' +
-        '        .replace(/Learn\\\\s+more\\\\.?/i, \\\'了解更多。\\\') + trailingSpaces;\\n' +
+        '    if (normalized.toLowerCase().indexOf(\\\'local permissions have higher priority\\\') !== -1) {\\n' +
+        '      var hasDotPrefix = normalized.trim().indexOf(\\\'.\\\') === 0;\\n' +
+        '      var translated = \\\'本地权限具有更高优先级。\\\';\\n' +
+        '      if (hasDotPrefix) {\\n' +
+        '        translated = \\\'。\\\' + translated;\\n' +
+        '      }\\n' +
+        '      if (normalized.toLowerCase().indexOf(\\\'learn more\\\') !== -1) {\\n' +
+        '        translated += \\\'了解更多。\\\';\\n' +
+        '      }\\n' +
+        '      return leadingSpaces + translated + trailingSpaces;\\n' +
         '    }\\n' +
         '    if (/Agent\\\\s+settings\\\\s+and\\\\s+permissions\\\\s+for\\\\s+conversations\\\\s+outside\\\\s+of\\\\s+projects/i.test(normalized)) {\\n' +
         '      return leadingSpaces + normalized.replace(/Agent\\\\s+settings\\\\s+and\\\\s+permissions\\\\s+for\\\\s+conversations\\\\s+outside\\\\s+of\\\\s+projects\\\\./i, \\\'项目外对话的智能体设置和权限。\\\') + trailingSpaces;\\n' +
@@ -326,6 +349,13 @@ if (entry) {
       process.exit(1);
     }
 
+    if (!content.includes('function isPrecededByChinesePunctuation')) {
+      const target = 'function isInsideChatMessage';
+      const replacement = 'function isPrecededByChinesePunctuation(node) {\\n    if (!node) return false;\\n    var prev = node.previousSibling;\\n    if (prev) {\\n      var text = prev.textContent || \\\'\\\';\\n      var trimmedText = text.trim();\\n      if (trimmedText) {\\n        var lastChar = trimmedText.charAt(trimmedText.length - 1);\\n        if (lastChar === \\\'。\\\' || lastChar === \\\'！\\\' || lastChar === \\\'？\\\' || lastChar === \\\'.\\\') {\\n          return true;\\n        }\\n      }\\n    }\\n    return false;\\n  }\\n\\n  function isInsideChatMessage';
+      content = content.replace(target, replacement);
+      console.log('已成功注入 isPrecededByChinesePunctuation 函数定义。');
+    }
+
     if (!content.includes('function isInsideChatMessage')) {
       const target = 'function isInsideInputOrEditable';
       const replacement = 'function isInsideChatMessage(node) {\\n    if (!node) return false;\\n    let curr = node.nodeType === 3 ? node.parentElement : node;\\n    while (curr) {\\n      const cls = curr.getAttribute ? (curr.getAttribute(\\\'class\\\') || \\\'\\\') : \\\'\\\';\\n      if (cls && typeof cls === \\\'string\\\') {\\n        const clsLower = cls.toLowerCase();\\n        if (\\n          clsLower.includes(\\\'message\\\') || \\n          clsLower.includes(\\\'bubble\\\') || \\n          clsLower.includes(\\\'markdown\\\')\\n        ) {\\n          return true;\\n        }\\n      }\\n      const tagName = curr.tagName ? curr.tagName.toUpperCase() : \\\'\\\';\\n      if (tagName === \\\'PRE\\\' || tagName === \\\'CODE\\\') {\\n        return true;\\n      }\\n      if (curr.hasAttribute && curr.hasAttribute(\\\'data-message-id\\\')) {\\n        return true;\\n      }\\n      if (curr.getAttribute) {\\n        const testId = curr.getAttribute(\\\'data-testid\\\') || \\\'\\\';\\n        if (testId.toLowerCase().includes(\\\'message\\\')) {\\n          return true;\\n        }\\n      }\\n      curr = curr.parentElement;\\n    }\\n    return false;\\n  }\\n\\n  function isInsideInputOrEditable';
@@ -380,6 +410,13 @@ if (entry) {
     } else {
       console.error('未能在 content 中定位 isInsideInputOrEditable 替换边界');
       process.exit(1);
+    }
+
+    if (!content.includes('if (!value || (!/[A-Za-z]/.test(value) && value.trim() !== \\\'.\\\'))')) {
+      const target = 'if (!value || !/[A-Za-z]/.test(value)) return value;';
+      const replacement = 'if (!value || (!/[A-Za-z]/.test(value) && value.trim() !== \\\'.\\\')) return value;';
+      content = content.replace(target, replacement);
+      console.log('已成功放行独立句点 "." 的翻译拦截逻辑。');
     }
 
     entry.new = content;
