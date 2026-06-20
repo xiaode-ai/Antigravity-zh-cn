@@ -1,21 +1,23 @@
-# 🌐 Antigravity IDE 设置页面中文化项目 (Antigravity-zh-cn)
+# 🌐 Antigravity L10N 中文化项目 (Antigravity-zh-cn)
 
-本工程是一个为 **Antigravity IDE** 设置页面设计的专业级本地化 (L10n) 与生命周期管理项目。
+本工程是一个为 **Antigravity 桌面端**与 **Antigravity IDE** 设计的专业级本地化 (L10n) 与生命周期管理项目。
 
-项目通过**解耦翻译词库**与**配置驱动**的设计架构，实现了对 IDE 内置设置面板（常规、账户、权限、外观、浏览器、自定义、Best of N 等）的一键安全汉化、一键完美还原及自动化完整性校验。
+项目通过**解耦翻译词库**与**配置驱动**的设计架构，实现了对应用主进程及内置设置面板（常规、账户、权限、外观、浏览器、自定义、Best of N 等）的一键安全汉化、一键完美还原及自动化完整性校验。
 
 ---
 
 ## 🌟 项目亮点
 
 1. **词典与代码完全解耦 (`translations.json`)**
-   所有 109 组汉化对照字样全部以 JSON 纯文本独立存储，任何后续翻译的勘误、微调或新增，只需直接编辑 `translations.json` 即可，无需修改任何核心编译代码。
+   所有 28 组核心控制台与主进程汉化对照字样，以及 667 组 DOM 渲染层设置与对话框动态汉化对照字样（共计 694 组词条）全部以 JSON 纯文本独立存储。任何后续翻译的勘误、微调或新增，只需直接编辑 `translations.json` 即可，无需修改任何核心编译代码。
 2. **免除脏数据污染 (Zero-Conflict Design)**
-   汉化引擎每次运行时，都**以最原始的出厂备份 (`main.js.bak`) 为基准**进行最新全量词库的渲染替换。无论重复执行多少次，都能产出最干净、最稳定的译文，彻底杜绝已汉化段与待汉化段重叠引起的冲突。
+   汉化引擎每次运行时，都**以最原始的出厂备份为基准**进行最新全量词库的渲染替换。无论重复执行多少次，都能产出最干净、最稳定的译文，彻底杜绝已汉化段与待汉化段重叠引起的冲突。
 3. **行业级 i18n 静态分析与插值校验 (`@xiaode-ai/i18nt`)**
    引入现代化国际化分析框架，实现对汉化翻译字句的高精度 ICU 及插值变量一致性强对比，提供最极致的安全拦截防御。
 4. **内置链式安全检测与格式化**
    内置了对词库的自动规整与缩进格式化能力。在汉化应用前，自动链式执行词库完整性审查，并利用 Node 原生的 `--check` 抽象语法校验器，确保生成的 JS 文件结构 100% 结构良好，彻底拒绝闪退隐患。
+5. **多目标类型支持 (Multi-Target Support)**
+   完美支持同时汉化 **Antigravity 桌面端**（基于 ASAR 打包环境一键解包/翻译/打包）与 **Antigravity IDE**（直接对目标 JS 文件进行汉化）。
 
 ---
 
@@ -30,15 +32,15 @@
    npx @xiaode-ai/antigravity-zh-cn
    ```
    *首次运行时，工具如果检测到当前目录没有 `config.json` 配置文件，会自动在当前目录复制生成一个全新的 `config.json` 模板文件。*
-2. 打开该目录下的 `config.json`，修改 `"targetFilePath"` 字段为您本地实际的 Antigravity IDE `main.js` 文件的绝对路径。
-3. 执行一键汉化替换：
-   ```bash
-   npx @xiaode-ai/antigravity-zh-cn translate
-   ```
-4. 如果需要将 IDE 完美回滚到出厂英文版本，只需运行：
-   ```bash
-   npx @xiaode-ai/antigravity-zh-cn rollback
-   ```
+2. 打开该目录下的 `config.json`，根据您的需求配置目标路径：
+   - 对于 **antigravity** (桌面端)：修改 `"asarPath"` 字段为您本地实际的 `app.asar` 文件的绝对路径。
+   - 对于 **ide** (IDE 端)：修改 `"targetFilePath"` 字段为您本地实际的 IDE `main.js` 文件的绝对路径。
+3. 执行一键汉化替换（默认汉化桌面端；若要汉化 IDE，请在命令末尾添加 `ide`）：
+   - 汉化桌面端：`npx @xiaode-ai/antigravity-zh-cn translate`
+   - 汉化 IDE：`npx @xiaode-ai/antigravity-zh-cn translate ide`
+4. 如果需要将应用完美回退到出厂英文版本，只需运行：
+   - 还原桌面端：`npx @xiaode-ai/antigravity-zh-cn rollback`
+   - 还原 IDE：`npx @xiaode-ai/antigravity-zh-cn rollback ide`
 
 ### 🌍 方式 B：通过 `npm` 全局安装运行
 
@@ -46,40 +48,38 @@
    ```bash
    npm install -g @xiaode-ai/antigravity-zh-cn
    ```
-2. 运行汉化（首次运行会自动在当前目录初始化 `config.json`，请按上方提示配置路径后再次运行）：
-   ```bash
-   antigravity-zh-cn translate
-   ```
+2. 运行汉化（默认汉化桌面端；若要汉化 IDE，请在命令末尾添加 `ide`）：
+   - 汉化桌面端：`antigravity-zh-cn translate`
+   - 汉化 IDE：`antigravity-zh-cn translate ide`
 3. 运行还原：
-   ```bash
-   antigravity-zh-cn rollback
-   ```
+   - 还原桌面端：`antigravity-zh-cn rollback`
+   - 还原 IDE：`antigravity-zh-cn rollback ide`
 
 ---
 
 ## 💻 开发者本地运行流程
 
-如果您需要对词库进行开发、精简或本地维护，您可以克隆本项目后，在当前项目目录（建议在 Antigravity 中将本文件夹打开为 **Active Workspace**），直接在终端中运行以下五组命令。
+如果您需要对词库进行开发、精简或本地维护，您可以克隆本项目后，在当前项目目录（建议在 Antigravity 中将本文件夹打开为 **Active Workspace**），直接在终端中运行以下命令。
 
-为了保证汉化词库的纯净度与 IDE 的运行安全性，建议按照以下**推荐的运行生命周期顺序**来执行流程：
+各命令默认针对桌面端执行，若要针对 IDE 执行，统一在命令后增加 `ide` 后缀即可（例如 `npm run translate ide`）。为了保证汉化词库的纯净度与应用的运行安全性，建议按照以下**推荐的运行生命周期顺序**来执行流程：
 
 ### 1. 🧹 一键清理过期词条
 ```bash
-npm run prune
+npm run prune ide
 ```
-* **执行过程**：智能比对当前 `translations.json` 词库与 IDE 主程序备份，自动识别并剔除在 IDE 最新版本中已被废弃、不存在的过期词条，保持词库纯净。
-* **使用场景**：通常在 IDE 升级、核心代码变更、或者需要清理冗余翻译时作为流程的第一步运行。
+* **执行过程**：智能比对当前 `translations.json` 词库与对应目标的主程序或 ASAR 备份，自动识别并剔除在最新版本中已被废弃、不存在的过期词条，保持词库纯净。
+* **使用场景**：通常在应用升级、核心代码变更、或者需要清理冗余翻译时作为流程的第一步运行。
 
 ### 2. 🔍 词库审计与自动格式化
 ```bash
-npm run scan
+npm run scan ide
 ```
 * **执行过程**：一键对 `translations.json` 词库进行语法审查、React/ICU 大括号变量完整性强比对、编码一致性（UTF-8）及乱码检测，自动对字典进行 2 空格缩进的美化排版。
 * **审计安全拦截机制**：
   * 🔴 **致命隐患 (Fatal Error)**：
     * **变量丢失**：如果原始字串中带有 `\${r.product.nameShort}` 等 React/ICU 模板变量，而翻译字串中缺失，扫描器将直接报错。
     * **中文花括号**：误用中文输入法的 “｛” 或 “｝” 将会被自动定位。
-    * *拦截机制*：当出现致命隐患时，`npm run translate` 将会自动触发**前置强行拦截并以 Exit Code 1 中断**，防止脏数据损坏 IDE 核心渲染！
+    * *拦截机制*：当出现致命隐患时，`npm run translate` 将会自动触发**前置强行拦截并以 Exit Code 1 中断**，防止脏数据损坏目标渲染！
   * 🟡 **潜在风险 (Warning)**：
     * **未翻译字句**：翻译译文与原始英文完全一致（排除系统级 React 组件包裹特征段）。
     * **疑似未翻译**：译文中全是纯英文，未发现任何汉字。
@@ -88,24 +88,31 @@ npm run scan
 
 ### 3. ⚙️ 一键执行安全汉化
 ```bash
-npm run translate
+npm run translate ide
 ```
-* **执行过程**：检测出厂备份 -> 自动安全复制备份文件 -> 运行前置扫描诊断（`npm run scan`） -> 应用最新词库翻译替换 -> 写回 IDE 核心运行库 -> 自动链式执行文件语法校验（`npm run check`）。
-* **使用场景**：在通过第 1、2 步的安全审计后，一键对 IDE 进行汉化。
+* **执行过程**：检测出厂备份 -> 自动安全复制备份文件 -> 运行前置扫描诊断（`npm run scan`） -> 应用最新词库翻译替换 -> 写回对应目标运行库 -> 自动链式执行文件语法校验（`npm run check`）。
+* **使用场景**：在通过第 1、2 步的安全审计后，一键对目标应用进行汉化。
 
 ### 4. 🔬 独立执行安全性检测
 ```bash
-npm run check
+npm run check ide
 ```
-* **执行过程**：对当前 IDE 库中的运行文件进行编译测试，诊断是否存在任何语法破损。
+* **执行过程**：对当前目标库中的运行文件进行编译测试，诊断是否存在任何语法破损。
 * **使用场景**：虽然汉化与回滚过程中会自动链式调用此校验，但在手动修改或排查故障时可以随时独立执行检测。
 
 ### 5. 🔄 一键完美恢复官方英文版
 ```bash
-npm run rollback
+npm run rollback ide
 ```
-* **执行过程**：读取留存的出厂备份文件 -> 物理覆盖覆盖 IDE 运行库 -> 自动链式执行文件语法校验。
+* **执行过程**：读取留存的出厂备份文件 -> 物理覆盖对应目标运行库 -> 自动链式执行文件语法校验。
 * **使用场景**：当不需要汉化或者需要恢复官方英文出厂状态时运行。
+
+### 6. 🌐 页面未翻译文本收集
+```bash
+npm run collect-dom
+```
+* **执行过程**：自动化扫描并抓取所有页面中尚未翻译的 DOM 文本（包括各种隐藏的设置页面与对话框），并将其同步记录到 `dom-untranslated.json` 中。
+* **参数说明**：支持使用 `-- --visible-only` 仅扫描当前可见页面。
 
 ---
 
@@ -123,30 +130,26 @@ npm run rollback
    ```
 3. 直接保存文件，并在终端重新运行 `npm run translate` 即可完美应用！
 
-### ⚙️ 适配 IDE 升级与路径变更
-如果您的 Antigravity IDE 升级了版本导致 `main.js` 的运行路径发生改变，只需：
+### ⚙️ 适配升级与路径变更
+当应用或 IDE 升级了版本导致文件路径发生改变时，只需：
 1. 打开根目录下的 `config.json` 文件；
-2. 修改 `targetFilePath` 为新的 `main.js` 实际路径：
-   ```json
-   {
-     "targetFilePath": "您新的 main.js 绝对路径",
-     "backupSuffix": ".bak"
-   }
-   ```
+2. 针对对应的目标类型修改其对应的路径字段：
+   - 对于 `antigravity`：修改 `"asarPath"` 为新的 `app.asar` 文件的绝对路径。
+   - 对于 `ide`：修改 `"targetFilePath"` 为新的 `main.js` 文件的绝对路径。
 3. 保存并再次运行汉化即可。
 
 ---
 
 ## 🛡️ 安全性与灾备保障
 * 本项目为安全起见，只要检测到目录下已有原装备份文件（`.bak` 结尾），**绝不会在翻译时二次覆盖此备份**，从而永久性留存了您最初安装时的原始英文存底。
-* 任何时候出现任何异常，您只需运行 `npm run rollback`，即可一键完璧归赵，瞬间恢复官方英文出厂状态。
+* 任何时候出现任何异常，您只需运行 `npm run rollback ide`，即可一键完璧归赵，瞬间恢复官方英文出厂状态。
 
 > [!TIP]
 > **重启生效提示**：
-> 运行 `npm run translate` 结束后，**请重新启动您的 Antigravity IDE**，即可尽享中文化后的愉悦开发体验！
+> 运行 `npm run translate` 结束后，**请重新启动您的 Antigravity 桌面端或 IDE**，即可尽享中文化后的愉悦开发体验！
 
 ---
 
 ## 🚑 紧急救援指南
-如果在 Windows 环境下由于字符集问题遇到字典乱码或主程序语法破损崩溃（例如打开设置页显示空白），请立即参阅项目根目录下的 **[RESCUE.md](file:///c:/Users/i-cgh/.gemini/antigravity-ide/scratch/Antigravity-zh-cn/RESCUE.md)**，按照其中的官方物理终端四步恢复方案执行一键复活。
+如果在 Windows 环境下由于字符集问题遇到字典乱码或主程序语法破损崩溃（例如打开设置页显示空白），请立即参阅项目根目录下的 **[RESCUE.md](file:///c:/Users/i-cgh/Documents/GitHub/Antigravity-zh-cn/RESCUE.md)**，按照其中的官方物理终端四步恢复方案执行一键复活。
 
