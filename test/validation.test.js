@@ -558,4 +558,78 @@ try {
   process.exit(1);
 }
 
+// Test Case 5: Verify that the translations do not collide with code syntax identifiers like SET_ERROR:
+try {
+  const { applyTranslationsToContent } = await import('../src/translate.js');
+  const translations = JSON.parse(fs.readFileSync('translations.json', 'utf8'));
+  const sortedTranslations = [...translations].sort((a, b) => b.old.length - a.old.length);
+  
+  const testCode = 'const state = { on: { SET_ERROR:{actions:"setError"} } };';
+  const { content: result } = applyTranslationsToContent(testCode, sortedTranslations);
+  
+  assert.strictEqual(result, testCode, 'Translations should not modify identifiers like SET_ERROR:');
+  console.log('✅ Test 5 (No Code Identifier Collision) Passed!');
+} catch (e) {
+  console.error('❌ Test 5 Failed:', e);
+  process.exit(1);
+}
+
+// Test Case 6: Verify NLS dynamic closest-index lookup logic (shifts and duplicates)
+try {
+  // Define mapping runner using the same algorithm
+  const runNlsMapping = (nlsData, mappings) => {
+    let nlsModifiedCount = 0;
+    mappings.forEach(mapping => {
+      let targetIndex = mapping.index;
+      if (nlsData[targetIndex] !== mapping.oldVal) {
+        const indices = [];
+        let idx = nlsData.indexOf(mapping.oldVal);
+        while (idx !== -1) {
+          indices.push(idx);
+          idx = nlsData.indexOf(mapping.oldVal, idx + 1);
+        }
+        if (indices.length > 0) {
+          indices.sort((a, b) => Math.abs(a - mapping.index) - Math.abs(b - mapping.index));
+          targetIndex = indices[0];
+        } else {
+          if (nlsData[targetIndex] === mapping.newVal) {
+            nlsModifiedCount++;
+            return;
+          }
+          return; // Skip
+        }
+      }
+      nlsData[targetIndex] = mapping.newVal;
+      nlsModifiedCount++;
+    });
+    return nlsModifiedCount;
+  };
+
+  // 1. Test basic index shift
+  const testNlsData1 = ['other1', 'other2', 'Target', 'other3'];
+  const testMappings1 = [{ index: 0, oldVal: 'Target', newVal: '目标' }];
+  const count1 = runNlsMapping(testNlsData1, testMappings1);
+  assert.strictEqual(count1, 1, 'Should resolve index shift');
+  assert.strictEqual(testNlsData1[2], '目标', 'Should write to correct index');
+
+  // 2. Test duplicate values finding the closest index
+  const testNlsData2 = ['Dup', 'other', 'Dup', 'other2'];
+  const testMappings2 = [
+    { index: 0, oldVal: 'Dup', newVal: '首个' },
+    { index: 3, oldVal: 'Dup', newVal: '次个' }
+  ];
+  const count2 = runNlsMapping(testNlsData2, testMappings2);
+  assert.strictEqual(count2, 2, 'Should resolve duplicate values');
+  assert.strictEqual(testNlsData2[0], '首个', 'Index 0 should resolve to closest');
+  assert.strictEqual(testNlsData2[2], '次个', 'Index 2 should resolve to closest to original 3');
+
+  console.log('✅ Test 6 (NLS Dynamic Index Shift Resolver) Passed!');
+} catch (e) {
+  console.error('❌ Test 6 Failed:', e);
+  process.exit(1);
+}
+
 console.log('--- All Unit Tests Passed! ---');
+process.exit(0);
+
+

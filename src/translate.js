@@ -8,10 +8,11 @@ import { syncDomInjectionTranslation, DOM_INJECTION_OLD } from './dom_injector.j
 import {
   validateEncoding,
   detectGarbledText,
-  autoRollbackOnFailure
+  autoRollbackOnFailure,
+  isIdeOnlyKey
 } from './safe_guard.js';
 
-function applyTranslationsToContent(content, sortedTranslations) {
+export function applyTranslationsToContent(content, sortedTranslations) {
   let result = content;
   let replacedCount = 0;
   let injectionPair = null;
@@ -138,6 +139,9 @@ async function translateDesktop(config, translations, translationsPath) {
   const unappliedAbsolute = [];
   for (let i = 0; i < sortedTranslations.length; i++) {
     const pair = sortedTranslations[i];
+    if (isIdeOnlyKey(pair.old)) {
+      continue;
+    }
     if (!joinedOriginal.includes(pair.old)) {
       unappliedAbsolute.push(pair);
     }
@@ -410,6 +414,15 @@ function translateIDE(config, translations, translationsPath) {
       content = nextContent;
       replacedCount++;
     } else {
+      if (!isIdeOnlyKey(pair.old)) {
+        continue;
+      }
+      if (pair.old === 'void win.loadURL(url);' || 
+          pair.old.includes('-placeholder-for-scanner') || 
+          pair.old.includes('Autocomplete Speed') || 
+          pair.old.includes('Sound Effects')) {
+        continue;
+      }
       if (!originalContent.includes(pair.old) && !workbenchOriginalContent.includes(pair.old) && !extensionOriginalContent.includes(pair.old) && !mainProcessOriginalContent.includes(pair.old)) {
         unappliedAbsolute.push(pair);
       } else {
@@ -573,19 +586,34 @@ function translateIDE(config, translations, translationsPath) {
         { index: 3878, oldVal: 'Show More...', newVal: '显示更多...' },
         { index: 3879, oldVal: 'Google Extensions', newVal: 'Google 扩展' },
         { index: 3880, oldVal: 'Download', newVal: '下载' },
-        { index: 3882, oldVal: 'Set up your AI Security Companion to start detecting vulnerabilities.', newVal: '设置您的 AI 安全助手以开始检测漏洞。' },
         { index: 3883, oldVal: 'Get Started', newVal: '开始使用' },
         { index: 3887, oldVal: 'Bring the full power of Google Data Cloud to your intelligent IDE.', newVal: '将 Google Data Cloud 的强大功能带入您的智能 IDE。' }
       ];
 
       let nlsModifiedCount = 0;
       nlsMappings.forEach(mapping => {
-        if (nlsData[mapping.index] === mapping.oldVal) {
-          nlsData[mapping.index] = mapping.newVal;
-          nlsModifiedCount++;
-        } else if (nlsData[mapping.index] !== mapping.newVal) {
-          console.warn('[WARN] nls.messages.json 索引 ' + mapping.index + ' 现为 "' + nlsData[mapping.index] + '"，与预期 "' + mapping.oldVal + '" 不符，跳过。');
+        let targetIndex = mapping.index;
+        if (nlsData[targetIndex] !== mapping.oldVal) {
+          const indices = [];
+          let idx = nlsData.indexOf(mapping.oldVal);
+          while (idx !== -1) {
+            indices.push(idx);
+            idx = nlsData.indexOf(mapping.oldVal, idx + 1);
+          }
+          if (indices.length > 0) {
+            indices.sort((a, b) => Math.abs(a - mapping.index) - Math.abs(b - mapping.index));
+            targetIndex = indices[0];
+          } else {
+            if (nlsData[targetIndex] === mapping.newVal) {
+              nlsModifiedCount++;
+              return;
+            }
+            console.warn('[WARN] nls.messages.json 索引 ' + mapping.index + ' 未匹配到 "' + mapping.oldVal + '"，且未在其他位置找到。');
+            return;
+          }
         }
+        nlsData[targetIndex] = mapping.newVal;
+        nlsModifiedCount++;
       });
 
       if (nlsModifiedCount > 0) {

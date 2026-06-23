@@ -275,3 +275,14 @@ export function safeWriteWithValidation(targetPath, content, backupPath) {
     };
   }
 }
+
+/**
+ * 判断一个翻译键是否为 IDE 专用键（设置项键或扫描占位符）
+ * @param {string} key 翻译键名
+ * @returns {boolean}
+ */
+export function isIdeOnlyKey(key) {
+  if (!key || typeof key !== 'string') return false;
+  return /^(label|screen|title|children):"/.test(key) || key.includes('-placeholder-for-scanner');
+}
+

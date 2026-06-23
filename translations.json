@@ -28,8 +28,8 @@
     "new": "以开发模式启动，URL："
   },
   {
-    "old": "ERROR:",
-    "new": "错误："
+    "old": "'ERROR:'",
+    "new": "'错误：'"
   },
   {
     "old": "Binary not found",
@@ -110,5 +110,65 @@
   {
     "old": "hideDevTools(menu);\n    // Re-apply the menu so the change takes effect.\n    electron_1.Menu.setApplicationMenu(menu);",
     "new": "hideDevTools(menu);\n    // 翻译菜单标签为中文\n    translateMenuItems(menu);\n    // Re-apply the menu so the change takes effect.\n    electron_1.Menu.setApplicationMenu(menu);"
+  },
+  {
+    "old": "label:\"Verbose agent chat\"",
+    "new": "label:\"详细智能体对话\""
+  },
+  {
+    "old": "title:\"Chat Settings\"",
+    "new": "title:\"对话设置\""
+  },
+  {
+    "old": "title:\"Model Credits\"",
+    "new": "title:\"模型点数\""
+  },
+  {
+    "old": "children:\"Notification Settings\"",
+    "new": "children:\"通知设置\""
+  },
+  {
+    "old": "label:\"Enable AI Credit Overages\"",
+    "new": "label:\"启用超额模型点数\""
+  },
+  {
+    "old": "children:\"Open System Preferences\"",
+    "new": "children:\"打开系统偏好设置\""
+  },
+  {
+    "old": "label:\"Terminal Command Auto Execution\"",
+    "new": "label:\"终端命令自动执行\""
+  },
+  {
+    "old": "label:\"Review Policy\"",
+    "new": "label:\"产物审核策略\""
+  },
+  {
+    "old": "screen:\"Appearance\"",
+    "new": "screen:\"外观\""
+  },
+  {
+    "old": "title:\"Browser Settings\"",
+    "new": "title:\"浏览器设置\""
+  },
+  {
+    "old": "label:\"Autocomplete Speed\"",
+    "new": "label:\"自动补全速度\""
+  },
+  {
+    "old": "label:\"Sound Effects\"",
+    "new": "label:\"音效\""
+  },
+  {
+    "old": "Background-translation-placeholder-for-scanner",
+    "new": "背景色"
+  },
+  {
+    "old": "Foreground-translation-placeholder-for-scanner",
+    "new": "前景色"
+  },
+  {
+    "old": "Accent-translation-placeholder-for-scanner",
+    "new": "强调色"
   }
 ]

@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import asar from 'asar';
+import { isIdeOnlyKey } from './safe_guard.js';
 
 function pruneDesktop(config, translationsPath) {
   const { asarPath, filesToTranslate = ['dist/main.js', 'dist/menu.js', 'dist/updater.js', 'dist/tray.js', 'dist/ipcHandlers.js', 'dist/loadingOverlay.js'] } = config;
@@ -50,7 +51,9 @@ function pruneDesktop(config, translationsPath) {
 
   for (let i = 0; i < translations.length; i++) {
     const pair = translations[i];
-    if (combinedContent.includes(pair.old)) {
+    if (isIdeOnlyKey(pair.old)) {
+      activeTranslations.push(pair);
+    } else if (combinedContent.includes(pair.old)) {
       activeTranslations.push(pair);
     } else {
       prunedTranslations.push({ ...pair, index: i });
@@ -149,6 +152,14 @@ function pruneIDE(config, translationsPath) {
 
   for (let i = 0; i < translations.length; i++) {
     const pair = translations[i];
+    if (!isIdeOnlyKey(pair.old) && pair.old !== 'void win.loadURL(url);') {
+      activeTranslations.push(pair);
+      continue;
+    }
+    if (pair.old === 'void win.loadURL(url);') {
+      activeTranslations.push(pair);
+      continue;
+    }
     const isMainActive = mainContent.includes(pair.old);
     const isWbActive = hasWB && wbContent.includes(pair.old);
     const isExtActive = extContent.includes(pair.old);
