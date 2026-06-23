@@ -328,6 +328,148 @@ async function translateDesktop(config, translations, translationsPath) {
   }
 }
 
+export const NLS_MAPPINGS = [
+  { index: 48, oldVal: 'now', newVal: '刚刚' },
+  { index: 49, oldVal: '{0} second ago', newVal: '{0} 秒前' },
+  { index: 50, oldVal: '{0} sec ago', newVal: '{0} 秒前' },
+  { index: 51, oldVal: '{0} seconds ago', newVal: '{0} 秒前' },
+  { index: 52, oldVal: '{0} secs ago', newVal: '{0} 秒前' },
+  { index: 57, oldVal: '{0} minute ago', newVal: '{0} 分钟前' },
+  { index: 58, oldVal: '{0} min ago', newVal: '{0} 分钟前' },
+  { index: 59, oldVal: '{0} minutes ago', newVal: '{0} 分钟前' },
+  { index: 60, oldVal: '{0} mins ago', newVal: '{0} 分钟前' },
+  { index: 65, oldVal: '{0} hour ago', newVal: '{0} 小时前' },
+  { index: 66, oldVal: '{0} hr ago', newVal: '{0} 小时前' },
+  { index: 67, oldVal: '{0} hours ago', newVal: '{0} 小时前' },
+  { index: 68, oldVal: '{0} hrs ago', newVal: '{0} 小时前' },
+  { index: 73, oldVal: '{0} day ago', newVal: '{0} 天前' },
+  { index: 74, oldVal: '{0} days ago', newVal: '{0} 天前' },
+  { index: 4961, oldVal: 'Toggle Agent', newVal: '切换智能体' },
+  { index: 3308, oldVal: 'Quick Open', newVal: '快速打开' },
+  { index: 4199, oldVal: 'Quick Open', newVal: '快速打开' },
+  { index: 4960, oldVal: 'Open Browser (Preview)', newVal: '打开浏览器 (预览)' },
+  { index: 3102, oldVal: 'Profile', newVal: '个人资料' },
+  { index: 4027, oldVal: 'Profile', newVal: '个人资料' },
+  { index: 16323, oldVal: 'Profile', newVal: '个人资料' },
+  { index: 3867, oldVal: 'Code with Agent', newVal: '与智能体协作编程' },
+  { index: 14712, oldVal: 'Code with Agent', newVal: '与智能体协作编程' },
+  { index: 14713, oldVal: 'Code with Agent', newVal: '与智能体协作编程' },
+  { index: 14724, oldVal: 'Code with Agent', newVal: '与智能体协作编程' },
+  { index: 14725, oldVal: 'Code with Agent', newVal: '与智能体协作编程' },
+  { index: 3154, oldVal: 'Provide Feedback', newVal: '提供反馈' },
+  { index: 3155, oldVal: 'Download Diagnostics', newVal: '下载诊断信息' },
+  { index: 3156, oldVal: 'Download Diagnostics', newVal: '下载诊断信息' },
+  { index: 4974, oldVal: 'Download Diagnostics', newVal: '下载诊断信息' },
+  { index: 5927, oldVal: 'Review', newVal: '审核' },
+  { index: 8471, oldVal: 'Review', newVal: '审核' },
+  { index: 6011, oldVal: '1 file changed', newVal: '1 个文件已更改' },
+  { index: 6012, oldVal: '{0} files changed', newVal: '{0} 个文件已更改' },
+  { index: 5746, oldVal: 'Changed 1 file', newVal: '已更改 1 个文件' },
+  { index: 5747, oldVal: 'Changed {0} files', newVal: '已更改 {0} 个文件' },
+  { index: 5008, oldVal: 'Open {0} User Settings', newVal: '打开 {0} 用户设置' },
+  { index: 5015, oldVal: 'Quick Settings Panel', newVal: '快速设置面板' },
+  { index: 5018, oldVal: 'Quick Settings Panel', newVal: '快速设置面板' },
+  { index: 4978, oldVal: 'Docs', newVal: '文档' },
+  { index: 4979, oldVal: 'Report Issue', newVal: '报告问题' },
+  { index: 4980, oldVal: 'Changelog', newVal: '更新日志' },
+  { index: 6128, oldVal: 'Limited', newVal: '受限' },
+  { index: 6307, oldVal: 'Limited', newVal: '受限' },
+  { index: 6309, oldVal: 'Limited', newVal: '受限' },
+  { index: 5021, oldVal: 'Reset to default shortcuts', newVal: '重置为默认快捷键' },
+  { index: 955, oldVal: 'Show more ({0})', newVal: '显示更多 ({0})' },
+  { index: 5238, oldVal: 'Show more...', newVal: '显示更多...' },
+  { index: 5239, oldVal: 'Show more...', newVal: '显示更多...' },
+  { index: 9332, oldVal: 'Accept Changes', newVal: '接受更改' },
+  { index: 4, oldVal: 'Error', newVal: '错误' },
+  { index: 1185, oldVal: 'Error', newVal: '错误' },
+  { index: 1756, oldVal: 'Error', newVal: '错误' },
+  { index: 2196, oldVal: 'Error', newVal: '错误' },
+  { index: 2198, oldVal: 'Error', newVal: '错误' },
+  { index: 8630, oldVal: 'Error', newVal: '错误' },
+  { index: 9956, oldVal: 'Error', newVal: '错误' },
+  { index: 14084, oldVal: 'Errored', newVal: '出错' },
+  { index: 2201, oldVal: 'Errors', newVal: '错误' },
+  { index: 9784, oldVal: '1 Error', newVal: '1 个错误' },
+  { index: 9785, oldVal: '{0} Errors', newVal: '{0} 个错误' },
+  { index: 9721, oldVal: 'Errors: {0}', newVal: '错误: {0}' },
+  { index: 2099, oldVal: 'Unknown Error', newVal: '未知错误' },
+  { index: 12385, oldVal: 'Task "{0}" finished in {1}.', newVal: '任务"{0}"在 {1} 内完成。' },
+  { index: 12386, oldVal: 'Task finished in {0}.', newVal: '任务在 {0} 内完成。' },
+  { index: 5526, oldVal: 'Finished in {0}.', newVal: '在 {0} 内完成。' },
+  { index: 5528, oldVal: 'Finished', newVal: '已完成' },
+  { index: 5510, oldVal: 'Failed', newVal: '已失败' },
+  { index: 3870, oldVal: 'Workspaces', newVal: '工作区' },
+  { index: 3871, oldVal: 'Open Folder', newVal: '打开文件夹' },
+  { index: 3872, oldVal: 'Clone Repository', newVal: '克隆仓库' },
+  { index: 3873, oldVal: 'Open Fig Workspace', newVal: '打开 Fig 工作区' },
+  { index: 3874, oldVal: 'Connect to Cloudtop', newVal: '连接至 Cloudtop' },
+  { index: 3875, oldVal: 'Generate Project', newVal: '生成项目' },
+  { index: 3876, oldVal: 'Open Folder', newVal: '打开文件夹' },
+  { index: 3877, oldVal: 'Show All Recent Folders {0}', newVal: '显示所有最近文件夹 {0}' },
+  { index: 3878, oldVal: 'Show More...', newVal: '显示更多...' },
+  { index: 3879, oldVal: 'Google Extensions', newVal: 'Google 扩展' },
+  { index: 3880, oldVal: 'Download', newVal: '下载' },
+  { index: 3883, oldVal: 'Get Started', newVal: '开始使用' },
+  { index: 3887, oldVal: 'Bring the full power of Google Data Cloud to your intelligent IDE.', newVal: '将 Google Data Cloud 的强大功能带入您的智能 IDE。' },
+  { index: 9848, oldVal: 'MCP Servers', newVal: 'MCP 服务器' },
+  { index: 9852, oldVal: 'MCP Servers', newVal: 'MCP 服务器' },
+  { index: 10072, oldVal: 'MCP Servers', newVal: 'MCP 服务器' },
+  { index: 10073, oldVal: 'MCP Servers', newVal: 'MCP 服务器' },
+  { index: 10085, oldVal: 'MCP Servers', newVal: 'MCP 服务器' },
+  { index: 10086, oldVal: 'MCP Servers', newVal: 'MCP 服务器' },
+  { index: 10087, oldVal: 'MCP Servers', newVal: 'MCP 服务器' },
+  { index: 10088, oldVal: 'MCP Servers', newVal: 'MCP 服务器' },
+  { index: 10138, oldVal: 'MCP Servers', newVal: 'MCP 服务器' },
+  { index: 14354, oldVal: 'MCP Servers', newVal: 'MCP 服务器' },
+  { index: 16269, oldVal: 'MCP Servers', newVal: 'MCP 服务器' },
+  { index: 16361, oldVal: 'MCP Servers', newVal: 'MCP 服务器' },
+  { index: 9800, oldVal: 'MCP Server', newVal: 'MCP 服务器' },
+  { index: 3103, oldVal: 'Workspace', newVal: '工作区' },
+  { index: 6535, oldVal: 'Workspace', newVal: '工作区' },
+  { index: 9896, oldVal: 'Workspace', newVal: '工作区' },
+  { index: 9898, oldVal: 'Workspace', newVal: '工作区' },
+  { index: 9999, oldVal: 'Workspace', newVal: '工作区' },
+  { index: 11163, oldVal: 'Workspace', newVal: '工作区' },
+  { index: 11169, oldVal: 'Workspace', newVal: '工作区' },
+  { index: 11171, oldVal: 'Workspace', newVal: '工作区' },
+  { index: 11200, oldVal: 'Workspace', newVal: '工作区' },
+  { index: 11217, oldVal: 'Workspace', newVal: '工作区' },
+  { index: 11221, oldVal: 'Workspace', newVal: '工作区' },
+  { index: 11284, oldVal: 'Workspace', newVal: '工作区' },
+  { index: 15515, oldVal: 'Workspace', newVal: '工作区' },
+  { index: 15668, oldVal: 'Workspace', newVal: '工作区' },
+  { index: 15872, oldVal: 'Workspace', newVal: '工作区' }
+];
+
+export function translateNlsData(nlsData, mappings, label = 'nls.messages.json') {
+  let modifiedCount = 0;
+  mappings.forEach(mapping => {
+    let targetIndex = mapping.index;
+    if (nlsData[targetIndex] !== mapping.oldVal) {
+      const indices = [];
+      let idx = nlsData.indexOf(mapping.oldVal);
+      while (idx !== -1) {
+        indices.push(idx);
+        idx = nlsData.indexOf(mapping.oldVal, idx + 1);
+      }
+      if (indices.length > 0) {
+        indices.sort((a, b) => Math.abs(a - mapping.index) - Math.abs(b - mapping.index));
+        targetIndex = indices[0];
+      } else {
+        if (nlsData[targetIndex] === mapping.newVal) {
+          modifiedCount++;
+          return;
+        }
+        console.warn('[WARN] ' + label + ' 索引 ' + mapping.index + ' 未匹配到 "' + mapping.oldVal + '"，且未在其他位置找到。');
+        return;
+      }
+    }
+    nlsData[targetIndex] = mapping.newVal;
+    modifiedCount++;
+  });
+  return modifiedCount;
+}
+
 function translateIDE(config, translations, translationsPath) {
   const { targetFilePath, backupSuffix = '.bak' } = config;
   const backupPath = targetFilePath + backupSuffix;
@@ -514,107 +656,7 @@ function translateIDE(config, translations, translationsPath) {
     }
 
     if (Array.isArray(nlsData)) {
-      const nlsMappings = [
-        { index: 48, oldVal: 'now', newVal: '刚刚' },
-        { index: 49, oldVal: '{0} second ago', newVal: '{0} 秒前' },
-        { index: 50, oldVal: '{0} sec ago', newVal: '{0} 秒前' },
-        { index: 51, oldVal: '{0} seconds ago', newVal: '{0} 秒前' },
-        { index: 52, oldVal: '{0} secs ago', newVal: '{0} 秒前' },
-        { index: 57, oldVal: '{0} minute ago', newVal: '{0} 分钟前' },
-        { index: 58, oldVal: '{0} min ago', newVal: '{0} 分钟前' },
-        { index: 59, oldVal: '{0} minutes ago', newVal: '{0} 分钟前' },
-        { index: 60, oldVal: '{0} mins ago', newVal: '{0} 分钟前' },
-        { index: 65, oldVal: '{0} hour ago', newVal: '{0} 小时前' },
-        { index: 66, oldVal: '{0} hr ago', newVal: '{0} 小时前' },
-        { index: 67, oldVal: '{0} hours ago', newVal: '{0} 小时前' },
-        { index: 68, oldVal: '{0} hrs ago', newVal: '{0} 小时前' },
-        { index: 73, oldVal: '{0} day ago', newVal: '{0} 天前' },
-        { index: 74, oldVal: '{0} days ago', newVal: '{0} 天前' },
-        { index: 4968, oldVal: 'Toggle Agent', newVal: '切换智能体' },
-        { index: 3310, oldVal: 'Quick Open', newVal: '快速打开' },
-        { index: 4206, oldVal: 'Quick Open', newVal: '快速打开' },
-        { index: 4967, oldVal: 'Open Browser (Preview)', newVal: '打开浏览器 (预览)' },
-        { index: 3104, oldVal: 'Profile', newVal: '个人资料' },
-        { index: 4034, oldVal: 'Profile', newVal: '个人资料' },
-        { index: 16330, oldVal: 'Profile', newVal: '个人资料' },
-        { index: 5927, oldVal: 'Review', newVal: '审核' },
-        { index: 8471, oldVal: 'Review', newVal: '审核' },
-        { index: 6011, oldVal: '1 file changed', newVal: '1 个文件已更改' },
-        { index: 6012, oldVal: '{0} files changed', newVal: '{0} 个文件已更改' },
-        { index: 5746, oldVal: 'Changed 1 file', newVal: '已更改 1 个文件' },
-        { index: 5747, oldVal: 'Changed {0} files', newVal: '已更改 {0} 个文件' },
-        { index: 5008, oldVal: 'Open {0} User Settings', newVal: '打开 {0} 用户设置' },
-        { index: 5015, oldVal: 'Quick Settings Panel', newVal: '快速设置面板' },
-        { index: 5018, oldVal: 'Quick Settings Panel', newVal: '快速设置面板' },
-        { index: 4978, oldVal: 'Docs', newVal: '文档' },
-        { index: 4979, oldVal: 'Report Issue', newVal: '报告问题' },
-        { index: 4980, oldVal: 'Changelog', newVal: '更新日志' },
-        { index: 6128, oldVal: 'Limited', newVal: '受限' },
-        { index: 6307, oldVal: 'Limited', newVal: '受限' },
-        { index: 6309, oldVal: 'Limited', newVal: '受限' },
-        { index: 5021, oldVal: 'Reset to default shortcuts', newVal: '重置为默认快捷键' },
-        { index: 955, oldVal: 'Show more ({0})', newVal: '显示更多 ({0})' },
-        { index: 5238, oldVal: 'Show more...', newVal: '显示更多...' },
-        { index: 5239, oldVal: 'Show more...', newVal: '显示更多...' },
-        { index: 9332, oldVal: 'Accept Changes', newVal: '接受更改' },
-        { index: 4, oldVal: 'Error', newVal: '错误' },
-        { index: 1185, oldVal: 'Error', newVal: '错误' },
-        { index: 1756, oldVal: 'Error', newVal: '错误' },
-        { index: 2196, oldVal: 'Error', newVal: '错误' },
-        { index: 2198, oldVal: 'Error', newVal: '错误' },
-        { index: 8630, oldVal: 'Error', newVal: '错误' },
-        { index: 9956, oldVal: 'Error', newVal: '错误' },
-        { index: 14084, oldVal: 'Errored', newVal: '出错' },
-        { index: 2201, oldVal: 'Errors', newVal: '错误' },
-        { index: 9784, oldVal: '1 Error', newVal: '1 个错误' },
-        { index: 9785, oldVal: '{0} Errors', newVal: '{0} 个错误' },
-        { index: 9721, oldVal: 'Errors: {0}', newVal: '错误: {0}' },
-        { index: 2099, oldVal: 'Unknown Error', newVal: '未知错误' },
-        { index: 12385, oldVal: 'Task "{0}" finished in {1}.', newVal: '任务"{0}"在 {1} 内完成。' },
-        { index: 12386, oldVal: 'Task finished in {0}.', newVal: '任务在 {0} 内完成。' },
-        { index: 5526, oldVal: 'Finished in {0}.', newVal: '在 {0} 内完成。' },
-        { index: 5528, oldVal: 'Finished', newVal: '已完成' },
-        { index: 5510, oldVal: 'Failed', newVal: '已失败' },
-        { index: 3870, oldVal: 'Workspaces', newVal: '工作区' },
-        { index: 3871, oldVal: 'Open Folder', newVal: '打开文件夹' },
-        { index: 3872, oldVal: 'Clone Repository', newVal: '克隆仓库' },
-        { index: 3873, oldVal: 'Open Fig Workspace', newVal: '打开 Fig 工作区' },
-        { index: 3874, oldVal: 'Connect to Cloudtop', newVal: '连接至 Cloudtop' },
-        { index: 3875, oldVal: 'Generate Project', newVal: '生成项目' },
-        { index: 3876, oldVal: 'Open Folder', newVal: '打开文件夹' },
-        { index: 3877, oldVal: 'Show All Recent Folders {0}', newVal: '显示所有最近文件夹 {0}' },
-        { index: 3878, oldVal: 'Show More...', newVal: '显示更多...' },
-        { index: 3879, oldVal: 'Google Extensions', newVal: 'Google 扩展' },
-        { index: 3880, oldVal: 'Download', newVal: '下载' },
-        { index: 3883, oldVal: 'Get Started', newVal: '开始使用' },
-        { index: 3887, oldVal: 'Bring the full power of Google Data Cloud to your intelligent IDE.', newVal: '将 Google Data Cloud 的强大功能带入您的智能 IDE。' }
-      ];
-
-      let nlsModifiedCount = 0;
-      nlsMappings.forEach(mapping => {
-        let targetIndex = mapping.index;
-        if (nlsData[targetIndex] !== mapping.oldVal) {
-          const indices = [];
-          let idx = nlsData.indexOf(mapping.oldVal);
-          while (idx !== -1) {
-            indices.push(idx);
-            idx = nlsData.indexOf(mapping.oldVal, idx + 1);
-          }
-          if (indices.length > 0) {
-            indices.sort((a, b) => Math.abs(a - mapping.index) - Math.abs(b - mapping.index));
-            targetIndex = indices[0];
-          } else {
-            if (nlsData[targetIndex] === mapping.newVal) {
-              nlsModifiedCount++;
-              return;
-            }
-            console.warn('[WARN] nls.messages.json 索引 ' + mapping.index + ' 未匹配到 "' + mapping.oldVal + '"，且未在其他位置找到。');
-            return;
-          }
-        }
-        nlsData[targetIndex] = mapping.newVal;
-        nlsModifiedCount++;
-      });
+      const nlsModifiedCount = translateNlsData(nlsData, NLS_MAPPINGS, 'nls.messages.json');
 
       if (nlsModifiedCount > 0) {
         console.log('[INFO] nls.messages.json 汉化完成，成功更新 ' + nlsModifiedCount + ' 个条目。');
@@ -666,31 +708,7 @@ function translateIDE(config, translations, translationsPath) {
       }
 
       if (Array.isArray(clpNlsData)) {
-        const clpMappings = [
-          { index: 48, oldVal: 'now', newVal: '刚刚' },
-          { index: 49, oldVal: '{0} second ago', newVal: '{0} 秒前' },
-          { index: 50, oldVal: '{0} sec ago', newVal: '{0} 秒前' },
-          { index: 51, oldVal: '{0} seconds ago', newVal: '{0} 秒前' },
-          { index: 52, oldVal: '{0} secs ago', newVal: '{0} 秒前' },
-          { index: 57, oldVal: '{0} minute ago', newVal: '{0} 分钟前' },
-          { index: 58, oldVal: '{0} min ago', newVal: '{0} 分钟前' },
-          { index: 59, oldVal: '{0} minutes ago', newVal: '{0} 分钟前' },
-          { index: 60, oldVal: '{0} mins ago', newVal: '{0} 分钟前' },
-          { index: 65, oldVal: '{0} hour ago', newVal: '{0} 小时前' },
-          { index: 66, oldVal: '{0} hr ago', newVal: '{0} 小时前' },
-          { index: 67, oldVal: '{0} hours ago', newVal: '{0} 小时前' },
-          { index: 68, oldVal: '{0} hrs ago', newVal: '{0} 小时前' },
-          { index: 73, oldVal: '{0} day ago', newVal: '{0} 天前' },
-          { index: 74, oldVal: '{0} days ago', newVal: '{0} 天前' }
-        ];
-        let clpModifiedCount = 0;
-        clpMappings.forEach(mapping => {
-          const cur = clpNlsData[mapping.index];
-          if (cur === mapping.oldVal) {
-            clpNlsData[mapping.index] = mapping.newVal;
-            clpModifiedCount++;
-          }
-        });
+        const clpModifiedCount = translateNlsData(clpNlsData, NLS_MAPPINGS, path.basename(clpNlsPath));
 
         if (clpModifiedCount > 0) {
           console.log('[INFO] CLP 文件汉化完成，成功更新 ' + clpModifiedCount + ' 个条目。');
@@ -754,6 +772,31 @@ function translateIDE(config, translations, translationsPath) {
       const nextContent = mainProcessContent.replaceAll(pair.old, pair.new);
       if (nextContent !== mainProcessContent) { mainProcessContent = nextContent; mpReplacedCount++; mpModified = true; }
     }
+
+    // 动态注入 DOM 汉化脚本到 out/main.js
+    const injectPair = sortedTranslations.find(p => p.old === 'void win.loadURL(url);');
+    if (injectPair && injectPair.new) {
+      const baseInject = injectPair.new.replace('void win.loadURL(url);', '').trim();
+
+      // 1. 注入 this._win.loadURL(n)
+      const targetStr1 = 'this._win.loadURL(n)';
+      if (mainProcessContent.includes(targetStr1)) {
+        const injectCode1 = baseInject.replaceAll('win.webContents', 'this._win.webContents');
+        mainProcessContent = mainProcessContent.replace(targetStr1, `((() => { ${injectCode1} return ${targetStr1}; })())`);
+        mpModified = true;
+        mpReplacedCount++;
+      }
+
+      // 2. 注入 this.win.loadURL(B)
+      const targetStr2 = 'this.win.loadURL(B)';
+      if (mainProcessContent.includes(targetStr2)) {
+        const injectCode2 = baseInject.replaceAll('win.webContents', 'this.win.webContents');
+        mainProcessContent = mainProcessContent.replace(targetStr2, `((() => { ${injectCode2} return ${targetStr2}; })())`);
+        mpModified = true;
+        mpReplacedCount++;
+      }
+    }
+
     if (mpModified) {
       console.log('[INFO] out/main.js 应用 ' + mpReplacedCount + ' 组映射，正在写入...');
       try {

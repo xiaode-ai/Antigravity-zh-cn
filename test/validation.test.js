@@ -124,6 +124,47 @@ try {
     { input: 'Learn more.', expected: '了解更多。' },
     { input: '. Local permissions have higher priority. ', expected: '。本地权限具有更高优先级。' },
     // 新增测试用例
+    { input: 'Agent Auto-Fix Lints', expected: '智能体自动修复 Lint' },
+    { input: 'Auto Execution', expected: '自动执行' },
+    { input: 'Suggestions in Editor', expected: '编辑器内的建议' },
+    { input: 'Tab Gitignore Access', expected: 'Tab 键 Gitignore 访问' },
+    { input: 'Tab Speed', expected: 'Tab 键建议速度' },
+    { input: 'Tab to Import', expected: 'Tab 键自动导入' },
+    { input: 'Snooze', expected: '暂停' },
+    { input: 'Start', expected: '开始' },
+    { input: 'Advanced Settings', expected: '高级设置' },
+    { input: 'AI Shortcuts', expected: 'AI 快捷键' },
+    { input: 'Open Command', expected: '打开命令' },
+    { input: 'Open Agent', expected: '打开智能体' },
+    { input: 'View all Antigravity IDE shortcuts', expected: '查看所有 Antigravity IDE 快捷键' },
+    { input: 'Manage MCPs', expected: '管理 MCP' },
+    { input: 'Manage MCP servers', expected: '管理 MCP 服务器' },
+    { input: 'Manage MCP 服务器', expected: '管理 MCP 服务器' },
+    { input: 'MCP Store', expected: 'MCP 商店' },
+    { input: 'Search MCP servers', expected: '搜索 MCP 服务器' },
+    { input: 'View raw config', expected: '查看原始配置' },
+    { input: 'Refresh', expected: '刷新' },
+    { input: 'No MCP servers installed. ', expected: '未安装任何 MCP 服务器。' },
+    { input: 'Click here', expected: '点击此处' },
+    { input: ' to view the MCP server store.', expected: ' 查看 MCP 服务器商店。' },
+    { input: 'Provide Feedback', expected: '提供反馈' },
+    { input: 'Workspace', expected: '工作区' },
+    { input: 'Customize Agent to get a better, more personalized experience.', expected: '自定义智能体以获得更好、更个性化的体验。' },
+    { input: 'Back to Agent', expected: '返回智能体' },
+    { input: 'Rules help guide the behavior of Agent.', expected: '规则用于引导智能体的行为。' },
+    { input: 'Workflows', expected: '工作流' },
+    { input: 'Refresh rules', expected: '刷新规则' },
+    { input: 'Edit workflow', expected: '编辑工作流' },
+    { input: 'Refresh workflows', expected: '刷新工作流' },
+    { input: 'Customization', expected: '自定义' },
+    { input: 'Customizations', expected: '自定义' },
+    { input: 'MCP Servers', expected: 'MCP 服务器' },
+    { input: 'Additional Options', expected: '更多选项' },
+    { input: 'Past Conversations', expected: '历史对话' },
+    { input: 'Close Agent View', expected: '关闭智能体视图' },
+    { input: 'Editor-Specific Settings', expected: '编辑器专属设置' },
+    { input: 'Open in Cider', expected: '在 Cider 中打开' },
+    { input: 'AI may make mistakes. Double-check all generated code.', expected: 'AI 可能会出错。请仔细核对所有生成的代码。' },
     { input: 'No items found', expected: '未找到任何项' },
     { input: 'Recent', expected: '最近' },
     { input: 'Your quota for this model is running low.', expected: '您对此模型的配额即将用尽。' },
@@ -626,6 +667,51 @@ try {
   console.log('✅ Test 6 (NLS Dynamic Index Shift Resolver) Passed!');
 } catch (e) {
   console.error('❌ Test 6 Failed:', e);
+  process.exit(1);
+}
+
+// Test Case 7: IDE main.js loadURL IIFE syntax injection validation
+try {
+  const fakeTranslations = [
+    {
+      old: 'void win.loadURL(url);',
+      new: 'win.webContents.on(\'dom-ready\', () => {\n  win.webContents.executeJavaScript("console.log(\\\"Hello\\\");");\n});\nvoid win.loadURL(url);'
+    }
+  ];
+
+  const injectPair = fakeTranslations.find(p => p.old === 'void win.loadURL(url);');
+  assert(injectPair, 'Should find injectPair');
+  
+  const baseInject = injectPair.new.replace('void win.loadURL(url);', '').trim();
+  
+  let fakeMainProcessContent = `
+    const a = 1;
+    this._win.loadURL(n);
+    const b = 2;
+    this.win.loadURL(B);
+    const c = 3;
+  `;
+
+  // 1. Inject this._win.loadURL(n)
+  const targetStr1 = 'this._win.loadURL(n)';
+  const injectCode1 = baseInject.replaceAll('win.webContents', 'this._win.webContents');
+  fakeMainProcessContent = fakeMainProcessContent.replace(targetStr1, `((() => { ${injectCode1} return ${targetStr1}; })())`);
+
+  // 2. Inject this.win.loadURL(B)
+  const targetStr2 = 'this.win.loadURL(B)';
+  const injectCode2 = baseInject.replaceAll('win.webContents', 'this.win.webContents');
+  fakeMainProcessContent = fakeMainProcessContent.replace(targetStr2, `((() => { ${injectCode2} return ${targetStr2}; })())`);
+
+  // Verify syntax correctness using acorn parser
+  const acorn = await import('acorn');
+  acorn.parse(fakeMainProcessContent, { ecmaVersion: 'latest', sourceType: 'script' });
+
+  assert(fakeMainProcessContent.includes('((() => { this._win.webContents.on'), 'Should contain injected _win handler');
+  assert(fakeMainProcessContent.includes('((() => { this.win.webContents.on'), 'Should contain injected win handler');
+
+  console.log('✅ Test 7 (IDE main.js loadURL IIFE Syntax Injection) Passed!');
+} catch (e) {
+  console.error('❌ Test 7 Failed:', e);
   process.exit(1);
 }
 
