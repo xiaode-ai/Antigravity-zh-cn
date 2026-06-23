@@ -159,6 +159,8 @@ try {
     { input: '1 file, 1 folder, 1 search', expected: '1 个文件，1 个文件夹，1 次搜索' },
     { input: '11 files, 3 folders, 5 searches', expected: '11 个文件，3 个文件夹，5 次搜索' },
     { input: '2 files, 1 folder, 6 searches', expected: '2 个文件，1 个文件夹，6 次搜索' },
+    { input: '5 files, 3 folders, 5 searches, 10 pages', expected: '5 个文件，3 个文件夹，5 次搜索，10 个页面' },
+    { input: '10 pages', expected: '10 个页面' },
     { input: 'New', expected: '新建' },
     { input: 'Model', expected: '模型' },
     { input: 'Stop Execution', expected: '停止执行' },
