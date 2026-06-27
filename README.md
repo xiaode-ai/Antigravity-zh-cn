@@ -1,6 +1,6 @@
-# 🌐 Antigravity L10N 中文化项目 (Antigravity-zh-cn)
+# 🌐 Antigravity zh-cn 中文化项目 (Antigravity-zh-cn)
 
-本工程是一个为 **Antigravity 桌面端**与 **Antigravity IDE** 设计的专业级本地化 (L10n) 与生命周期管理项目。
+本工程是一个为 **Antigravity 桌面端**与 **Antigravity IDE** 设计的专业级本地化 (zh-cn) 与生命周期管理项目。
 
 项目通过**解耦翻译词库**与**配置驱动**的设计架构，实现了对应用主进程及内置设置面板（常规、账户、权限、外观、浏览器、自定义、Best of N 等）的一键安全汉化、一键完美还原及自动化完整性校验。
 
@@ -55,7 +55,13 @@
    - 还原桌面端：`antigravity-zh-cn rollback`
    - 还原 IDE：`antigravity-zh-cn rollback ide`
 
+### ⚡ 方式 C：在 Windows 下双击一键运行（极速推荐）
+
+如果您克隆了本仓库或在本地开发，可直接双击运行项目根目录下的 Windows 启动脚本：
+* **`run.bat`**：一键执行中文化与还原官方英文版。支持自动检测并安装依赖包，双击后手动输入选项即可对 Antigravity 桌面端或 IDE 端进行汉化或还原。
+
 ---
+
 
 ## 💻 开发者本地运行流程
 

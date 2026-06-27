@@ -9,7 +9,7 @@ _verify_unpacked_refs.mjs
 
 # 临时目录
 _test_asar/
-_l10n_check_tmp/
+_zh-cn_check_tmp/
 
 # 输出/临时文件
 asar_output.txt

@@ -136,10 +136,35 @@ async function translateDesktop(config, translations, translationsPath) {
     } catch (e) { /* skip */ }
   }
   const joinedOriginal = allOriginalContent.join('\n');
+
+  // 解析并提取 DOM 动态字典的 Keys 以豁免静态检测
+  const domKeys = new Set();
+  const domEntry = sortedTranslations.find(t => t.old === 'void win.loadURL(url);');
+  if (domEntry && domEntry.new) {
+    const dictStartMarker = 'const dictionary = {';
+    const dictStartIdx = domEntry.new.indexOf(dictStartMarker);
+    const dictEndIdx = domEntry.new.indexOf('};', dictStartIdx);
+    if (dictStartIdx !== -1 && dictEndIdx !== -1) {
+      const dictBody = domEntry.new.substring(dictStartIdx + dictStartMarker.length, dictEndIdx);
+      try {
+        const jsonStr = '{' + dictBody.replace(/\\"/g, '"').replace(/\\\\/g, '\\') + '}';
+        const dictObj = JSON.parse(jsonStr);
+        Object.keys(dictObj).forEach(k => domKeys.add(k));
+      } catch (e) {
+        const keyRegex = /"([^"]+)"\s*:/g;
+        let match;
+        const cleanBody = dictBody.replace(/\\"/g, '"');
+        while ((match = keyRegex.exec(cleanBody)) !== null) {
+          domKeys.add(match[1]);
+        }
+      }
+    }
+  }
+
   const unappliedAbsolute = [];
   for (let i = 0; i < sortedTranslations.length; i++) {
     const pair = sortedTranslations[i];
-    if (isIdeOnlyKey(pair.old)) {
+    if (isIdeOnlyKey(pair.old) || domKeys.has(pair.old) || pair.old === 'void win.loadURL(url);') {
       continue;
     }
     if (!joinedOriginal.includes(pair.old)) {
@@ -168,8 +193,8 @@ async function translateDesktop(config, translations, translationsPath) {
   // 解包 asar 到临时目录
   console.log('[INFO] 正在解包原始 asar 到临时目录...');
   const resourcesDir = path.dirname(asarPath);
-  const tempDir = path.join(resourcesDir, '_l10n_temp_asar_extract');
-  const tempNewAsar = path.join(resourcesDir, '_l10n_new_app.asar');
+  const tempDir = path.join(resourcesDir, '_zh-cn_temp_asar_extract');
+  const tempNewAsar = path.join(resourcesDir, '_zh-cn_new_app.asar');
   const originalUnpackedDir = asarPath + '.unpacked';
   const backupUnpackedDir = backupPath + '.unpacked';
   const tempNewUnpackedDir = tempNewAsar + '.unpacked';
@@ -559,10 +584,10 @@ function translateIDE(config, translations, translationsPath) {
       if (!isIdeOnlyKey(pair.old)) {
         continue;
       }
-      if (pair.old === 'void win.loadURL(url);' || 
-          pair.old.includes('-placeholder-for-scanner') || 
-          pair.old.includes('Autocomplete Speed') || 
-          pair.old.includes('Sound Effects')) {
+      if (pair.old === 'void win.loadURL(url);' ||
+        pair.old.includes('-placeholder-for-scanner') ||
+        pair.old.includes('Autocomplete Speed') ||
+        pair.old.includes('Sound Effects')) {
         continue;
       }
       if (!originalContent.includes(pair.old) && !workbenchOriginalContent.includes(pair.old) && !extensionOriginalContent.includes(pair.old) && !mainProcessOriginalContent.includes(pair.old)) {

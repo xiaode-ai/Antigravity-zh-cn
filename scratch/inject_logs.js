@@ -7,11 +7,11 @@ if (entry) {
   const content = entry.new;
   const startIdx = content.indexOf('function translateText(');
   const endIdx = content.indexOf('const translateTextNode =');
-  
+
   if (startIdx !== -1 && endIdx !== -1) {
     const oldFn = content.substring(startIdx, endIdx);
     console.log('找到的旧 translateText 定义长度:', oldFn.length);
-    
+
     // 我们用普通字符串定义 replacement
     const replacementStr = 'function translateText(value) {\\n' +
       '  if (!value || !/[A-Za-z]/.test(value)) return value;\\n' +
@@ -34,7 +34,7 @@ if (entry) {
       '    }\\n' +
       '  }\\n' +
       '  if (/project|setting|conversation|scheduled/i.test(value) || /项目|设置|对话|计划任务/i.test(res)) {\\n' +
-      '    console.log("[L10N_DEBUG] value=" + JSON.stringify(value) + ", trimmed=" + JSON.stringify(trimmed) + ", res=" + JSON.stringify(res));\\n' +
+      '    console.log("[zh-cn_DEBUG] value=" + JSON.stringify(value) + ", trimmed=" + JSON.stringify(trimmed) + ", res=" + JSON.stringify(res));\\n' +
       '  }\\n' +
       '  return res;\\n' +
       '}\\n    ';

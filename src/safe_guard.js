@@ -283,6 +283,25 @@ export function safeWriteWithValidation(targetPath, content, backupPath) {
  */
 export function isIdeOnlyKey(key) {
   if (!key || typeof key !== 'string') return false;
-  return /^(label|screen|title|children):"/.test(key) || key.includes('-placeholder-for-scanner');
+  if (/^(label|screen|title|children):"/.test(key) || key.includes('-placeholder-for-scanner')) {
+    return true;
+  }
+  const domOnlyKeys = [
+    'Antigravity has been redesigned to put agents first',
+    'AI may make mistakes. Double-check all generated code.',
+    '<title>Welcome to Antigravity</title>',
+    'Editor-Specific Settings',
+    'alt="Antigravity Icon"',
+    'Additional Options',
+    'Past Conversations',
+    'Close Agent View',
+    '<html lang="en">',
+    'Customizations',
+    'Toggles',
+    'Toggles.',
+    'Toggles ⓘ',
+    'Active Conversations'
+  ];
+  return domOnlyKeys.some(dk => key.startsWith(dk) || key === dk);
 }
 

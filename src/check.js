@@ -12,7 +12,7 @@ async function safeSyntaxCheck(filePath, content) {
   } catch (acornErr) {
     try {
       // 回退到 node --check：使用当前工作目录下的唯一临时文件，避免复用父级旧缓存或同名文件。
-      const tmpDir = path.join(process.cwd(), '_l10n_check_tmp');
+      const tmpDir = path.join(process.cwd(), '_zh-cn_check_tmp');
       if (!fs.existsSync(tmpDir)) fs.mkdirSync(tmpDir, { recursive: true });
       const safeName = filePath.replace(/[\\/:]/g, '_');
       const tmpFile = path.join(tmpDir, safeName);

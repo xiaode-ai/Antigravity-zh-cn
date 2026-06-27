@@ -246,6 +246,16 @@ function scanDesktop(config, translationsPath) {
     // 未翻译检测
     const isCode = isReactCodeStructure(pair.old);
     const hasChinese = /[\u4e00-\u9fa5]/.test(pair.new);
+    const isWhiteListedEnglishOnlyTranslation = (oldText, newText) => {
+      if (!oldText || !newText) return false;
+      if (/lang=["']\w+["']/i.test(oldText) && /lang=["']\w+["']/i.test(newText)) return true;
+      if (/<html\b/i.test(oldText) && /<html\b/i.test(newText)) return true;
+      if (/charset=/i.test(oldText)) return true;
+      if (/zh[-_]cn/i.test(newText)) return true;
+      if (/\.(png|jpg|jpeg|gif|svg|ico)/i.test(oldText)) return true;
+      return false;
+    };
+
     if (pair.new === pair.old && !isCode) {
       warningsCount++;
       warnings.push({
@@ -256,13 +266,15 @@ function scanDesktop(config, translationsPath) {
       });
     } else if (!hasChinese && !isCode && pair.new.length > 0) {
       if (/[a-zA-Z]{2,}/.test(pair.new)) {
-        warningsCount++;
-        warnings.push({
-          index: i,
-          oldText: pair.old,
-          newText: pair.new,
-          message: '疑似未完成翻译：译文中未发现任何汉字，仍残留纯英文字段。'
-        });
+        if (!isWhiteListedEnglishOnlyTranslation(pair.old, pair.new)) {
+          warningsCount++;
+          warnings.push({
+            index: i,
+            oldText: pair.old,
+            newText: pair.new,
+            message: '疑似未完成翻译：译文中未发现任何汉字，仍残留纯英文字段。'
+          });
+        }
       }
     }
   }
